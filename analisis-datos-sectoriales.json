@@ -1,0 +1,185 @@
+{
+  "title": "Análisis con Datos Sectoriales",
+  "questions": [
+    {
+      "intro": "El análisis con datos sectoriales es una técnica que permite comparar la situación financiera y de resultados de una empresa con la media del sector al que pertenece. Esta comparación es esencial para evaluar si la empresa está por encima o por debajo del promedio en aspectos como rentabilidad, liquidez, endeudamiento o eficiencia. Los datos sectoriales suelen obtenerse de informes de entidades como el Banco de España, Iberinform o Informa D&B. Sin embargo, su fiabilidad puede verse afectada por factores como la calidad de la información declarada por las empresas o la heterogeneidad de actividades dentro de un mismo sector. A pesar de estas limitaciones, el análisis sectorial es una herramienta fundamental para la toma de decisiones estratégicas.",
+      "question": "1. ¿Cuál es el objetivo del análisis con datos sectoriales?",
+      "options": [
+        "Comparar la empresa con la media del sector",
+        "Calcular el beneficio neto del ejercicio",
+        "Determinar el valor de mercado de las acciones",
+        "Justificar el aumento de capital"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El objetivo del <u>análisis con datos sectoriales</u> es <u>comparar</u> la situación financiera y de resultados de una empresa con la <u>media del sector</u> al que pertenece.</p><p>Permite evaluar si la empresa tiene una <u>rentabilidad</u>, <u>liquidez</u> o <u>eficiencia</u> superior o inferior al promedio. Esta comparación es clave para la <u>toma de decisiones estratégicas</u>, como la fijación de precios, la gestión del crédito o la planificación de inversiones.</p><p>Los datos suelen obtenerse de <u>informes sectoriales</u> de entidades como el Banco de España o Informa D&B, aunque su <u>fiabilidad</u> puede variar según la calidad de la información declarada.</p>"
+    },
+    {
+      "intro": "Los datos sectoriales se obtienen de fuentes como el Banco de España, Iberinform, Informa D&B o el Instituto Nacional de Estadística (INE). Estas entidades recopilan información financiera de miles de empresas y la agrupan por sectores económicos. Aunque son una herramienta útil, su fiabilidad puede verse afectada por el uso de datos oficiales que no siempre coinciden con la realidad económica de las empresas. Además, algunas empresas realizan actividades que abarcan varios sectores, lo que dificulta su clasificación precisa.",
+      "question": "2. ¿De dónde provienen los datos sectoriales?",
+      "options": [
+        "De informes internos de la empresa",
+        "De entidades como el Banco de España o Informa D&B",
+        "De la auditoría externa",
+        "Del mercado de valores"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Los <u>datos sectoriales</u> se obtienen de <u>entidades especializadas</u> que recopilan información financiera de miles de empresas, como el <u>Banco de España</u>, <u>Iberinform</u>, <u>Informa D&B</u> o el <u>INE</u>.</p><p>Estas entidades <u>agrupan</u> las empresas por <u>sectores económicos</u> y calculan medias de ratios financieros como rentabilidad, liquidez o endeudamiento.</p><p>Aunque son una herramienta útil, su <u>fiabilidad</u> puede verse afectada por el uso de <u>datos oficiales</u> que no siempre coinciden con la realidad económica de las empresas.</p>"
+    },
+    {
+      "intro": "La comparación con datos sectoriales permite identificar fortalezas y debilidades competitivas de la empresa. Por ejemplo, si el ROE de la empresa es del 15% y el promedio del sector es del 10%, indica una gestión financiera superior. En cambio, si el periodo medio de cobro es de 90 días frente a 45 días del sector, puede haber problemas en la gestión del crédito. Este análisis contextualizado es clave para definir estrategias de mejora y aprovechar oportunidades competitivas.",
+      "question": "3. ¿Qué ventaja ofrece la comparación con datos sectoriales?",
+      "options": [
+        "Identificar fortalezas y debilidades competitivas",
+        "Calcular el beneficio bruto",
+        "Determinar el valor de mercado de las acciones",
+        "Evaluar solo el activo fijo"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>La <u>comparación con datos sectoriales</u> permite <u>identificar fortalezas y debilidades competitivas</u> de la empresa.</p><p>Por ejemplo, si el <u>ROE</u> de la empresa es del <u>15%</u> y el promedio del sector es del <u>10%</u>, indica una <u>gestión financiera superior</u>.</p><p>En cambio, si el <u>periodo medio de cobro</u> es de <u>90 días</u> frente a <u>45 días</u> del sector, puede haber <u>problemas en la gestión del crédito</u>. Este análisis contextualizado es clave para definir <u>estrategias de mejora</u>.</p>"
+    },
+    {
+      "intro": "La fiabilidad de los datos sectoriales puede verse afectada por varios factores. En primer lugar, se basan en información oficial (cuentas anuales depositadas), que no siempre refleja la situación real de la empresa. En segundo lugar, algunas empresas desarrollan actividades en varios sectores, lo que dificulta su clasificación. En tercer lugar, el tamaño y la estructura de las empresas del sector pueden ser muy heterogéneos, lo que distorsiona las medias. Por ello, es importante interpretar los datos con cautela y complementarlos con otros análisis.",
+      "question": "4. ¿Qué factores pueden afectar la fiabilidad de los datos sectoriales?",
+      "options": [
+        "Uso de datos oficiales que no coinciden con la realidad",
+        "Empresas con actividades en varios sectores",
+        "Heterogeneidad de tamaño y estructura en el sector",
+        "Todos los anteriores"
+      ],
+      "correct": [3],
+      "saber_mas": "<p>La <u>fiabilidad de los datos sectoriales</u> puede verse afectada por varios factores:</p><p>1. Se basan en <u>datos oficiales</u> que no siempre coinciden con la <u>realidad económica</u> de las empresas.</p><p>2. Algunas empresas realizan <u>actividades en varios sectores</u>, lo que dificulta su clasificación.</p><p>3. La <u>heterogeneidad</u> de tamaño, estructura y modelo de negocio distorsiona las <u>medias sectoriales</u>.</p><p>Por ello, es importante interpretarlos con <u>cautela</u> y complementarlos con otros análisis.</p>"
+    },
+    {
+      "intro": "El análisis sectorial debe complementarse con el análisis interno de la empresa. Mientras que el primero proporciona una visión externa y comparativa, el segundo permite entender la estructura de costes, la eficiencia operativa y la estrategia de la empresa. Por ejemplo, una baja rentabilidad puede deberse a una política de precios agresiva para ganar cuota de mercado, no a una mala gestión. La combinación de ambos análisis ofrece una visión más completa y realista de la situación de la empresa.",
+      "question": "5. ¿Por qué es importante combinar el análisis sectorial con el interno?",
+      "options": [
+        "Para obtener una visión más completa y realista",
+        "Para calcular el beneficio neto",
+        "Para determinar el valor de mercado",
+        "Para justificar la auditoría"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Es importante <u>combinar el análisis sectorial</u> con el <u>análisis interno</u> porque el primero ofrece una <u>visión externa y comparativa</u>, mientras que el segundo permite entender la <u>estructura de costes</u>, la <u>eficiencia operativa</u> y la <u>estrategia</u> de la empresa.</p><p>Por ejemplo, una <u>baja rentabilidad</u> puede deberse a una <u>política de precios agresiva</u> para ganar cuota de mercado, no a una mala gestión.</p><p>La combinación de ambos análisis ofrece una <u>visión más completa</u> y realista.</p>"
+    },
+    {
+      "intro": "Los ratios sectoriales son indicadores clave que permiten comparar el rendimiento de la empresa con el promedio del sector. Entre los más utilizados están el ROE, el ROA, el ratio de liquidez general, el ratio de endeudamiento y los ratios de rotación. Estos indicadores deben analizarse en conjunto, no de forma aislada. Por ejemplo, un ROE alto puede deberse a un alto apalancamiento financiero, lo que aumenta el riesgo. La interpretación debe ser crítica y contextual.",
+      "question": "6. ¿Qué indicadores suelen incluirse en los ratios sectoriales?",
+      "options": [
+        "ROE, ROA, liquidez, endeudamiento, rotación",
+        "Solo el beneficio neto",
+        "El valor de mercado de las acciones",
+        "La liquidez inmediata"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Los <u>ratios sectoriales</u> incluyen indicadores clave como el <u>ROE</u>, <u>ROA</u>, <u>liquidez general</u>, <u>endeudamiento</u> y <u>rotación de activos</u>.</p><p>Estos indicadores permiten comparar el <u>rendimiento</u> de la empresa con el <u>promedio del sector</u>.</p><p>Deben analizarse <u>en conjunto</u>, no de forma aislada. Por ejemplo, un <u>ROE alto</u> puede deberse a un <u>alto apalancamiento</u>, lo que aumenta el <u>riesgo financiero</u>.</p>"
+    },
+    {
+      "intro": "La heterogeneidad de empresas dentro de un mismo sector puede distorsionar los datos sectoriales. Por ejemplo, un sector puede incluir desde pequeñas empresas familiares hasta grandes corporaciones multinacionales, con modelos de negocio, estructuras de costes y estrategias muy diferentes. Esto hace que la media sectorial no sea representativa para todas las empresas. Por ello, es recomendable segmentar el análisis por tamaño, tipo de actividad o modelo de negocio.",
+      "question": "7. ¿Cómo afecta la heterogeneidad de empresas al análisis sectorial?",
+      "options": [
+        "No tiene efecto",
+        "Puede distorsionar los datos sectoriales y hacer la media no representativa",
+        "Aumenta automáticamente la rentabilidad",
+        "Elimina la necesidad de análisis"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>heterogeneidad de empresas</u> dentro de un mismo sector puede <u>distorsionar los datos sectoriales</u>.</p><p>Un sector puede incluir desde <u>pequeñas empresas familiares</u> hasta <u>grandes corporaciones</u>, con <u>modelos de negocio</u> y <u>estructuras de costes</u> muy diferentes.</p><p>Esto hace que la <u>media sectorial</u> no sea <u>representativa</u> para todas las empresas. Por ello, es recomendable <u>segmentar el análisis</u> por tamaño o modelo de negocio.</p>"
+    },
+    {
+      "intro": "El análisis de tendencias sectoriales permite identificar cambios en el entorno económico que afectan al sector. Por ejemplo, una disminución generalizada del ROA puede indicar una caída en la demanda o un aumento en la competencia. Este análisis ayuda a anticipar escenarios futuros y a adaptar la estrategia de la empresa. Debe realizarse con datos de varios ejercicios para detectar patrones significativos.",
+      "question": "8. ¿Qué permite el análisis de tendencias sectoriales?",
+      "options": [
+        "Identificar cambios en el entorno económico que afectan al sector",
+        "Calcular el beneficio del ejercicio",
+        "Determinar el valor de mercado",
+        "Justificar la auditoría"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis de tendencias sectoriales</u> permite <u>identificar cambios</u> en el entorno económico que afectan al sector.</p><p>Por ejemplo, una <u>disminución del ROA</u> puede indicar una <u>caída en la demanda</u> o un <u>aumento en la competencia</u>.</p><p>Este análisis ayuda a <u>anticipar escenarios futuros</u> y a <u>adaptar la estrategia</u> de la empresa. Debe realizarse con <u>varios ejercicios</u> para detectar patrones significativos.</p>"
+    },
+    {
+      "intro": "La selección del sector de comparación es crucial para que el análisis sea válido. A veces, una empresa realiza actividades que pertenecen a varios sectores, lo que dificulta su clasificación. En estos casos, puede ser útil compararla con varios sectores o con empresas de tamaño y modelo de negocio similares. La elección incorrecta del sector puede llevar a conclusiones erróneas.",
+      "question": "9. ¿Por qué es importante la selección del sector de comparación?",
+      "options": [
+        "Para que el análisis sea válido y las conclusiones correctas",
+        "Para aumentar el beneficio",
+        "Para reducir el impuesto",
+        "Para simplificar la auditoría"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>La <u>selección del sector de comparación</u> es crucial para que el <u>análisis sea válido</u>.</p><p>Si una empresa realiza actividades en <u>varios sectores</u>, puede ser difícil elegir uno solo.</p><p>En estos casos, es mejor compararla con <u>varios sectores</u> o con empresas de <u>tamaño y modelo de negocio similares</u>. La elección incorrecta puede llevar a <u>conclusiones erróneas</u>.</p>"
+    },
+    {
+      "intro": "El análisis de sensibilidad sectorial evalúa cómo cambian los resultados de la empresa ante variaciones en variables clave como precios, costes o volumen de ventas, en comparación con el sector. Por ejemplo, ¿qué pasa si el precio de venta baja un 10% y el sector lo hace un 15%? Este análisis ayuda a identificar la competitividad relativa y a preparar planes de contingencia.",
+      "question": "10. ¿Para qué sirve el análisis de sensibilidad sectorial?",
+      "options": [
+        "Para evaluar la competitividad relativa ante cambios en variables clave",
+        "Para calcular el beneficio neto",
+        "Para determinar el valor de mercado",
+        "Para justificar la auditoría"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis de sensibilidad sectorial</u> evalúa cómo cambia el <u>resultado de la empresa</u> ante <u>variaciones</u> en variables clave (precios, costes, ventas), en comparación con el <u>sector</u>.</p><p>Por ejemplo, si el <u>precio baja un 10%</u> y el <u>sector un 15%</u>, la empresa mantiene ventaja competitiva.</p><p>Ayuda a identificar la <u>competitividad relativa</u> y a preparar <u>planes de contingencia</u>.</p>"
+    },
+    {
+      "intro": "El benchmarking financiero es una técnica que consiste en comparar los indicadores financieros de la empresa con los de las mejores empresas del sector. No se limita a la media, sino que busca emular las mejores prácticas. Por ejemplo, si la mejor empresa del sector tiene un periodo medio de cobro de 30 días, la empresa puede adoptar políticas para acercarse a ese objetivo. El benchmarking es clave para la mejora continua.",
+      "question": "11. ¿Qué es el benchmarking financiero?",
+      "options": [
+        "Comparar con la media del sector",
+        "Comparar con las mejores empresas del sector para emular sus prácticas",
+        "Calcular el beneficio neto",
+        "Reducir el impuesto"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>benchmarking financiero</u> consiste en comparar los <u>indicadores</u> de la empresa con los de las <u>mejores empresas del sector</u>.</p><p>No se limita a la <u>media</u>, sino que busca <u>emular las mejores prácticas</u>.</p><p>Por ejemplo, si la mejor empresa tiene un <u>periodo medio de cobro</u> de <u>30 días</u>, la empresa puede adoptar políticas para <u>acercarse a ese objetivo</u>. Es clave para la <u>mejora continua</u>.</p>"
+    },
+    {
+      "intro": "La interpretación de los datos sectoriales debe hacerse con perspectiva de coste-beneficio. Solo se debe recopilar información que compense el coste de obtenerla. Por ejemplo, un análisis muy detallado puede no ser rentable para una pequeña empresa. La selección de indicadores debe ser estratégica, priorizando aquellos que aportan más valor para la toma de decisiones.",
+      "question": "12. ¿Qué criterio debe guiar la selección de información en el análisis sectorial?",
+      "options": [
+        "Perspectiva de coste-beneficio",
+        "Cantidad de datos",
+        "Complejidad técnica",
+        "Tamaño del informe"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>La selección de información debe hacerse con una <u>perspectiva de coste-beneficio</u>.</p><p>Solo se debe recopilar <u>información que compense el coste</u> de obtenerla.</p><p>Por ejemplo, un análisis muy detallado puede no ser <u>rentable</u> para una <u>pequeña empresa</u>. La selección debe ser <u>estratégica</u>, priorizando indicadores clave.</p>"
+    },
+    {
+      "intro": "El análisis sectorial es una herramienta dinámica que debe actualizarse periódicamente. Los cambios en el entorno económico, la competencia o la tecnología pueden alterar rápidamente los ratios sectoriales. Por ello, es recomendable realizar este análisis al menos una vez al año, y más frecuentemente en sectores volátiles. La actualización permite mantener la estrategia empresarial alineada con la realidad del mercado.",
+      "question": "13. ¿Con qué frecuencia debe actualizarse el análisis sectorial?",
+      "options": [
+        "Una vez cada cinco años",
+        "Al menos una vez al año",
+        "Solo cuando hay auditoría",
+        "Nunca, es estático"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>análisis sectorial</u> debe <u>actualizarse periódicamente</u>, al menos <u>una vez al año</u>.</p><p>Los cambios en el <u>entorno económico</u>, la <u>competencia</u> o la <u>tecnología</u> pueden alterar rápidamente los <u>ratios sectoriales</u>.</p><p>En sectores <u>volátiles</u>, puede ser necesario hacerlo con más frecuencia. La actualización permite mantener la <u>estrategia empresarial</u> alineada con el mercado.</p>"
+    },
+    {
+      "intro": "El análisis sectorial debe integrarse en el cuadro de mando integral. Este cuadro resume los indicadores clave de desempeño (KPI) de la empresa, incluyendo tanto internos como externos. La inclusión de datos sectoriales permite a la dirección evaluar el rendimiento relativo y tomar decisiones más informadas. El cuadro debe ser simple, claro y enfocado en la información más relevante.",
+      "question": "14. ¿Dónde debe integrarse el análisis sectorial?",
+      "options": [
+        "En el cuadro de mando integral",
+        "En la memoria del auditor",
+        "En el libro diario",
+        "En el balance de situación"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis sectorial</u> debe integrarse en el <u>cuadro de mando integral</u>.</p><p>Este cuadro resume los <u>indicadores clave de desempeño</u> (KPI) de la empresa, incluyendo <u>internos</u> y <u>externos</u>.</p><p>La inclusión de <u>datos sectoriales</u> permite evaluar el <u>rendimiento relativo</u> y tomar <u>decisiones más informadas</u>. Debe ser <u>simple</u> y <u>enfocado</u> en la información más relevante.</p>"
+    },
+    {
+      "intro": "La utilidad del análisis sectorial depende del objetivo del usuario. Para un gestor, sirve para mejorar la eficiencia. Para un inversor, para evaluar el potencial de rentabilidad. Para un acreedor, para analizar el riesgo de impago. Cada usuario debe adaptar el análisis a sus necesidades específicas, seleccionando los indicadores más relevantes para su decisión.",
+      "question": "15. ¿Depende la utilidad del análisis sectorial del usuario?",
+      "options": [
+        "No, es igual para todos",
+        "Sí, depende del objetivo del usuario",
+        "Solo sirve para gestores",
+        "Solo sirve para inversores"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>utilidad del análisis sectorial</u> <u>depende del usuario</u>.</p><p>Para un <u>gestor</u>, sirve para <u>mejorar la eficiencia</u>. Para un <u>inversor</u>, para evaluar el <u>potencial de rentabilidad</u>. Para un <u>acreedor</u>, para analizar el <u>riesgo de impago</u>.</p><p>Cada usuario debe <u>adaptar el análisis</u> a sus <u>necesidades específicas</u>, seleccionando los indicadores más relevantes.</p>"
+    }
+  ]
+}
