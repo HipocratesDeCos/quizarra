@@ -1,0 +1,185 @@
+{
+  "title": "Análisis del Balance de Situación II",
+  "questions": [
+    {
+      "intro": "El análisis financiero mediante ratios es una herramienta fundamental para evaluar la salud económica de una empresa. Los ratios permiten medir aspectos clave como la liquidez, la solvencia, la rentabilidad y la eficiencia. Entre los más utilizados están el ratio de liquidez general, el ratio de disponibilidad, el fondo de maniobra, el ratio de endeudamiento y los ratios de rentabilidad. Estos indicadores deben interpretarse en contexto, comparándose con ejercicios anteriores o con empresas del mismo sector. Un ratio aislado no proporciona una visión completa; es necesario un análisis conjunto para obtener conclusiones válidas sobre la gestión financiera de la empresa.",
+      "question": "1. ¿Cuál es la finalidad del análisis por ratios?",
+      "options": [
+        "Calcular el beneficio neto",
+        "Evaluar la liquidez, solvencia y rentabilidad de la empresa",
+        "Determinar el valor de mercado de las acciones",
+        "Justificar el aumento de capital"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La finalidad del <u>análisis por ratios</u> es <u>evaluar la liquidez, solvencia, rentabilidad y eficiencia</u> de la empresa de forma cuantitativa y comparable.</p><p>Por ejemplo, el <u>ratio de liquidez general</u> (activo corriente / pasivo corriente) mide la capacidad de pago a corto plazo. El <u>ratio de endeudamiento</u> (pasivo total / patrimonio neto) indica el nivel de apalancamiento financiero. Y los <u>ratios de rentabilidad</u> (como el ROA o ROE) miden la eficacia de la gestión.</p><p>Estos indicadores deben analizarse en <u>serie temporal</u> (comparando ejercicios) y en <u>contexto sectorial</u> para obtener conclusiones válidas.</p>"
+    },
+    {
+      "intro": "El fondo de maniobra (FM) es la diferencia entre el activo corriente y el pasivo corriente. Representa los recursos permanentes destinados a financiar el activo circulante. Un FM positivo indica solvencia a corto plazo, ya que el activo corriente es mayor que el exigible a corto plazo. Un FM negativo indica un riesgo de insolvencia, ya que la empresa financia parte de su activo fijo con deudas a corto plazo. El FM es una medida clave de la estabilidad financiera y debe analizarse junto con otros ratios de liquidez y endeudamiento.",
+      "question": "2. ¿Qué indica un fondo de maniobra negativo?",
+      "options": [
+        "Excelente liquidez",
+        "Riesgo de insolvencia a corto plazo",
+        "Alta rentabilidad",
+        "Fuerte capitalización"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>fondo de maniobra</u> (FM) negativo indica <u>riesgo de insolvencia</u> a corto plazo, ya que el <u>pasivo corriente</u> es mayor que el <u>activo corriente</u>.</p><p>Además, sugiere que la empresa está <u>financiando parte de su activo no corriente</u> con <u>deudas a corto plazo</u>, lo que genera un <u>desequilibrio financiero</u>.</p><p>Un FM positivo es deseable, ya que indica que la empresa tiene <u>recursos permanentes</u> para cubrir su activo circulante, reforzando su <u>solvencia</u>.</p>"
+    },
+    {
+      "intro": "El ratio de liquidez general se calcula como activo corriente dividido por pasivo corriente. Se considera adecuado un valor entre 1,5 y 2. Por debajo de 1,5 puede indicar problemas de liquidez. Por encima de 2, puede indicar inmovilización excesiva de recursos. Sin embargo, este ratio debe interpretarse con cuidado, ya que incluye existencias, que pueden no ser fácilmente convertibles en efectivo. Por eso, se complementa con el ratio de disponibilidad y el ratio ácido.",
+      "question": "3. ¿Cuál es el valor recomendado para el ratio de liquidez general?",
+      "options": [
+        "Entre 0,5 y 1",
+        "Entre 1,5 y 2",
+        "Superior a 3",
+        "Inferior a 0,5"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>ratio de liquidez general</u> se considera adecuado cuando su valor está entre <u>1,5 y 2</u>.</p><p>Valores inferiores pueden indicar <u>falta de liquidez</u>. Valores superiores pueden indicar <u>inmovilización excesiva</u> de recursos en activos poco rentables.</p><p>Este ratio debe <u>interpretarse con otros</u>, como el <u>ratio ácido</u> (sin existencias) o el <u>ratio de disponibilidad</u>, para evaluar la <u>calidad del activo corriente</u>.</p>"
+    },
+    {
+      "intro": "El ratio ácido (o ratio de liquidez inmediata) excluye las existencias del activo corriente, ya que son el componente menos líquido. Se calcula como (activo corriente - existencias) / pasivo corriente. Su valor recomendado es cercano a 1. Este ratio ofrece una visión más realista de la capacidad de pago inmediato, especialmente en empresas con altos niveles de inventario. Es una medida más exigente que el ratio de liquidez general.",
+      "question": "4. ¿Qué ventaja tiene el ratio ácido frente al ratio de liquidez general?",
+      "options": [
+        "Es más fácil de calcular",
+        "Excluye las existencias, ofreciendo una visión más realista de la liquidez",
+        "Se aplica solo a empresas grandes",
+        "No requiere el balance"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>ratio ácido</u> (activo corriente - existencias / pasivo corriente) <u>excluye las existencias</u>, que son el componente menos líquido del activo corriente.</p><p>Ofrece una <u>visión más conservadora y realista</u> de la capacidad de pago inmediato.</p><p>Es especialmente útil en empresas con <u>altos niveles de inventario</u>, donde el ratio de liquidez general podría dar una falsa sensación de seguridad.</p>"
+    },
+    {
+      "intro": "El ratio de disponibilidad mide la liquidez más inmediata, considerando solo los activos que pueden convertirse en efectivo sin ninguna transformación: tesorería y disponible. Se calcula como disponible / pasivo corriente. Un valor inferior a 0,3 puede indicar dificultades para hacer frente a pagos urgentes. Este ratio es el más exigente de todos los de liquidez y debe analizarse junto con los demás para tener una visión completa.",
+      "question": "5. ¿Qué activos incluye el ratio de disponibilidad?",
+      "options": [
+        "Existencias y clientes",
+        "Tesorería y disponible",
+        "Inmovilizado material",
+        "Capital social"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>ratio de disponibilidad</u> solo incluye <u>tesorería y disponible</u>, ya que son los activos que pueden utilizarse inmediatamente para pagar deudas.</p><p>Se calcula como <u>disponible / pasivo corriente</u>. Un valor <u>inferior a 0,3</u> puede indicar <u>riesgo de insolvencia inmediata</u>.</p><p>Es el ratio de liquidez <u>más conservador</u>, ya que no considera activos que requieran conversión (como clientes o existencias).</p>"
+    },
+    {
+      "intro": "El ratio de endeudamiento total mide la proporción entre el pasivo total y el patrimonio neto. Se calcula como pasivo total / patrimonio neto. Un valor superior a 1,4 indica una alta dependencia del financiamiento ajeno, lo que aumenta el riesgo financiero. Un valor inferior a 0,7 (ratio de autonomía financiera) también puede ser preocupante si indica falta de apalancamiento productivo. La estructura del pasivo (corto vs. largo plazo) también es clave para evaluar el riesgo.",
+      "question": "6. ¿Qué indica un ratio de endeudamiento superior a 1,4?",
+      "options": [
+        "Bajo riesgo financiero",
+        "Alta dependencia del financiamiento ajeno",
+        "Excelente liquidez",
+        "Alta rentabilidad operativa"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>ratio de endeudamiento</u> superior a <u>1,4</u> indica que el <u>pasivo total</u> es más de <u>1,4 veces el patrimonio neto</u>.</p><p>Esto significa que la empresa depende <u>excesivamente del financiamiento ajeno</u>, lo que aumenta su <u>riesgo financiero</u> y vulnerabilidad ante subidas de tipos de interés.</p><p>Este ratio debe analizarse junto con la <u>estructura del pasivo</u> y la <u>capacidad de generación de flujos de caja</u>.</p>"
+    },
+    {
+      "intro": "El ratio de autonomía financiera es el inverso del ratio de endeudamiento: patrimonio neto / pasivo total. Mide el grado de independencia financiera de la empresa. Un valor inferior a 0,7 indica descapitalización y alto riesgo. Un valor entre 0,7 y 1,4 se considera equilibrado. Un valor superior a 1,4 indica una empresa muy capitalizada, con baja dependencia del endeudamiento, pero posiblemente con baja rentabilidad por no aprovechar el apalancamiento.",
+      "question": "7. ¿Qué indica un ratio de autonomía financiera inferior a 0,7?",
+      "options": [
+        "Alta rentabilidad",
+        "Descapitalización y alto riesgo financiero",
+        "Buena liquidez",
+        "Elevada capacidad de inversión"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>ratio de autonomía financiera</u> inferior a <u>0,7</u> indica que el <u>patrimonio neto</u> cubre menos del <u>70%</u> del <u>pasivo total</u>.</p><p>Esto refleja una <u>alta dependencia del endeudamiento</u> y un <u>elevado riesgo financiero</u>.</p><p>La empresa tiene <u>poca capacidad</u> para absorber pérdidas sin entrar en insolvencia, lo que la hace vulnerable ante crisis económicas.</p>"
+    },
+    {
+      "intro": "El ratio de rotación de existencias mide cuántas veces se renuevan las existencias durante el ejercicio. Se calcula como coste de ventas / existencias medias. Un valor alto indica eficiencia en la gestión de inventarios. Un valor bajo puede indicar obsolescencia o exceso de stock. Este ratio debe compararse con el sector, ya que varía mucho según el tipo de actividad. Es clave para evaluar la eficiencia operativa de la empresa.",
+      "question": "8. ¿Qué mide el ratio de rotación de existencias?",
+      "options": [
+        "La rentabilidad del capital",
+        "Cuántas veces se renuevan las existencias en el ejercicio",
+        "El nivel de deuda a corto plazo",
+        "La liquidez inmediata"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>ratio de rotación de existencias</u> mide <u>cuántas veces</u> se <u>renuevan</u> las existencias durante el ejercicio.</p><p>Se calcula como <u>coste de ventas / existencias medias</u>. Un valor <u>alto</u> indica <u>eficiencia</u> en la gestión de inventarios. Un valor <u>bajo</u> puede indicar <u>obsolescencia</u> o <u>exceso de stock</u>.</p><p>Debe compararse con el <u>promedio del sector</u>, ya que varía mucho según el tipo de actividad (por ejemplo, comercio vs. industria).</p>"
+    },
+    {
+      "intro": "El ratio de rotación de clientes mide la eficiencia en la gestión del crédito comercial. Se calcula como ventas netas / clientes medios. Un valor alto indica que la empresa cobra rápidamente. Un valor bajo puede indicar problemas de cobro o políticas de crédito demasiado laxas. Este ratio debe analizarse junto con el periodo medio de cobro, que expresa el resultado en días.",
+      "question": "9. ¿Qué indica un bajo ratio de rotación de clientes?",
+      "options": [
+        "Cobros rápidos",
+        "Problemas de cobro o políticas de crédito laxas",
+        "Alta rentabilidad",
+        "Bajo nivel de ventas"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>bajo ratio de rotación de clientes</u> indica que la empresa tarda <u>más en cobrar</u> a sus clientes.</p><p>Puede deberse a <u>políticas de crédito demasiado laxas</u> o a <u>problemas de cobro</u> con clientes morosos.</p><p>Este ratio debe analizarse junto con el <u>periodo medio de cobro</u> (en días) y con el <u>estado de clientes de dudoso cobro</u> para evaluar el riesgo de impagos.</p>"
+    },
+    {
+      "intro": "El ratio de rentabilidad económica (ROA) mide la eficiencia con la que la empresa utiliza sus activos para generar beneficios. Se calcula como beneficio antes de intereses e impuestos (BAII) / activo total. Permite comparar empresas de distinto tamaño. Un ROA alto indica buena gestión de los recursos. Debe analizarse junto con el ROE para evaluar el impacto del apalancamiento.",
+      "question": "10. ¿Qué mide el ratio ROA?",
+      "options": [
+        "La rentabilidad del capital propio",
+        "La eficiencia en el uso de los activos para generar beneficios",
+        "El nivel de endeudamiento",
+        "La liquidez de la empresa"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>ROA</u> (Return on Assets) mide la <u>rentabilidad de los activos</u> de la empresa.</p><p>Se calcula como <u>BAII / activo total</u>. Indica cuánto beneficio genera cada euro invertido en activos.</p><p>Permite comparar la <u>eficiencia operativa</u> de empresas de distinto tamaño. Un ROA <u>alto</u> indica una <u>buena gestión</u> de los recursos productivos.</p>"
+    },
+    {
+      "intro": "El ratio de rentabilidad financiera (ROE) mide la rentabilidad del capital propio. Se calcula como beneficio neto / patrimonio neto. Es el ratio más relevante para los accionistas. Un ROE alto indica que la empresa genera buenos rendimientos sobre el capital invertido. Debe analizarse junto con el ROA para evaluar el impacto del apalancamiento financiero.",
+      "question": "11. ¿Qué mide el ratio ROE?",
+      "options": [
+        "La rentabilidad del capital propio",
+        "La eficiencia en el uso de los activos",
+        "El nivel de deuda",
+        "La liquidez inmediata"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>ROE</u> (Return on Equity) mide la <u>rentabilidad del capital propio</u>.</p><p>Se calcula como <u>beneficio neto / patrimonio neto</u>. Es el indicador más relevante para los <u>accionistas</u>, ya que muestra cuánto rentan sus inversiones.</p><p>Un ROE <u>alto</u> indica una <u>buena gestión</u> y <u>creación de valor</u>. Debe analizarse junto con el <u>ROA</u> para evaluar el <u>efecto del apalancamiento</u>.</p>"
+    },
+    {
+      "intro": "El periodo medio de pago a proveedores mide el tiempo medio que tarda la empresa en pagar a sus proveedores. Se calcula como (pasivo corriente / compras anuales) x 365. Un periodo largo puede indicar problemas de liquidez o una estrategia de financiación a costa de proveedores. Un periodo muy corto puede indicar pérdida de oportunidades de descuento por pronto pago.",
+      "question": "12. ¿Qué indica un periodo medio de pago a proveedores muy largo?",
+      "options": [
+        "Buena liquidez",
+        "Posible financiación a costa de proveedores o problemas de pago",
+        "Alta rentabilidad",
+        "Eficiencia en compras"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>periodo medio de pago</u> muy largo indica que la empresa <u>retiene el pago a proveedores</u> durante mucho tiempo.</p><p>Puede ser una <u>estrategia de financiación</u> (usar el crédito de proveedores), pero también puede indicar <u>problemas de liquidez</u>.</p><p>Si es excesivo, puede dañar las relaciones comerciales y limitar futuras compras a crédito.</p>"
+    },
+    {
+      "intro": "El periodo medio de cobro a clientes mide el tiempo medio que tarda la empresa en cobrar a sus clientes. Se calcula como (clientes / ventas anuales) x 365. Un periodo largo puede indicar problemas de gestión del crédito o clientes morosos. Un periodo muy corto puede indicar políticas de crédito muy restrictivas que limitan las ventas.",
+      "question": "13. ¿Qué indica un periodo medio de cobro muy largo?",
+      "options": [
+        "Cobros rápidos",
+        "Problemas de gestión del crédito o clientes morosos",
+        "Alta rentabilidad",
+        "Bajo nivel de ventas"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>periodo medio de cobro</u> muy largo indica que la empresa tarda <u>más en cobrar</u> a sus clientes.</p><p>Puede deberse a <u>problemas de gestión del crédito</u>, <u>clientes morosos</u> o <u>políticas de pago demasiado generosas</u>.</p><p>Esto afecta negativamente a la <u>liquidez</u> y puede requerir <u>financiación adicional</u> para hacer frente a los pagos.</p>"
+    },
+    {
+      "intro": "El periodo medio de almacenamiento de existencias mide el tiempo medio que permanecen las existencias en almacén. Se calcula como (existencias / coste de ventas) x 365. Un periodo largo puede indicar obsolescencia, exceso de stock o baja rotación. Un periodo muy corto puede indicar riesgo de ruptura de stock. Debe analizarse junto con el ratio de rotación de existencias.",
+      "question": "14. ¿Qué indica un periodo medio de almacenamiento muy largo?",
+      "options": [
+        "Alta eficiencia en inventarios",
+        "Obsolescencia o exceso de stock",
+        "Rápida rotación",
+        "Bajo nivel de ventas"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>periodo medio de almacenamiento</u> muy largo indica que las existencias <u>permanecen mucho tiempo</u> en almacén.</p><p>Puede deberse a <u>obsolescencia</u>, <u>exceso de stock</u> o <u>baja demanda</u>.</p><p>Esto aumenta los <u>costes de almacenamiento</u> y el riesgo de <u>deterioro o pérdida de valor</u>, afectando negativamente a la rentabilidad.</p>"
+    },
+    {
+      "intro": "El ciclo de explotación es el tiempo que transcurre desde que se adquieren las materias primas hasta que se cobra la venta del producto. Está formado por el periodo medio de almacenamiento, el periodo medio de fabricación, el periodo medio de venta y el periodo medio de cobro. Un ciclo largo requiere más financiación. Un ciclo corto mejora la liquidez. La gestión eficiente del ciclo es clave para la rentabilidad y solvencia.",
+      "question": "15. ¿Qué componentes forman el ciclo de explotación?",
+      "options": [
+        "Almacenamiento, fabricación, venta y cobro",
+        "Solo compras y ventas",
+        "Inversión y financiación",
+        "Amortización y depreciación"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>ciclo de explotación</u> comprende todas las fases del proceso productivo: <u>almacenamiento</u> de materias primas, <u>fabricación</u>, <u>venta</u> del producto y <u>cobro</u> al cliente.</p><p>Se mide en días y es clave para determinar la <u>necesidad de financiación</u> del activo circulante.</p><p>Un <u>ciclo corto</u> mejora la <u>liquidez</u> y reduce el riesgo. Un <u>ciclo largo</u> requiere más recursos financieros y aumenta la dependencia del crédito.</p>"
+    }
+  ]
+}
