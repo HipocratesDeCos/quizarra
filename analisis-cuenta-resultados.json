@@ -1,0 +1,185 @@
+{
+  "title": "Análisis de la Cuenta de Pérdidas y Ganancias",
+  "questions": [
+    {
+      "intro": "La cuenta de pérdidas y ganancias es el estado financiero que informa sobre el resultado del ejercicio, integrado por los ingresos y gastos del periodo. Existen dos modelos: normal y abreviado, según el tamaño y volumen de la empresa. Debe presentarse con una estructura funcional, clasificando los gastos por naturaleza (materias primas, personal, amortizaciones, etc.) o por función (coste de ventas, gastos comerciales, gastos administrativos). La elección del modelo afecta a la presentación, pero no al contenido esencial. Además, puede imputarse directamente al patrimonio neto ciertos ingresos o gastos, como las variaciones en el valor razonable de activos financieros disponibles para la venta.",
+      "question": "1. ¿Cómo se estructura la cuenta de pérdidas y ganancias según el PGC?",
+      "options": [
+        "Solo por naturaleza de los gastos",
+        "Por naturaleza o por función de los gastos",
+        "Solo por función de los gastos",
+        "Alfabéticamente por tipo de ingreso"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>cuenta de pérdidas y ganancias</u> puede estructurarse por <u>naturaleza</u> (clasificando los gastos por tipo: materias primas, servicios externos, personal, amortizaciones) o por <u>función</u> (distribuyendo los gastos entre coste de ventas, gastos comerciales, gastos administrativos, etc.).</p><p>Esta elección afecta a la presentación, pero no al resultado final. La estructura por <u>función</u> permite analizar mejor la rentabilidad por actividades, mientras que la por <u>naturaleza</u> es más sencilla y homogénea.</p><p>Además, el PGC permite que ciertos resultados, como los derivados de <u>activos financieros a valor razonable con cambios en patrimonio neto</u>, se imputen directamente al patrimonio, sin pasar por la cuenta de resultados.</p>"
+    },
+    {
+      "intro": "El beneficio bruto de explotación se calcula como ventas netas menos coste de ventas. Es una medida clave de la eficiencia operativa de la empresa, ya que refleja la rentabilidad del negocio principal. Un beneficio bruto creciente indica una buena gestión de los costes de producción o compras. Este margen debe analizarse junto con otros indicadores, como el periodo medio de cobro o el ratio de rotación de existencias, para evaluar la calidad del resultado.",
+      "question": "2. ¿Qué indica un aumento del beneficio bruto de explotación?",
+      "options": [
+        "Mayor eficiencia en la gestión de costes de producción o compras",
+        "Mayor endeudamiento",
+        "Mejora del activo fijo",
+        "Reducción del capital social"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Un <u>aumento del beneficio bruto de explotación</u> (ventas netas - coste de ventas) indica <u>mayor eficiencia</u> en la gestión de los <u>costes de producción o compras</u>.</p><p>Este margen es clave para evaluar la <u>rentabilidad del negocio principal</u>. Si crece más que las ventas, puede indicar <u>mejora en la gestión de proveedores</u> o <u>optimización de procesos productivos</u>.</p><p>Debe analizarse junto con otros indicadores, como el <u>ratio de rotación de existencias</u> o el <u>periodo medio de cobro</u>, para evaluar la calidad del resultado.</p>"
+    },
+    {
+      "intro": "El beneficio de explotación (BAII) se obtiene restando al beneficio bruto los gastos de personal, los gastos generales y las amortizaciones. Es un indicador clave de la rentabilidad operativa de la empresa, independientemente de su estructura financiera. Permite comparar empresas con diferentes niveles de endeudamiento. Un BAII positivo y creciente indica una gestión operativa eficiente. Debe analizarse en serie temporal y en comparación con el sector.",
+      "question": "3. ¿Qué mide el beneficio de explotación (BAII)?",
+      "options": [
+        "La rentabilidad del capital propio",
+        "La rentabilidad operativa de la empresa, independiente del endeudamiento",
+        "El nivel de deuda a corto plazo",
+        "La liquidez inmediata"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>beneficio de explotación</u> (BAII) mide la <u>rentabilidad operativa</u> de la empresa, es decir, la capacidad de generar beneficios a partir de su actividad principal.</p><p>Se calcula como <u>ventas netas - coste de ventas - gastos de explotación</u>. Es independiente del <u>endeudamiento</u> y de los <u>ingresos financieros</u>, lo que permite comparar empresas con estructuras financieras distintas.</p><p>Un BAII <u>positivo y creciente</u> indica una <u>buena gestión operativa</u> y es clave para la sostenibilidad a largo plazo.</p>"
+    },
+    {
+      "intro": "El beneficio antes de impuestos (BAI) se obtiene sumando al beneficio de explotación los ingresos y gastos financieros. Incluye el resultado de actividades no operativas, como intereses de deudas, dividendos recibidos o ganancias por venta de activos. Este resultado es clave para calcular el impuesto sobre sociedades. Su evolución debe analizarse para detectar dependencia excesiva de ingresos financieros o problemas de coste de financiación.",
+      "question": "4. ¿Qué componentes forman el beneficio antes de impuestos?",
+      "options": [
+        "Ventas netas y coste de ventas",
+        "Beneficio de explotación más ingresos y gastos financieros",
+        "Solo el resultado del ejercicio",
+        "Amortizaciones y provisiones"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>beneficio antes de impuestos</u> (BAI) se calcula como <u>beneficio de explotación + ingresos financieros - gastos financieros</u>.</p><p>Incluye elementos no operativos como <u>intereses de deudas</u>, <u>dividendos recibidos</u> o <u>ganancias por venta de activos</u>.</p><p>Es clave para calcular el <u>impuesto sobre sociedades</u>. Su evolución debe analizarse para detectar <u>dependencia de ingresos financieros</u> o <u>problemas de coste de financiación</u>.</p>"
+    },
+    {
+      "intro": "El beneficio neto del ejercicio es el resultado final después de deducir el impuesto sobre sociedades. Se distribuye entre dividendos a los socios y reservas. Su evolución a lo largo del tiempo es un indicador clave de la rentabilidad y sostenibilidad de la empresa. Debe analizarse junto con el ROE (rentabilidad financiera) para evaluar el rendimiento para los accionistas. Un beneficio neto creciente indica buena gestión, siempre que no se deba a ingresos no recurrentes.",
+      "question": "5. ¿Qué indica un crecimiento sostenido del beneficio neto?",
+      "options": [
+        "Buena gestión operativa y financiera",
+        "Mayor endeudamiento",
+        "Reducción de activos",
+        "Disminución de capital social"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Un <u>crecimiento sostenido del beneficio neto</u> indica <u>buena gestión operativa y financiera</u>, siempre que no se deba a ingresos no recurrentes.</p><p>Este resultado es clave para los <u>accionistas</u>, ya que determina la <u>rentabilidad de su inversión</u> (ROE).</p><p>Debe analizarse junto con el <u>ROA</u> y el <u>apalancamiento financiero</u> para evaluar si el crecimiento es sostenible y no depende exclusivamente del endeudamiento.</p>"
+    },
+    {
+      "intro": "La estructura funcional de la cuenta de resultados permite analizar la rentabilidad por actividades. Al clasificar los gastos por función (comercial, administrativo, financiero), se puede identificar qué áreas generan más valor y cuáles tienen márgenes ajustados. Esta estructura es más útil que la por naturaleza para la toma de decisiones de gestión. Permite detectar ineficiencias en áreas específicas y tomar medidas correctoras.",
+      "question": "6. ¿Qué ventaja ofrece la estructura funcional de la cuenta de resultados?",
+      "options": [
+        "Permite analizar la rentabilidad por actividades",
+        "Simplifica el cálculo del impuesto",
+        "Reduce el beneficio neto",
+        "Facilita la auditoría"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>La <u>estructura funcional</u> de la cuenta de resultados permite <u>analizar la rentabilidad por actividades</u> (comercial, administrativa, financiera).</p><p>Al clasificar los gastos por función, se puede identificar qué áreas generan <u>más valor</u> y cuáles tienen <u>márgenes ajustados</u>.</p><p>Esta estructura es más útil que la por <u>naturaleza</u> para la <u>toma de decisiones de gestión</u>, ya que permite detectar ineficiencias y tomar medidas correctoras.</p>"
+    },
+    {
+      "intro": "Los ingresos y gastos imputados directamente al patrimonio neto son aquellos que, por su naturaleza, no pasan por la cuenta de resultados. Por ejemplo, las variaciones en el valor razonable de activos financieros disponibles para la venta o las diferencias de conversión en operaciones con el extranjero. Estos resultados se registran en el estado de cambios en el patrimonio neto y solo se trasladan a resultados cuando se realizan (por ejemplo, al vender el activo).",
+      "question": "7. ¿Dónde se registran los ingresos imputados directamente al patrimonio neto?",
+      "options": [
+        "En la cuenta de pérdidas y ganancias",
+        "En el estado de cambios en el patrimonio neto",
+        "En el balance de situación",
+        "En la memoria"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Los <u>ingresos y gastos imputados directamente al patrimonio neto</u> se registran en el <u>estado de cambios en el patrimonio neto</u>, no en la cuenta de resultados.</p><p>Esto ocurre con <u>variaciones en el valor razonable</u> de ciertos activos financieros o <u>diferencias de conversión</u> en operaciones con el extranjero.</p><p>Estos resultados solo se <u>trasladan a la cuenta de resultados</u> cuando se <u>realizan</u> (por ejemplo, al vender el activo). Este tratamiento evita la volatilidad innecesaria del resultado del ejercicio.</p>"
+    },
+    {
+      "intro": "El análisis vertical de la cuenta de resultados permite conocer la estructura porcentual de ingresos y gastos. Cada partida se expresa como porcentaje de las ventas netas. Esto facilita la comparación entre ejercicios y con empresas del mismo sector. Por ejemplo, si los gastos de personal representan el 30% de las ventas, se puede evaluar si es un porcentaje adecuado según el sector. Este análisis es clave para detectar desviaciones en la estructura de costes.",
+      "question": "8. ¿Qué permite el análisis vertical de la cuenta de resultados?",
+      "options": [
+        "Comparar partidas como porcentaje de las ventas netas",
+        "Calcular el beneficio bruto",
+        "Determinar el valor de mercado de las acciones",
+        "Evaluar solo el activo fijo"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis vertical</u> de la cuenta de resultados permite <u>comparar cada partida</u> (ingresos, gastos) como <u>porcentaje de las ventas netas</u>.</p><p>Por ejemplo, si los <u>gastos de personal</u> son el 30% de las ventas, se puede evaluar si es un porcentaje <u>adecuado según el sector</u>.</p><p>Este análisis es clave para detectar <u>desviaciones en la estructura de costes</u> y evaluar la <u>eficiencia operativa</u> de la empresa.</p>"
+    },
+    {
+      "intro": "El análisis horizontal de la cuenta de resultados compara los valores de cada partida entre diferentes ejercicios. Permite detectar tendencias en ingresos, costes y beneficios. Por ejemplo, si las ventas crecen un 10% pero los gastos de personal crecen un 15%, puede indicar una pérdida de eficiencia. Este análisis debe complementarse con el vertical para obtener una visión completa de la evolución de la rentabilidad.",
+      "question": "9. ¿Qué muestra el análisis horizontal de la cuenta de resultados?",
+      "options": [
+        "La estructura porcentual de los ingresos",
+        "La evolución de ingresos, costes y beneficios entre ejercicios",
+        "El valor de mercado de las acciones",
+        "La liquidez inmediata"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>análisis horizontal</u> de la cuenta de resultados muestra la <u>evolución</u> de <u>ingresos, costes y beneficios</u> entre <u>dos o más ejercicios</u>.</p><p>Permite detectar <u>tendencias</u> (crecimiento, estancamiento, deterioro) y evaluar la <u>gestión financiera</u> de la empresa a lo largo del tiempo.</p><p>Debe complementarse con el <u>análisis vertical</u> para obtener una <u>visión completa</u> de la evolución de la rentabilidad.</p>"
+    },
+    {
+      "intro": "El margen de beneficio bruto es el porcentaje de beneficio bruto sobre las ventas netas. Se calcula como (beneficio bruto / ventas netas) x 100. Un margen alto indica buena gestión de los costes de producción o compras. Este ratio varía mucho según el sector: un supermercado tiene márgenes bajos pero alta rotación, mientras que una joyería tiene márgenes altos pero baja rotación. Es clave para evaluar la competitividad del modelo de negocio.",
+      "question": "10. ¿Qué indica un alto margen de beneficio bruto?",
+      "options": [
+        "Buena gestión de los costes de producción o compras",
+        "Alto nivel de deuda",
+        "Baja rotación de existencias",
+        "Reducción del capital social"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Un <u>alto margen de beneficio bruto</u> indica <u>buena gestión de los costes de producción o compras</u>.</p><p>Se calcula como <u>(beneficio bruto / ventas netas) x 100</u>. Es clave para evaluar la <u>competitividad del modelo de negocio</u>.</p><p>Varía mucho según el sector: un <u>supermercado</u> tiene márgenes bajos pero <u>alta rotación</u>, mientras que una <u>joyería</u> tiene márgenes altos pero <u>baja rotación</u>.</p>"
+    },
+    {
+      "intro": "El margen de beneficio neto es el porcentaje de beneficio neto sobre las ventas netas. Se calcula como (beneficio neto / ventas netas) x 100. Mide la rentabilidad final de la empresa después de todos los gastos e impuestos. Un margen creciente indica mejora en la eficiencia operativa y financiera. Debe analizarse junto con el ROE para evaluar el rendimiento para los accionistas.",
+      "question": "11. ¿Qué mide el margen de beneficio neto?",
+      "options": [
+        "La rentabilidad final de la empresa después de todos los gastos",
+        "La eficiencia en el uso de los activos",
+        "El nivel de deuda",
+        "La liquidez inmediata"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>margen de beneficio neto</u> mide la <u>rentabilidad final</u> de la empresa después de todos los <u>gastos e impuestos</u>.</p><p>Se calcula como <u>(beneficio neto / ventas netas) x 100</u>. Un margen <u>creciente</u> indica mejora en la <u>eficiencia operativa y financiera</u>.</p><p>Debe analizarse junto con el <u>ROE</u> para evaluar el <u>rendimiento para los accionistas</u>.</p>"
+    },
+    {
+      "intro": "El punto muerto o umbral de rentabilidad es el nivel de ventas en el que los ingresos igualan a los costes totales (fijos y variables). Por debajo de este punto, la empresa tiene pérdidas; por encima, beneficios. Es una herramienta clave para la planificación financiera y la toma de decisiones. Permite evaluar el riesgo operativo y el impacto de cambios en precios, costes o volumen de ventas.",
+      "question": "12. ¿Qué indica el punto muerto?",
+      "options": [
+        "El nivel de ventas donde los ingresos igualan a los costes",
+        "El beneficio máximo posible",
+        "El nivel de deuda óptimo",
+        "La liquidez inmediata"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>punto muerto</u> o <u>umbral de rentabilidad</u> es el nivel de ventas donde los <u>ingresos igualan a los costes totales</u> (fijos y variables).</p><p>Por debajo de este punto, la empresa tiene <u>pérdidas</u>; por encima, <u>beneficios</u>.</p><p>Es una herramienta clave para la <u>planificación financiera</u> y la <u>toma de decisiones</u>. Permite evaluar el <u>riesgo operativo</u> y el impacto de cambios en precios, costes o volumen de ventas.</p>"
+    },
+    {
+      "intro": "Los costes fijos son aquellos que no varían con el volumen de producción o ventas, como alquileres, sueldos fijos o amortizaciones. Los costes variables sí varían con el volumen, como materias primas o comisiones de ventas. Esta distinción es clave para el análisis de rentabilidad y el cálculo del punto muerto. Una empresa con altos costes fijos tiene mayor riesgo operativo, ya que necesita un volumen mínimo de ventas para cubrirlos.",
+      "question": "13. ¿Qué caracteriza a los costes fijos?",
+      "options": [
+        "No varían con el volumen de producción o ventas",
+        "Varían directamente con las ventas",
+        "Son siempre más altos que los variables",
+        "Dependen del tipo de producto"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Los <u>costes fijos</u> son aquellos que <u>no varían</u> con el volumen de producción o ventas, como <u>alquileres</u>, <u>sueldos fijos</u> o <u>amortizaciones</u>.</p><p>Los <u>costes variables</u> sí varían con el volumen, como <u>materias primas</u> o <u>comisiones de ventas</u>.</p><p>Esta distinción es clave para el <u>análisis de rentabilidad</u> y el <u>cálculo del punto muerto</u>. Una empresa con altos costes fijos tiene <u>mayor riesgo operativo</u>.</p>"
+    },
+    {
+      "intro": "El apalancamiento operativo mide el grado en que los costes fijos afectan a la rentabilidad. Se calcula como margen de contribución / beneficio de explotación. Un alto apalancamiento operativo significa que pequeños cambios en las ventas generan grandes cambios en el beneficio. Esto puede ser beneficioso en épocas de crecimiento, pero peligroso en crisis. Es clave para evaluar el riesgo operativo de la empresa.",
+      "question": "14. ¿Qué indica un alto apalancamiento operativo?",
+      "options": [
+        "Pequeños cambios en ventas generan grandes cambios en beneficio",
+        "Bajo riesgo operativo",
+        "Alta liquidez",
+        "Baja rentabilidad"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Un <u>alto apalancamiento operativo</u> indica que <u>pequeños cambios</u> en las ventas generan <u>grandes cambios</u> en el beneficio.</p><p>Se calcula como <u>margen de contribución / beneficio de explotación</u>.</p><p>Puede ser <u>beneficioso</u> en épocas de crecimiento, pero <u>peligroso</u> en crisis. Es clave para evaluar el <u>riesgo operativo</u> de la empresa.</p>"
+    },
+    {
+      "intro": "El análisis de sensibilidad evalúa cómo cambia el resultado ante variaciones en variables clave como precios, costes o volumen de ventas. Es una herramienta de planificación financiera que permite anticipar escenarios y tomar decisiones más informadas. Por ejemplo, ¿qué pasa si el precio de venta baja un 10%? ¿O si los costes de materias primas suben un 15%? Este análisis ayuda a identificar los factores críticos de éxito y a preparar planes de contingencia.",
+      "question": "15. ¿Para qué sirve el análisis de sensibilidad?",
+      "options": [
+        "Para evaluar cómo cambia el resultado ante variaciones en variables clave",
+        "Para calcular el beneficio neto",
+        "Para determinar el valor de mercado de las acciones",
+        "Para justificar la auditoría"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis de sensibilidad</u> evalúa cómo cambia el <u>resultado</u> ante <u>variaciones</u> en variables clave como <u>precios</u>, <u>costes</u> o <u>volumen de ventas</u>.</p><p>Es una herramienta de <u>planificación financiera</u> que permite anticipar <u>escenarios</u> y tomar decisiones más informadas.</p><p>Ayuda a identificar los <u>factores críticos de éxito</u> y a preparar <u>planes de contingencia</u>.</p>"
+    }
+  ]
+}
