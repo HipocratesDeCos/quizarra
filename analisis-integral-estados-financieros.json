@@ -1,0 +1,185 @@
+{
+  "title": "Análisis Integral de Estados Financieros",
+  "questions": [
+    {
+      "intro": "El análisis integral de estados financieros es un proceso sistemático que combina diferentes técnicas (horizontal, vertical, por ratios, sectorial) para obtener una visión completa de la situación de la empresa. No se limita a un solo estado financiero, sino que integra el balance, la cuenta de resultados, el estado de flujos de efectivo y la memoria. El objetivo es evaluar la solvencia, liquidez, rentabilidad y eficiencia, y detectar posibles riesgos o oportunidades. Este análisis es clave para la toma de decisiones estratégicas por parte de gestores, inversores y acreedores.",
+      "question": "1. ¿Qué caracteriza al análisis integral de estados financieros?",
+      "options": [
+        "Combina diferentes técnicas para obtener una visión completa",
+        "Se limita al balance",
+        "Solo analiza el beneficio neto",
+        "Ignora el estado de flujos de efectivo"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis integral</u> combina <u>diferentes técnicas</u> (horizontal, vertical, por ratios, sectorial) para obtener una <u>visión completa</u> de la empresa.</p><p>Integra el <u>balance</u>, la <u>cuenta de resultados</u>, el <u>estado de flujos de efectivo</u> y la <u>memoria</u>.</p><p>Evalúa la <u>solvencia</u>, <u>liquidez</u>, <u>rentabilidad</u> y <u>eficiencia</u>, y es clave para la <u>toma de decisiones estratégicas</u>.</p>"
+    },
+    {
+      "intro": "El análisis horizontal permite comparar los estados financieros de diferentes ejercicios para detectar tendencias. Muestra las variaciones absolutas y relativas de cada partida. Por ejemplo, si el activo total ha crecido un 20%, puede indicar expansión. Si el pasivo corriente ha crecido un 50%, puede indicar problemas de liquidez. Este análisis debe complementarse con el vertical y por ratios para una visión integral.",
+      "question": "2. ¿Qué muestra el análisis horizontal?",
+      "options": [
+        "La evolución de las partidas entre ejercicios",
+        "La estructura porcentual del patrimonio",
+        "Solo el resultado del último ejercicio",
+        "El valor de mercado de las acciones"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis horizontal</u> muestra la <u>evolución</u> de las partidas entre <u>dos o más ejercicios</u>.</p><p>Calcula <u>variaciones absolutas</u> y <u>relativas</u>. Por ejemplo, un crecimiento del <u>pasivo corriente</u> del <u>50%</u> puede indicar <u>problemas de liquidez</u>.</p><p>Debe complementarse con el <u>análisis vertical</u> y por <u>ratios</u> para una <u>visión integral</u>.</p>"
+    },
+    {
+      "intro": "El análisis vertical expresa cada partida como porcentaje del total del activo (en el balance) o de las ventas netas (en la cuenta de resultados). Permite conocer la estructura del patrimonio y la importancia relativa de cada partida. Por ejemplo, si el inmovilizado material es el 70% del activo, indica una empresa con alta inversión en activo fijo. Este análisis es clave para comparar empresas de distinto tamaño.",
+      "question": "3. ¿Qué permite el análisis vertical?",
+      "options": [
+        "Comparar empresas de distinto tamaño mediante estructuras porcentuales",
+        "Calcular el beneficio neto",
+        "Determinar el valor de mercado",
+        "Evaluar solo el activo fijo"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis vertical</u> permite <u>comparar empresas de distinto tamaño</u> porque expresa cada partida como un <u>porcentaje</u> del total.</p><p>Por ejemplo, si el <u>inmovilizado material</u> es el <u>70%</u> del activo, indica una empresa con <u>alta inversión en activo fijo</u>.</p><p>Es clave para evaluar la <u>estructura financiera</u> y detectar desequilibrios.</p>"
+    },
+    {
+      "intro": "El análisis por ratios combina diferentes indicadores para evaluar aspectos clave como liquidez, solvencia, rentabilidad y eficiencia. Los ratios deben interpretarse en conjunto, no de forma aislada. Por ejemplo, un ratio de liquidez bajo puede ser aceptable si el periodo medio de cobro es muy corto. La combinación de ratios ofrece una visión más realista de la situación financiera.",
+      "question": "4. ¿Por qué deben interpretarse los ratios en conjunto?",
+      "options": [
+        "Porque un ratio aislado no ofrece una visión completa",
+        "Porque son difíciles de calcular",
+        "Solo sirven para auditorías",
+        "No deben interpretarse juntos"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Los <u>ratios</u> deben interpretarse <u>en conjunto</u> porque un <u>ratio aislado</u> no ofrece una <u>visión completa</u> de la situación.</p><p>Por ejemplo, un <u>ratio de liquidez</u> bajo puede ser <u>aceptable</u> si el <u>periodo medio de cobro</u> es muy corto.</p><p>La combinación de ratios ofrece una <u>visión más realista</u> y permite detectar <u>riesgos</u> ocultos.</p>"
+    },
+    {
+      "intro": "El análisis sectorial compara los indicadores de la empresa con la media del sector. Permite evaluar si la empresa está por encima o por debajo del promedio en rentabilidad, liquidez o eficiencia. Es una herramienta clave para la toma de decisiones estratégicas. Debe complementarse con el análisis interno para una visión completa.",
+      "question": "5. ¿Qué permite el análisis sectorial?",
+      "options": [
+        "Comparar con la media del sector",
+        "Calcular el beneficio bruto",
+        "Determinar el valor de mercado",
+        "Justificar la auditoría"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis sectorial</u> permite <u>comparar</u> los indicadores de la empresa con la <u>media del sector</u>.</p><p>Evalúa si la empresa tiene una <u>rentabilidad</u>, <u>liquidez</u> o <u>eficiencia</u> superior o inferior al promedio.</p><p>Es clave para la <u>toma de decisiones estratégicas</u> y debe complementarse con el <u>análisis interno</u>.</p>"
+    },
+    {
+      "intro": "El estado de flujos de efectivo es una herramienta clave en el análisis integral. Muestra los flujos de explotación, inversión y financiación. Un flujo de explotación positivo indica que la actividad principal genera efectivo. Es un indicador más realista que el beneficio neto, ya que no se basa en el principio del devengo.",
+      "question": "6. ¿Qué indica un flujo de explotación positivo?",
+      "options": [
+        "Que la actividad principal genera efectivo",
+        "Que hay pérdidas",
+        "Que la empresa no vende",
+        "Que hay mucho pasivo"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Un <u>flujo de explotación positivo</u> indica que la <u>actividad principal</u> de la empresa <u>genera efectivo</u>.</p><p>Es un indicador más <u>realista</u> que el <u>beneficio neto</u>, ya que no se basa en el principio del <u>devengo</u>.</p><p>Es clave para evaluar la <u>capacidad de generación de caja</u> y la <u>solvencia</u> a largo plazo.</p>"
+    },
+    {
+      "intro": "La memoria contiene información detallada sobre las políticas contables, partidas significativas, riesgos, contingencias y operaciones con partes vinculadas. Es una parte esencial del análisis integral, ya que amplía y comenta la información de los demás estados financieros. Sin su análisis, la visión sería incompleta.",
+      "question": "7. ¿Por qué es importante analizar la memoria?",
+      "options": [
+        "Porque amplía y comenta la información de los estados financieros",
+        "Porque sustituye al balance",
+        "Solo sirve para auditorías",
+        "No es relevante"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>La <u>memoria</u> es esencial porque <u>amplía y comenta</u> la información de los <u>estados financieros</u>.</p><p>Contiene detalles sobre <u>políticas contables</u>, <u>riesgos</u>, <u>contingencias</u> y <u>operaciones con partes vinculadas</u>.</p><p>Sin su análisis, la visión sería <u>incompleta</u>. Es clave para expresar la <u>imagen fiel</u>.</p>"
+    },
+    {
+      "intro": "El análisis integral debe ser dinámico y actualizarse periódicamente. Los cambios en el entorno económico, la competencia o la regulación pueden alterar rápidamente la situación financiera. Por ello, es recomendable realizar un análisis integral al menos una vez al año, y más frecuentemente en sectores volátiles.",
+      "question": "8. ¿Con qué frecuencia debe realizarse el análisis integral?",
+      "options": [
+        "Una vez cada cinco años",
+        "Al menos una vez al año",
+        "Solo cuando hay auditoría",
+        "Nunca, es estático"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>análisis integral</u> debe <u>actualizarse periódicamente</u>, al menos <u>una vez al año</u>.</p><p>Los cambios en el <u>entorno económico</u>, la <u>competencia</u> o la <u>regulación</u> pueden alterar rápidamente la situación.</p><p>En sectores <u>volátiles</u>, puede ser necesario hacerlo con más frecuencia.</p>"
+    },
+    {
+      "intro": "El análisis integral debe integrarse en el cuadro de mando. Este cuadro resume los indicadores clave de desempeño (KPI) y permite a la dirección tomar decisiones más informadas. Debe ser simple, claro y enfocado en la información más relevante, con una perspectiva de coste-beneficio.",
+      "question": "9. ¿Dónde debe integrarse el análisis integral?",
+      "options": [
+        "En el cuadro de mando",
+        "En el libro diario",
+        "En el balance",
+        "En el libro de actas"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis integral</u> debe integrarse en el <u>cuadro de mando</u>.</p><p>Este cuadro resume los <u>indicadores clave de desempeño</u> (KPI) y permite a la <u>dirección</u> tomar <u>decisiones más informadas</u>.</p><p>Debe ser <u>simple</u>, <u>claro</u> y enfocado en la <u>información más relevante</u>.</p>"
+    },
+    {
+      "intro": "La utilidad del análisis integral depende del usuario. Para un gestor, sirve para mejorar la eficiencia. Para un inversor, para evaluar el potencial de rentabilidad. Para un acreedor, para analizar el riesgo de impago. Cada usuario debe adaptar el análisis a sus necesidades específicas.",
+      "question": "10. ¿Depende la utilidad del análisis integral del usuario?",
+      "options": [
+        "No, es igual para todos",
+        "Sí, depende del usuario",
+        "Solo sirve para gestores",
+        "Solo sirve para inversores"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>utilidad del análisis integral</u> <u>depende del usuario</u>.</p><p>Para un <u>gestor</u>, sirve para <u>mejorar la eficiencia</u>. Para un <u>inversor</u>, para evaluar el <u>potencial de rentabilidad</u>. Para un <u>acreedor</u>, para analizar el <u>riesgo de impago</u>.</p><p>Cada usuario debe <u>adaptar el análisis</u> a sus <u>necesidades específicas</u>.</p>"
+    },
+    {
+      "intro": "El análisis integral debe basarse en la imagen fiel de las cuentas anuales. Si los estados financieros no expresan la imagen fiel, el análisis será erróneo. Por ello, es fundamental que los estados estén formulados conforme al PGC y que los principios contables (devengo, prudencia, empresa en funcionamiento) se apliquen correctamente.",
+      "question": "11. ¿Qué condición es fundamental para un buen análisis integral?",
+      "options": [
+        "Que los estados financieros expresen la imagen fiel",
+        "Que el beneficio sea alto",
+        "Que haya mucho activo fijo",
+        "Que el pasivo sea bajo"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis integral</u> requiere que los <u>estados financieros</u> expresen la <u>imagen fiel</u>.</p><p>Si no es así, el análisis será <u>erróneo</u>.</p><p>Es fundamental que se apliquen correctamente los <u>principios contables</u> (devengo, prudencia, empresa en funcionamiento).</p>"
+    },
+    {
+      "intro": "El análisis integral debe ser crítico y no limitarse a los números. Debe interpretar los datos en contexto, considerando factores cualitativos como la gestión, el entorno económico o la estrategia empresarial. Un buen análisis combina lo cuantitativo y lo cualitativo.",
+      "question": "12. ¿Debe el análisis integral ser crítico?",
+      "options": [
+        "Sí, debe interpretar los datos en contexto",
+        "No, basta con los números",
+        "Solo para auditorías",
+        "No es necesario"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis integral</u> debe ser <u>crítico</u> y no limitarse a los <u>números</u>.</p><p>Debe interpretar los datos en <u>contexto</u>, considerando factores <u>cualitativos</u> como la <u>gestión</u>, el <u>entorno económico</u> o la <u>estrategia</u>.</p><p>Un buen análisis <u>combina lo cuantitativo y lo cualitativo</u>.</p>"
+    },
+    {
+      "intro": "El análisis integral debe guiar la toma de decisiones. Sus conclusiones deben traducirse en acciones concretas, como ajustar la política de precios, mejorar la gestión del crédito o replantear la estrategia de inversión. El análisis no es un fin en sí mismo, sino una herramienta para la mejora continua.",
+      "question": "13. ¿Cuál es el objetivo final del análisis integral?",
+      "options": [
+        "Guíar la toma de decisiones",
+        "Cumplir con la ley",
+        "Justificar la auditoría",
+        "Aumentar el beneficio"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El objetivo final del <u>análisis integral</u> es <u>guíar la toma de decisiones</u>.</p><p>Sus conclusiones deben traducirse en <u>acciones concretas</u>, como ajustar la <u>política de precios</u> o <u>mejorar la gestión del crédito</u>.</p><p>No es un fin en sí mismo, sino una herramienta para la <u>mejora continua</u>.</p>"
+    },
+    {
+      "intro": "El análisis integral debe ser accesible para todos los usuarios. Aunque es técnico, debe presentarse de forma clara y comprensible. El uso de gráficos, cuadros resumen y explicaciones sencillas facilita su comprensión y toma de decisiones.",
+      "question": "14. ¿Debe ser accesible el análisis integral?",
+      "options": [
+        "Sí, debe presentarse de forma clara y comprensible",
+        "No, solo para expertos",
+        "Solo para directivos",
+        "No es necesario"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis integral</u> debe ser <u>accesible</u> para todos los usuarios.</p><p>Aunque es <u>técnico</u>, debe presentarse de forma <u>clara y comprensible</u>.</p><p>El uso de <u>gráficos</u>, <u>cuadros resumen</u> y <u>explicaciones sencillas</u> facilita su <u>comprensión</u> y <u>toma de decisiones</u>.</p>"
+    },
+    {
+      "intro": "El análisis integral es una herramienta de mejora continua. No se realiza una sola vez, sino que debe repetirse periódicamente para evaluar el impacto de las decisiones tomadas y ajustar la estrategia. Este enfoque permite una evolución constante hacia una mayor eficiencia y rentabilidad.",
+      "question": "15. ¿Es el análisis integral una herramienta de mejora continua?",
+      "options": [
+        "Sí, debe repetirse periódicamente",
+        "No, es estático",
+        "Solo para grandes empresas",
+        "No es necesario"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis integral</u> es una <u>herramienta de mejora continua</u>.</p><p>No se realiza <u>una sola vez</u>, sino que debe <u>repetirse periódicamente</u>.</p><p>Permite evaluar el <u>impacto de las decisiones</u> y <u>ajustar la estrategia</u>, promoviendo una <u>evolución constante</u> hacia la <u>eficiencia</u> y <u>rentabilidad</u>.</p>"
+    }
+  ]
+}
