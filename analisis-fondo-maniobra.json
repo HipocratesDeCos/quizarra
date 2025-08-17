@@ -1,0 +1,185 @@
+{
+  "title": "Análisis del Fondo de Maniobra",
+  "questions": [
+    {
+      "intro": "El fondo de maniobra (FM) es la diferencia entre el activo corriente y el pasivo corriente. Representa los recursos permanentes destinados a financiar el activo circulante. Un FM positivo indica solvencia a corto plazo, ya que el activo corriente es mayor que el exigible a corto plazo. Un FM negativo indica un riesgo de insolvencia, ya que la empresa financia parte de su activo fijo con deudas a corto plazo. El FM es una medida clave de la estabilidad financiera y debe analizarse junto con otros ratios de liquidez y el ciclo de explotación.",
+      "question": "1. ¿Qué indica un fondo de maniobra negativo?",
+      "options": [
+        "Excelente liquidez",
+        "Riesgo de insolvencia a corto plazo",
+        "Alta rentabilidad",
+        "Fuerte capitalización"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>fondo de maniobra</u> (FM) negativo indica <u>riesgo de insolvencia</u> a corto plazo, ya que el <u>pasivo corriente</u> es mayor que el <u>activo corriente</u>.</p><p>Además, sugiere que la empresa está <u>financiando parte de su activo no corriente</u> con <u>deudas a corto plazo</u>, lo que genera un <u>desequilibrio financiero</u>.</p><p>Un FM positivo es deseable, ya que indica que la empresa tiene <u>recursos permanentes</u> para cubrir su activo circulante, reforzando su <u>solvencia</u>.</p>"
+    },
+    {
+      "intro": "El fondo de maniobra puede ser negativo y, sin embargo, la empresa no estar en riesgo de suspensión de pagos si existe un desfase favorable entre los plazos de cobro y pago. Por ejemplo, si el periodo medio de cobro a clientes es de 30 días y el periodo medio de pago a proveedores es de 90 días, la empresa cobra antes de tener que pagar. Esto genera un flujo de caja positivo que compensa el FM negativo. Este modelo es común en hipermercados o compañías de seguros.",
+      "question": "2. ¿Puede una empresa con fondo de maniobra negativo no estar en riesgo de suspensión de pagos?",
+      "options": [
+        "No, siempre está en riesgo",
+        "Sí, si el periodo de cobro es menor que el de pago",
+        "Solo si tiene mucho patrimonio neto",
+        "Solo si no tiene deudas"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Sí, una empresa con <u>fondo de maniobra negativo</u> puede <u>no estar en riesgo de suspensión de pagos</u> si existe un <u>desfase favorable</u> entre los plazos de cobro y pago.</p><p>Por ejemplo, si el <u>periodo medio de cobro</u> es de <u>30 días</u> y el <u>periodo medio de pago</u> es de <u>90 días</u>, la empresa <u>cobra antes</u> de tener que pagar a sus proveedores.</p><p>Este flujo de caja positivo compensa el FM negativo. Este modelo es típico de <u>hipermercados</u> o <u>compañías de seguros</u>, que reciben dinero de clientes antes de tener que pagar a sus proveedores.</p>"
+    },
+    {
+      "intro": "El equilibrio financiero se alcanza cuando los recursos permanentes (patrimonio neto + pasivo no corriente) financian el activo no corriente y parte del activo corriente. En una estructura equilibrada, el activo no corriente está financiado por recursos permanentes, y el activo corriente por pasivo corriente. Si el activo no corriente es financiado en parte por pasivo corriente, existe un desequilibrio que puede generar riesgo de liquidez si no se renueva el crédito.",
+      "question": "3. ¿Qué indica un desequilibrio financiero en la estructura de financiación?",
+      "options": [
+        "Que el activo no corriente está financiado por recursos permanentes",
+        "Que el activo no corriente está financiado en parte por pasivo corriente",
+        "Que el pasivo corriente es mayor que el activo corriente",
+        "Que el patrimonio neto es muy alto"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>desequilibrio financiero</u> se produce cuando el <u>activo no corriente</u> es financiado en parte por <u>pasivo corriente</u>.</p><p>Esto significa que la empresa depende del <u>financiamiento a corto plazo</u> para mantener su estructura productiva a largo plazo.</p><p>Si no puede <u>renovar el crédito</u>, puede enfrentar <u>problemas de liquidez</u> graves. Un equilibrio financiero adecuado requiere que los <u>recursos permanentes</u> (patrimonio neto + pasivo no corriente) financien el <u>activo no corriente</u> y parte del <u>activo corriente</u>.</p>"
+    },
+    {
+      "intro": "El fondo de maniobra neto (FMN) es un indicador más refinado que el fondo de maniobra tradicional. Se calcula como (activo corriente - existencias) - (pasivo corriente - deudas a corto plazo). Este ratio elimina las partidas más volátiles del activo y pasivo corriente, ofreciendo una visión más estable de la liquidez real de la empresa. Es especialmente útil en empresas con altos niveles de inventario o deuda comercial.",
+      "question": "4. ¿Qué ventaja tiene el fondo de maniobra neto frente al tradicional?",
+      "options": [
+        "Es más fácil de calcular",
+        "Elimina partidas volátiles como existencias y deuda comercial",
+        "Se aplica solo a empresas grandes",
+        "No requiere el balance"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>fondo de maniobra neto</u> (FMN) mejora el FM tradicional al <u>eliminar partidas volátiles</u> como <u>existencias</u> y <u>deudas a corto plazo</u>.</p><p>Se calcula como <u>(activo corriente - existencias) - (pasivo corriente - deudas a corto plazo)</u>.</p><p>Ofrece una <u>visión más estable</u> de la liquidez real, especialmente útil en empresas con <u>altos niveles de inventario</u> o <u>financiación comercial</u>.</p>"
+    },
+    {
+      "intro": "La liquidez inmediata se refiere a la capacidad de la empresa para hacer frente a sus obligaciones con recursos que no requieren transformación: tesorería y disponible. Se mide con el ratio de disponibilidad (disponible / pasivo corriente). Un valor inferior a 0,3 puede indicar dificultades para hacer frente a pagos urgentes. Este ratio es el más exigente de todos los de liquidez y debe analizarse junto con el ciclo de explotación.",
+      "question": "5. ¿Qué activos se consideran clave para la liquidez inmediata?",
+      "options": [
+        "Existencias y clientes",
+        "Tesorería y disponible",
+        "Inmovilizado material",
+        "Capital social"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Los activos clave para la <u>liquidez inmediata</u> son el <u>disponible</u> (tesorería, bancos, equivalentes de efectivo).</p><p>Se comparan con el <u>pasivo corriente</u> para evaluar la capacidad de pago inmediato.</p><p>El <u>ratio de disponibilidad</u> (disponible / pasivo corriente) debe ser <u>superior a 0,3</u> para garantizar solvencia a corto plazo. Valores inferiores pueden indicar <u>riesgo de insolvencia inmediata</u>.</p>"
+    },
+    {
+      "intro": "El ciclo de explotación es el tiempo que transcurre desde que se adquieren las materias primas hasta que se cobra la venta del producto. Está formado por el periodo medio de almacenamiento, fabricación, venta y cobro. Un ciclo largo requiere más financiación. Un ciclo corto mejora la liquidez. La gestión eficiente del ciclo es clave para la rentabilidad y solvencia. El fondo de maniobra debe ajustarse a la duración del ciclo.",
+      "question": "6. ¿Qué componentes forman el ciclo de explotación?",
+      "options": [
+        "Almacenamiento, fabricación, venta y cobro",
+        "Solo compras y ventas",
+        "Inversión y financiación",
+        "Amortización y depreciación"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>ciclo de explotación</u> comprende todas las fases del proceso productivo: <u>almacenamiento</u> de materias primas, <u>fabricación</u>, <u>venta</u> del producto y <u>cobro</u> al cliente.</p><p>Se mide en días y es clave para determinar la <u>necesidad de financiación</u> del activo circulante.</p><p>Un <u>ciclo corto</u> mejora la <u>liquidez</u> y reduce el riesgo. Un <u>ciclo largo</u> requiere más recursos financieros y aumenta la dependencia del crédito.</p>"
+    },
+    {
+      "intro": "El periodo medio de cobro a clientes mide el tiempo medio que tarda la empresa en cobrar a sus clientes. Se calcula como (clientes / ventas anuales) x 365. Un periodo largo puede indicar problemas de gestión del crédito o clientes morosos. Un periodo muy corto puede indicar políticas de crédito muy restrictivas que limitan las ventas. Debe analizarse junto con el fondo de maniobra para evaluar la liquidez real.",
+      "question": "7. ¿Qué indica un periodo medio de cobro muy largo?",
+      "options": [
+        "Cobros rápidos",
+        "Problemas de gestión del crédito o clientes morosos",
+        "Alta rentabilidad",
+        "Bajo nivel de ventas"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>periodo medio de cobro</u> muy largo indica que la empresa tarda <u>más en cobrar</u> a sus clientes.</p><p>Puede deberse a <u>problemas de gestión del crédito</u>, <u>clientes morosos</u> o <u>políticas de pago demasiado generosas</u>.</p><p>Esto afecta negativamente a la <u>liquidez</u> y puede requerir <u>financiación adicional</u> para hacer frente a los pagos.</p>"
+    },
+    {
+      "intro": "El periodo medio de pago a proveedores mide el tiempo medio que tarda la empresa en pagar a sus proveedores. Se calcula como (pasivo corriente / compras anuales) x 365. Un periodo largo puede indicar problemas de liquidez o una estrategia de financiación a costa de proveedores. Un periodo muy corto puede indicar pérdida de oportunidades de descuento por pronto pago.",
+      "question": "8. ¿Qué indica un periodo medio de pago muy largo?",
+      "options": [
+        "Buena liquidez",
+        "Posible financiación a costa de proveedores o problemas de pago",
+        "Alta rentabilidad",
+        "Eficiencia en compras"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>periodo medio de pago</u> muy largo indica que la empresa <u>retiene el pago a proveedores</u> durante mucho tiempo.</p><p>Puede ser una <u>estrategia de financiación</u> (usar el crédito de proveedores), pero también puede indicar <u>problemas de liquidez</u>.</p><p>Si es excesivo, puede dañar las relaciones comerciales y limitar futuras compras a crédito.</p>"
+    },
+    {
+      "intro": "El fondo de maniobra óptimo depende del sector y del modelo de negocio. En algunos sectores, como el retail o los seguros, un FM negativo es normal y sostenible si el flujo de caja es positivo. En otros, como la industria, un FM positivo es esencial. No existe un valor universalmente bueno; debe interpretarse en contexto.",
+      "question": "9. ¿Existe un valor universalmente bueno para el fondo de maniobra?",
+      "options": [
+        "Sí, siempre debe ser positivo",
+        "No, depende del sector y modelo de negocio",
+        "Sí, debe ser igual al 50% del activo total",
+        "No, debe ser siempre cero"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>No existe un <u>valor universalmente bueno</u> para el fondo de maniobra. Su interpretación <u>depende del sector</u> y del <u>modelo de negocio</u>.</p><p>En <u>hipermercados</u> o <u>seguros</u>, un FM <u>negativo</u> puede ser <u>sostenible</u> si el flujo de caja es positivo.</p><p>En <u>industria</u>, un FM <u>positivo</u> es esencial. La clave es analizarlo junto con el <u>ciclo de explotación</u> y el <u>flujo de caja</u>.</p>"
+    },
+    {
+      "intro": "El modelo de Altman (Z-score) es una herramienta para predecir la probabilidad de suspensión de pagos. Según el valor de Z: si Z > 3, no hay peligro; si Z entre 1 y 3, la situación es dudosa; si Z < 1.8, hay alta probabilidad de suspender pagos. Este modelo combina ratios de liquidez, rentabilidad y endeudamiento para evaluar el riesgo financiero global de la empresa.",
+      "question": "10. ¿Qué indica un Z-score inferior a 1.8 según Altman?",
+      "options": [
+        "No hay peligro de suspensión de pagos",
+        "Situación financiera dudosa",
+        "Alta probabilidad de suspensión de pagos",
+        "Excelente rentabilidad"
+      ],
+      "correct": [2],
+      "saber_mas": "<p>Según el <u>modelo de Altman</u> (Z-score), un valor <u>inferior a 1.8</u> indica <u>alta probabilidad de suspensión de pagos</u>.</p><p>Si <u>Z > 3</u>, no hay peligro. Si <u>entre 1 y 3</u>, la situación es <u>dudosa</u>.</p><p>Este modelo combina <u>ratios de liquidez</u>, <u>rentabilidad</u> y <u>endeudamiento</u> para evaluar el <u>riesgo financiero global</u> de la empresa.</p>"
+    },
+    {
+      "intro": "La gestión del fondo de maniobra requiere equilibrar liquidez, rentabilidad y riesgo. Un FM excesivo puede indicar inmovilización de recursos poco rentables. Un FM insuficiente puede generar problemas de solvencia. La gestión óptima busca minimizar el riesgo sin sacrificar la rentabilidad, ajustando el ciclo de explotación y la estructura de financiación.",
+      "question": "11. ¿Qué busca la gestión óptima del fondo de maniobra?",
+      "options": [
+        "Maximizar el FM sin límite",
+        "Minimizar el riesgo sin sacrificar la rentabilidad",
+        "Eliminar el pasivo corriente",
+        "Reducir el activo fijo"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>gestión óptima del fondo de maniobra</u> busca <u>minimizar el riesgo</u> de insolvencia <u>sin sacrificar la rentabilidad</u>.</p><p>Un FM <u>excesivo</u> puede indicar <u>inmovilización de recursos</u> poco rentables. Un FM <u>insuficiente</u> puede generar <u>problemas de solvencia</u>.</p><p>La clave es <u>ajustar el ciclo de explotación</u> y la <u>estructura de financiación</u> para lograr un equilibrio sostenible.</p>"
+    },
+    {
+      "intro": "El fondo de maniobra debe analizarse en contexto, junto con el flujo de caja y el ciclo de explotación. Una empresa puede tener FM negativo pero flujos de explotación positivos, lo que indica buena gestión operativa. En cambio, una empresa con FM positivo pero flujos negativos puede estar en riesgo. El FM es solo un indicador estático que debe complementarse con análisis dinámicos.",
+      "question": "12. ¿Por qué debe analizarse el fondo de maniobra junto con el flujo de caja?",
+      "options": [
+        "Porque el FM es estático y el flujo de caja es dinámico",
+        "Para calcular el beneficio neto",
+        "Para determinar el valor de mercado",
+        "Para justificar la auditoría"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>fondo de maniobra</u> es un indicador <u>estático</u> (punto en el tiempo), mientras que el <u>flujo de caja</u> es <u>dinámico</u> (evolución en el tiempo).</p><p>Una empresa puede tener FM <u>negativo</u> pero <u>flujos de explotación positivos</u>, lo que indica <u>buen manejo del ciclo</u>.</p><p>Por eso, ambos deben analizarse <u>conjuntamente</u> para obtener una <u>visión completa</u> de la liquidez y solvencia.</p>"
+    },
+    {
+      "intro": "Las existencias son un componente clave del activo corriente y del fondo de maniobra. Una gestión ineficiente de inventarios puede distorsionar el FM. Un exceso de existencias aumenta el activo corriente, mejorando el FM, pero puede indicar obsolescencia o baja rotación. Debe analizarse junto con el ratio de rotación de existencias.",
+      "question": "13. ¿Cómo puede un exceso de existencias afectar al fondo de maniobra?",
+      "options": [
+        "Mejora el FM pero puede indicar ineficiencia",
+        "No tiene efecto",
+        "Reduce el FM",
+        "Aumenta la rentabilidad"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Un <u>exceso de existencias</u> <u>mejora el fondo de maniobra</u> porque aumenta el <u>activo corriente</u>.</p><p>Sin embargo, puede indicar <u>ineficiencia</u> en la gestión, <u>obsolescencia</u> o <u>baja rotación</u>.</p><p>Debe analizarse junto con el <u>ratio de rotación de existencias</u> para evaluar la <u>calidad del activo corriente</u>.</p>"
+    },
+    {
+      "intro": "El fondo de maniobra debe ser suficiente para cubrir las necesidades de financiación del ciclo de explotación. Si el ciclo dura 120 días, el FM debe cubrir al menos ese periodo. Un FM insuficiente requiere financiación ajena. Un FM excesivo puede indicar inmovilización de recursos. La gestión del FM debe alinearse con la duración del ciclo.",
+      "question": "14. ¿Cómo se relaciona el fondo de maniobra con el ciclo de explotación?",
+      "options": [
+        "Debe cubrir al menos la duración del ciclo de explotación",
+        "No tiene relación",
+        "El ciclo debe ser siempre más corto que el FM",
+        "El FM debe ser cero si el ciclo es corto"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>fondo de maniobra</u> debe ser <u>suficiente</u> para cubrir las <u>necesidades de financiación</u> del <u>ciclo de explotación</u>.</p><p>Si el ciclo dura <u>120 días</u>, el FM debe cubrir al menos ese periodo.</p><p>Un FM <u>insuficiente</u> requiere <u>financiación ajena</u>. Un FM <u>excesivo</u> puede indicar <u>inmovilización de recursos</u>. La gestión debe <u>alinearse</u> con la duración del ciclo.</p>"
+    },
+    {
+      "intro": "El fondo de maniobra es un indicador clave de la solvencia a corto plazo, pero debe interpretarse con cuidado. No basta con su valor absoluto; debe analizarse en contexto, con tendencias, comparación sectorial y análisis de flujos. Un FM negativo no siempre es negativo, ni uno positivo siempre es positivo. La calidad del activo y pasivo corriente es crucial.",
+      "question": "15. ¿Por qué debe interpretarse el fondo de maniobra con cuidado?",
+      "options": [
+        "Porque su valor absoluto no lo dice todo",
+        "Porque es difícil de calcular",
+        "Porque solo sirve para grandes empresas",
+        "Porque no se usa en la práctica"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>fondo de maniobra</u> debe interpretarse con <u>precaución</u> porque su <u>valor absoluto</u> no refleja toda la realidad.</p><p>Debe analizarse con <u>tendencias</u>, <u>comparación sectorial</u> y <u>análisis de flujos</u>.</p><p>Un FM <u>negativo</u> no siempre es malo (ej. hipermercados), ni uno <u>positivo</u> siempre es bueno (si hay existencias obsoletas). La <u>calidad del activo corriente</u> es crucial.</p>"
+    }
+  ]
+}
