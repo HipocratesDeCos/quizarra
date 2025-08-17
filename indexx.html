@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aprendizaje Activo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Aprendizaje Activo</h1>
+    </header>
+
+    <main>
+        <section id="content-creation">
+            <h2>Crear Contenido</h2>
+            <div class="content-form">
+                <h3>Añadir Quiz</h3>
+                <textarea id="new-quiz-question" placeholder="Escribe la pregunta"></textarea>
+                <textarea id="new-quiz-answer" placeholder="Escribe la respuesta correcta"></textarea>
+                <button id="add-quiz-btn">Añadir Quiz</button>
+            </div>
+            <div class="content-form">
+                <h3>Añadir Flashcard</h3>
+                <textarea id="new-flashcard-front" placeholder="Escribe el anverso (pregunta/concepto)"></textarea>
+                <textarea id="new-flashcard-back" placeholder="Escribe el reverso (respuesta/definición)"></textarea>
+                <button id="add-flashcard-btn">Añadir Flashcard</button>
+            </div>
+            <div class="content-form">
+                <h3>Mis Notas</h3>
+                <textarea id="notes-area" placeholder="Escribe tus resúmenes o notas aquí..."></textarea>
+            </div>
+        </section>
+
+        <section id="quiz-section">
+            <h2>Modo Quiz</h2>
+            <div id="current-quiz-display" class="card">
+                No hay quizzes, ¡añade uno para empezar!
+            </div>
+            <input type="text" id="quiz-user-answer" placeholder="Tu respuesta">
+            <div class="quiz-controls">
+                <button id="check-quiz-answer-btn">Comprobar Respuesta</button>
+                <button id="next-quiz-btn" style="display:none;">Siguiente Pregunta</button>
+            </div>
+            <p id="quiz-feedback"></p>
+        </section>
+
+        <section id="flashcard-section">
+            <h2>Modo Flashcards</h2>
+            <div id="flashcard-front" class="card">
+                No hay flashcards, ¡añade una para empezar!
+            </div>
+            <div id="flashcard-back" class="card" style="display:none;"></div>
+            <div class="flashcard-controls">
+                <button id="show-back-btn" style="display:none;">Mostrar Reverso</button>
+                <div id="flashcard-review-btns" style="display:none;">
+                    <button id="flashcard-easy-btn" class="easy">Fácil (Dominado)</button>
+                    <button id="flashcard-hard-btn" class="hard">Difícil (Repasar)</button>
+                </div>
+                <button id="next-flashcard-btn" style="display:none;">Siguiente Flashcard</button>
+            </div>
+        </section>
+
+        <section id="pomodoro-section">
+            <h2>Temporizador Pomodoro</h2>
+            <div id="pomodoro-timer">25:00</div>
+            <p id="pomodoro-status">Trabajo</p>
+            <div class="pomodoro-controls">
+                <button id="start-pomodoro-btn">Iniciar</button>
+                <button id="pause-pomodoro-btn">Pausar</button>
+                <button id="reset-pomodoro-btn">Reiniciar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
