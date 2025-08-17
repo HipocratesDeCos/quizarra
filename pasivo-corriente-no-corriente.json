@@ -1,0 +1,125 @@
+{
+  "title": "Pasivo Corriente y No Corriente",
+  "questions": [
+    {
+      "intro": "El pasivo representa una obligación presente de la empresa surgida como consecuencia de eventos pasados, cuya liquidación se espera que genere una salida de recursos que incorporan beneficios económicos. Para que un elemento sea reconocido como pasivo, debe cumplir tres condiciones: ser una obligación presente, derivarse de eventos pasados y esperarse que su liquidación implique una salida de recursos. Las obligaciones pueden ser legales (por contrato o ley) o constructivas (por prácticas establecidas que generan una expectativa válida en terceros). El pasivo se clasifica en corriente y no corriente: es corriente si vence en el ciclo normal de explotación (generalmente 12 meses), y no corriente en caso contrario. Esta clasificación es clave para analizar la solvencia y liquidez de la empresa. Un error en el reconocimiento puede distorsionar la imagen fiel del patrimonio.",
+      "question": "1. ¿Qué define a un pasivo en contabilidad?",
+      "options": [
+        "Una obligación presente de la empresa",
+        "Un compromiso futuro de pago",
+        "Resulta de eventos pasados",
+        "Su liquidación implica salida de beneficios económicos"
+      ],
+      "correct": [0, 2, 3],
+      "saber_mas": "<p>Un <u>pasivo</u> es una <u>obligación presente</u> de la empresa que surge como consecuencia de <u>eventos pasados</u> y cuya liquidación se espera que genere una <u>salida de recursos</u> con beneficios económicos. Esta definición, establecida en el marco conceptual del PGC, excluye compromisos futuros no vinculantes.</p><p>Por ejemplo, una deuda con un proveedor por compras realizadas es un pasivo, ya que el evento pasado (la compra) ha generado una obligación actual de pago. La salida de recursos puede ser en efectivo, entrega de activos o prestación de servicios.</p><p>Las <u>provisiones</u> también son pasivos, cuando existe una obligación actual por eventos pasados, aunque el monto sea incierto. La correcta identificación de pasivos es crucial para evaluar la solvencia y liquidez de la empresa, ya que afecta directamente al patrimonio neto. Un error en el reconocimiento puede distorsionar la <u>imagen fiel</u> del balance.</p>"
+    },
+    {
+      "intro": "La clasificación del pasivo entre corriente y no corriente depende del plazo de exigibilidad. El pasivo corriente incluye obligaciones que vencen en el ciclo normal de explotación, generalmente en menos de 12 meses, como proveedores, deudas bancarias a corto plazo o impuestos pendientes. El pasivo no corriente agrupa obligaciones con vencimiento superior a un año, como préstamos a largo plazo, empréstitos o provisiones con vencimiento extendido. Esta distinción es clave para analizar la solvencia a corto plazo (ratio de liquidez). Además, cuando una deuda a largo plazo se acerca a su vencimiento (menos de 12 meses), debe reclasificarse al pasivo corriente, cumpliendo con el principio de devengo y prudencia. Esta reclasificación es obligatoria, incluso si la empresa tiene intención de refinanciarla.",
+      "question": "2. ¿Cuál es la diferencia entre pasivo corriente y no corriente?",
+      "options": [
+        "El corriente vence en menos de un año, el no corriente en más de un año",
+        "El no corriente no genera intereses",
+        "El corriente se registra en el grupo 4",
+        "El no corriente no requiere provisión"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>La clasificación del <u>pasivo</u> depende del <u>plazo de exigibilidad</u>. El <u>pasivo corriente</u> incluye obligaciones que vencen en el <u>ciclo normal de explotación</u> (generalmente <u>12 meses</u>), como proveedores, deudas bancarias a corto plazo o impuestos pendientes.</p><p>El <u>pasivo no corriente</u> agrupa obligaciones con vencimiento superior a un año, como préstamos bancarios a largo plazo, empréstitos o provisiones con vencimiento extendido.</p><p>Esta distinción es clave para analizar la <u>solvencia a corto plazo</u> (ratio de liquidez). Además, cuando una deuda a largo plazo se acerca a su vencimiento (menos de 12 meses), debe <u>reclasificarse</u> al pasivo corriente, cumpliendo con el principio de <u>devengo</u> y <u>prudencia</u>.</p>"
+    },
+    {
+      "intro": "Las provisiones para reestructuraciones son pasivos que se reconocen cuando la empresa tiene un plan formalizado de reestructuración (como cierre de plantas, reducción de plantilla o traslado de actividades) y existe una obligación presente derivada de anuncios públicos o decisiones ejecutivas. Se registran con cargo a (641) Indemnizaciones y abono a (146) Provisiones para reestructuraciones. Por ejemplo, si se anuncia el despido de 10 empleados con indemnización total de 150.000 €, se registra esa cantidad como provisión. La provisión debe actualizarse por intereses implícitos si el pago se aplaza. No se reconocen provisiones por planes no formalizados o decisiones futuras, ya que no generan obligación presente. Este tratamiento asegura la imagen fiel del pasivo y evita ocultar costes futuros.",
+      "question": "3. ¿Qué son las 'provisiones para reestructuraciones'?",
+      "options": [
+        "Gastos por cambios en la estructura organizativa",
+        "Reservas voluntarias para inversiones futuras",
+        "Dotaciones para aumentar el capital social",
+        "Ingresos diferidos por venta de activos"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Las <u>provisiones para reestructuraciones</u> son pasivos que se reconocen cuando la empresa tiene un <u>plan formalizado</u> de reestructuración (como cierre de plantas, reducción de plantilla o traslado de actividades) y existe una <u>obligación presente</u> derivada de anuncios públicos o decisiones ejecutivas.</p><p>Se registran con cargo a <u>(641) Indemnizaciones</u> y abono a <u>(146) Provisiones para reestructuraciones</u>. Por ejemplo, si se anuncia el despido de 10 empleados con indemnización total de 150.000 €, se registra esa cantidad como provisión.</p><p>La provisión debe actualizarse por <u>intereses implícitos</u> si el pago se aplaza. No se reconocen provisiones por <u>planes no formalizados</u> o <u>decisiones futuras</u>, ya que no generan obligación presente. Este tratamiento asegura la <u>imagen fiel</u> del pasivo.</p>"
+    },
+    {
+      "intro": "La actualización de una provisión por intereses implícitos es un ajuste que reconoce el costo financiero derivado del aplazamiento del pago, aunque no exista un interés nominal acordado. Se registra con cargo a (660) Gastos financieros por actualización de provisiones y abono a la cuenta de provisión correspondiente. Por ejemplo, si una provisión de 100.000 € se actualiza en 5.000 € por intereses, se registra: 5.000 € a (660) y 5.000 € a (142). Este ajuste aplica el método del interés efectivo y refleja que el valor actual de la obligación aumenta con el tiempo. Es obligatorio para cumplir con el principio de devengo y garantizar la imagen fiel del resultado. Los intereses implícitos no se pagan en efectivo, pero se contabilizan como gasto del ejercicio.",
+      "question": "4. ¿Cómo se contabiliza la actualización de una provisión por intereses implícitos?",
+      "options": [
+        "Como un ingreso financiero",
+        "Con cargo a gastos financieros y abono a la provisión",
+        "Se ignora hasta el pago",
+        "Se registra como reducción del capital"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>actualización de una provisión</u> por intereses implícitos se registra con cargo a <u>(660) Gastos financieros por actualización de provisiones</u> y abono a la cuenta de provisión correspondiente (por ejemplo, <u>(142) Provisiones para otras responsabilidades</u>).</p><p>Este ajuste reconoce el <u>coste del aplazamiento</u> del pago, incluso si no hay un interés explícito. Por ejemplo, si una provisión de 100.000 € se actualiza en 5.000 € por intereses, se registra: <u>5.000 € a (660)</u> y <u>5.000 € a (142)</u>.</p><p>Este tratamiento aplica el principio de <u>devengo</u> y refleja que el valor actual de la obligación aumenta con el tiempo. Los intereses implícitos se calculan mediante el <u>método del interés efectivo</u>, asegurando una valoración más precisa del pasivo.</p>"
+    },
+    {
+      "intro": "Una deuda transformable en subvención es un pasivo que representa una ayuda pública condicionada a ciertos requisitos (como inversiones, empleo o investigación). Mientras no se cumplan, se registra como deuda a largo plazo (cuenta 172). Por ejemplo, si una empresa recibe 60.000 € de una ayuda condicionada a una inversión, se registra: 60.000 € a (172) y 60.000 € a (4708) Hacienda Pública, deudora por subvenciones. Cuando se cumplan las condiciones, se traslada a (130) Subvenciones. Este tratamiento evita reconocer un ingreso antes de tiempo, cumpliendo con el principio de prudencia. La deuda se convierte en subvención solo cuando el derecho es inalterable, protegiendo la imagen fiel del patrimonio. Es distinto de una donación, ya que nace como obligación.",
+      "question": "5. ¿Qué es una 'deuda transformable en subvención'?",
+      "options": [
+        "Una deuda que se convierte automáticamente en ingreso",
+        "Una deuda que se reconoce como pasivo mientras no se cumplan condiciones para su transformación en subvención",
+        "Un préstamo sin intereses",
+        "Una donación de socios"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Una <u>deuda transformable en subvención</u> (cuenta 172) es un pasivo que representa una <u>ayuda pública condicionada</u> a ciertos requisitos (como inversiones, empleo o investigación). Mientras no se cumplan, se registra como <u>deuda a largo plazo</u>.</p><p>Por ejemplo, si una empresa recibe 60.000 € de una ayuda condicionada a una inversión, se registra: <u>60.000 € a (172)</u> y <u>60.000 € a (4708) Hacienda Pública, deudora por subvenciones</u>. Cuando se cumplan las condiciones, se traslada a <u>(130) Subvenciones</u>.</p><p>Este tratamiento evita reconocer un ingreso antes de tiempo, cumpliendo con el principio de <u>prudencia</u>. La deuda se convierte en subvención solo cuando el derecho es <u>inalterable</u>, protegiendo la <u>imagen fiel</u> del patrimonio.</p>"
+    },
+    {
+      "intro": "En un empréstito con prima de emisión, la empresa recibe más dinero del valor nominal de las obligaciones. La prima de emisión (PE = Valor de emisión - Valor nominal) no se reconoce como ingreso, sino como una reducción del pasivo inicial. Por ejemplo, si se emiten obligaciones por 100.000 € a 105, se reciben 105.000 €, pero el pasivo inicial es 100.000 €. La prima de 5.000 € se registra como descuento y se amortiza como gasto financiero durante la vida del préstamo, usando el método del interés efectivo. Este tratamiento refleja que la prima es un costo financiero implícito distribuido en el tiempo, no un beneficio. Asegura que el costo efectivo del préstamo se distribuya sistemáticamente, cumpliendo con el principio de asociación de ingresos y gastos.",
+      "question": "6. ¿Cómo se trata un empréstito con prima de emisión?",
+      "options": [
+        "La prima se registra como ingreso inmediato",
+        "La prima se deduce del valor nominal y se amortiza como gasto financiero",
+        "La prima se añade al capital social",
+        "La prima se ignora en la contabilidad"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>En un <u>empréstito con prima de emisión</u>, la empresa recibe más dinero del valor nominal de las obligaciones. La <u>prima de emisión</u> (PE = Valor nominal - Valor de emisión) no se reconoce como ingreso, sino como una <u>reducción del pasivo inicial</u>.</p><p>Por ejemplo, si se emiten obligaciones por 100.000 € a 105, se reciben 105.000 €, pero el pasivo inicial es 100.000 €. La prima de 5.000 € se registra como <u>descuento</u> y se <u>amortiza como gasto financiero</u> durante la vida del préstamo, usando el <u>método del interés efectivo</u>.</p><p>Este tratamiento refleja que la prima es un <u>coste financiero implícito</u> distribuido en el tiempo, no un beneficio. Asegura que el <u>coste efectivo</u> del préstamo se distribuya sistemáticamente, cumpliendo con el principio de <u>asociación de ingresos y gastos</u>.</p>"
+    },
+    {
+      "intro": "Cuando se paga una provisión, se realiza un asiento de baja: se abona la cuenta de tesorería y se carga la cuenta de provisión correspondiente. Por ejemplo, si se paga una indemnización de 800.000 € que estaba provisionada por 750.000 €, se registra: 750.000 € a (142) Provisiones, 50.000 € a (7952) Exceso de provisiones y 800.000 € a (572) Bancos. Si el pago es igual a la provisión, no hay ajuste. Si es mayor, el exceso se registra como gasto del ejercicio. Si es menor, el sobrante se registra como ingreso (exceso de provisiones). Este procedimiento asegura que la provisión refleje fielmente la obligación real y evita distorsiones en el resultado.",
+      "question": "7. ¿Qué ocurre cuando se paga una provisión?",
+      "options": [
+        "Se reduce el patrimonio neto",
+        "Se da de baja la provisión y se registra el pago",
+        "Se convierte en ingreso",
+        "Se aumenta el capital social"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Cuando se <u>paga una provisión</u>, se realiza un asiento de <u>baja</u>: se abona la cuenta de tesorería y se carga la cuenta de provisión correspondiente.</p><p>Por ejemplo, si se paga una indemnización de 800.000 € que estaba provisionada por 750.000 €, se registra: <u>750.000 € a (142) Provisiones</u>, <u>50.000 € a (7952) Exceso de provisiones</u> y <u>800.000 € a (572) Bancos</u>.</p><p>Si el pago es <u>igual</u> a la provisión, no hay ajuste. Si es <u>mayor</u>, el exceso se registra como <u>gasto del ejercicio</u>. Si es <u>menor</u>, el sobrante se registra como <u>ingreso</u> (exceso de provisiones). Este procedimiento asegura que la provisión refleje fielmente la obligación real.</p>"
+    },
+    {
+      "intro": "Los intereses implícitos son el costo financiero derivado del aplazamiento de un pago, aunque no exista un interés nominal acordado. Se derivan de la diferencia entre el valor presente y el valor nominal de una obligación. Por ejemplo, en una provisión o empréstito, si el pago se realiza en el futuro, su valor actual es menor. La diferencia se reconoce como gasto financiero a lo largo del tiempo, usando el método del interés efectivo. Estos intereses no se pagan en efectivo, pero se contabilizan para reflejar el verdadero costo del financiamiento. El PGC exige su reconocimiento para cumplir con el principio de devengo y garantizar la imagen fiel del resultado. Son distintos de los intereses explícitos, pero igualmente relevantes para la valoración del pasivo.",
+      "question": "8. ¿Qué son los 'intereses implícitos' en un pasivo?",
+      "options": [
+        "Intereses que no se pagan",
+        "Coste financiero derivado del aplazamiento de un pago, aunque no haya interés explícito",
+        "Dividendos no distribuidos",
+        "Aportaciones de socios sin interés"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Los <u>intereses implícitos</u> son el <u>coste financiero</u> asociado al aplazamiento de un pago, aunque no exista un interés nominal acordado. Se derivan de la diferencia entre el <u>valor presente</u> y el <u>valor nominal</u> de una obligación.</p><p>Por ejemplo, en una provisión o empréstito, si el pago se realiza en el futuro, su valor actual es menor. La diferencia se reconoce como <u>gasto financiero</u> a lo largo del tiempo, usando el <u>método del interés efectivo</u>.</p><p>Estos intereses no se pagan en efectivo, pero se contabilizan para reflejar el <u>verdadero costo</u> del financiamiento. El PGC exige su reconocimiento para cumplir con el principio de <u>devengo</u> y garantizar la <u>imagen fiel</u> del resultado.</p>"
+    },
+    {
+      "intro": "Cuando una deuda a largo plazo se acerca a su vencimiento (menos de 12 meses), debe reclasificarse al pasivo corriente, independientemente de la intención de refinanciarla. Por ejemplo, si un préstamo de 100.000 € vence el 30/06/20X2 y estamos en 31/12/20X1, se realiza el asiento: 100.000 € a (520) Deudas a corto plazo y 100.000 € a (170) Deudas a largo plazo. Esta reclasificación es obligatoria para reflejar fielmente la solvencia a corto plazo de la empresa. Solo si se firma un acuerdo de refinanciación antes del cierre del ejercicio, puede mantenerse en el pasivo no corriente. Este ajuste es clave para la imagen fiel del balance y evita ocultar riesgos de liquidez.",
+      "question": "9. ¿Cómo se reclasifica una deuda a largo plazo que vence en menos de un año?",
+      "options": [
+        "Se convierte automáticamente en ingreso",
+        "Se traslada del pasivo no corriente al corriente",
+        "Se elimina del balance",
+        "Se registra como capital social"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Cuando una <u>deuda a largo plazo</u> se acerca a su vencimiento (menos de 12 meses), debe <u>reclasificarse</u> al <u>pasivo corriente</u>, independientemente de la intención de refinanciarla.</p><p>Por ejemplo, si un préstamo de 100.000 € vence el 30/06/20X2 y estamos en 31/12/20X1, se realiza el asiento: <u>100.000 € a (520) Deudas a corto plazo</u> y <u>100.000 € a (170) Deudas a largo plazo</u>.</p><p>Esta reclasificación es obligatoria para reflejar fielmente la <u>solvencia a corto plazo</u> de la empresa. Solo si se firma un <u>acuerdo de refinanciación</u> antes del cierre del ejercicio, puede mantenerse en el pasivo no corriente. Este ajuste es clave para la <u>imagen fiel</u> del balance.</p>"
+    },
+    {
+      "intro": "En el contexto de provisiones, la cuenta de resaca no se refiere a efectos comerciales, sino a la creación de un nuevo pasivo que sustituye a una provisión ya reconocida, cuando cambian las condiciones de la obligación. Por ejemplo, si una empresa provisiona 100.000 € por una demanda y luego llega a un acuerdo de pago de 120.000 € en cuotas, debe dar de baja la provisión y reconocer un nuevo pasivo por el nuevo monto y condiciones. Este proceso asegura que el pasivo refleje la realidad actual de la obligación. La diferencia (20.000 €) se registra como gasto del ejercicio. Es una aplicación del principio de actualización y imagen fiel, evitando ocultar costes adicionales.",
+      "question": "10. ¿Qué es una 'cuenta de resaca' en el contexto de provisiones?",
+      "options": [
+        "Un nuevo efecto girado para sustituir a uno impagado",
+        "Un nuevo pasivo que sustituye a una provisión ya pagada",
+        "Una provisión que se actualiza por intereses",
+        "Un ingreso por devolución de deuda"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>En el contexto de provisiones, la <u>cuenta de resaca</u> no se refiere a efectos comerciales, sino a la <u>creación de un nuevo pasivo</u> que sustituye a una provisión ya reconocida, cuando cambian las condiciones de la obligación.</p><p>Por ejemplo, si una empresa provisiona 100.000 € por una demanda y luego llega a un acuerdo de pago de 120.000 € en cuotas, debe <u>dar de baja la provisión</u> y <u>reconocer un nuevo pasivo</u> por el nuevo monto y condiciones.</p><p>Este proceso asegura que el pasivo refleje la <u>realidad actual</u> de la obligación. La diferencia (20.000 €) se registra como <u>gasto del ejercicio</u>. Es una aplicación del principio de <u>actualización</u> y <u>imagen fiel</u>.</p>"
+    }
+  ]
+}
