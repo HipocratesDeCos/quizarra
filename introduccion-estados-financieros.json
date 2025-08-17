@@ -1,0 +1,185 @@
+{
+  "title": "Introducción y Estructura de los Estados Financieros",
+  "questions": [
+    {
+      "intro": "Los estados financieros son el conjunto de documentos que reflejan la situación patrimonial, financiera y de resultados de una empresa. Según el Plan General de Contabilidad (PGC), están compuestos por el balance, la cuenta de pérdidas y ganancias, el estado de cambios en el patrimonio neto, el estado de flujos de efectivo y la memoria. Su objetivo principal es expresar la imagen fiel del patrimonio, la situación financiera y los resultados del ejercicio. La responsabilidad de su formulación recae en los administradores de la empresa, quienes deben hacerlo con claridad, veracidad y coherencia. Estos documentos deben ser comprensibles, relevantes, fiables y comparables, cumpliendo con los requisitos cualitativos establecidos en el marco conceptual del PGC.",
+      "question": "1. ¿Cuál es el objetivo principal de los estados financieros según el PGC?",
+      "options": [
+        "Maximizar el beneficio de la empresa",
+        "Expresar la imagen fiel del patrimonio y resultados",
+        "Reducir el impuesto de sociedades",
+        "Facilitar la auditoría externa"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El objetivo principal de los <u>estados financieros</u> es <u>expresar la imagen fiel</u> del patrimonio, la situación financiera y los resultados de la empresa. Este requisito es fundamental para que los usuarios (inversores, acreedores, administraciones) puedan tomar decisiones económicas fundamentadas.</p><p>Para lograrlo, los estados deben cumplir con los <u>requisitos cualitativos</u> del marco conceptual: <u>relevancia</u>, <u>fiabilidad</u>, <u>comparabilidad</u> y <u>comprensibilidad</u>. Además, deben ser coherentes entre sí y estar redactados conforme al PGC, al Código de Comercio y a la Ley de Sociedades de Capital.</p><p>La <u>imagen fiel</u> no se logra solo con el cumplimiento formal de las normas, sino con una aplicación rigurosa de los principios contables y una adecuada presentación de la información.</p>"
+    },
+    {
+      "intro": "El balance de situación es el estado financiero que muestra la situación patrimonial de la empresa en una fecha determinada. Se estructura según la ecuación fundamental: Activo = Patrimonio Neto + Pasivo. El activo se clasifica en no corriente y corriente, según su liquidez. El pasivo también se divide en no corriente y corriente. Esta clasificación es clave para analizar la solvencia y liquidez de la empresa. Además, los elementos del balance deben estar valorados conforme a las normas de registro y valoración del PGC, aplicando principios como devengo, prudencia y coste histórico. El balance debe ser coherente con los demás estados financieros y la memoria.",
+      "question": "2. ¿Cómo se clasifica el activo en el balance según el PGC?",
+      "options": [
+        "Por orden alfabético",
+        "En activo corriente y no corriente",
+        "Solo por tipo de activo (material, intangible, financiero)",
+        "Según el valor de mercado"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>activo</u> del balance se clasifica en <u>no corriente</u> y <u>corriente</u>. El <u>activo no corriente</u> incluye los elementos destinados a servir de forma duradera en la actividad (inmovilizado material, intangible y financiero). El <u>activo corriente</u> agrupa los elementos que se espera realizar, vender o consumir en el ciclo normal de explotación (existencias, deudores, tesorería).</p><p>Esta clasificación es fundamental para analizar la <u>solvencia</u> y <u>liquidez</u> de la empresa. Por ejemplo, un alto activo corriente respecto al pasivo corriente indica buena capacidad de pago a corto plazo.</p><p>El PGC exige que esta clasificación se haga con criterio técnico, no arbitrario, y que sea coherente con la imagen fiel del patrimonio.</p>"
+    },
+    {
+      "intro": "La cuenta de pérdidas y ganancias es el estado financiero que informa sobre el resultado del ejercicio, integrado por los ingresos y gastos del periodo. Existen dos modelos: normal y abreviado, según el tamaño y volumen de la empresa. Debe presentarse con una estructura funcional, clasificando los gastos por naturaleza (materias primas, personal, amortizaciones, etc.) o por función (coste de ventas, gastos comerciales, gastos administrativos). La elección del modelo afecta a la presentación, pero no al contenido esencial. Además, puede imputarse directamente al patrimonio neto ciertos ingresos o gastos, como las variaciones en el valor razonable de activos financieros disponibles para la venta.",
+      "question": "3. ¿Cómo se estructura la cuenta de pérdidas y ganancias según el PGC?",
+      "options": [
+        "Solo por naturaleza de los gastos",
+        "Por naturaleza o por función de los gastos",
+        "Solo por función de los gastos",
+        "Alfabéticamente por tipo de ingreso"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>cuenta de pérdidas y ganancias</u> puede estructurarse por <u>naturaleza</u> (clasificando los gastos por tipo: materias primas, servicios externos, personal, amortizaciones) o por <u>función</u> (distribuyendo los gastos entre coste de ventas, gastos comerciales, gastos administrativos, etc.).</p><p>Esta elección afecta a la presentación, pero no al resultado final. La estructura por <u>función</u> permite analizar mejor la rentabilidad por actividades, mientras que la por <u>naturaleza</u> es más sencilla y homogénea.</p><p>Además, el PGC permite que ciertos resultados, como los derivados de <u>activos financieros a valor razonable con cambios en patrimonio neto</u>, se imputen directamente al patrimonio, sin pasar por la cuenta de resultados.</p>"
+    },
+    {
+      "intro": "El estado de cambios en el patrimonio neto muestra la evolución de los fondos propios durante el ejercicio. Detalla cómo ha variado el capital social, las reservas, los resultados de ejercicios anteriores y el resultado del ejercicio. También incluye las imputaciones directas al patrimonio neto, como las revalorizaciones, diferencias de conversión o cambios en el valor razonable de ciertos activos financieros. Este estado es clave para entender cómo la empresa ha generado o consumido recursos propios, y para analizar su capacidad de autofinanciación. Se concilia con la diferencia entre el patrimonio neto del balance inicial y final.",
+      "question": "4. ¿Qué información muestra el estado de cambios en el patrimonio neto?",
+      "options": [
+        "Solo el resultado del ejercicio",
+        "La evolución del capital social, reservas y resultados",
+        "Los movimientos de tesorería",
+        "Las deudas con proveedores"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>estado de cambios en el patrimonio neto</u> muestra la <u>evolución</u> de los <u>fondos propios</u> durante el ejercicio. Detalla los movimientos en: <u>capital social</u>, <u>reservas</u> (legal, estatutaria, voluntaria), <u>resultados negativos de ejercicios anteriores</u> y <u>resultado del ejercicio</u>.</p><p>Además, incluye las <u>imputaciones directas al patrimonio neto</u>, como las variaciones en el valor razonable de activos financieros disponibles para la venta, o diferencias de conversión en operaciones con el extranjero.</p><p>Este estado permite analizar la <u>autofinanciación</u> de la empresa y su capacidad para generar recursos propios. Es un puente entre la cuenta de resultados y el balance, y debe conciliarse con la variación del patrimonio neto.</p>"
+    },
+    {
+      "intro": "El estado de flujos de efectivo informa sobre los movimientos de tesorería durante el ejercicio, clasificados en actividades de explotación, inversión y financiación. Aunque el resultado del ejercicio se basa en el principio del devengo, este estado muestra la realidad de la liquidez. Las actividades de explotación incluyen cobros y pagos derivados de la actividad principal. Las de inversión, compras y ventas de activos fijos. Y las de financiación, obtención de préstamos, pago de dividendos o aportaciones de socios. Es un documento clave para evaluar la capacidad de la empresa para generar efectivo y hacer frente a sus obligaciones.",
+      "question": "5. ¿En qué grandes bloques se clasifican los flujos de efectivo?",
+      "options": [
+        "Ventas, compras y gastos",
+        "Explotación, inversión y financiación",
+        "Ingresos, gastos y resultados",
+        "Activos, pasivos y patrimonio"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>estado de flujos de efectivo</u> clasifica los movimientos de tesorería en tres grandes bloques: <u>actividades de explotación</u>, <u>inversión</u> y <u>financiación</u>.</p><p>Las <u>actividades de explotación</u> incluyen cobros a clientes, pagos a proveedores, salarios, impuestos, etc. Las <u>de inversión</u> reflejan compras y ventas de activos fijos, inversiones financieras, etc. Las <u>de financiación</u> registran obtención de préstamos, pago de dividendos, aportaciones de socios, etc.</p><p>Este estado es clave para entender la <u>liquidez real</u> de la empresa, ya que el resultado del ejercicio puede ser positivo pero con escasez de efectivo. Ayuda a prever problemas de solvencia.</p>"
+    },
+    {
+      "intro": "La memoria es el documento que amplía y comenta la información contenida en los demás estados financieros. Es una parte esencial de las cuentas anuales y debe redactarse con claridad y precisión. Contiene información sobre las políticas contables aplicadas, detalles de las partidas del balance y la cuenta de resultados, y aclaraciones sobre operaciones significativas. También incluye información sobre riesgos, contingencias, compromisos y relaciones con partes vinculadas. La memoria permite a los usuarios comprender mejor la situación de la empresa y evaluar la calidad de la información. Es obligatoria y forma parte integrante de las cuentas anuales.",
+      "question": "6. ¿Cuál es la función principal de la memoria en las cuentas anuales?",
+      "options": [
+        "Reemplazar al balance",
+        "Ampliar y comentar la información de los estados financieros",
+        "Servir como informe de auditoría",
+        "Listar solo los ingresos del ejercicio"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>memoria</u> es el documento que <u>amplía y comenta</u> la información contenida en el balance, la cuenta de pérdidas y ganancias y los demás estados financieros.</p><p>Debe incluir: <u>políticas contables</u> aplicadas, <u>desglose de partidas</u> significativas, <u>información sobre riesgos y contingencias</u>, <u>operaciones con partes vinculadas</u>, y cualquier otro dato relevante para la comprensión de la situación financiera.</p><p>Además, puede <u>agrupar partidas irrelevantes</u> para mejorar la claridad, o <u>subdividirlas</u> si son significativas. La memoria es <u>obligatoria</u> y forma parte de la <u>unidad indivisible</u> de las cuentas anuales, siendo clave para expresar la <u>imagen fiel</u>.</p>"
+    },
+    {
+      "intro": "La imagen fiel es el objetivo supremo de las cuentas anuales. Implica que la información refleje con veracidad, integridad y neutralidad la situación patrimonial, financiera y de resultados de la empresa. Para garantizarla, los estados financieros deben ser coherentes entre sí, con políticas contables adecuadas y aplicadas de forma uniforme. Además, deben ser comprensibles, comparables y oportunos. La imagen fiel no se logra solo con el cumplimiento formal de las normas, sino con la aplicación rigurosa de los principios contables, como prudencia, devengo y empresa en funcionamiento.",
+      "question": "7. ¿Qué significa que las cuentas anuales expresen la 'imagen fiel'?",
+      "options": [
+        "Que estén firmadas por el auditor",
+        "Que reflejen con veracidad la situación patrimonial y financiera",
+        "Que tengan un diseño visual atractivo",
+        "Que se presenten antes del plazo legal"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>imagen fiel</u> es el objetivo supremo de las cuentas anuales. Significa que la información contable <u>refleje con veracidad, integridad y neutralidad</u> la situación patrimonial, financiera y de resultados de la empresa.</p><p>No basta con cumplir formalmente con el PGC; se requiere una <u>aplicación rigurosa</u> de los principios contables (devengo, prudencia, empresa en funcionamiento) y una <u>coherencia interna</u> entre todos los estados financieros y la memoria.</p><p>La imagen fiel protege a los usuarios (inversores, acreedores, administraciones) y es responsabilidad de los <u>administradores</u> de la empresa, quienes la firman y responden de su veracidad.</p>"
+    },
+    {
+      "intro": "La responsabilidad de formular las cuentas anuales recae en los administradores de la empresa. Deben hacerlo en un plazo máximo de tres meses desde el cierre del ejercicio. Una vez formuladas, deben ser aprobadas por la junta de accionistas en un plazo máximo de seis meses desde el cierre. Posteriormente, deben depositarse en el Registro Mercantil dentro del mes siguiente a su aprobación. Este calendario legal es obligatorio y asegura la transparencia y disponibilidad de la información financiera. El incumplimiento puede tener consecuencias legales y sanciones.",
+      "question": "8. ¿Cuál es el plazo máximo para formular las cuentas anuales?",
+      "options": [
+        "Un mes desde el cierre del ejercicio",
+        "Tres meses desde el cierre del ejercicio",
+        "Seis meses desde el cierre del ejercicio",
+        "Doce meses desde el cierre del ejercicio"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>plazo máximo para formular</u> las cuentas anuales es de <u>tres meses</u> desde el cierre del ejercicio, según el artículo 253 del Texto Refundido de la Ley de Sociedades de Capital (TRLSC).</p><p>Una vez formuladas, deben ser <u>aprobadas</u> por la junta de accionistas en un plazo máximo de <u>seis meses</u> desde el cierre.</p><p>Y finalmente, deben <u>depositarse</u> en el Registro Mercantil <u>dentro del mes siguiente</u> a su aprobación. Este calendario legal asegura la <u>transparencia</u> y <u>oportunidad</u> de la información financiera, protegiendo a los socios y terceros.</p>"
+    },
+    {
+      "intro": "La uniformidad en la aplicación de las políticas contables es un principio fundamental del PGC. Exige que los métodos de registro y valoración se mantengan de un ejercicio a otro, para garantizar la comparabilidad de la información. Si se produce un cambio en la política contable, debe justificarse y revelarse en la memoria, indicando su impacto en el patrimonio y resultados. Los cambios pueden ser obligatorios (por nuevas normas) o voluntarios (por mejora de la información). En ambos casos, deben aplicarse retrospectivamente, salvo que sea impracticable.",
+      "question": "9. ¿Qué exige el principio de uniformidad en las cuentas anuales?",
+      "options": [
+        "Cambiar los métodos contables cada año",
+        "Mantener los mismos métodos contables de ejercicio a ejercicio",
+        "Usar solo el método del interés efectivo",
+        "Aplicar la política contable más favorable al beneficio"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El principio de <u>uniformidad</u> exige que las <u>políticas contables</u> se apliquen de forma <u>coherente</u> de un ejercicio a otro, para garantizar la <u>comparabilidad</u> de la información financiera.</p><p>Si se produce un <u>cambio</u> en la política contable (por ejemplo, en la amortización), debe estar <u>justificado</u> y <u>revelado</u> en la memoria, indicando su <u>impacto</u> en el patrimonio neto y el resultado.</p><p>Los cambios deben aplicarse <u>retrospectivamente</u>, salvo que sea impracticable. Esto asegura que los usuarios puedan comparar los resultados de diferentes ejercicios con fiabilidad.</p>"
+    },
+    {
+      "intro": "La memoria puede agrupar partidas que representen un importe irrelevante para mejorar la claridad de la información, siempre que no se distorsione la imagen fiel. Por ejemplo, gastos pequeños de oficina pueden agruparse en una sola partida. También puede subdividir partidas significativas para ofrecer más detalle. Además, debe incluir referencias cruzadas a la información correspondiente en otros estados financieros. Esta flexibilidad permite adaptar la presentación a la naturaleza y tamaño de la empresa, sin perder transparencia.",
+      "question": "10. ¿Puede la memoria agrupar partidas en las cuentas anuales?",
+      "options": [
+        "Nunca, debe detallar todo individualmente",
+        "Sí, si el importe es irrelevante y mejora la claridad",
+        "Solo si lo autoriza el auditor",
+        "Solo en empresas grandes"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Sí, la <u>memoria</u> puede <u>agrupar partidas</u> que representen un <u>importe irrelevante</u> para mostrar la imagen fiel, o si de este modo se favorece la <u>claridad</u> de la información.</p><p>Por ejemplo, gastos pequeños de servicios externos pueden agruparse en una sola partida. Esto evita una carga innecesaria de detalle.</p><p>Además, puede <u>subdividir partidas</u> significativas para ofrecer más detalle. La clave es que la agrupación no distorsione la <u>imagen fiel</u> ni oculte información relevante para los usuarios.</p>"
+    },
+    {
+      "intro": "Los gastos de establecimiento son activos inmateriales que representan costes incurridos en la puesta en marcha de una empresa, como trámites legales, estudios de mercado o campañas de lanzamiento. Se valoran inicialmente por su coste y se amortizan sistemáticamente durante su vida útil estimada, generalmente entre 5 y 10 años. No se pueden revalorizar ni reconocer ingresos por su apreciación. Su correcta contabilización es clave para reflejar fielmente el esfuerzo de creación de la empresa.",
+      "question": "11. ¿Cómo se amortizan los gastos de establecimiento?",
+      "options": [
+        "No se amortizan porque no tienen sustancia física",
+        "Se amortizan sistemáticamente durante su vida útil",
+        "Se deducen íntegramente en el primer ejercicio",
+        "Se revalorizan anualmente"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Los <u>gastos de establecimiento</u> son <u>inmovilizados intangibles</u> que representan costes de puesta en marcha de la empresa, como trámites legales, estudios de mercado o campañas de lanzamiento.</p><p>Se valoran por su <u>coste</u> y se <u>amortizan sistemáticamente</u> durante su vida útil estimada, que generalmente oscila entre 5 y 10 años. El método más común es el <u>lineal</u>.</p><p>No se pueden <u>revalorizar</u> ni reconocer <u>ingresos</u> por su apreciación. Su amortización genera un <u>gasto periódico</u> en la cuenta de resultados, reflejando el desgaste de su utilidad económica.</p>"
+    },
+    {
+      "intro": "Las subvenciones, donaciones y legados recibidos por la empresa se registran como un aumento del patrimonio neto, no como ingreso del ejercicio. Se reconocen en cuentas del grupo 1, como (130) Subvenciones, donaciones y legados recibidos. Posteriormente, pueden transferirse a reservas o resultados cuando se cumplan las condiciones. Por ejemplo, si se recibe una subvención de 60.000 €, se registra: 60.000 € a (130) y 60.000 € a (4708) Hacienda Pública, deudora por subvenciones. Este tratamiento evita distorsionar el resultado del ejercicio y refleja que la subvención es un refuerzo patrimonial, no un ingreso operativo.",
+      "question": "12. ¿Cómo se contabilizan las subvenciones al capital?",
+      "options": [
+        "Como ingresos del ejercicio",
+        "Como un aumento del patrimonio neto, no como ingreso",
+        "Se distribuyen como dividendos",
+        "Se registran como deudas a largo plazo"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Las <u>subvenciones al capital</u> (como ayudas públicas, donaciones o legados) se registran como un <u>aumento del patrimonio neto</u>, no como <u>ingreso del ejercicio</u>. Se reconocen en cuentas del grupo 1, como <u>(130) Subvenciones, donaciones y legados recibidos</u>.</p><p>Posteriormente, pueden transferirse a <u>reservas</u> o <u>resultados</u> cuando se cumplan las condiciones. Por ejemplo, si se recibe una subvención de 60.000 €, se registra: <u>60.000 € a (130)</u> y <u>60.000 € a (4708) Hacienda Pública, deudora por subvenciones</u>.</p><p>Este tratamiento evita distorsionar el resultado del ejercicio y refleja que la subvención es un <u>refuerzo patrimonial</u>, no un ingreso operativo.</p>"
+    },
+    {
+      "intro": "Las inversiones financieras a largo plazo incluyen préstamos participativos, cuentas en participación y valores representativos de deuda no negociados en mercados activos. Se valoran inicialmente por su coste y posteriormente por coste amortizado, ajustando los intereses devengados. A diferencia de las inversiones a corto plazo, estas partidas no se valoran al valor razonable con cambios en pérdidas y ganancias, sino que siguen un modelo de coste amortizado, reflejando su naturaleza de inversión a largo plazo. Son una parte clave del activo no corriente.",
+      "question": "13. ¿Qué activos financieros a largo plazo se incluyen en el inmovilizado?",
+      "options": [
+        "Acciones cotizadas en bolsa",
+        "Préstamos a largo plazo concedidos a terceros",
+        "Efectivo en cuentas corrientes",
+        "Deudores comerciales a corto plazo"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>En el <u>inmovilizado financiero</u> (grupo 25) se incluyen aquellos activos financieros que la empresa tiene la intención de mantener a <u>largo plazo</u>. Entre ellos destacan los <u>préstamos y partidas a cobrar a largo plazo</u>, como los créditos concedidos a terceros con vencimiento superior a un año.</p><p>Estos activos se valoran inicialmente por su <u>coste</u> (importe del préstamo) y posteriormente por <u>coste amortizado</u>, ajustando los intereses devengados. También pueden incluir <u>cuentas en participación</u> y <u>valores representativos de deuda</u> no negociados en mercados activos.</p><p>A diferencia de las inversiones financieras a corto plazo (grupo 54-55), estas partidas no se valoran al valor razonable con cambios en pérdidas y ganancias, sino que siguen un modelo de coste amortizado, reflejando su naturaleza de inversión a largo plazo.</p>"
+    },
+    {
+      "intro": "Las existencias son activos que la empresa posee para su venta en el curso normal de la explotación, en proceso de producción para dicha venta, o en forma de materiales o suministros para ser consumidos en la producción o prestación de servicios. Se valoran al coste de adquisición o producción, ajustado por el valor neto realizable si este es inferior, aplicando el principio de prudencia. Este ajuste, conocido como deterioro de valor, debe realizarse al cierre del ejercicio. Las existencias son el núcleo del ciclo de explotación y están sujetas a continuas compras y ventas.",
+      "question": "14. ¿Qué tipos de existencias reconoce la contabilidad?",
+      "options": [
+        "Materias primas y otros aprovisionamientos",
+        "Productos en curso y productos terminados",
+        "Mercaderías para reventa",
+        "Inmovilizado material disponible para venta"
+      ],
+      "correct": [0, 1, 2],
+      "saber_mas": "<p>La contabilidad reconoce varios tipos de <u>existencias</u> según su estado y finalidad. Las <u>materias primas</u> son bienes que se consumirán en el proceso productivo. Los <u>productos en curso</u> están en proceso de fabricación. Los <u>productos terminados</u> están listos para la venta. Las <u>mercaderías</u> son productos adquiridos para su reventa sin transformación.</p><p>Estas categorías se incluyen en el <u>grupo 3</u> del PGC. Es importante no confundirlas con el inmovilizado material, aunque una empresa pueda vender maquinaria usada; en ese caso, se trata de una <u>baja</u>, no de existencias.</p><p>Las existencias se valoran al <u>coste</u> o al <u>valor neto realizable</u>, según el criterio de prudencia. Además, deben revisarse anualmente por <u>deterioro de valor</u>. Una correcta clasificación y valoración es esencial para determinar el <u>coste de ventas</u> y el <u>beneficio bruto</u>.</p>"
+    },
+    {
+      "intro": "El principio de empresa en funcionamiento es una hipótesis fundamental para la elaboración de las cuentas anuales. Supone que la empresa continuará su actividad de forma indefinida y no tiene intención ni necesidad de liquidarse o reducir sustancialmente su actividad. Esta hipótesis es crucial para la valoración de activos y pasivos. Por ejemplo, los activos no se valoran al precio de liquidación, sino al costo o valor razonable, asumiendo que se usarán en la actividad futura. Si no se aplicara este principio, la presentación del balance sería completamente distinta, enfocada en la realización inmediata de activos y pago de pasivos.",
+      "question": "15. ¿Qué significa el principio de 'empresa en funcionamiento'?",
+      "options": [
+        "La empresa está en proceso de liquidación",
+        "La empresa continuará su actividad de forma indefinida",
+        "La empresa solo opera durante un ciclo productivo",
+        "La empresa no puede vender activos"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El principio de <u>empresa en funcionamiento</u> (o empresa en marcha) asume que la empresa <u>continuará su actividad de forma indefinida</u> y no tiene intención ni necesidad de liquidarse o reducir sustancialmente su actividad.</p><p>Esta hipótesis es fundamental para la valoración de activos y pasivos. Por ejemplo, los activos no se valoran al precio de liquidación, sino al costo o valor razonable, asumiendo que se usarán en la actividad futura.</p><p>Si no se aplicara este principio, la presentación del balance sería completamente distinta, enfocada en la realización inmediata de activos y pago de pasivos.</p>"
+    }
+  ]
+}
