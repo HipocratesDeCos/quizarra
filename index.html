@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperQuiz - Contabilidad Financiera</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f7fa;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            color: #4facfe;
+            font-size: 2.5rem;
+        }
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .quiz-menu {
+            text-align: center;
+        }
+        .quiz-menu h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .quiz-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .btn {
+            max-width: 600px;
+            width: 100%;
+            margin: 15px auto;
+            display: block;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border: none;
+            border-radius: 15px;
+            padding: 18px 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.6);
+        }
+        .btn-home {
+            background: #6c757d;
+            margin-top: 30px;
+        }
+        .btn-home:hover {
+            background: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SuperQuiz</h1>
+            <p>Contabilidad Financiera</p>
+        </div>
+
+        <!-- Menú Principal -->
+        <div class="quiz-menu">
+            <h2>Selecciona un Tema</h2>
+            <div class="quiz-list" id="quiz-list">
+                <!-- Los botones se cargarán automáticamente -->
+            </div>
+            <button class="btn btn-home" onclick="window.location.reload()">← Volver al Inicio</button>
+        </div>
+    </div>
+
+    <script>
+        // Cargar el menú desde quizzes.json
+        async function loadQuizMenu() {
+            try {
+                const response = await fetch('quizzes.json');
+                const quizzes = await response.json();
+                const quizList = document.getElementById('quiz-list');
+
+                quizzes.forEach(quiz => {
+                    const button = document.createElement('button');
+                    button.className = 'btn';
+                    button.setAttribute('data-quiz', quiz.id);
+                    button.textContent = quiz.title;
+                    button.onclick = () => {
+                        window.location.href = `quizzes/${quiz.id}.json`;
+                    };
+                    quizList.appendChild(button);
+                });
+            } catch (error) {
+                quizList.innerHTML = `<p style="color: red;">Error: No se pudo cargar el menú. Verifica que quizzes.json exista.</p>`;
+                console.error('Error al cargar quizzes.json:', error);
+            }
+        }
+
+        // Iniciar al cargar la página
+        document.addEventListener('DOMContentLoaded', loadQuizMenu);
+    </script>
+</body>
+</html>
