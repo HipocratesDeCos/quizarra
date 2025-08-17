@@ -1,0 +1,58 @@
+[
+  {
+    "id": "contabilidad-basica",
+    "title": "Introducción al PGC y Marco Conceptual"
+  },
+  {
+    "id": "inversion-no-corriente",
+    "title": "Inversión No Corriente - Activo Fijo"
+  },
+  {
+    "id": "inversion-corriente",
+    "title": "Inversión Corriente - Activo Circulante"
+  },
+  {
+    "id": "patrimonio-neto",
+    "title": "Patrimonio Neto - Capital y Reservas"
+  },
+  {
+    "id": "pasivo-corriente-no-corriente",
+    "title": "Pasivo Corriente y No Corriente"
+  },
+  {
+    "id": "impuesto-sociedades",
+    "title": "Impuesto de Sociedades"
+  },
+  {
+    "id": "cuentas-anuales",
+    "title": "Cuentas Anuales"
+  },
+  {
+    "id": "analisis-balance-i",
+    "title": "Análisis del Balance de Situación I"
+  },
+  {
+    "id": "analisis-balance-ii",
+    "title": "Análisis del Balance de Situación II"
+  },
+  {
+    "id": "analisis-cuenta-resultados",
+    "title": "Análisis de la Cuenta de Pérdidas y Ganancias"
+  },
+  {
+    "id": "rentabilidad-autofinanciacion-crecimiento",
+    "title": "Rentabilidad, Autofinanciación y Crecimiento"
+  },
+  {
+    "id": "analisis-fondo-maniobra",
+    "title": "Análisis del Fondo de Maniobra"
+  },
+  {
+    "id": "analisis-datos-sectoriales",
+    "title": "Análisis con Datos Sectoriales"
+  },
+  {
+    "id": "analisis-integral-estados-financieros",
+    "title": "Análisis Integral de Estados Financieros"
+  }
+]
