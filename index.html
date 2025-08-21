@@ -353,6 +353,17 @@
             padding-left: 20px;
             margin: 10px 0;
         }
+        .debug-info {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: #666;
+            white-space: pre-wrap;
+        }
         @keyframes dots {
             0%, 20% { content: '.'; }
             40% { content: '..'; }
@@ -472,6 +483,32 @@
         let quizData = null;
         let totalQuestions = 0;
 
+        // Función para obtener la ruta base de la aplicación
+        function getBasePath() {
+            const path = window.location.pathname;
+            // Si estamos en GitHub Pages con un repositorio específico
+            if (path.includes('/SuperQuiz') || path.includes('/superquiz')) {
+                const segments = path.split('/');
+                if (segments.length > 1) {
+                    return '/' + segments[1];
+                }
+            }
+            return '';
+        }
+
+        // Función para mostrar información de debug
+        function showDebugInfo(info) {
+            console.log('Debug Info:', info);
+            const debugDiv = document.createElement('div');
+            debugDiv.className = 'debug-info';
+            debugDiv.textContent = JSON.stringify(info, null, 2);
+            
+            const quizList = document.getElementById('quiz-list');
+            if (quizList && !quizList.querySelector('.debug-info')) {
+                quizList.appendChild(debugDiv);
+            }
+        }
+
         // Función para mostrar una página específica
         function showPage(pageId, area = 'contabilidad') {
             if (pageId === 'menu-page') {
@@ -496,111 +533,117 @@
         // Carga los temas de un área
         function loadAreaThemes() {
             const quizList = document.getElementById('quiz-list');
+            const basePath = getBasePath();
             
-            // Intentamos cargar los temas desde el servidor
-            fetch(`content/${currentArea}/index.json`)
-                .then(response => {
-                    if (response.ok) {
-                        return response.json();
-                    }
-                    // Si no existe index.json, cargamos los temas directamente
-                    throw new Error('No existe index.json');
-                })
-                .then(data => {
-                    // Si existe index.json, lo usamos
-                    quizList.innerHTML = '';
-                    for (const [id, quiz] of Object.entries(data)) {
-                        const btn = document.createElement('button');
-                        btn.className = 'btn';
-                        btn.textContent = quiz.title;
-                        btn.onclick = () => loadQuiz(id);
-                        quizList.appendChild(btn);
-                    }
-                })
-                .catch(error => {
-                    // Si no existe index.json, buscamos los archivos JSON directamente
-                    const themeFiles = [
-                        'contabilidad-basica.json',
-                        'inversion-no-corriente.json',
-                        'analisis-financiero.json',
-                        'ratios-empresa.json',
-                        'macroeconomia.json',
-                        'microeconomia.json',
-                        'marketing-digital.json',
-                        'segmentacion-mercado.json'
-                    ];
-                    
-                    const validThemes = [];
-                    
-                    // Verificamos qué temas existen
-                    const checkThemes = themeFiles.map(file => 
-                        fetch(`content/${currentArea}/${file}`)
-                            .then(res => {
-                                if (res.ok) {
-                                    validThemes.push({
-                                        id: file.replace('.json', ''),
-                                        file: file
-                                    });
-                                }
-                            })
-                            .catch(() => {})
-                    );
-                    
-                    Promise.allSettled(checkThemes).then(() => {
-                        if (validThemes.length === 0) {
-                            quizList.innerHTML = '<div class="error">No se encontraron temas para esta área. Asegúrate de que los archivos JSON existen en el servidor.</div>';
-                            return;
+            showDebugInfo({
+                currentArea,
+                basePath,
+                currentUrl: window.location.href,
+                pathname: window.location.pathname
+            });
+            
+            // Lista de archivos JSON conocidos para cada área
+            const knownFiles = {
+                'contabilidad': ['contabilidad-basica.json', 'inversion-no-corriente.json'],
+                'analisis-economico-financiero': ['introduccion.json'],
+                'economia': ['introduccion.json'],
+                'marketing': ['introduccion.json']
+            };
+            
+            const filesToCheck = knownFiles[currentArea] || [];
+            const validThemes = [];
+            let checkedFiles = 0;
+            
+            if (filesToCheck.length === 0) {
+                quizList.innerHTML = '<div class="error">No hay temas configurados para esta área.</div>';
+                return;
+            }
+            
+            filesToCheck.forEach(file => {
+                const url = `${basePath}/content/${currentArea}/${file}`;
+                
+                fetch(url)
+                    .then(response => {
+                        checkedFiles++;
+                        if (response.ok) {
+                            return response.json();
                         }
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    })
+                    .then(data => {
+                        validThemes.push({
+                            id: file.replace('.json', ''),
+                            title: data.title || 'Título no disponible',
+                            file: file
+                        });
                         
-                        // Cargamos los títulos de los temas que existen
-                        const loadTitles = validThemes.map(theme => 
-                            fetch(`content/${currentArea}/${theme.file}`)
-                                .then(res => res.json())
-                                .then(data => ({ 
-                                    id: theme.id, 
-                                    title: data.title 
-                                }))
-                                .catch(error => {
-                                    console.error(`Error cargando ${theme.file}:`, error);
-                                    return null;
-                                })
-                        );
+                        // Si hemos revisado todos los archivos, mostrar resultados
+                        if (checkedFiles === filesToCheck.length) {
+                            displayThemes(validThemes);
+                        }
+                    })
+                    .catch(error => {
+                        console.error(`Error loading ${file}:`, error);
                         
-                        Promise.allSettled(loadTitles)
-                            .then(results => {
-                                quizList.innerHTML = '';
-                                results.forEach(result => {
-                                    if (result.status === 'fulfilled' && result.value) {
-                                        const theme = result.value;
-                                        const btn = document.createElement('button');
-                                        btn.className = 'btn';
-                                        btn.textContent = theme.title;
-                                        btn.onclick = () => loadQuiz(theme.id);
-                                        quizList.appendChild(btn);
-                                    }
-                                });
-                                
-                                // Si no hay temas válidos, mostramos mensaje de error
-                                if (quizList.children.length === 0) {
-                                    quizList.innerHTML = '<div class="error">No se pudieron cargar los temas. Verifica que los archivos JSON son válidos.</div>';
-                                }
-                            });
+                        // Si hemos revisado todos los archivos, mostrar resultados
+                        if (checkedFiles === filesToCheck.length) {
+                            displayThemes(validThemes);
+                        }
                     });
-                });
+            });
+        }
+
+        // Muestra los temas válidos encontrados
+        function displayThemes(themes) {
+            const quizList = document.getElementById('quiz-list');
+            
+            if (themes.length === 0) {
+                quizList.innerHTML = `
+                    <div class="error">
+                        <h3>No se encontraron temas</h3>
+                        <p>No se pudieron cargar los archivos JSON para el área "${currentArea}".</p>
+                        <p>Verifica que los siguientes archivos existen y son accesibles:</p>
+                        <ul>
+                            <li>content/${currentArea}/contabilidad-basica.json</li>
+                            <li>content/${currentArea}/inversion-no-corriente.json</li>
+                        </ul>
+                        <p>URL base detectada: <code>${getBasePath()}</code></p>
+                    </div>
+                `;
+                return;
+            }
+            
+            quizList.innerHTML = '';
+            themes.forEach(theme => {
+                const btn = document.createElement('button');
+                btn.className = 'btn';
+                btn.textContent = theme.title;
+                btn.onclick = () => loadQuiz(theme.id);
+                quizList.appendChild(btn);
+            });
         }
 
         // Carga un quiz específico desde JSON
         function loadQuiz(quizId) {
             currentQuizId = quizId;
+            const basePath = getBasePath();
+            const url = `${basePath}/content/${currentArea}/${quizId}.json`;
             
             // Mostrar mensaje de carga
             const content = document.getElementById('quiz-content');
             content.innerHTML = '<div class="loading">Cargando tema...</div>';
             
-            fetch(`content/${currentArea}/${quizId}.json`)
+            showDebugInfo({
+                action: 'loadQuiz',
+                quizId,
+                url,
+                basePath
+            });
+            
+            fetch(url)
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error(`Quiz no encontrado (${response.status})`);
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                     }
                     return response.json();
                 })
@@ -624,14 +667,15 @@
                     content.innerHTML = `
                         <div class="error">
                             <h3>¡Error al cargar el tema!</h3>
-                            <p>Detalles: ${error.message}</p>
-                            <p>Posibles causas:</p>
+                            <p><strong>URL intentada:</strong> <code>${url}</code></p>
+                            <p><strong>Error:</strong> ${error.message}</p>
+                            <p>Posibles soluciones:</p>
                             <ul>
-                                <li>El archivo JSON no existe en el servidor</li>
-                                <li>El archivo JSON tiene formato incorrecto</li>
-                                <li>Problemas de conexión</li>
+                                <li>Verifica que el archivo JSON existe en el repositorio</li>
+                                <li>Comprueba que el archivo tiene formato JSON válido</li>
+                                <li>Asegúrate de que GitHub Pages está habilitado</li>
+                                <li>Espera unos minutos para que GitHub Pages se actualice</li>
                             </ul>
-                            <p>Verifica que el archivo <code>content/${currentArea}/${quizId}.json</code> existe y es válido.</p>
                         </div>
                     `;
                 });
@@ -642,6 +686,7 @@
             const question = quizData.questions[currentQuestionIndex];
             const content = document.getElementById('quiz-content');
             document.getElementById('current-question').textContent = currentQuestionIndex + 1;
+            selectedOptions = []; // Reset selections for new question
             
             content.innerHTML = `
                 <div class="question">
@@ -654,22 +699,20 @@
                     </div>
                     <div class="feedback" id="feedback-${currentQuestionIndex}" style="display:none;"></div>
                     <div class="question-actions">
-                        <button class="btn-validate" id="validate-btn">Validar respuesta</button>
+                        <button class="btn-validate" id="validate-btn" onclick="validateAnswer()">Validar respuesta</button>
                         <button class="btn-saber-mas" onclick="openModal()">Saber más</button>
                     </div>
                 </div>
             `;
-            
-            // Añadir evento al botón de validación
-            document.getElementById('validate-btn').addEventListener('click', validateAnswer);
         }
 
         // Permite seleccionar opciones
         function toggleSelect(element, optionIndex) {
             const options = document.querySelectorAll(`#options-${currentQuestionIndex} .option`);
+            const question = quizData.questions[currentQuestionIndex];
             
             // Si es pregunta de única respuesta, deseleccionar otras
-            if (quizData.questions[currentQuestionIndex].correct.length === 1) {
+            if (question.correct.length === 1) {
                 options.forEach(opt => opt.classList.remove('selected'));
                 element.classList.add('selected');
                 selectedOptions = [optionIndex];
@@ -688,17 +731,24 @@
 
         // Valida la respuesta
         function validateAnswer() {
+            if (selectedOptions.length === 0) {
+                alert('Por favor, selecciona al menos una opción.');
+                return;
+            }
+            
             const question = quizData.questions[currentQuestionIndex];
             const feedback = document.getElementById(`feedback-${currentQuestionIndex}`);
             const validateBtn = document.getElementById('validate-btn');
             const options = document.querySelectorAll(`#options-${currentQuestionIndex} .option`);
             
-            // Deshabilitar botón
+            // Deshabilitar botón y opciones
             validateBtn.disabled = true;
+            options.forEach(opt => opt.style.pointerEvents = 'none');
             
             // Verificar respuestas
-            const isCorrect = selectedOptions.length === question.correct.length && 
-                            selectedOptions.every(val => question.correct.includes(val));
+            const correctAnswers = [...question.correct].sort();
+            const userAnswers = [...selectedOptions].sort();
+            const isCorrect = JSON.stringify(correctAnswers) === JSON.stringify(userAnswers);
             
             // Mostrar feedback
             if (isCorrect) {
@@ -720,13 +770,17 @@
                 if (selectedOptions.includes(i) && !question.correct.includes(i)) {
                     opt.classList.add('incorrect');
                 }
-                opt.style.pointerEvents = 'none';
             });
             
             // Cambiar botón a "Siguiente"
             setTimeout(() => {
-                validateBtn.textContent = 'Siguiente pregunta';
-                validateBtn.onclick = nextQuestion;
+                if (currentQuestionIndex < totalQuestions - 1) {
+                    validateBtn.textContent = 'Siguiente pregunta';
+                    validateBtn.onclick = nextQuestion;
+                } else {
+                    validateBtn.textContent = 'Ver resultados';
+                    validateBtn.onclick = showResults;
+                }
                 validateBtn.disabled = false;
             }, 1500);
         }
@@ -734,12 +788,7 @@
         // Muestra la siguiente pregunta
         function nextQuestion() {
             currentQuestionIndex++;
-            
-            if (currentQuestionIndex < totalQuestions) {
-                loadQuestion();
-            } else {
-                showResults();
-            }
+            loadQuestion();
         }
 
         // Muestra los resultados
@@ -757,49 +806,4 @@
             } else if (percentage >= 50) {
                 resultMessage.textContent = 'Buen esfuerzo. Revisa las preguntas que has fallado para mejorar.';
             } else {
-                resultMessage.textContent = 'Necesitas repasar más el tema. ¡No te rindas!';
-            }
-            
-            showPage('results-page');
-        }
-
-        // Abre el modal de "Saber más"
-        function openModal() {
-            const question = quizData.questions[currentQuestionIndex];
-            const modal = document.getElementById('saberMasModal');
-            const modalContent = document.getElementById('modal-content');
-            
-            modalContent.innerHTML = question.saber_mas;
-            modal.style.display = 'flex';
-        }
-
-        // Cierra el modal
-        function closeModal() {
-            document.getElementById('saberMasModal').style.display = 'none';
-        }
-
-        // Inicialización al cargar la página
-        document.addEventListener('DOMContentLoaded', () => {
-            // Configurar evento para cerrar el modal al hacer clic fuera
-            window.onclick = function(event) {
-                const modal = document.getElementById('saberMasModal');
-                if (event.target === modal) closeModal();
-            };
-            
-            // Configurar botón de cierre del modal
-            const closeBtn = document.querySelector('.modal-close');
-            if (closeBtn) {
-                closeBtn.onclick = closeModal;
-            }
-            
-            // Si hay un hash en la URL, cargar esa área directamente
-            if (window.location.hash) {
-                const area = window.location.hash.substring(1);
-                if (['contabilidad', 'analisis-economico-financiero', 'economia', 'marketing'].includes(area)) {
-                    showPage('menu-page', area);
-                }
-            }
-        });
-    </script>
-</body>
-</html>
+                resultMessage.textContent = 'Necesitas repasar más el tema. ¡No te rindas
