@@ -1,0 +1,18 @@
+{
+  "title": "Título del tema",
+  "questions": [
+    {
+      "intro": "Introducción opcional",
+      "question": "1. Tu pregunta aquí",
+      "options": [
+        "Opción 1",
+        "Opción 2",
+        "Opción 3",
+        "Opción 4"
+      ],
+      "correct": [0, 1],
+      "saber_mas": "<p>Contenido detallado para el botón 'Saber más'</p>"
+    },
+    // Más preguntas...
+  ]
+}
