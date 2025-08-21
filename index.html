@@ -482,7 +482,7 @@
         function getBasePath() {
             const path = window.location.pathname;
             // Si estamos en GitHub Pages con un repositorio específico
-            if (path.includes('/SuperQuiz') || path.includes('/superquiz')) {
+            if (path.includes('/quizarra')) {
                 const segments = path.split('/');
                 if (segments.length > 1) {
                     return '/' + segments[1];
