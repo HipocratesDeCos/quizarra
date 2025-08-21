@@ -1,0 +1,161 @@
+{
+  "title": "Introducción al Plan General de Contabilidad",
+  "questions": [
+    {
+      "intro": "El Plan General de Contabilidad (PGC) es el marco normativo que regula la contabilidad en España. Establece los principios, criterios y normas contables que deben seguir las empresas para elaborar sus estados financieros.",
+      "question": "1. ¿Cuál es el objetivo principal del Plan General de Contabilidad?",
+      "options": [
+        "Homogeneizar la información contable",
+        "Garantizar la utilidad de la información para la toma de decisiones",
+        "Establecer criterios fiscales",
+        "Facilitar la comparabilidad"
+      ],
+      "correct": [0, 1, 3],
+      "saber_mas": "<p>El <u>objetivo principal del Plan General de Contabilidad</u> es proporcionar un marco común que permita la elaboración de estados financieros <u>homogéneos, comprensibles y comparables</u>. Esto es fundamental para que inversores, acreedores y otros usuarios puedan tomar decisiones económicas fundamentadas.</p><p>El PGC no solo regula el registro contable, sino que también garantiza la <u>transparencia</u> y <u>calidad</u> de la información. Por ejemplo, una empresa que cambia de sector debe seguir los mismos criterios para mantener la <u>continuidad</u> y <u>comparabilidad</u>.</p><p>Además, el PGC establece que la información debe ser <u>relevante</u> y <u>fiable</u>, cumpliendo con el marco conceptual. Esto asegura la <u>imagen fiel</u> del patrimonio, situación financiera y resultados.</p>"
+    },
+    {
+      "question": "2. ¿Qué característica cualitativa implica que la información influya en las decisiones económicas de los usuarios?",
+      "options": ["Relevancia", "Fiabilidad", "Comparabilidad", "Comprensibilidad"],
+      "correct": [0],
+      "saber_mas": "<p>La <u>relevancia</u> es una característica cualitativa fundamental que implica que la información contable influye en las decisiones económicas de los usuarios. Para ser relevante, debe tener <u>valor predictivo</u> o <u>valor confirmatorio</u>.</p><p>Por ejemplo, conocer el nivel de deuda de una empresa ayuda a prever su solvencia futura. La <u>materialidad</u> está relacionada con la relevancia: un dato es material si su omisión o error podría influir en las decisiones.</p><p>Según el marco conceptual del PGC, sin relevancia, la información pierde su utilidad principal, aunque sea fiable o comparable.</p>"
+    },
+    {
+      "question": "3. ¿Qué principio contable exige que los ingresos y gastos se registren cuando se generan, no cuando se cobran o pagan?",
+      "options": ["Devengo", "Prudencia", "Importancia relativa", "Asociación de ingresos y gastos"],
+      "correct": [0],
+      "saber_mas": "<p>El <u>principio del devengo</u> establece que los ingresos y gastos deben reconocerse en el momento en que se generan, independientemente de cuándo se cobren o paguen. Es fundamental para la <u>imagen fiel</u> del resultado.</p><p>Por ejemplo, si una empresa vende en diciembre y cobra en enero, el ingreso se registra en diciembre. Este principio permite una adecuada <u>asociación de ingresos y gastos</u> en el período correspondiente.</p><p>El devengo es clave para diferenciar entre <u>tesorería</u> y <u>resultado</u>, evitando distorsiones por la cronología del cobro.</p>"
+    },
+    {
+      "question": "4. ¿Qué significa el principio de prudencia?",
+      "options": [
+        "Evitar sobrevalorar activos e ingresos",
+        "Evitar infravalorar pasivos y gastos",
+        "No compensar activos y pasivos",
+        "Aplicar políticas contables uniformemente"
+      ],
+      "correct": [0, 1],
+      "saber_mas": "<p>El <u>principio de prudencia</u> exige que se tenga precaución ante la incertidumbre. Implica que los activos e ingresos no se sobrevaloren, y que los pasivos y gastos no se infravaloren.</p><p>Por ejemplo, si hay dudas sobre el cobro a un cliente, se debe crear una provisión. Pero no se puede usar la prudencia para crear reservas ocultas, ya que eso afectaría la <u>fiabilidad</u> de la información.</p><p>Es un equilibrio: proteger a los usuarios sin distorsionar la realidad financiera.</p>"
+    },
+    {
+      "question": "5. ¿Qué elementos integran las cuentas anuales según el PGC?",
+      "options": [
+        "Balance, cuenta de pérdidas y ganancias, estado de cambios en el patrimonio neto",
+        "Balance, memoria, estado de flujo de efectivo",
+        "Balance, cuenta de pérdidas y ganancias, estado de cambios en el patrimonio neto, estado de flujo de efectivo y memoria",
+        "Balance, cuenta de pérdidas y ganancias, memoria"
+      ],
+      "correct": [2],
+      "saber_mas": "<p>Las <u>cuentas anuales</u> están formadas por cinco documentos principales:</p><ul><li><strong>Balance</strong>: muestra la situación financiera al cierre del ejercicio.</li><li><strong>Cuenta de pérdidas y ganancias</strong>: refleja los resultados del periodo.</li><li><strong>Estado de cambios en el patrimonio neto</strong>: detalla el movimiento del patrimonio.</li><li><strong>Estado de flujo de efectivo</strong>: muestra el movimiento de liquidez.</li><li><strong>Memoria</strong>: explica los datos y criterios utilizados.</li></ul><p>Esta estructura garantiza la transparencia y coherencia de la información.</p>"
+    },
+    {
+      "question": "6. ¿Qué es un activo según el Marco Conceptual?",
+      "options": [
+        "Un recurso controlado por la empresa con expectativa de beneficios futuros",
+        "Un derecho a recibir dinero en el futuro",
+        "Un bien que pertenece a la empresa",
+        "Un elemento que genera ingresos"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Un <u>activo</u> es un recurso que la empresa controla como consecuencia de sucesos pasados, y del que espera obtener <u>beneficios económicos futuros</u>.</p><p>No basta con que el bien exista: debe haber <u>control efectivo</u> y <u>probabilidad de rendimientos</u>. Por ejemplo, un inmueble arrendado no es activo si no se tiene control.</p><p>La propiedad legal no es necesaria; lo importante es la <u>esencia económica</u> del recurso.</p>"
+    },
+    {
+      "question": "7. ¿Qué define un pasivo?",
+      "options": [
+        "Una obligación presente derivada de eventos pasados",
+        "Un compromiso futuro",
+        "Una deuda con proveedores",
+        "Un saldo a pagar"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Un <u>pasivo</u> es una obligación presente surgida de eventos pasados, cuya liquidación probablemente implique una <u>salida de recursos</u> con beneficios económicos.</p><p>Por ejemplo, un préstamo bancario es un pasivo porque existe una obligación actual. Si solo hubiera un contrato futuro, no sería un pasivo.</p><p>El concepto incluye también las <u>provisiones</u>, que son pasivos estimados, como gastos de desmantelamiento o litigios pendientes.</p>"
+    },
+    {
+      "question": "8. ¿Qué es el patrimonio neto?",
+      "options": [
+        "La parte residual de los activos menos los pasivos",
+        "Los fondos aportados por los socios",
+        "Los resultados acumulados",
+        "El capital social"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>patrimonio neto</u> es la diferencia entre los activos y los pasivos. Representa los <u>fondos propios</u> de la empresa.</p><p>Incluye el <u>capital social</u>, las <u>reservas</u> y los <u>resultados acumulados</u>. No es solo el capital aportado, sino todo lo que pertenece a los propietarios tras deducir las deudas.</p><p>Es clave para evaluar la solvencia y estabilidad financiera.</p>"
+    },
+    {
+      "question": "9. ¿Qué es un ingreso imputado?",
+      "options": [
+        "Un incremento de activos o decremento de pasivos que altera positivamente el patrimonio neto",
+        "Un cobro realizado",
+        "Un derecho a cobrar",
+        "Un aumento de capital"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Un <u>ingreso imputado</u> es cualquier entrada o incremento de activos, o decremento de pasivos, que aumenta positivamente el patrimonio neto, siempre que no proceda de aportaciones de propietarios.</p><p>Por ejemplo, la venta de productos genera un ingreso imputado, incluso si el cobro se hace después.</p><p>Es diferente del <u>ingreso inicial</u> (el total pactado), que puede no estar completamente devengado.</p>"
+    },
+    {
+      "question": "10. ¿Qué es un gasto imputado?",
+      "options": [
+        "Un decremento de activos o incremento de pasivos que reduce el patrimonio neto",
+        "Un pago realizado",
+        "Un costo anticipado",
+        "Un descuento recibido"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Un <u>gasto imputado</u> es cualquier salida, consumo o deterioro de activos, o incremento de pasivos, que disminuye negativamente el patrimonio neto, siempre que no sea una distribución a propietarios.</p><p>Por ejemplo, el consumo de mercaderías o el pago de salarios son gastos imputados.</p><p>Se diferencia del <u>gasto inicial</u> (costo total), que puede no estar totalmente devengado.</p>"
+    },
+    {
+      "question": "11. ¿Qué criterio de valoración se aplica al coste histórico?",
+      "options": [
+        "El precio de adquisición del activo",
+        "El valor razonable",
+        "El valor neto realizable",
+        "El valor en uso"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>coste histórico</u> es el precio de adquisición del activo, incluyendo el importe pagado, los impuestos y gastos directamente atribuibles a su compra.</p><p>Para activos producidos internamente, incluye materiales, mano de obra y costes indirectos.</p><p>Es el método más utilizado por su <u>fiabilidad</u> y <u>objetividad</u>, aunque puede no reflejar el valor actual.</p>"
+    },
+    {
+      "question": "12. ¿Qué es el valor razonable?",
+      "options": [
+        "El precio que se recibiría por la venta de un activo en condiciones normales",
+        "El costo de producción",
+        "El valor neto realizable",
+        "El valor en libros"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>valor razonable</u> es el importe que se recibiría por la venta de un activo, o se pagaría por la transferencia de un pasivo, en una transacción ordenada entre partes informadas e independientes.</p><p>Se basa en el mercado activo y se clasifica en tres niveles: precios cotizados (nivel 1), modelos con datos observables (nivel 2) y estimaciones con datos no observables (nivel 3).</p><p>Es útil para reflejar la <u>realidad económica</u> de los activos y pasivos.</p>"
+    },
+    {
+      "question": "13. ¿Qué es el valor neto realizable?",
+      "options": [
+        "El importe esperado por la venta de un activo menos los costes de venta",
+        "El valor razonable",
+        "El costo amortizado",
+        "El valor en uso"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>valor neto realizable</u> es el importe que se espera obtener por la venta de un activo en condiciones normales, menos los costes necesarios para su venta.</p><p>Es útil para determinar si un activo debe depreciarse por deterioro.</p><p>Por ejemplo, si un producto tiene un valor de mercado de 100€ y los costes de venta son 10€, su valor neto realizable es 90€.</p>"
+    },
+    {
+      "question": "14. ¿Qué es el valor en uso?",
+      "options": [
+        "El valor actual de los flujos de efectivo futuros esperados",
+        "El valor razonable",
+        "El costo histórico",
+        "El valor neto realizable"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>valor en uso</u> es el valor actual de los flujos de efectivo netos que se esperan obtener del activo durante su vida útil.</p><p>Se calcula aplicando un tipo de descuento que incluye el riesgo del activo.</p><p>Es útil para evaluar si un activo debe mantenerse en el balance o si ha sufrido un deterioro.</p>"
+    },
+    {
+      "question": "15. ¿Qué es el coste amortizado?",
+      "options": [
+        "El importe inicial ajustado por intereses y amortización",
+        "El valor razonable",
+        "El costo histórico",
+        "El valor en uso"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>coste amortizado</u> es el importe al que fue inicialmente valorado un instrumento financiero, ajustado por la amortización de intereses utilizando el tipo de interés efectivo.</p><p>Se aplica a préstamos, créditos y bonos.</p><p>Permite reflejar la evolución del valor del instrumento financiero en el tiempo.</p>"
+    }
+  ]
+}
