@@ -806,4 +806,50 @@
             } else if (percentage >= 50) {
                 resultMessage.textContent = 'Buen esfuerzo. Revisa las preguntas que has fallado para mejorar.';
             } else {
-                resultMessage.textContent = 'Necesitas repasar más el tema. ¡No te rindas
+                resultMessage.textContent = 'Necesitas repasar más el tema. ¡No te rindas!';
+            }
+            
+            showPage('results-page');
+        }
+
+        // Abre el modal de "Saber más"
+        function openModal() {
+            const question = quizData.questions[currentQuestionIndex];
+            const modal = document.getElementById('saberMasModal');
+            const modalContent = document.getElementById('modal-content');
+            
+            modalContent.innerHTML = question.saber_mas;
+            modal.style.display = 'flex';
+        }
+
+        // Cierra el modal
+        function closeModal() {
+            document.getElementById('saberMasModal').style.display = 'none';
+        }
+
+        // Inicialización al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            // Configurar evento para cerrar el modal al hacer clic fuera
+            window.onclick = function(event) {
+                const modal = document.getElementById('saberMasModal');
+                if (event.target === modal) closeModal();
+            };
+            
+            // Configurar tecla ESC para cerrar el modal
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    closeModal();
+                }
+            });
+            
+            // Si hay un hash en la URL, cargar esa área directamente
+            if (window.location.hash) {
+                const area = window.location.hash.substring(1);
+                if (['contabilidad', 'analisis-economico-financiero', 'economia', 'marketing'].includes(area)) {
+                    showPage('menu-page', area);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
