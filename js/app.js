@@ -120,7 +120,7 @@ function loadAreaThemes() {
 function loadQuiz(quizId) {
     currentQuizId = quizId;
     
-    fetch(`content/${currentArea}/${quizId}.json`)
+    fetch(`/docs/content/${currentArea}/${quizId}.json`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Quiz no encontrado');
