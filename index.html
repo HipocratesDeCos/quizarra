@@ -353,17 +353,6 @@
             padding-left: 20px;
             margin: 10px 0;
         }
-        .debug-info {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: monospace;
-            font-size: 0.8rem;
-            color: #666;
-            white-space: pre-wrap;
-        }
         @keyframes dots {
             0%, 20% { content: '.'; }
             40% { content: '..'; }
@@ -478,30 +467,9 @@
         let quizData = null;
         let totalQuestions = 0;
 
-        // Función para obtener la ruta base de la aplicación
-        function getBasePath() {
-            const path = window.location.pathname;
-            // Si estamos en GitHub Pages con un repositorio específico
-            if (path.includes('/quizarra')) {
-                const segments = path.split('/');
-                if (segments.length > 1) {
-                    return '/' + segments[1];
-                }
-            }
-            return '';
-        }
-
-        // Función para mostrar información de debug
-        function showDebugInfo(info) {
-            console.log('Debug Info:', info);
-            const debugDiv = document.createElement('div');
-            debugDiv.className = 'debug-info';
-            debugDiv.textContent = JSON.stringify(info, null, 2);
-            
-            const quizList = document.getElementById('quiz-list');
-            if (quizList && !quizList.querySelector('.debug-info')) {
-                quizList.appendChild(debugDiv);
-            }
+        // Función para obtener la URL completa del quiz
+        function getQuizURL(area, file) {
+            return `https://hipocratesdecos.github.io/quizarra/content/${area}/${file}`;
         }
 
         // Función para mostrar una página específica
@@ -528,14 +496,6 @@
         // Carga los temas de un área
         function loadAreaThemes() {
             const quizList = document.getElementById('quiz-list');
-            const basePath = getBasePath();
-            
-            showDebugInfo({
-                currentArea,
-                basePath,
-                currentUrl: window.location.href,
-                pathname: window.location.pathname
-            });
             
             // Lista de archivos JSON conocidos para cada área
             const knownFiles = {
@@ -555,15 +515,17 @@
             }
             
             filesToCheck.forEach(file => {
-                const url = `${basePath}/content/${currentArea}/${file}`;
+                const url = getQuizURL(currentArea, file);
+                console.log('Cargando:', url);
                 
                 fetch(url)
                     .then(response => {
                         checkedFiles++;
+                        console.log(`${file}: ${response.status}`);
                         if (response.ok) {
                             return response.json();
                         }
-                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                        throw new Error(`HTTP ${response.status}`);
                     })
                     .then(data => {
                         validThemes.push({
@@ -572,15 +534,13 @@
                             file: file
                         });
                         
-                        // Si hemos revisado todos los archivos, mostrar resultados
                         if (checkedFiles === filesToCheck.length) {
                             displayThemes(validThemes);
                         }
                     })
                     .catch(error => {
-                        console.error(`Error loading ${file}:`, error);
+                        console.error(`Error con ${file}:`, error);
                         
-                        // Si hemos revisado todos los archivos, mostrar resultados
                         if (checkedFiles === filesToCheck.length) {
                             displayThemes(validThemes);
                         }
@@ -596,13 +556,8 @@
                 quizList.innerHTML = `
                     <div class="error">
                         <h3>No se encontraron temas</h3>
-                        <p>No se pudieron cargar los archivos JSON para el área "${currentArea}".</p>
-                        <p>Verifica que los siguientes archivos existen y son accesibles:</p>
-                        <ul>
-                            <li>content/${currentArea}/contabilidad-basica.json</li>
-                            <li>content/${currentArea}/inversion-no-corriente.json</li>
-                        </ul>
-                        <p>URL base detectada: <code>${getBasePath()}</code></p>
+                        <p>No se pudieron cargar los archivos JSON.</p>
+                        <p>Verifica la consola para más detalles.</p>
                     </div>
                 `;
                 return;
@@ -621,24 +576,17 @@
         // Carga un quiz específico desde JSON
         function loadQuiz(quizId) {
             currentQuizId = quizId;
-            const basePath = getBasePath();
-            const url = `${basePath}/content/${currentArea}/${quizId}.json`;
+            const url = getQuizURL(currentArea, `${quizId}.json`);
             
-            // Mostrar mensaje de carga
             const content = document.getElementById('quiz-content');
             content.innerHTML = '<div class="loading">Cargando tema...</div>';
             
-            showDebugInfo({
-                action: 'loadQuiz',
-                quizId,
-                url,
-                basePath
-            });
+            console.log('Cargando quiz:', url);
             
             fetch(url)
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                        throw new Error(`HTTP ${response.status}`);
                     }
                     return response.json();
                 })
@@ -650,27 +598,18 @@
                     score = 0;
                     selectedOptions = [];
                     
-                    // Actualizar título
                     document.getElementById('quiz-title').textContent = quizData.title;
                     
-                    // Cargar la primera pregunta
                     loadQuestion();
                     showPage('quiz-page');
                 })
                 .catch(error => {
-                    console.error('Error loading quiz:', error);
+                    console.error('Error:', error);
                     content.innerHTML = `
                         <div class="error">
-                            <h3>¡Error al cargar el tema!</h3>
-                            <p><strong>URL intentada:</strong> <code>${url}</code></p>
-                            <p><strong>Error:</strong> ${error.message}</p>
-                            <p>Posibles soluciones:</p>
-                            <ul>
-                                <li>Verifica que el archivo JSON existe en el repositorio</li>
-                                <li>Comprueba que el archivo tiene formato JSON válido</li>
-                                <li>Asegúrate de que GitHub Pages está habilitado</li>
-                                <li>Espera unos minutos para que GitHub Pages se actualice</li>
-                            </ul>
+                            <h3>Error al cargar el tema</h3>
+                            <p>URL: ${url}</p>
+                            <p>Error: ${error.message}</p>
                         </div>
                     `;
                 });
@@ -681,7 +620,7 @@
             const question = quizData.questions[currentQuestionIndex];
             const content = document.getElementById('quiz-content');
             document.getElementById('current-question').textContent = currentQuestionIndex + 1;
-            selectedOptions = []; // Reset selections for new question
+            selectedOptions = [];
             
             content.innerHTML = `
                 <div class="question">
@@ -706,14 +645,11 @@
             const options = document.querySelectorAll(`#options-${currentQuestionIndex} .option`);
             const question = quizData.questions[currentQuestionIndex];
             
-            // Si es pregunta de única respuesta, deseleccionar otras
             if (question.correct.length === 1) {
                 options.forEach(opt => opt.classList.remove('selected'));
                 element.classList.add('selected');
                 selectedOptions = [optionIndex];
-            } 
-            // Si es pregunta de múltiple respuesta
-            else {
+            } else {
                 if (element.classList.contains('selected')) {
                     element.classList.remove('selected');
                     selectedOptions = selectedOptions.filter(i => i !== optionIndex);
@@ -736,16 +672,13 @@
             const validateBtn = document.getElementById('validate-btn');
             const options = document.querySelectorAll(`#options-${currentQuestionIndex} .option`);
             
-            // Deshabilitar botón y opciones
             validateBtn.disabled = true;
             options.forEach(opt => opt.style.pointerEvents = 'none');
             
-            // Verificar respuestas
             const correctAnswers = [...question.correct].sort();
             const userAnswers = [...selectedOptions].sort();
             const isCorrect = JSON.stringify(correctAnswers) === JSON.stringify(userAnswers);
             
-            // Mostrar feedback
             if (isCorrect) {
                 feedback.className = 'feedback correct';
                 feedback.innerHTML = '¡Correcto! La respuesta es correcta.';
@@ -757,7 +690,6 @@
             
             feedback.style.display = 'block';
             
-            // Resaltar respuestas correctas e incorrectas
             options.forEach((opt, i) => {
                 if (question.correct.includes(i)) {
                     opt.classList.add('correct');
@@ -767,7 +699,6 @@
                 }
             });
             
-            // Cambiar botón a "Siguiente"
             setTimeout(() => {
                 if (currentQuestionIndex < totalQuestions - 1) {
                     validateBtn.textContent = 'Siguiente pregunta';
@@ -790,7 +721,6 @@
         function showResults() {
             document.getElementById('final-score').textContent = `${score}/${totalQuestions}`;
             
-            // Mensaje según puntuación
             const resultMessage = document.getElementById('result-message');
             const percentage = (score / totalQuestions) * 100;
             
@@ -822,22 +752,19 @@
             document.getElementById('saberMasModal').style.display = 'none';
         }
 
-        // Inicialización al cargar la página
+        // Inicialización
         document.addEventListener('DOMContentLoaded', () => {
-            // Configurar evento para cerrar el modal al hacer clic fuera
             window.onclick = function(event) {
                 const modal = document.getElementById('saberMasModal');
                 if (event.target === modal) closeModal();
             };
             
-            // Configurar tecla ESC para cerrar el modal
             document.addEventListener('keydown', function(event) {
                 if (event.key === 'Escape') {
                     closeModal();
                 }
             });
             
-            // Si hay un hash en la URL, cargar esa área directamente
             if (window.location.hash) {
                 const area = window.location.hash.substring(1);
                 if (['contabilidad', 'analisis-economico-financiero', 'economia', 'marketing'].includes(area)) {
