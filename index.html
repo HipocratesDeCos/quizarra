@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperQuiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            color: white;
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            color: white;
+        }
+        .page {
+            display: none;
+            flex: 1;
+        }
+        .page.active {
+            display: flex;
+            flex-direction: column;
+        }
+        .main-menu {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            flex: 1;
+            text-align: center;
+        }
+        .main-buttons {
+            display: grid;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .btn {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border: none;
+            border-radius: 15px;
+            padding: 20px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            height: auto;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+        }
+        .btn:hover {
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.6);
+            transform: translateY(-2px);
+        }
+        .quiz-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            flex: 1;
+        }
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .quiz-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        .progress {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        .instructions {
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc8 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 4px solid #4caf50;
+        }
+        .instructions p {
+            margin: 0;
+            font-weight: 500;
+            color: #2e7d32;
+        }
+        .question {
+            margin-bottom: 40px;
+            padding: 30px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .question:last-child {
+            border-bottom: none;
+        }
+        .question-intro {
+            background: #f8f9fa;
+            border-left: 4px solid #4facfe;
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+        }
+        .question-intro p {
+            margin: 0;
+            color: #555;
+            font-style: italic;
+        }
+        .question-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .options {
+            display: grid;
+            gap: 12px;
+        }
+        .option {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+        .option:hover {
+            background: #eef2f7;
+        }
+        .option.selected {
+            background: linear-gradient(135deg, #d4e5ff 0%, #c1d7ff 100%);
+            border: 2px solid #4facfe;
+            font-weight: 500;
+        }
+        .option.correct {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border: 2px solid #28a745;
+        }
+        .option.incorrect {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            border: 2px solid #dc3545;
+        }
+        .question-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+        }
+        .btn-validate {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-validate:hover {
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+        .btn-validate:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .btn-saber-mas {
+            color: #667eea;
+            text-decoration: underline;
+            background: none;
+            border: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 0;
+            margin: 0 10px;
+        }
+        .btn-saber-mas:hover {
+            color: #555;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #555;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .modal-close:hover {
+            color: #000;
+        }
+        .modal-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .modal-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .modal-content u {
+            text-decoration: none;
+            border-bottom: 1px dotted #007bff;
+            cursor: help;
+        }
+        .feedback {
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        .feedback.correct {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border: 2px solid #28a745;
+            color: #155724;
+        }
+        .feedback.incorrect {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            border: 2px solid #dc3545;
+            color: #721c24;
+        }
+        .results {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .results h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+        .results .score {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+        .results .message {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .btn-home {
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .btn-home:hover {
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .quiz-container, .quiz-menu, .main-menu {
+                padding: 20px;
+            }
+            .quiz-container {
+                max-width: 90%;
+            }
+            .question-text {
+                font-size: 1.1rem;
+            }
+            .btn {
+                padding: 15px 20px;
+                font-size: 1rem;
+            }
+            .quiz-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .results h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SuperQuiz</h1>
+            <p>Plataforma de aprendizaje interactivo</p>
+        </div>
+
+        <!-- Página principal -->
+        <div class="container page active" id="main-page">
+            <div class="header">
+                <h1>SuperQuiz</h1>
+                <p>Plataforma de aprendizaje interactivo</p>
+            </div>
+            <div class="main-menu">
+                <h2>Selecciona un área</h2>
+                <div class="main-buttons">
+                    <button class="btn" onclick="showPage('menu-page', 'contabilidad')">CONTABILIDAD</button>
+                    <button class="btn" onclick="showPage('menu-page', 'analisis-economico-financiero')">ANÁLISIS ECONÓMICO-FINANCIERO</button>
+                    <button class="btn" onclick="showPage('menu-page', 'economia')">ECONOMÍA</button>
+                    <button class="btn" onclick="showPage('menu-page', 'marketing')">MARKETING</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú de temas -->
+        <div class="page" id="menu-page">
+            <div class="main-menu">
+                <h2 id="area-title">Temas disponibles</h2>
+                <div id="quiz-list" class="main-buttons">
+                    <!-- Los temas se cargarán dinámicamente aquí -->
+                </div>
+                <button class="btn btn-home" onclick="showPage('main-page')">← Volver al inicio</button>
+            </div>
+        </div>
+
+        <!-- Página del quiz -->
+        <div class="page" id="quiz-page">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2 class="quiz-title" id="quiz-title">Título del tema</h2>
+                    <div class="progress">Pregunta <span id="current-question">1</span> de <span id="total-questions">15</span></div>
+                </div>
+                
+                <div class="instructions">
+                    <p>Selecciona una o varias opciones y haz clic en "Validar respuesta" para comprobar si es correcta.</p>
+                </div>
+                
+                <div id="quiz-content">
+                    <!-- El contenido del quiz se cargará dinámicamente aquí -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Página de resultados -->
+        <div class="page" id="results-page">
+            <div class="results">
+                <h3>¡Quiz completado!</h3>
+                <div class="score" id="final-score">0/0</div>
+                <div class="message" id="result-message">¡Buen trabajo!</div>
+                <button class="btn-home" onclick="showPage('menu-page')">Volver a los temas</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para "Saber más" -->
+    <div id="saberMasModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h3 class="modal-title">Más información</h3>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script>
+        // Variables globales
+        let currentArea = 'contabilidad';
+        let currentQuizId = '';
+        let currentQuestionIndex = 0;
+        let selectedOptions = [];
+        let score = 0;
+        let quizData = null;
+        let totalQuestions = 0;
+
+        // Función para mostrar una página específica
+        function showPage(pageId, area = 'contabilidad') {
+            if (pageId === 'menu-page') {
+                currentArea = area;
+                document.getElementById('area-title').textContent = 
+                    area === 'contabilidad' ? 'Contabilidad' :
+                    area === 'analisis-economico-financiero' ? 'Análisis Económico-Financiero' :
+                    area === 'economia' ? 'Economía' : 'Marketing';
+                
+                loadAreaThemes();
+            }
+            
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Carga los temas de un área
+        function loadAreaThemes() {
+            const quizList = document.getElementById('quiz-list');
+            quizList.innerHTML = '';
+            
+            // Definimos los temas por área
+            const themes = {
+                'contabilidad': [
+                    { id: "contabilidad-basica", title: "Introducción al Plan General de Contabilidad" },
+                    { id: "inversion-no-corriente", title: "Inversión No Corriente - Activo Fijo" }
+                ],
+                'analisis-economico-financiero': [
+                    { id: "analisis-financiero", title: "Análisis Financiero Básico" },
+                    { id: "ratios-empresa", title: "Ratios de Solvencia y Liquidez" }
+                ],
+                'economia': [
+                    { id: "macroeconomia", title: "Conceptos Básicos de Macroeconomía" },
+                    { id: "microeconomia", title: "Oferta, Demanda y Equilibrio de Mercado" }
+                ],
+                'marketing': [
+                    { id: "marketing-digital", title: "Fundamentos de Marketing Digital" },
+                    { id: "segmentacion-mercado", title: "Segmentación y Posicionamiento" }
+                ]
+            };
+            
+            // Mostramos los temas de la área seleccionada
+            if (themes[currentArea]) {
+                themes[currentArea].forEach(theme => {
+                    const btn = document.createElement('button');
+                    btn.className = 'btn';
+                    btn.textContent = theme.title;
+                    btn.onclick = () => loadQuiz(theme.id);
+                    quizList.appendChild(btn);
+                });
+            }
+        }
+
+        // Carga un quiz específico
+        function loadQuiz(quizId) {
+            currentQuizId = quizId;
+            
+            // Definimos los quizzes (en un sistema real, esto vendría de JSON)
+            const quizzes = {
+                'contabilidad-basica': {
+                    title: "Introducción al Plan General de Contabilidad",
+                    questions: [
+                        {
+                            intro: "El Plan General de Contabilidad (PGC) es el marco normativo que regula la contabilidad en España. Establece los principios, criterios y normas contables que deben seguir las empresas para elaborar sus estados financieros.",
+                            question: "1. ¿Cuál es el objetivo principal del Plan General de Contabilidad?",
+                            options: [
+                                "Homogeneizar la información contable",
+                                "Garantizar la utilidad de la información para la toma de decisiones",
+                                "Establecer criterios fiscales",
+                                "Facilitar la comparabilidad"
+                            ],
+                            correct: [0, 1, 3],
+                            saber_mas: "<p>El <u>objetivo principal del Plan General de Contabilidad</u> es proporcionar un marco común que permita la elaboración de estados financieros <u>homogéneos, comprensibles y comparables</u>. Esto es fundamental para que inversores, acreedores y otros usuarios puedan tomar decisiones económicas fundamentadas.</p><p>El PGC no solo regula el registro contable, sino que también garantiza la <u>transparencia</u> y <u>calidad</u> de la información. Por ejemplo, una empresa que cambia de sector debe seguir los mismos criterios para mantener la <u>continuidad</u> y <u>comparabilidad</u>.</p><p>Además, el PGC establece que la información debe ser <u>relevante</u> y <u>fiable</u>, cumpliendo con el marco conceptual. Esto asegura la <u>imagen fiel</u> del patrimonio, situación financiera y resultados.</p>"
+                        },
+                        {
+                            question: "2. ¿Qué característica cualitativa implica que la información influya en las decisiones económicas de los usuarios?",
+                            options: ["Relevancia", "Fiabilidad", "Comparabilidad", "Comprensibilidad"],
+                            correct: [0],
+                            saber_mas: "<p>La <u>relevancia</u> es una característica cualitativa fundamental que implica que la información contable influye en las decisiones económicas de los usuarios. Para ser relevante, debe tener <u>valor predictivo</u> o <u>valor confirmatorio</u>.</p><p>Por ejemplo, conocer el nivel de deuda de una empresa ayuda a prever su solvencia futura. La <u>materialidad</u> está relacionada con la relevancia: un dato es material si su omisión o error podría influir en las decisiones.</p><p>Según el marco conceptual del PGC, sin relevancia, la información pierde su utilidad principal, aunque sea fiable o comparable.</p>"
+                        },
+                        {
+                            question: "3. ¿Qué principio contable exige que los ingresos y gastos se registren cuando se generan, no cuando se cobran o pagan?",
+                            options: ["Devengo", "Prudencia", "Importancia relativa", "Asociación de ingresos y gastos"],
+                            correct: [0],
+                            saber_mas: "<p>El <u>principio del devengo</u> establece que los ingresos y gastos deben reconocerse en el momento en que se generan, independientemente de cuándo se cobren o paguen. Es fundamental para la <u>imagen fiel</u> del resultado.</p><p>Por ejemplo, si una empresa vende en diciembre y cobra en enero, el ingreso se registra en diciembre. Este principio permite una adecuada <u>asociación de ingresos y gastos</u> en el período correspondiente.</p><p>El devengo es clave para diferenciar entre <u>tesorería</u> y <u>resultado</u>, evitando distorsiones por la cronología del cobro.</p>"
+                        },
+                        {
+                            question: "4. ¿Qué significa el principio de prudencia?",
+                            options: [
+                                "Evitar sobrevalorar activos e ingresos",
+                                "Evitar infravalorar pasivos y gastos",
+                                "No compensar activos y pasivos",
+                                "Aplicar políticas contables uniformemente"
+                            ],
+                            correct: [0, 1],
+                            saber_mas: "<p>El <u>principio de prudencia</u> exige que se tenga precaución ante la incertidumbre. Implica que los activos e ingresos no se sobrevaloren, y que los pasivos y gastos no se infravaloren.</p><p>Por ejemplo, si hay dudas sobre el cobro a un cliente, se debe crear una provisión. Pero no se puede usar la prudencia para crear reservas ocultas, ya que eso afectaría la <u>fiabilidad</u> de la información.</p><p>Es un equilibrio: proteger a los usuarios sin distorsionar la realidad financiera.</p>"
+                        },
+                        {
+                            question: "5. ¿Qué elementos integran las cuentas anuales según el PGC?",
+                            options: [
+                                "Balance, cuenta de pérdidas y ganancias, estado de cambios en el patrimonio neto",
+                                "Balance, memoria, estado de flujo de efectivo",
+                                "Balance, cuenta de pérdidas y ganancias, estado de cambios en el patrimonio neto, estado de flujo de efectivo y memoria",
+                                "Balance, cuenta de pérdidas y ganancias, memoria"
+                            ],
+                            correct: [2],
+                            saber_mas: "<p>Las <u>cuentas anuales</u> están formadas por cinco documentos principales:</p><ul><li><strong>Balance</strong>: muestra la situación financiera al cierre del ejercicio.</li><li><strong>Cuenta de pérdidas y ganancias</strong>: refleja los resultados del periodo.</li><li><strong>Estado de cambios en el patrimonio neto</strong>: detalla el movimiento del patrimonio.</li><li><strong>Estado de flujo de efectivo</strong>: muestra el movimiento de liquidez.</li><li><strong>Memoria</strong>: explica los datos y criterios utilizados.</li></ul><p>Esta estructura garantiza la transparencia y coherencia de la información.</p>"
+                        },
+                        {
+                            question: "6. ¿Qué es un activo según el Marco Conceptual?",
+                            options: [
+                                "Un recurso controlado por la empresa con expectativa de beneficios futuros",
+                                "Un derecho a recibir dinero en el futuro",
+                                "Un bien que pertenece a la empresa",
+                                "Un elemento que genera ingresos"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>Un <u>activo</u> es un recurso que la empresa controla como consecuencia de sucesos pasados, y del que espera obtener <u>beneficios económicos futuros</u>.</p><p>No basta con que el bien exista: debe haber <u>control efectivo</u> y <u>probabilidad de rendimientos</u>. Por ejemplo, un inmueble arrendado no es activo si no se tiene control.</p><p>La propiedad legal no es necesaria; lo importante es la <u>esencia económica</u> del recurso.</p>"
+                        },
+                        {
+                            question: "7. ¿Qué define un pasivo?",
+                            options: [
+                                "Una obligación presente derivada de eventos pasados",
+                                "Un compromiso futuro",
+                                "Una deuda con proveedores",
+                                "Un saldo a pagar"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>Un <u>pasivo</u> es una obligación presente surgida de eventos pasados, cuya liquidación probablemente implique una <u>salida de recursos</u> con beneficios económicos.</p><p>Por ejemplo, un préstamo bancario es un pasivo porque existe una obligación actual. Si solo hubiera un contrato futuro, no sería un pasivo.</p><p>El concepto incluye también las <u>provisiones</u>, que son pasivos estimados, como gastos de desmantelamiento o litigios pendientes.</p>"
+                        },
+                        {
+                            question: "8. ¿Qué es el patrimonio neto?",
+                            options: [
+                                "La parte residual de los activos menos los pasivos",
+                                "Los fondos aportados por los socios",
+                                "Los resultados acumulados",
+                                "El capital social"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>El <u>patrimonio neto</u> es la diferencia entre los activos y los pasivos. Representa los <u>fondos propios</u> de la empresa.</p><p>Incluye el <u>capital social</u>, las <u>reservas</u> y los <u>resultados acumulados</u>. No es solo el capital aportado, sino todo lo que pertenece a los propietarios tras deducir las deudas.</p><p>Es clave para evaluar la solvencia y estabilidad financiera.</p>"
+                        },
+                        {
+                            question: "9. ¿Qué es un ingreso imputado?",
+                            options: [
+                                "Un incremento de activos o decremento de pasivos que altera positivamente el patrimonio neto",
+                                "Un cobro realizado",
+                                "Un derecho a cobrar",
+                                "Un aumento de capital"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>Un <u>ingreso imputado</u> es cualquier entrada o incremento de activos, o decremento de pasivos, que aumenta positivamente el patrimonio neto, siempre que no proceda de aportaciones de propietarios.</p><p>Por ejemplo, la venta de productos genera un ingreso imputado, incluso si el cobro se hace después.</p><p>Es diferente del <u>ingreso inicial</u> (el total pactado), que puede no estar completamente devengado.</p>"
+                        },
+                        {
+                            question: "10. ¿Qué es un gasto imputado?",
+                            options: [
+                                "Un decremento de activos o incremento de pasivos que reduce el patrimonio neto",
+                                "Un pago realizado",
+                                "Un costo anticipado",
+                                "Un descuento recibido"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>Un <u>gasto imputado</u> es cualquier salida, consumo o deterioro de activos, o incremento de pasivos, que disminuye negativamente el patrimonio neto, siempre que no sea una distribución a propietarios.</p><p>Por ejemplo, el consumo de mercaderías o el pago de salarios son gastos imputados.</p><p>Se diferencia del <u>gasto inicial</u> (costo total), que puede no estar totalmente devengado.</p>"
+                        },
+                        {
+                            question: "11. ¿Qué criterio de valoración se aplica al coste histórico?",
+                            options: [
+                                "El precio de adquisición del activo",
+                                "El valor razonable",
+                                "El valor neto realizable",
+                                "El valor en uso"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>El <u>coste histórico</u> es el precio de adquisición del activo, incluyendo el importe pagado, los impuestos y gastos directamente atribuibles a su compra.</p><p>Para activos producidos internamente, incluye materiales, mano de obra y costes indirectos.</p><p>Es el método más utilizado por su <u>fiabilidad</u> y <u>objetividad</u>, aunque puede no reflejar el valor actual.</p>"
+                        },
+                        {
+                            question: "12. ¿Qué es el valor razonable?",
+                            options: [
+                                "El precio que se recibiría por la venta de un activo en condiciones normales",
+                                "El costo de producción",
+                                "El valor neto realizable",
+                                "El valor en libros"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>El <u>valor razonable</u> es el importe que se recibiría por la venta de un activo, o se pagaría por la transferencia de un pasivo, en una transacción ordenada entre partes informadas e independientes.</p><p>Se basa en el mercado activo y se clasifica en tres niveles: precios cotizados (nivel 1), modelos con datos observables (nivel 2) y estimaciones con datos no observables (nivel 3).</p><p>Es útil para reflejar la <u>realidad económica</u> de los activos y pasivos.</p>"
+                        },
+                        {
+                            question: "13. ¿Qué es el valor neto realizable?",
+                            options: [
+                                "El importe esperado por la venta de un activo menos los costes de venta",
+                                "El valor razonable",
+                                "El costo amortizado",
+                                "El valor en uso"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>El <u>valor neto realizable</u> es el importe que se espera obtener por la venta de un activo en condiciones normales, menos los costes necesarios para su venta.</p><p>Es útil para determinar si un activo debe depreciarse por deterioro.</p><p>Por ejemplo, si un producto tiene un valor de mercado de 100€ y los costes de venta son 10€, su valor neto realizable es 90€.</p>"
+                        },
+                        {
+                            question: "14. ¿Qué es el valor en uso?",
+                            options: [
+                                "El valor actual de los flujos de efectivo futuros esperados",
+                                "El valor razonable",
+                                "El costo histórico",
+                                "El valor neto realizable"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>El <u>valor en uso</u> es el valor actual de los flujos de efectivo netos que se esperan obtener del activo durante su vida útil.</p><p>Se calcula aplicando un tipo de descuento que incluye el riesgo del activo.</p><p>Es útil para evaluar si un activo debe mantenerse en el balance o si ha sufrido un deterioro.</p>"
+                        },
+                        {
+                            question: "15. ¿Qué es el coste amortizado?",
+                            options: [
+                                "El importe inicial ajustado por intereses y amortización",
+                                "El valor razonable",
+                                "El costo histórico",
+                                "El valor en uso"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>El <u>coste amortizado</u> es el importe al que fue inicialmente valorado un instrumento financiero, ajustado por la amortización de intereses utilizando el tipo de interés efectivo.</p><p>Se aplica a préstamos, créditos y bonos.</p><p>Permite reflejar la evolución del valor del instrumento financiero en el tiempo.</p>"
+                        }
+                    ]
+                },
+                'inversion-no-corriente': {
+                    title: "Inversión No Corriente - Activo Fijo",
+                    questions: [
+                        {
+                            intro: "El activo no corriente comprende elementos destinados a servir de forma duradera en la actividad de la empresa.",
+                            question: "1. ¿Qué caracteriza al activo no corriente?",
+                            options: [
+                                "Permanencia superior a un año",
+                                "Destinado a la venta inmediata",
+                                "No destinado a la venta",
+                                "Controlado por la empresa"
+                            ],
+                            correct: [0, 2, 3],
+                            saber_mas: "<p>El <u>activo no corriente</u> se compone de activos que la empresa utiliza de forma duradera. Su principal característica es la <u>permanencia</u> superior al año o ciclo de explotación.</p><p>No está destinado a la venta, sino a participar en el proceso productivo. Se clasifica en <u>inmovilizado material</u>, <u>intangible</u> y <u>financiero</u>.</p><p>Según el PGC, se valora inicialmente por <u>coste de adquisición o producción</u> y se amortiza sistemáticamente (excepto terrenos).</p>"
+                        },
+                        {
+                            question: "2. ¿Qué se incluye en el inmovilizado intangible?",
+                            options: [
+                                "Investigación y desarrollo",
+                                "Propiedad industrial",
+                                "Fondo de comercio",
+                                "Aplicaciones informáticas"
+                            ],
+                            correct: [1, 2, 3],
+                            saber_mas: "<p>El <u>inmovilizado intangible</u> incluye activos sin forma física: <u>concesiones</u>, <u>patentes</u>, <u>fondo de comercio</u>, <u>software</u>, etc.</p><p>Los gastos de <u>investigación</u> se imputan al ejercicio, pero los de <u>desarrollo</u> pueden activarse si se cumplen ciertos requisitos (viabilidad técnica, intención de finalizar, capacidad de uso, beneficios futuros).</p><p>El <u>fondo de comercio</u> solo se reconoce por adquisición onerosa, no por generación interna.</p>"
+                        },
+                        {
+                            question: "3. ¿Qué es un arrendamiento financiero?",
+                            options: [
+                                "El arrendatario asume riesgos y beneficios de propiedad",
+                                "El arrendador mantiene los riesgos",
+                                "Se registra como activo y pasivo",
+                                "Es un gasto inmediato"
+                            ],
+                            correct: [0, 2],
+                            saber_mas: "<p>En un <u>arrendamiento financiero</u>, el arrendatario asume los <u>riesgos y beneficios</u> de la propiedad. Se registra un <u>activo</u> y un <u>pasivo financiero</u> por el menor entre el valor razonable del activo y el valor actual de las cuotas.</p><p>Este modelo se aplica cuando el arrendatario controla el uso del activo y se espera que obtenga beneficios económicos.</p>"
+                        },
+                        {
+                            question: "4. ¿Qué criterio se usa para valorar un activo financiero a coste amortizado?",
+                            options: [
+                                "Valor razonable",
+                                "Coste histórico",
+                                "Coste amortizado",
+                                "Valor neto realizable"
+                            ],
+                            correct: [2],
+                            saber_mas: "<p>Un activo financiero se valora a <u>coste amortizado</u> si cumple dos condiciones: (1) el modelo de negocio es mantenerlo para cobrar flujos contractuales (no para negociar), y (2) los flujos son solo pagos de principal e intereses (test SPPI).</p><p>Se aplica a créditos comerciales, préstamos y bonos no negociados.</p>"
+                        },
+                        {
+                            question: "5. ¿Qué activos se incluyen en el grupo 2 del PGC?",
+                            options: [
+                                "Inmovilizado material",
+                                "Inversiones inmobiliarias",
+                                "Inversiones financieras a largo plazo",
+                                "Existencias"
+                            ],
+                            correct: [0, 1, 2],
+                            saber_mas: "<p>El <u>grupo 2</u> del PGC incluye todos los activos no corrientes: <u>inmovilizado material</u>, <u>intangible</u>, <u>inversiones inmobiliarias</u> y <u>financieras a largo plazo</u>.</p><p>Las <u>existencias</u> pertenecen al grupo 3. Este agrupamiento facilita la clasificación en el balance.</p>"
+                        },
+                        {
+                            question: "6. ¿Cuándo se puede activar un gasto de desarrollo?",
+                            options: [
+                                "Siempre que se incurra",
+                                "Solo si hay viabilidad técnica",
+                                "Si hay intención de finalizarlo",
+                                "Si generará beneficios futuros"
+                            ],
+                            correct: [1, 2, 3],
+                            saber_mas: "<p>Para activar un gasto de desarrollo, debe demostrarse: <u>viabilidad técnica</u>, <u>intención de finalizarlo</u>, <u>capacidad para usarlo</u> y <u>beneficios económicos futuros</u>.</p><p>Esto asegura que solo se capitalicen proyectos viables, no meras investigaciones preliminares.</p>"
+                        },
+                        {
+                            question: "7. ¿Qué es el valor en uso de un activo?",
+                            options: [
+                                "Valor actual de flujos de efectivo futuros esperados",
+                                "Precio de mercado",
+                                "Coste de reposición",
+                                "Valor neto realizable"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>El <u>valor en uso</u> es el valor actual de los flujos de efectivo netos que se esperan obtener del activo durante su vida útil.</p><p>Se calcula descontando los flujos futuros usando un tipo de interés que incluye el riesgo del activo. Es clave para evaluar deterioro.</p>"
+                        },
+                        {
+                            question: "8. ¿Qué activos se clasifican como mantenidos para la venta?",
+                            options: [
+                                "Activos cuya recuperación se espera por venta",
+                                "Existencias",
+                                "Inversiones a corto plazo",
+                                "Activos que ya no se usan"
+                            ],
+                            correct: [0, 3],
+                            saber_mas: "<p>Los activos mantenidos para la venta son aquellos cuya recuperación se espera <u>principalmente por su venta</u>, no por su uso continuado.</p><p>Deben estar disponibles inmediatamente para venta y su venta debe ser muy probable. Se miden al menor entre valor contable y valor razonable menos costes de venta.</p>"
+                        },
+                        {
+                            question: "9. ¿Qué es un activo financiero a valor razonable con cambios en el patrimonio neto?",
+                            options: [
+                                "Instrumentos de patrimonio no mantenidos para negociar",
+                                "Acciones mantenidas para obtener rentabilidad a largo plazo",
+                                "Activos mantenidos para especulación",
+                                "Derivados financieros"
+                            ],
+                            correct: [0, 1],
+                            saber_mas: "<p>Esta categoría incluye activos financieros, como acciones, que no se mantienen para negociar, pero que la empresa decide valorar al <u>valor razonable</u> con cambios en el <u>patrimonio neto</u>.</p><p>Los dividendos se reconocen en resultados, pero las plusvalías no afectan al resultado hasta su enajenación.</p>"
+                        },
+                        {
+                            question: "10. ¿Qué se registra en un arrendamiento financiero?",
+                            options: [
+                                "Un inmovilizado y un pasivo financiero",
+                                "Un gasto inmediato",
+                                "Un activo y un ingreso",
+                                "Una inversión financiera"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>En el momento inicial, se registra un <u>inmovilizado</u> (material o intangible) y un <u>pasivo financiero</u> por el menor entre el valor razonable del activo y el valor actual de las cuotas.</p><p>Este pasivo se amortiza con el método del interés efectivo.</p>"
+                        },
+                        {
+                            question: "11. ¿Qué es el fondo de comercio por adquisición?",
+                            options: [
+                                "Diferencia entre el precio de compra y el valor razonable neto de activos adquiridos",
+                                "Gastos de publicidad",
+                                "Coste de desarrollo interno",
+                                "Amortización acumulada"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>El <u>fondo de comercio</u> por adquisición es la diferencia entre el precio pagado y el valor razonable neto de los activos y pasivos adquiridos.</p><p>No se amortiza, pero sí se somete a pruebas de deterioro anuales. No se reconoce si se genera internamente.</p>"
+                        },
+                        {
+                            question: "12. ¿Qué activos financieros se valoran al coste?",
+                            options: [
+                                "Participaciones en empresas del grupo",
+                                "Acciones mantenidas para negociar",
+                                "Instrumentos de patrimonio no negociados",
+                                "Derivados"
+                            ],
+                            correct: [0, 2],
+                            saber_mas: "<p>Los activos financieros a <u>coste</u> incluyen participaciones en empresas del grupo, multigrupo y asociadas, salvo que se mantengan para negociar.</p><p>Se valoran a coste menos deterioro acumulado. Las pérdidas por deterioro se reconocen en resultados.</p>"
+                        },
+                        {
+                            question: "13. ¿Qué es el test SPPI?",
+                            options: [
+                                "Evalúa si los flujos contractuales son solo principal e intereses",
+                                "Determina la vida útil del activo",
+                                "Clasifica el modelo de negocio",
+                                "Evalúa la rentabilidad"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>El <u>test SPPI</u> (Solamente Pagos de Principal e Intereses) verifica si los flujos contractuales del activo financiero consisten únicamente en pagos de principal e intereses.</p><p>Es uno de los dos criterios clave (junto al modelo de negocio) para clasificar activos financieros según el PGC.</p>"
+                        },
+                        {
+                            question: "14. ¿Qué activos se deterioran?",
+                            options: [
+                                "Inmovilizado intangible",
+                                "Inmovilizado material",
+                                "Existencias",
+                                "Inversiones financieras"
+                            ],
+                            correct: [0, 1, 3],
+                            saber_mas: "<p>Los activos no corrientes y las existencias están sujetos a <u>corrección valorativa por deterioro</u> cuando su valor contable supera el importe recuperable.</p><p>El deterioro se reconoce en resultados y puede revertirse (excepto en inmovilizado intangible).</p>"
+                        },
+                        {
+                            question: "15. ¿Qué se contabiliza en 'Construcciones en curso'?",
+                            options: [
+                                "Costes de construcción no finalizada",
+                                "Amortización anual",
+                                "Gastos de administración",
+                                "Impuestos"
+                            ],
+                            correct: [0],
+                            saber_mas: "<p>La cuenta <u>Construcciones en curso</u> (231) recoge los costes incurridos en la construcción de un inmueble que aún no está finalizado.</p><p>Al finalizar, se traslada al inmovilizado material. Los gastos consumidos se reflejan mediante la amortización, no directamente.</p>"
+                        }
+                    ]
+                }
+            };
+            
+            // Cargamos el quiz seleccionado
+            if (quizzes[quizId]) {
+                quizData = quizzes[quizId];
+                totalQuestions = quizData.questions.length;
+                document.getElementById('total-questions').textContent = totalQuestions;
+                currentQuestionIndex = 0;
+                score = 0;
+                selectedOptions = [];
+                loadQuestion();
+                showPage('quiz-page');
+            } else {
+                alert('Error al cargar el tema. Por favor, inténtalo de nuevo.');
+            }
+        }
+
+        // Carga una pregunta específica
+        function loadQuestion() {
+            const question = quizData.questions[currentQuestionIndex];
+            const content = document.getElementById('quiz-content');
+            document.getElementById('current-question').textContent = currentQuestionIndex + 1;
+            
+            content.innerHTML = `
+                <div class="question">
+                    ${question.intro ? `<div class="question-intro"><p>${question.intro}</p></div>` : ''}
+                    <div class="question-text">${question.question}</div>
+                    <div class="options" id="options-${currentQuestionIndex}">
+                        ${question.options.map((opt, i) => `
+                            <div class="option" onclick="toggleSelect(this, ${i})">${opt}</div>
+                        `).join('')}
+                    </div>
+                    <div class="feedback" id="feedback-${currentQuestionIndex}" style="display:none;"></div>
+                    <div class="question-actions">
+                        <button class="btn-validate" onclick="validateAnswer()" id="validate-btn">Validar respuesta</button>
+                        <button class="btn-saber-mas" onclick="openModal()">Saber más</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Permite seleccionar opciones
+        function toggleSelect(element, optionIndex) {
+            const options = document.querySelectorAll(`#options-${currentQuestionIndex} .option`);
+            
+            // Si es pregunta de única respuesta, deseleccionar otras
+            if (quizData.questions[currentQuestionIndex].correct.length === 1) {
+                options.forEach(opt => opt.classList.remove('selected'));
+                element.classList.add('selected');
+                selectedOptions = [optionIndex];
+            } 
+            // Si es pregunta de múltiple respuesta
+            else {
+                if (element.classList.contains('selected')) {
+                    element.classList.remove('selected');
+                    selectedOptions = selectedOptions.filter(i => i !== optionIndex);
+                } else {
+                    element.classList.add('selected');
+                    selectedOptions.push(optionIndex);
+                }
+            }
+        }
+
+        // Valida la respuesta
+        function validateAnswer() {
+            const question = quizData.questions[currentQuestionIndex];
+            const feedback = document.getElementById(`feedback-${currentQuestionIndex}`);
+            const validateBtn = document.getElementById('validate-btn');
+            const options = document.querySelectorAll(`#options-${currentQuestionIndex} .option`);
+            
+            // Deshabilitar botón
+            validateBtn.disabled = true;
+            
+            // Verificar respuestas
+            const isCorrect = selectedOptions.length === question.correct.length && 
+                            selectedOptions.every(val => question.correct.includes(val));
+            
+            // Mostrar feedback
+            if (isCorrect) {
+                feedback.className = 'feedback correct';
+                feedback.innerHTML = '¡Correcto! La respuesta es correcta.';
+                score++;
+            } else {
+                feedback.className = 'feedback incorrect';
+                feedback.innerHTML = 'Incorrecto. Revisa las opciones seleccionadas.';
+            }
+            
+            // Resaltar respuestas correctas e incorrectas
+            options.forEach((opt, i) => {
+                if (question.correct.includes(i)) {
+                    opt.classList.add('correct');
+                }
+                if (selectedOptions.includes(i) && !question.correct.includes(i)) {
+                    opt.classList.add('incorrect');
+                }
+            });
+            
+            feedback.style.display = 'block';
+            
+            // Habilitar botón "Siguiente" después de 2 segundos
+            setTimeout(() => {
+                validateBtn.textContent = 'Siguiente pregunta';
+                validateBtn.onclick = nextQuestion;
+            }, 2000);
+        }
+
+        // Muestra la siguiente pregunta
+        function nextQuestion() {
+            currentQuestionIndex++;
+            
+            if (currentQuestionIndex < totalQuestions) {
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        // Muestra los resultados
+        function showResults() {
+            document.getElementById('final-score').textContent = `${score}/${totalQuestions}`;
+            
+            // Mensaje según puntuación
+            const resultMessage = document.getElementById('result-message');
+            const percentage = (score / totalQuestions) * 100;
+            
+            if (percentage === 100) {
+                resultMessage.textContent = '¡Excelente! Has respondido todas las preguntas correctamente.';
+            } else if (percentage >= 75) {
+                resultMessage.textContent = '¡Buen trabajo! Tienes un buen conocimiento del tema.';
+            } else if (percentage >= 50) {
+                resultMessage.textContent = 'Buen esfuerzo. Revisa las preguntas que has fallado para mejorar.';
+            } else {
+                resultMessage.textContent = 'Necesitas repasar más el tema. ¡No te rindas!';
+            }
+            
+            showPage('results-page');
+        }
+
+        // Abre el modal de "Saber más"
+        function openModal() {
+            const question = quizData.questions[currentQuestionIndex];
+            const modal = document.getElementById('saberMasModal');
+            const modalContent = document.getElementById('modal-content');
+            
+            modalContent.innerHTML = question.saber_mas;
+            modal.style.display = 'flex';
+        }
+
+        // Cierra el modal
+        function closeModal() {
+            document.getElementById('saberMasModal').style.display = 'none';
+        }
+
+        // Cierra el modal al hacer clic fuera
+        window.onclick = function(event) {
+            const modal = document.getElementById('saberMasModal');
+            if (event.target === modal) closeModal();
+        };
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', () => {
+            // Aquí normalmente cargaríamos los temas, pero ya lo hace showPage
+        });
+    </script>
+</body>
+</html>
