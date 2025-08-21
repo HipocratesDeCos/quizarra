@@ -1,0 +1,171 @@
+{
+  "title": "Inversión No Corriente - Activo Fijo",
+  "questions": [
+    {
+      "intro": "El activo no corriente comprende elementos destinados a servir de forma duradera en la actividad de la empresa.",
+      "question": "1. ¿Qué caracteriza al activo no corriente?",
+      "options": [
+        "Permanencia superior a un año",
+        "Destinado a la venta inmediata",
+        "No destinado a la venta",
+        "Controlado por la empresa"
+      ],
+      "correct": [0, 2, 3],
+      "saber_mas": "<p>El <u>activo no corriente</u> se compone de activos que la empresa utiliza de forma duradera. Su principal característica es la <u>permanencia</u> superior al año o ciclo de explotación.</p><p>No está destinado a la venta, sino a participar en el proceso productivo. Se clasifica en <u>inmovilizado material</u>, <u>intangible</u> y <u>financiero</u>.</p><p>Según el PGC, se valora inicialmente por <u>coste de adquisición o producción</u> y se amortiza sistemáticamente (excepto terrenos).</p>"
+    },
+    {
+      "question": "2. ¿Qué se incluye en el inmovilizado intangible?",
+      "options": [
+        "Investigación y desarrollo",
+        "Propiedad industrial",
+        "Fondo de comercio",
+        "Aplicaciones informáticas"
+      ],
+      "correct": [1, 2, 3],
+      "saber_mas": "<p>El <u>inmovilizado intangible</u> incluye activos sin forma física: <u>concesiones</u>, <u>patentes</u>, <u>fondo de comercio</u>, <u>software</u>, etc.</p><p>Los gastos de <u>investigación</u> se imputan al ejercicio, pero los de <u>desarrollo</u> pueden activarse si se cumplen ciertos requisitos (viabilidad técnica, intención de finalizar, capacidad de uso, beneficios futuros).</p><p>El <u>fondo de comercio</u> solo se reconoce por adquisición onerosa, no por generación interna.</p>"
+    },
+    {
+      "question": "3. ¿Qué es un arrendamiento financiero?",
+      "options": [
+        "El arrendatario asume riesgos y beneficios de propiedad",
+        "El arrendador mantiene los riesgos",
+        "Se registra como activo y pasivo",
+        "Es un gasto inmediato"
+      ],
+      "correct": [0, 2],
+      "saber_mas": "<p>En un <u>arrendamiento financiero</u>, el arrendatario asume los <u>riesgos y beneficios</u> de la propiedad. Se registra un <u>activo</u> y un <u>pasivo financiero</u> por el menor entre el valor razonable del activo y el valor actual de las cuotas.</p><p>Este modelo se aplica cuando el arrendatario controla el uso del activo y se espera que obtenga beneficios económicos.</p>"
+    },
+    {
+      "question": "4. ¿Qué criterio se usa para valorar un activo financiero a coste amortizado?",
+      "options": [
+        "Valor razonable",
+        "Coste histórico",
+        "Coste amortizado",
+        "Valor neto realizable"
+      ],
+      "correct": [2],
+      "saber_mas": "<p>Un activo financiero se valora a <u>coste amortizado</u> si cumple dos condiciones: (1) el modelo de negocio es mantenerlo para cobrar flujos contractuales (no para negociar), y (2) los flujos son solo pagos de principal e intereses (test SPPI).</p><p>Se aplica a créditos comerciales, préstamos y bonos no negociados.</p>"
+    },
+    {
+      "question": "5. ¿Qué activos se incluyen en el grupo 2 del PGC?",
+      "options": [
+        "Inmovilizado material",
+        "Inversiones inmobiliarias",
+        "Inversiones financieras a largo plazo",
+        "Existencias"
+      ],
+      "correct": [0, 1, 2],
+      "saber_mas": "<p>El <u>grupo 2</u> del PGC incluye todos los activos no corrientes: <u>inmovilizado material</u>, <u>intangible</u>, <u>inversiones inmobiliarias</u> y <u>financieras a largo plazo</u>.</p><p>Las <u>existencias</u> pertenecen al grupo 3. Este agrupamiento facilita la clasificación en el balance.</p>"
+    },
+    {
+      "question": "6. ¿Cuándo se puede activar un gasto de desarrollo?",
+      "options": [
+        "Siempre que se incurra",
+        "Solo si hay viabilidad técnica",
+        "Si hay intención de finalizarlo",
+        "Si generará beneficios futuros"
+      ],
+      "correct": [1, 2, 3],
+      "saber_mas": "<p>Para activar un gasto de desarrollo, debe demostrarse: <u>viabilidad técnica</u>, <u>intención de finalizarlo</u>, <u>capacidad para usarlo</u> y <u>beneficios económicos futuros</u>.</p><p>Esto asegura que solo se capitalicen proyectos viables, no meras investigaciones preliminares.</p>"
+    },
+    {
+      "question": "7. ¿Qué es el valor en uso de un activo?",
+      "options": [
+        "Valor actual de flujos de efectivo futuros esperados",
+        "Precio de mercado",
+        "Coste de reposición",
+        "Valor neto realizable"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>valor en uso</u> es el valor actual de los flujos de efectivo netos que se esperan obtener del activo durante su vida útil.</p><p>Se calcula descontando los flujos futuros usando un tipo de interés que incluye el riesgo del activo. Es clave para evaluar deterioro.</p>"
+    },
+    {
+      "question": "8. ¿Qué activos se clasifican como mantenidos para la venta?",
+      "options": [
+        "Activos cuya recuperación se espera por venta",
+        "Existencias",
+        "Inversiones a corto plazo",
+        "Activos que ya no se usan"
+      ],
+      "correct": [0, 3],
+      "saber_mas": "<p>Los activos mantenidos para la venta son aquellos cuya recuperación se espera <u>principalmente por su venta</u>, no por su uso continuado.</p><p>Deben estar disponibles inmediatamente para venta y su venta debe ser muy probable. Se miden al menor entre valor contable y valor razonable menos costes de venta.</p>"
+    },
+    {
+      "question": "9. ¿Qué es un activo financiero a valor razonable con cambios en el patrimonio neto?",
+      "options": [
+        "Instrumentos de patrimonio no mantenidos para negociar",
+        "Acciones mantenidas para obtener rentabilidad a largo plazo",
+        "Activos mantenidos para especulación",
+        "Derivados financieros"
+      ],
+      "correct": [0, 1],
+      "saber_mas": "<p>Esta categoría incluye activos financieros, como acciones, que no se mantienen para negociar, pero que la empresa decide valorar al <u>valor razonable</u> con cambios en el <u>patrimonio neto</u>.</p><p>Los dividendos se reconocen en resultados, pero las plusvalías no afectan al resultado hasta su enajenación.</p>"
+    },
+    {
+      "question": "10. ¿Qué se registra en un arrendamiento financiero?",
+      "options": [
+        "Un inmovilizado y un pasivo financiero",
+        "Un gasto inmediato",
+        "Un activo y un ingreso",
+        "Una inversión financiera"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>En el momento inicial, se registra un <u>inmovilizado</u> (material o intangible) y un <u>pasivo financiero</u> por el menor entre el valor razonable del activo y el valor actual de las cuotas.</p><p>Este pasivo se amortiza con el método del interés efectivo.</p>"
+    },
+    {
+      "question": "11. ¿Qué es el fondo de comercio por adquisición?",
+      "options": [
+        "Diferencia entre el precio de compra y el valor razonable neto de activos adquiridos",
+        "Gastos de publicidad",
+        "Coste de desarrollo interno",
+        "Amortización acumulada"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>fondo de comercio</u> por adquisición es la diferencia entre el precio pagado y el valor razonable neto de los activos y pasivos adquiridos.</p><p>No se amortiza, pero sí se somete a pruebas de deterioro anuales. No se reconoce si se genera internamente.</p>"
+    },
+    {
+      "question": "12. ¿Qué activos financieros se valoran al coste?",
+      "options": [
+        "Participaciones en empresas del grupo",
+        "Acciones mantenidas para negociar",
+        "Instrumentos de patrimonio no negociados",
+        "Derivados"
+      ],
+      "correct": [0, 2],
+      "saber_mas": "<p>Los activos financieros a <u>coste</u> incluyen participaciones en empresas del grupo, multigrupo y asociadas, salvo que se mantengan para negociar.</p><p>Se valoran a coste menos deterioro acumulado. Las pérdidas por deterioro se reconocen en resultados.</p>"
+    },
+    {
+      "question": "13. ¿Qué es el test SPPI?",
+      "options": [
+        "Evalúa si los flujos contractuales son solo principal e intereses",
+        "Determina la vida útil del activo",
+        "Clasifica el modelo de negocio",
+        "Evalúa la rentabilidad"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>test SPPI</u> (Solamente Pagos de Principal e Intereses) verifica si los flujos contractuales del activo financiero consisten únicamente en pagos de principal e intereses.</p><p>Es uno de los dos criterios clave (junto al modelo de negocio) para clasificar activos financieros según el PGC.</p>"
+    },
+    {
+      "question": "14. ¿Qué activos se deterioran?",
+      "options": [
+        "Inmovilizado intangible",
+        "Inmovilizado material",
+        "Existencias",
+        "Inversiones financieras"
+      ],
+      "correct": [0, 1, 3],
+      "saber_mas": "<p>Los activos no corrientes y las existencias están sujetos a <u>corrección valorativa por deterioro</u> cuando su valor contable supera el importe recuperable.</p><p>El deterioro se reconoce en resultados y puede revertirse (excepto en inmovilizado intangible).</p>"
+    },
+    {
+      "question": "15. ¿Qué se contabiliza en 'Construcciones en curso'?",
+      "options": [
+        "Costes de construcción no finalizada",
+        "Amortización anual",
+        "Gastos de administración",
+        "Impuestos"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>La cuenta <u>Construcciones en curso</u> (231) recoge los costes incurridos en la construcción de un inmueble que aún no está finalizado.</p><p>Al finalizar, se traslada al inmovilizado material. Los gastos consumidos se reflejan mediante la amortización, no directamente.</p>"
+    }
+  ]
+}In
