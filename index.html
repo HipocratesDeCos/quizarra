@@ -322,26 +322,6 @@
         .btn-home:hover {
             box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
         }
-        .module-status {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 8px;
-            background-color: #ddd;
-        }
-        .module-status.loaded {
-            background-color: #4caf50;
-        }
-        .module-status.loading {
-            background-color: #ff9800;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.4; }
-            100% { opacity: 1; }
-        }
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
@@ -382,10 +362,6 @@
 
         <!-- Página principal -->
         <div class="container page active" id="main-page">
-            <div class="header">
-                <h1>SuperQuiz</h1>
-                <p>Plataforma de aprendizaje interactivo</p>
-            </div>
             <div class="main-menu">
                 <h2>Selecciona un área</h2>
                 <div class="main-buttons">
@@ -417,7 +393,7 @@
                 </div>
                 
                 <div class="instructions">
-                    <p>Selecciona una o varias opciones y haz clic en "Validar respuesta" para comprobar si es correcta.</p>
+                    <p>Selecciona una o varias opciones (según corresponda) y haz clic en "Validar respuesta" para comprobar si es correcta.</p>
                 </div>
                 
                 <div id="quiz-content">
@@ -1549,7 +1525,7 @@
             document.getElementById('total-questions').textContent = totalQuestions;
             currentQuestionIndex = 0;
             score = 0;
-            selectedOptions = [];
+            selectedOptions = []; // Inicializamos el array de opciones seleccionadas
             
             // Actualizar título
             document.getElementById('quiz-title').textContent = quizData.title;
@@ -1564,6 +1540,9 @@
             const question = quizData.questions[currentQuestionIndex];
             const content = document.getElementById('quiz-content');
             document.getElementById('current-question').textContent = currentQuestionIndex + 1;
+            
+            // Inicializamos las opciones seleccionadas para esta pregunta
+            selectedOptions = [];
             
             content.innerHTML = `
                 <div class="question">
