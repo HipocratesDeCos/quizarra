@@ -322,42 +322,6 @@
         .btn-home:hover {
             box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
         }
-        .loading {
-            text-align: center;
-            padding: 20px;
-            color: #666;
-        }
-        .loading::after {
-            content: '.';
-            animation: dots 1.5s steps(5, end) infinite;
-        }
-        .error {
-            background: #fff8f8;
-            border: 1px solid #ffcccc;
-            border-radius: 10px;
-            padding: 20px;
-            color: #cc0000;
-            margin: 20px 0;
-        }
-        .error h3 {
-            margin-top: 0;
-            color: #cc0000;
-        }
-        .error code {
-            background: #f0f0f0;
-            padding: 2px 5px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-        .error ul {
-            padding-left: 20px;
-            margin: 10px 0;
-        }
-        @keyframes dots {
-            0%, 20% { content: '.'; }
-            40% { content: '..'; }
-            60%, 100% { content: '...'; }
-        }
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
@@ -367,9 +331,6 @@
             }
             .quiz-container, .quiz-menu, .main-menu {
                 padding: 20px;
-            }
-            .quiz-container {
-                max-width: 90%;
             }
             .question-text {
                 font-size: 1.1rem;
@@ -467,10 +428,70 @@
         let quizData = null;
         let totalQuestions = 0;
 
-        // Función para obtener la URL completa del quiz
-        function getQuizURL(area, file) {
-            return `https://hipocratesdecos.github.io/quizarra/content/${area}/${file}`;
-        }
+        // Datos embebidos para evitar problemas de CORS
+        const embeddedQuizzes = {
+            'contabilidad': {
+                'contabilidad-basica': {
+                    "title": "Introducción al Plan General de Contabilidad",
+                    "questions": [
+                        {
+                            "intro": "El Plan General de Contabilidad (PGC) es el marco normativo que regula la contabilidad en España. Establece los principios, criterios y normas contables que deben seguir las empresas para elaborar sus estados financieros.",
+                            "question": "1. ¿Cuál es el objetivo principal del Plan General de Contabilidad?",
+                            "options": [
+                                "Homogeneizar la información contable",
+                                "Garantizar la utilidad de la información para la toma de decisiones",
+                                "Establecer criterios fiscales",
+                                "Facilitar la comparabilidad"
+                            ],
+                            "correct": [0, 1, 3],
+                            "saber_mas": "<p>El <u>objetivo principal del Plan General de Contabilidad</u> es proporcionar un marco común que permita la elaboración de estados financieros <u>homogéneos, comprensibles y comparables</u>. Esto es fundamental para que inversores, acreedores y otros usuarios puedan tomar decisiones económicas fundamentadas.</p><p>El PGC no solo regula el registro contable, sino que también garantiza la <u>transparencia</u> y <u>calidad</u> de la información. Por ejemplo, una empresa que cambia de sector debe seguir los mismos criterios para mantener la <u>continuidad</u> y <u>comparabilidad</u>.</p><p>Además, el PGC establece que la información debe ser <u>relevante</u> y <u>fiable</u>, cumpliendo con el marco conceptual. Esto asegura la <u>imagen fiel</u> del patrimonio, situación financiera y resultados.</p>"
+                        },
+                        {
+                            "question": "2. ¿Qué característica cualitativa implica que la información influya en las decisiones económicas de los usuarios?",
+                            "options": ["Relevancia", "Fiabilidad", "Comparabilidad", "Comprensibilidad"],
+                            "correct": [0],
+                            "saber_mas": "<p>La <u>relevancia</u> es una característica cualitativa fundamental que implica que la información contable influye en las decisiones económicas de los usuarios. Para ser relevante, debe tener <u>valor predictivo</u> o <u>valor confirmatorio</u>.</p><p>Por ejemplo, conocer el nivel de deuda de una empresa ayuda a prever su solvencia futura. La <u>materialidad</u> está relacionada con la relevancia: un dato es material si su omisión o error podría influir en las decisiones.</p><p>Según el marco conceptual del PGC, sin relevancia, la información pierde su utilidad principal, aunque sea fiable o comparable.</p>"
+                        }
+                    ]
+                },
+                'inversion-no-corriente': {
+                    "title": "Inversión No Corriente - Activo Fijo",
+                    "questions": [
+                        {
+                            "intro": "El activo no corriente comprende elementos destinados a servir de forma duradera en la actividad de la empresa.",
+                            "question": "1. ¿Qué caracteriza al activo no corriente?",
+                            "options": [
+                                "Permanencia superior a un año",
+                                "Destinado a la venta inmediata",
+                                "No destinado a la venta",
+                                "Controlado por la empresa"
+                            ],
+                            "correct": [0, 2, 3],
+                            "saber_mas": "<p>El <u>activo no corriente</u> se compone de activos que la empresa utiliza de forma duradera. Su principal característica es la <u>permanencia</u> superior al año o ciclo de explotación.</p><p>No está destinado a la venta, sino a participar en el proceso productivo. Se clasifica en <u>inmovilizado material</u>, <u>intangible</u> y <u>financiero</u>.</p><p>Según el PGC, se valora inicialmente por <u>coste de adquisición o producción</u> y se amortiza sistemáticamente (excepto terrenos).</p>"
+                        }
+                    ]
+                }
+            },
+            'analisis-economico-financiero': {
+                'introduccion': {
+                    "title": "Introducción al Análisis Económico-Financiero",
+                    "questions": [
+                        {
+                            "intro": "El análisis económico-financiero evalúa la situación y evolución financiera de una empresa.",
+                            "question": "1. ¿Cuál es el objetivo principal del análisis económico-financiero?",
+                            "options": [
+                                "Evaluar la rentabilidad",
+                                "Analizar la solvencia",
+                                "Estudiar la liquidez",
+                                "Todas las anteriores"
+                            ],
+                            "correct": [3],
+                            "saber_mas": "<p>El análisis económico-financiero tiene múltiples objetivos que incluyen evaluar la <u>rentabilidad</u>, <u>solvencia</u> y <u>liquidez</u> de una empresa.</p>"
+                        }
+                    ]
+                }
+            }
+        };
 
         // Función para mostrar una página específica
         function showPage(pageId, area = 'contabilidad') {
@@ -481,11 +502,6 @@
                     area === 'analisis-economico-financiero' ? 'Análisis Económico-Financiero' :
                     area === 'economia' ? 'Economía' : 'Marketing';
                 
-                // Mostrar mensaje de carga
-                const quizList = document.getElementById('quiz-list');
-                quizList.innerHTML = '<div class="loading">Cargando temas...</div>';
-                
-                // Cargar temas de esta área
                 loadAreaThemes();
             }
             
@@ -496,123 +512,45 @@
         // Carga los temas de un área
         function loadAreaThemes() {
             const quizList = document.getElementById('quiz-list');
+            const areaQuizzes = embeddedQuizzes[currentArea];
             
-            // Lista de archivos JSON conocidos para cada área
-            const knownFiles = {
-                'contabilidad': ['contabilidad-basica.json', 'inversion-no-corriente.json'],
-                'analisis-economico-financiero': ['introduccion.json'],
-                'economia': ['introduccion.json'],
-                'marketing': ['introduccion.json']
-            };
-            
-            const filesToCheck = knownFiles[currentArea] || [];
-            const validThemes = [];
-            let checkedFiles = 0;
-            
-            if (filesToCheck.length === 0) {
-                quizList.innerHTML = '<div class="error">No hay temas configurados para esta área.</div>';
-                return;
-            }
-            
-            filesToCheck.forEach(file => {
-                const url = getQuizURL(currentArea, file);
-                console.log('Cargando:', url);
-                
-                fetch(url)
-                    .then(response => {
-                        checkedFiles++;
-                        console.log(`${file}: ${response.status}`);
-                        if (response.ok) {
-                            return response.json();
-                        }
-                        throw new Error(`HTTP ${response.status}`);
-                    })
-                    .then(data => {
-                        validThemes.push({
-                            id: file.replace('.json', ''),
-                            title: data.title || 'Título no disponible',
-                            file: file
-                        });
-                        
-                        if (checkedFiles === filesToCheck.length) {
-                            displayThemes(validThemes);
-                        }
-                    })
-                    .catch(error => {
-                        console.error(`Error con ${file}:`, error);
-                        
-                        if (checkedFiles === filesToCheck.length) {
-                            displayThemes(validThemes);
-                        }
-                    });
-            });
-        }
-
-        // Muestra los temas válidos encontrados
-        function displayThemes(themes) {
-            const quizList = document.getElementById('quiz-list');
-            
-            if (themes.length === 0) {
-                quizList.innerHTML = `
-                    <div class="error">
-                        <h3>No se encontraron temas</h3>
-                        <p>No se pudieron cargar los archivos JSON.</p>
-                        <p>Verifica la consola para más detalles.</p>
-                    </div>
-                `;
+            if (!areaQuizzes) {
+                quizList.innerHTML = '<div class="error">No hay temas disponibles para esta área.</div>';
                 return;
             }
             
             quizList.innerHTML = '';
-            themes.forEach(theme => {
+            Object.keys(areaQuizzes).forEach(quizId => {
+                const quiz = areaQuizzes[quizId];
                 const btn = document.createElement('button');
                 btn.className = 'btn';
-                btn.textContent = theme.title;
-                btn.onclick = () => loadQuiz(theme.id);
+                btn.textContent = quiz.title;
+                btn.onclick = () => loadQuiz(quizId);
                 quizList.appendChild(btn);
             });
         }
 
-        // Carga un quiz específico desde JSON
+        // Carga un quiz específico
         function loadQuiz(quizId) {
             currentQuizId = quizId;
-            const url = getQuizURL(currentArea, `${quizId}.json`);
+            const areaQuizzes = embeddedQuizzes[currentArea];
             
-            const content = document.getElementById('quiz-content');
-            content.innerHTML = '<div class="loading">Cargando tema...</div>';
+            if (!areaQuizzes || !areaQuizzes[quizId]) {
+                document.getElementById('quiz-content').innerHTML = '<div class="error">Quiz no encontrado.</div>';
+                return;
+            }
             
-            console.log('Cargando quiz:', url);
+            quizData = areaQuizzes[quizId];
+            totalQuestions = quizData.questions.length;
+            document.getElementById('total-questions').textContent = totalQuestions;
+            currentQuestionIndex = 0;
+            score = 0;
+            selectedOptions = [];
             
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    quizData = data;
-                    totalQuestions = quizData.questions.length;
-                    document.getElementById('total-questions').textContent = totalQuestions;
-                    currentQuestionIndex = 0;
-                    score = 0;
-                    selectedOptions = [];
-                    
-                    document.getElementById('quiz-title').textContent = quizData.title;
-                    
-                    loadQuestion();
-                    showPage('quiz-page');
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    content.innerHTML = `
-                        <div class="error">
-                            <h3>Error al cargar el tema</h3>
-                            <p>URL: ${url}</p>
-                            <p>Error: ${error.message}</p>
-                        </div>
-                    `;
-                });
+            document.getElementById('quiz-title').textContent = quizData.title;
+            
+            loadQuestion();
+            showPage('quiz-page');
         }
 
         // Carga una pregunta específica
@@ -645,18 +583,13 @@
             const options = document.querySelectorAll(`#options-${currentQuestionIndex} .option`);
             const question = quizData.questions[currentQuestionIndex];
             
-            if (question.correct.length === 1) {
-                options.forEach(opt => opt.classList.remove('selected'));
-                element.classList.add('selected');
-                selectedOptions = [optionIndex];
+            // Siempre permitir selección múltiple
+            if (element.classList.contains('selected')) {
+                element.classList.remove('selected');
+                selectedOptions = selectedOptions.filter(i => i !== optionIndex);
             } else {
-                if (element.classList.contains('selected')) {
-                    element.classList.remove('selected');
-                    selectedOptions = selectedOptions.filter(i => i !== optionIndex);
-                } else {
-                    element.classList.add('selected');
-                    selectedOptions.push(optionIndex);
-                }
+                element.classList.add('selected');
+                selectedOptions.push(optionIndex);
             }
         }
 
