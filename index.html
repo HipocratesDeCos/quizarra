@@ -322,6 +322,42 @@
         .btn-home:hover {
             box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
         }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        .loading::after {
+            content: '.';
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+        .error {
+            background: #fff8f8;
+            border: 1px solid #ffcccc;
+            border-radius: 10px;
+            padding: 20px;
+            color: #cc0000;
+            margin: 20px 0;
+        }
+        .error h3 {
+            margin-top: 0;
+            color: #cc0000;
+        }
+        .error code {
+            background: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .error ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
@@ -427,926 +463,13 @@
     </div>
 
     <script>
-        // Datos embedidos - NO HAY PROBLEMAS DE CORS
-        const quizData = {
-            'contabilidad': {
-                'contabilidad-basica': {
-                    title: "Introducción al Plan General de Contabilidad",
-                    questions: [
-                        {
-                            intro: "El Plan General de Contabilidad (PGC) es el marco normativo que regula la contabilidad en España. Establece los principios, criterios y normas contables que deben seguir las empresas para elaborar sus estados financieros.",
-                            question: "1. ¿Cuál es el objetivo principal del Plan General de Contabilidad?",
-                            options: [
-                                "Homogeneizar la información contable",
-                                "Garantizar la utilidad de la información para la toma de decisiones",
-                                "Establecer criterios fiscales",
-                                "Facilitar la comparabilidad"
-                            ],
-                            correct: [0, 1, 3],
-                            saber_mas: "<p>El <u>objetivo principal del Plan General de Contabilidad</u> es proporcionar un marco común que permita la elaboración de estados financieros <u>homogéneos, comprensibles y comparables</u>. Esto es fundamental para que inversores, acreedores y otros usuarios puedan tomar decisiones económicas fundamentadas.</p><p>El PGC no solo regula el registro contable, sino que también garantiza la <u>transparencia</u> y <u>calidad</u> de la información. Por ejemplo, una empresa que cambia de sector debe seguir los mismos criterios para mantener la <u>continuidad</u> y <u>comparabilidad</u>.</p><p>Además, el PGC establece que la información debe ser <u>relevante</u> y <u>fiable</u>, cumpliendo con el marco conceptual. Esto asegura la <u>imagen fiel</u> del patrimonio, situación financiera y resultados.</p>"
-                        },
-                        {
-                            question: "2. ¿Qué característica cualitativa implica que la información influya en las decisiones económicas de los usuarios?",
-                            options: ["Relevancia", "Fiabilidad", "Comparabilidad", "Comprensibilidad"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>relevancia</u> es una característica cualitativa fundamental que implica que la información contable influye en las decisiones económicas de los usuarios. Para ser relevante, debe tener <u>valor predictivo</u> o <u>valor confirmatorio</u>.</p><p>Por ejemplo, conocer el nivel de deuda de una empresa ayuda a prever su solvencia futura. La <u>materialidad</u> está relacionada con la relevancia: un dato es material si su omisión o error podría influir en las decisiones.</p><p>Según el marco conceptual del PGC, sin relevancia, la información pierde su utilidad principal, aunque sea fiable o comparable.</p>"
-                        },
-                        {
-                            question: "3. ¿Qué principio contable exige que los ingresos y gastos se registren cuando se generan, no cuando se cobran o pagan?",
-                            options: ["Devengo", "Prudencia", "Importancia relativa", "Asociación de ingresos y gastos"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>principio del devengo</u> establece que los ingresos y gastos deben reconocerse en el momento en que se generan, independientemente de cuándo se cobren o paguen. Es fundamental para la <u>imagen fiel</u> del resultado.</p><p>Por ejemplo, si una empresa vende en diciembre y cobra en enero, el ingreso se registra en diciembre. Este principio permite una adecuada <u>asociación de ingresos y gastos</u> en el período correspondiente.</p><p>El devengo es clave para diferenciar entre <u>tesorería</u> y <u>resultado</u>, evitando distorsiones por la cronología del cobro.</p>"
-                        },
-                        {
-                            question: "4. ¿Qué significa el principio de prudencia?",
-                            options: [
-                                "Evitar sobrevalorar activos e ingresos",
-                                "Evitar infravalorar pasivos y gastos",
-                                "No compensar activos y pasivos",
-                                "Aplicar políticas contables uniformemente"
-                            ],
-                            correct: [0, 1],
-                            saber_mas: "<p>El <u>principio de prudencia</u> exige que se tenga precaución ante la incertidumbre. Implica que los activos e ingresos no se sobrevaloren, y que los pasivos y gastos no se infravaloren.</p><p>Por ejemplo, si hay dudas sobre el cobro a un cliente, se debe crear una provisión. Pero no se puede usar la prudencia para crear reservas ocultas, ya que eso afectaría la <u>fiabilidad</u> de la información.</p><p>Es un equilibrio: proteger a los usuarios sin distorsionar la realidad financiera.</p>"
-                        },
-                        {
-                            question: "5. ¿Qué elementos integran las cuentas anuales según el PGC?",
-                            options: [
-                                "Balance, cuenta de pérdidas y ganancias, estado de cambios en el patrimonio neto",
-                                "Balance, memoria, estado de flujo de efectivo",
-                                "Balance, cuenta de pérdidas y ganancias, estado de cambios en el patrimonio neto, estado de flujo de efectivo y memoria",
-                                "Balance, cuenta de pérdidas y ganancias, memoria"
-                            ],
-                            correct: [2],
-                            saber_mas: "<p>Las <u>cuentas anuales</u> están formadas por cinco documentos principales:</p><ul><li><strong>Balance</strong>: muestra la situación financiera al cierre del ejercicio.</li><li><strong>Cuenta de pérdidas y ganancias</strong>: refleja los resultados del periodo.</li><li><strong>Estado de cambios en el patrimonio neto</strong>: detalla el movimiento del patrimonio.</li><li><strong>Estado de flujo de efectivo</strong>: muestra el movimiento de liquidez.</li><li><strong>Memoria</strong>: explica los datos y criterios utilizados.</li></ul><p>Esta estructura garantiza la transparencia y coherencia de la información.</p>"
-                        },
-                        {
-                            question: "6. ¿Qué es un activo según el Marco Conceptual?",
-                            options: [
-                                "Un recurso controlado por la empresa con expectativa de beneficios futuros",
-                                "Un derecho a recibir dinero en el futuro",
-                                "Un bien que pertenece a la empresa",
-                                "Un elemento que genera ingresos"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>Un <u>activo</u> es un recurso que la empresa controla como consecuencia de sucesos pasados, y del que espera obtener <u>beneficios económicos futuros</u>.</p><p>No basta con que el bien exista: debe haber <u>control efectivo</u> y <u>probabilidad de rendimientos</u>. Por ejemplo, un inmueble arrendado no es activo si no se tiene control.</p><p>La propiedad legal no es necesaria; lo importante es la <u>esencia económica</u> del recurso.</p>"
-                        },
-                        {
-                            question: "7. ¿Qué define un pasivo?",
-                            options: [
-                                "Una obligación presente derivada de eventos pasados",
-                                "Un compromiso futuro",
-                                "Una deuda con proveedores",
-                                "Un saldo a pagar"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>Un <u>pasivo</u> es una obligación presente surgida de eventos pasados, cuya liquidación probablemente implique una <u>salida de recursos</u> con beneficios económicos.</p><p>Por ejemplo, un préstamo bancario es un pasivo porque existe una obligación actual. Si solo hubiera un contrato futuro, no sería un pasivo.</p><p>El concepto incluye también las <u>provisiones</u>, que son pasivos estimados, como gastos de desmantelamiento o litigios pendientes.</p>"
-                        },
-                        {
-                            question: "8. ¿Qué es el patrimonio neto?",
-                            options: [
-                                "La parte residual de los activos menos los pasivos",
-                                "Los fondos aportados por los socios",
-                                "Los resultados acumulados",
-                                "El capital social"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>El <u>patrimonio neto</u> es la diferencia entre los activos y los pasivos. Representa los <u>fondos propios</u> de la empresa.</p><p>Incluye el <u>capital social</u>, las <u>reservas</u> y los <u>resultados acumulados</u>. No es solo el capital aportado, sino todo lo que pertenece a los propietarios tras deducir las deudas.</p><p>Es clave para evaluar la solvencia y estabilidad financiera.</p>"
-                        },
-                        {
-                            question: "9. ¿Qué es un ingreso imputado?",
-                            options: [
-                                "Un incremento de activos o decremento de pasivos que altera positivamente el patrimonio neto",
-                                "Un cobro realizado",
-                                "Un derecho a cobrar",
-                                "Un aumento de capital"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>Un <u>ingreso imputado</u> es cualquier entrada o incremento de activos, o decremento de pasivos, que aumenta positivamente el patrimonio neto, siempre que no proceda de aportaciones de propietarios.</p><p>Por ejemplo, la venta de productos genera un ingreso imputado, incluso si el cobro se hace después.</p><p>Es diferente del <u>ingreso inicial</u> (el total pactado), que puede no estar completamente devengado.</p>"
-                        },
-                        {
-                            question: "10. ¿Qué es un gasto imputado?",
-                            options: [
-                                "Un decremento de activos o incremento de pasivos que reduce el patrimonio neto",
-                                "Un pago realizado",
-                                "Un costo anticipado",
-                                "Un descuento recibido"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>Un <u>gasto imputado</u> es cualquier salida, consumo o deterioro de activos, o incremento de pasivos, que disminuye negativamente el patrimonio neto, siempre que no sea una distribución a propietarios.</p><p>Por ejemplo, el consumo de mercaderías o el pago de salarios son gastos imputados.</p><p>Se diferencia del <u>gasto inicial</u> (costo total), que puede no estar totalmente devengado.</p>"
-                        },
-                        {
-                            question: "11. ¿Qué criterio de valoración se aplica al coste histórico?",
-                            options: [
-                                "El precio de adquisición del activo",
-                                "El valor razonable",
-                                "El valor neto realizable",
-                                "El valor en uso"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>El <u>coste histórico</u> es el precio de adquisición del activo, incluyendo el importe pagado, los impuestos y gastos directamente atribuibles a su compra.</p><p>Para activos producidos internamente, incluye materiales, mano de obra y costes indirectos.</p><p>Es el método más utilizado por su <u>fiabilidad</u> y <u>objetividad</u>, aunque puede no reflejar el valor actual.</p>"
-                        },
-                        {
-                            question: "12. ¿Qué es el valor razonable?",
-                            options: [
-                                "El precio que se recibiría por la venta de un activo en condiciones normales",
-                                "El costo de producción",
-                                "El valor neto realizable",
-                                "El valor en libros"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>El <u>valor razonable</u> es el importe que se recibiría por la venta de un activo, o se pagaría por la transferencia de un pasivo, en una transacción ordenada entre partes informadas e independientes.</p><p>Se basa en el mercado activo y se clasifica en tres niveles: precios cotizados (nivel 1), modelos con datos observables (nivel 2) y estimaciones con datos no observables (nivel 3).</p><p>Es útil para reflejar la <u>realidad económica</u> de los activos y pasivos.</p>"
-                        },
-                        {
-                            question: "13. ¿Qué es el valor neto realizable?",
-                            options: [
-                                "El importe esperado por la venta de un activo menos los costes de venta",
-                                "El valor razonable",
-                                "El costo amortizado",
-                                "El valor en uso"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>El <u>valor neto realizable</u> es el importe que se espera obtener por la venta de un activo en condiciones normales, menos los costes necesarios para su venta.</p><p>Es útil para determinar si un activo debe depreciarse por deterioro.</p><p>Por ejemplo, si un producto tiene un valor de mercado de 100€ y los costes de venta son 10€, su valor neto realizable es 90€.</p>"
-                        },
-                        {
-                            question: "14. ¿Qué es el valor en uso?",
-                            options: [
-                                "El valor actual de los flujos de efectivo futuros esperados",
-                                "El valor razonable",
-                                "El costo histórico",
-                                "El valor neto realizable"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>El <u>valor en uso</u> es el valor actual de los flujos de efectivo netos que se esperan obtener del activo durante su vida útil.</p><p>Se calcula aplicando un tipo de descuento que incluye el riesgo del activo.</p><p>Es útil para evaluar si un activo debe mantenerse en el balance o si ha sufrido un deterioro.</p>"
-                        },
-                        {
-                            question: "15. ¿Qué es el coste amortizado?",
-                            options: [
-                                "El importe inicial ajustado por intereses y amortización",
-                                "El valor razonable",
-                                "El costo histórico",
-                                "El valor en uso"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>El <u>coste amortizado</u> es el importe al que fue inicialmente valorado un instrumento financiero, ajustado por la amortización de intereses utilizando el tipo de interés efectivo.</p><p>Se aplica a préstamos, créditos y bonos.</p><p>Permite reflejar la evolución del valor del instrumento financiero en el tiempo.</p>"
-                        }
-                    ]
-                },
-                'inversion-no-corriente': {
-                    title: "Inversión No Corriente - Activo Fijo",
-                    questions: [
-                        {
-                            intro: "El activo no corriente comprende elementos destinados a servir de forma duradera en la actividad de la empresa.",
-                            question: "1. ¿Qué caracteriza al activo no corriente?",
-                            options: [
-                                "Permanencia superior a un año",
-                                "Destinado a la venta inmediata",
-                                "No destinado a la venta",
-                                "Controlado por la empresa"
-                            ],
-                            correct: [0, 2, 3],
-                            saber_mas: "<p>El <u>activo no corriente</u> se compone de activos que la empresa utiliza de forma duradera. Su principal característica es la <u>permanencia</u> superior al año o ciclo de explotación.</p><p>No está destinado a la venta, sino a participar en el proceso productivo. Se clasifica en <u>inmovilizado material</u>, <u>intangible</u> y <u>financiero</u>.</p><p>Según el PGC, se valora inicialmente por <u>coste de adquisición o producción</u> y se amortiza sistemáticamente (excepto terrenos).</p>"
-                        },
-                        {
-                            question: "2. ¿Qué se incluye en el inmovilizado intangible?",
-                            options: [
-                                "Investigación y desarrollo",
-                                "Propiedad industrial",
-                                "Fondo de comercio",
-                                "Aplicaciones informáticas"
-                            ],
-                            correct: [1, 2, 3],
-                            saber_mas: "<p>El <u>inmovilizado intangible</u> incluye activos sin forma física: <u>concesiones</u>, <u>patentes</u>, <u>fondo de comercio</u>, <u>software</u>, etc.</p><p>Los gastos de <u>investigación</u> se imputan al ejercicio, pero los de <u>desarrollo</u> pueden activarse si se cumplen ciertos requisitos (viabilidad técnica, intención de finalizar, capacidad de uso, beneficios futuros).</p><p>El <u>fondo de comercio</u> solo se reconoce por adquisición onerosa, no por generación interna.</p>"
-                        },
-                        {
-                            question: "3. ¿Qué es un arrendamiento financiero?",
-                            options: [
-                                "El arrendatario asume riesgos y beneficios de propiedad",
-                                "El arrendador mantiene los riesgos",
-                                "Se registra como activo y pasivo",
-                                "Es un gasto inmediato"
-                            ],
-                            correct: [0, 2],
-                            saber_mas: "<p>En un <u>arrendamiento financiero</u>, el arrendatario asume los <u>riesgos y beneficios</u> de la propiedad. Se registra un <u>activo</u> y un <u>pasivo financiero</u> por el menor entre el valor razonable del activo y el valor actual de las cuotas.</p><p>Este modelo se aplica cuando el arrendatario controla el uso del activo y se espera que obtenga beneficios económicos.</p>"
-                        },
-                        {
-                            question: "4. ¿Qué criterio se usa para valorar un activo financiero a coste amortizado?",
-                            options: [
-                                "Valor razonable",
-                                "Coste histórico",
-                                "Coste amortizado",
-                                "Valor neto realizable"
-                            ],
-                            correct: [2],
-                            saber_mas: "<p>Un activo financiero se valora a <u>coste amortizado</u> si cumple dos condiciones: (1) el modelo de negocio es mantenerlo para cobrar flujos contractuales (no para negociar), y (2) los flujos son solo pagos de principal e intereses (test SPPI).</p><p>Se aplica a créditos comerciales, préstamos y bonos no negociados.</p>"
-                        },
-                        {
-                            question: "5. ¿Qué activos se incluyen en el grupo 2 del PGC?",
-                            options: [
-                                "Inmovilizado material",
-                                "Inversiones inmobiliarias",
-                                "Inversiones financieras a largo plazo",
-                                "Existencias"
-                            ],
-                            correct: [0, 1, 2],
-                            saber_mas: "<p>El <u>grupo 2</u> del PGC incluye todos los activos no corrientes: <u>inmovilizado material</u>, <u>intangible</u>, <u>inversiones inmobiliarias</u> y <u>financieras a largo plazo</u>.</p><p>Las <u>existencias</u> pertenecen al grupo 3. Este agrupamiento facilita la clasificación en el balance.</p>"
-                        },
-                        {
-                            question: "6. ¿Cuándo se puede activar un gasto de desarrollo?",
-                            options: [
-                                "Siempre que se incurra",
-                                "Solo si hay viabilidad técnica",
-                                "Si hay intención de finalizarlo",
-                                "Si generará beneficios futuros"
-                            ],
-                            correct: [1, 2, 3],
-                            saber_mas: "<p>Para activar un gasto de desarrollo, debe demostrarse: <u>viabilidad técnica</u>, <u>intención de finalizarlo</u>, <u>capacidad para usarlo</u> y <u>beneficios económicos futuros</u>.</p><p>Esto asegura que solo se capitalicen proyectos viables, no meras investigaciones preliminares.</p>"
-                        },
-                        {
-                            question: "7. ¿Qué es el valor en uso de un activo?",
-                            options: [
-                                "Valor actual de flujos de efectivo futuros esperados",
-                                "Precio de mercado",
-                                "Coste de reposición",
-                                "Valor neto realizable"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>El <u>valor en uso</u> es el valor actual de los flujos de efectivo netos que se esperan obtener del activo durante su vida útil.</p><p>Se calcula descontando los flujos futuros usando un tipo de interés que incluye el riesgo del activo. Es clave para evaluar deterioro.</p>"
-                        },
-                        {
-                            question: "8. ¿Qué activos se clasifican como mantenidos para la venta?",
-                            options: [
-                                "Activos cuya recuperación se espera por venta",
-                                "Existencias",
-                                "Inversiones a corto plazo",
-                                "Activos que ya no se usan"
-                            ],
-                            correct: [0, 3],
-                            saber_mas: "<p>Los activos mantenidos para la venta son aquellos cuya recuperación se espera <u>principalmente por su venta</u>, no por su uso continuado.</p><p>Deben estar disponibles inmediatamente para venta y su venta debe ser muy probable. Se miden al menor entre valor contable y valor razonable menos costes de venta.</p>"
-                        },
-                        {
-                            question: "9. ¿Qué es un activo financiero a valor razonable con cambios en el patrimonio neto?",
-                            options: [
-                                "Instrumentos de patrimonio no mantenidos para negociar",
-                                "Acciones mantenidas para obtener rentabilidad a largo plazo",
-                                "Activos mantenidos para especulación",
-                                "Derivados financieros"
-                            ],
-                            correct: [0, 1],
-                            saber_mas: "<p>Esta categoría incluye activos financieros, como acciones, que no se mantienen para negociar, pero que la empresa decide valorar al <u>valor razonable</u> con cambios en el <u>patrimonio neto</u>.</p><p>Los dividendos se reconocen en resultados, pero las plusvalías no afectan al resultado hasta su enajenación.</p>"
-                        },
-                        {
-                            question: "10. ¿Qué se registra en un arrendamiento financiero?",
-                            options: [
-                                "Un inmovilizado y un pasivo financiero",
-                                "Un gasto inmediato",
-                                "Un activo y un ingreso",
-                                "Una inversión financiera"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>En el momento inicial, se registra un <u>inmovilizado</u> (material o intangible) y un <u>pasivo financiero</u> por el menor entre el valor razonable del activo y el valor actual de las cuotas.</p><p>Este pasivo se amortiza con el método del interés efectivo.</p>"
-                        },
-                        {
-                            question: "11. ¿Qué es el fondo de comercio por adquisición?",
-                            options: [
-                                "Diferencia entre el precio de compra y el valor razonable neto de activos adquiridos",
-                                "Gastos de publicidad",
-                                "Coste de desarrollo interno",
-                                "Amortización acumulada"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>El <u>fondo de comercio</u> por adquisición es la diferencia entre el precio pagado y el valor razonable neto de los activos y pasivos adquiridos.</p><p>No se amortiza, pero sí se somete a pruebas de deterioro anuales. No se reconoce si se genera internamente.</p>"
-                        },
-                        {
-                            question: "12. ¿Qué activos financieros se valoran al coste?",
-                            options: [
-                                "Participaciones en empresas del grupo",
-                                "Acciones mantenidas para negociar",
-                                "Instrumentos de patrimonio no negociados",
-                                "Derivados"
-                            ],
-                            correct: [0, 2],
-                            saber_mas: "<p>Los activos financieros a <u>coste</u> incluyen participaciones en empresas del grupo, multigrupo y asociadas, salvo que se mantengan para negociar.</p><p>Se valoran a coste menos deterioro acumulado. Las pérdidas por deterioro se reconocen en resultados.</p>"
-                        },
-                        {
-                            question: "13. ¿Qué es el test SPPI?",
-                            options: [
-                                "Evalúa si los flujos contractuales son solo principal e intereses",
-                                "Determina la vida útil del activo",
-                                "Clasifica el modelo de negocio",
-                                "Evalúa la rentabilidad"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>El <u>test SPPI</u> (Solamente Pagos de Principal e Intereses) verifica si los flujos contractuales del activo financiero consisten únicamente en pagos de principal e intereses.</p><p>Es uno de los dos criterios clave (junto al modelo de negocio) para clasificar activos financieros según el PGC.</p>"
-                        },
-                        {
-                            question: "14. ¿Qué activos se deterioran?",
-                            options: [
-                                "Inmovilizado intangible",
-                                "Inmovilizado material",
-                                "Existencias",
-                                "Inversiones financieras"
-                            ],
-                            correct: [0, 1, 3],
-                            saber_mas: "<p>Los activos no corrientes y las existencias están sujetos a <u>corrección valorativa por deterioro</u> cuando su valor contable supera el importe recuperable.</p><p>El deterioro se reconoce en resultados y puede revertirse (excepto en inmovilizado intangible).</p>"
-                        },
-                        {
-                            question: "15. ¿Qué se contabiliza en 'Construcciones en curso'?",
-                            options: [
-                                "Costes de construcción no finalizada",
-                                "Amortización anual",
-                                "Gastos de administración",
-                                "Impuestos"
-                            ],
-                            correct: [0],
-                            saber_mas: "<p>La cuenta <u>Construcciones en curso</u> (231) recoge los costes incurridos en la construcción de un inmueble que aún no está finalizado.</p><p>Al finalizar, se traslada al inmovilizado material. Los gastos consumidos se reflejan mediante la amortización, no directamente.</p>"
-                        }
-                    ]
-                }
-            },
-            'analisis-economico-financiero': {
-                'analisis-financiero': {
-                    title: "Análisis Financiero Básico",
-                    questions: [
-                        {
-                            question: "1. ¿Qué ratio mide la capacidad de una empresa para hacer frente a sus deudas a corto plazo?",
-                            options: ["Ratio de liquidez", "Ratio de solvencia", "Ratio de endeudamiento", "Ratio de rentabilidad"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de liquidez</u> (también llamado ratio corriente) mide la capacidad de una empresa para hacer frente a sus obligaciones a corto plazo. Se calcula como Activo Corriente / Pasivo Corriente. Un ratio superior a 1 indica que la empresa tiene suficientes activos corrientes para cubrir sus deudas a corto plazo.</p>"
-                        },
-                        {
-                            question: "2. ¿Qué representa el ratio de rotación de inventarios?",
-                            options: ["Eficiencia en la gestión de existencias", "Capacidad de pago a corto plazo", "Rentabilidad de las ventas", "Estructura financiera de la empresa"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de rotación de inventarios</u> mide la eficiencia en la gestión de existencias. Se calcula como Coste de Ventas / Inventario Promedio. Un ratio alto indica que la empresa vende sus productos rápidamente, mientras que un ratio bajo podría indicar exceso de inventario o problemas de venta.</p>"
-                        },
-                        {
-                            question: "3. ¿Cómo se calcula el ratio de margen neto?",
-                            options: ["Beneficio Neto / Ventas", "Beneficio Bruto / Ventas", "Beneficio Operativo / Ventas", "Beneficio antes de intereses e impuestos / Ventas"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de margen neto</u> se calcula como Beneficio Neto / Ventas. Este ratio indica qué porcentaje de cada euro de ventas se convierte en beneficio neto después de todos los gastos e impuestos. Es un indicador clave de la rentabilidad y eficiencia operativa de la empresa.</p>"
-                        },
-                        {
-                            question: "4. ¿Qué ratio mide la relación entre el beneficio antes de intereses e impuestos y los gastos financieros?",
-                            options: ["Cobertura de gastos financieros", "Ratio de solvencia", "Ratio de liquidez", "Ratio de endeudamiento"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de cobertura de gastos financieros</u> mide la capacidad de la empresa para hacer frente a sus gastos financieros. Se calcula como Beneficio antes de Intereses e Impuestos (BAII) / Gastos Financieros. Un ratio alto indica que la empresa tiene suficiente capacidad para cubrir sus pagos de intereses.</p>"
-                        },
-                        {
-                            question: "5. ¿Qué representa el ratio de endeudamiento?",
-                            options: ["Proporción de financiación ajena en la estructura del capital", "Capacidad de pago a corto plazo", "Rentabilidad de los activos", "Eficiencia en la gestión de inventarios"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de endeudamiento</u> mide la proporción de financiación ajena en la estructura del capital de la empresa. Se calcula como Pasivo Total / Patrimonio Neto. Un ratio alto indica que la empresa depende en gran medida de la financiación ajena, lo que puede incrementar el riesgo financiero.</p>"
-                        },
-                        {
-                            question: "6. ¿Qué ratio se utiliza para medir la rentabilidad de los recursos propios?",
-                            options: ["ROE (Return on Equity)", "ROA (Return on Assets)", "ROI (Return on Investment)", "Margen neto"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ROE (Return on Equity)</u> mide la rentabilidad de los recursos propios. Se calcula como Beneficio Neto / Patrimonio Neto. Este ratio indica qué rentabilidad están generando los fondos aportados por los accionistas. Es uno de los ratios más importantes para los inversores.</p>"
-                        },
-                        {
-                            question: "7. ¿Cómo se calcula el ratio de rotación de clientes?",
-                            options: ["Ventas / Cuentas por Cobrar Promedio", "Cuentas por Cobrar Promedio / Ventas", "Ventas / Cuentas por Pagar Promedio", "Cuentas por Pagar Promedio / Ventas"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de rotación de clientes</u> se calcula como Ventas / Cuentas por Cobrar Promedio. Este ratio mide la eficiencia en la gestión de las cuentas por cobrar. Un ratio alto indica que la empresa cobra rápidamente a sus clientes, mientras que un ratio bajo podría indicar problemas en la política de cobro.</p>"
-                        },
-                        {
-                            question: "8. ¿Qué ratio mide la relación entre el activo total y el patrimonio neto?",
-                            options: ["Ratio de apalancamiento financiero", "Ratio de solvencia", "Ratio de liquidez", "Ratio de endeudamiento"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de apalancamiento financiero</u> mide la relación entre el activo total y el patrimonio neto. Se calcula como Activo Total / Patrimonio Neto. Este ratio indica el grado de apalancamiento de la empresa: cuanto mayor sea el ratio, mayor será la dependencia de financiación ajena.</p>"
-                        },
-                        {
-                            question: "9. ¿Qué representa el ratio de margen bruto?",
-                            options: ["Beneficio bruto / Ventas", "Beneficio neto / Ventas", "Beneficio operativo / Ventas", "Beneficio antes de intereses e impuestos / Ventas"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de margen bruto</u> se calcula como Beneficio Bruto / Ventas. Este ratio indica qué porcentaje de cada euro de ventas queda después de deducir el coste directo de los productos vendidos. Es un indicador de la eficiencia en la producción y fijación de precios de la empresa.</p>"
-                        },
-                        {
-                            question: "10. ¿Cómo se interpreta un ratio de liquidez ácida inferior a 1?",
-                            options: ["Problemas potenciales para hacer frente a deudas a corto plazo", "Alta rentabilidad de la empresa", "Buen manejo de los inventarios", "Baja dependencia de financiación ajena"],
-                            correct: [0],
-                            saber_mas: "<p>Un <u>ratio de liquidez ácida</u> inferior a 1 indica problemas potenciales para hacer frente a las deudas a corto plazo. Este ratio se calcula como (Activo Corriente - Inventarios) / Pasivo Corriente. A diferencia del ratio de liquidez corriente, excluye los inventarios, considerando que pueden no ser fácilmente convertibles en efectivo.</p>"
-                        },
-                        {
-                            question: "11. ¿Qué ratio mide la rentabilidad de los activos totales?",
-                            options: ["ROA (Return on Assets)", "ROE (Return on Equity)", "ROI (Return on Investment)", "Margen neto"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ROA (Return on Assets)</u> mide la rentabilidad de los activos totales. Se calcula como Beneficio Neto / Activo Total. Este ratio indica qué tan eficientemente está utilizando la empresa sus activos para generar beneficios, independientemente de cómo estén financiados.</p>"
-                        },
-                        {
-                            question: "12. ¿Qué representa el ratio de periodo medio de pago?",
-                            options: ["Tiempo medio que tarda la empresa en pagar a sus proveedores", "Tiempo medio que tarda la empresa en cobrar a sus clientes", "Tiempo medio que los productos permanecen en inventario", "Tiempo medio que los activos están en funcionamiento"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de periodo medio de pago</u> representa el tiempo medio que tarda la empresa en pagar a sus proveedores. Se calcula como (Cuentas por Pagar / Compras) * 365. Este ratio es importante para evaluar la política de pagos de la empresa y su relación con los proveedores.</p>"
-                        },
-                        {
-                            question: "13. ¿Cómo se calcula el ratio de solvencia a largo plazo?",
-                            options: ["Recursos Permanentes / Inversiones Permanentes", "Activo Corriente / Pasivo Corriente", "Pasivo Total / Patrimonio Neto", "Beneficio Neto / Activo Total"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de solvencia a largo plazo</u> se calcula como Recursos Permanentes / Inversiones Permanentes. Los recursos permanentes incluyen el patrimonio neto y el pasivo no corriente, mientras que las inversiones permanentes son el activo no corriente. Un ratio superior a 1 indica que la empresa financia sus inversiones a largo plazo con recursos permanentes.</p>"
-                        },
-                        {
-                            question: "14. ¿Qué ratio mide la eficiencia en la gestión de los activos?",
-                            options: ["Rotación del activo total", "Margen neto", "ROE", "Ratio de endeudamiento"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>rotación del activo total</u> mide la eficiencia en la gestión de los activos. Se calcula como Ventas / Activo Total. Este ratio indica cuántas veces se renuevan los activos durante el ejercicio para generar ventas. Un ratio alto sugiere una gestión eficiente de los activos.</p>"
-                        },
-                        {
-                            question: "15. ¿Cómo se interpreta un ratio de cobertura de intereses muy elevado?",
-                            options: ["Alta capacidad para hacer frente a los pagos de intereses", "Baja rentabilidad de la empresa", "Exceso de inventario", "Problemas para cobrar a los clientes"],
-                            correct: [0],
-                            saber_mas: "<p>Un <u>ratio de cobertura de intereses</u> muy elevado indica alta capacidad para hacer frente a los pagos de intereses. Se calcula como Beneficio antes de Intereses e Impuestos (BAII) / Gastos Financieros. Un ratio alto significa que la empresa genera suficiente beneficio operativo para cubrir con holgura sus obligaciones financieras, lo que reduce el riesgo de impago.</p>"
-                        }
-                    ]
-                },
-                'ratios-empresa': {
-                    title: "Ratios de Solvencia y Liquidez",
-                    questions: [
-                        {
-                            question: "1. ¿Qué ratio es conocido como el 'ratio de acid test'?",
-                            options: ["Liquidez ácida", "Liquidez corriente", "Solvencia", "Endeudamiento"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de liquidez ácida</u> (también llamado 'acid test') mide la capacidad inmediata de pago de una empresa. Se calcula como (Activo Corriente - Inventarios) / Pasivo Corriente. A diferencia del ratio de liquidez corriente, excluye los inventarios porque no son tan líquidos. Un ratio superior a 1 es generalmente saludable.</p>"
-                        },
-                        {
-                            question: "2. ¿Cuál es la fórmula del ratio de liquidez corriente?",
-                            options: ["Activo Corriente / Pasivo Corriente", "Pasivo Corriente / Activo Corriente", "(Activo Corriente - Inventarios) / Pasivo Corriente", "Pasivo Total / Patrimonio Neto"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de liquidez corriente</u> se calcula como Activo Corriente / Pasivo Corriente. Este ratio mide la capacidad de la empresa para hacer frente a sus obligaciones a corto plazo con sus activos corrientes. Un ratio de 1.5 a 2.0 generalmente se considera saludable, aunque varía según el sector.</p>"
-                        },
-                        {
-                            question: "3. ¿Qué ratio mide la capacidad de una empresa para cumplir con sus obligaciones a largo plazo?",
-                            options: ["Ratio de solvencia", "Ratio de liquidez", "Ratio de rentabilidad", "Ratio de eficiencia"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de solvencia</u> mide la capacidad de una empresa para cumplir con sus obligaciones a largo plazo. Se calcula como Patrimonio Neto / Pasivo Total. Un ratio alto indica que la empresa tiene una sólida base de recursos propios frente a sus deudas a largo plazo, lo que reduce el riesgo financiero.</p>"
-                        },
-                        {
-                            question: "4. ¿Cómo se calcula el ratio de endeudamiento?",
-                            options: ["Pasivo Total / (Pasivo Total + Patrimonio Neto)", "Patrimonio Neto / Pasivo Total", "Pasivo Corriente / Activo Corriente", "Activo Total / Patrimonio Neto"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de endeudamiento</u> se calcula como Pasivo Total / (Pasivo Total + Patrimonio Neto). Este ratio indica la proporción de los recursos de la empresa que provienen de financiación ajena. Un ratio elevado (superior al 60-70%) puede indicar un alto riesgo financiero, aunque esto varía según el sector.</p>"
-                        },
-                        {
-                            question: "5. ¿Qué ratio mide la proporción de deuda a largo plazo en relación con los recursos propios?",
-                            options: ["Ratio de financiación", "Ratio de liquidez", "Ratio de cobertura", "Ratio de rotación"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de financiación</u> mide la proporción de deuda a largo plazo en relación con los recursos propios. Se calcula como Pasivo No Corriente / Patrimonio Neto. Este ratio indica el grado de apalancamiento financiero a largo plazo de la empresa y su dependencia de la financiación ajena para sus inversiones permanentes.</p>"
-                        },
-                        {
-                            question: "6. ¿Cuál es la fórmula del ratio de garantía?",
-                            options: ["Activo Total / Pasivo Total", "Pasivo Total / Activo Total", "Patrimonio Neto / Pasivo Total", "Activo Corriente / Pasivo Corriente"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de garantía</u> se calcula como Activo Total / Pasivo Total. Este ratio indica cuántos euros de activo tiene la empresa por cada euro de deuda. Un ratio superior a 1 indica que el activo total supera al pasivo total, lo que es fundamental para la viabilidad de la empresa.</p>"
-                        },
-                        {
-                            question: "7. ¿Qué ratio mide la capacidad de la empresa para hacer frente a sus pagos de intereses?",
-                            options: ["Cobertura de intereses", "Liquidez corriente", "Solvencia", "Endeudamiento"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de cobertura de intereses</u> mide la capacidad de la empresa para hacer frente a sus pagos de intereses. Se calcula como Beneficio antes de Intereses e Impuestos (BAII) / Gastos Financieros. Un ratio superior a 3 generalmente se considera saludable, indicando que la empresa genera suficiente beneficio operativo para cubrir sus obligaciones financieras.</p>"
-                        },
-                        {
-                            question: "8. ¿Cómo se interpreta un ratio de liquidez corriente inferior a 1?",
-                            options: ["Problemas para hacer frente a deudas a corto plazo", "Alta rentabilidad", "Buena gestión de inventarios", "Bajo endeudamiento"],
-                            correct: [0],
-                            saber_mas: "<p>Un <u>ratio de liquidez corriente</u> inferior a 1 indica problemas para hacer frente a deudas a corto plazo. Esto significa que la empresa tiene menos activos corrientes que pasivos corrientes, lo que podría generar problemas de tesorería. Sin embargo, en algunos sectores con alta rotación (como el retail), ratios ligeramente inferiores a 1 pueden ser normales.</p>"
-                        },
-                        {
-                            question: "9. ¿Qué ratio se calcula como Patrimonio Neto / Activo Total?",
-                            options: ["Ratio de autonomía financiera", "Ratio de endeudamiento", "Ratio de liquidez", "Ratio de solvencia"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de autonomía financiera</u> se calcula como Patrimonio Neto / Activo Total. Este ratio indica la proporción de los activos que están financiados con recursos propios. Un ratio alto (superior al 50%) sugiere una estructura financiera conservadora con baja dependencia de la deuda.</p>"
-                        },
-                        {
-                            question: "10. ¿Qué ratio mide el tiempo medio que los clientes tardan en pagar?",
-                            options: ["Periodo medio de cobro", "Periodo medio de pago", "Periodo medio de maduración", "Periodo medio de almacenamiento"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>periodo medio de cobro</u> mide el tiempo medio que los clientes tardan en pagar. Se calcula como (Cuentas por Cobrar / Ventas) * 365. Este ratio es clave para gestionar la tesorería de la empresa, ya que un periodo alto puede generar problemas de liquidez.</p>"
-                        },
-                        {
-                            question: "11. ¿Cómo se calcula el ratio de solvencia a largo plazo?",
-                            options: ["Recursos Permanentes / Inversiones Permanentes", "Activo Corriente / Pasivo Corriente", "Pasivo Total / Patrimonio Neto", "Activo Total / Pasivo Total"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de solvencia a largo plazo</u> se calcula como Recursos Permanentes / Inversiones Permanentes. Los recursos permanentes incluyen el patrimonio neto y el pasivo no corriente, mientras que las inversiones permanentes son el activo no corriente. Un ratio superior a 1 indica que la empresa financia sus inversiones a largo plazo con recursos permanentes, lo que es un indicador de estabilidad financiera.</p>"
-                        },
-                        {
-                            question: "12. ¿Qué ratio mide la relación entre el pasivo corriente y el pasivo total?",
-                            options: ["Ratio de exigibilidad", "Ratio de solvencia", "Ratio de endeudamiento", "Ratio de liquidez"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de exigibilidad</u> mide la relación entre el pasivo corriente y el pasivo total. Se calcula como Pasivo Corriente / Pasivo Total. Este ratio indica la proporción de deudas que la empresa debe hacer frente en el corto plazo. Un ratio muy alto podría indicar problemas de refinanciación si no se gestionan adecuadamente los vencimientos.</p>"
-                        },
-                        {
-                            question: "13. ¿Qué ratio es más restrictivo: liquidez corriente o liquidez ácida?",
-                            options: ["Liquidez ácida", "Liquidez corriente", "Ambos son iguales", "Depende del sector"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de liquidez ácida</u> es más restrictivo que el ratio de liquidez corriente. Mientras que el ratio de liquidez corriente considera todos los activos corrientes, el ratio ácido excluye los inventarios porque no son tan líquidos. Por lo tanto, el ratio ácido proporciona una visión más conservadora de la capacidad inmediata de pago de la empresa.</p>"
-                        },
-                        {
-                            question: "14. ¿Qué ratio mide la capacidad de la empresa para generar beneficios en relación con sus ventas?",
-                            options: ["Margen neto", "ROA", "ROE", "Rotación de activos"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ratio de margen neto</u> mide la capacidad de la empresa para generar beneficios en relación con sus ventas. Se calcula como Beneficio Neto / Ventas. Este ratio indica qué porcentaje de cada euro de ventas se convierte en beneficio neto, después de todos los gastos e impuestos.</p>"
-                        },
-                        {
-                            question: "15. ¿Cómo se interpreta un ratio de garantía inferior a 1?",
-                            options: ["Insolvencia técnica", "Alta rentabilidad", "Buena liquidez", "Bajo endeudamiento"],
-                            correct: [0],
-                            saber_mas: "<p>Un <u>ratio de garantía</u> inferior a 1 indica insolvencia técnica. Esto significa que el pasivo total supera al activo total, lo que es un indicador grave de problemas financieros. En esta situación, la empresa no tendría suficiente activo para hacer frente a todas sus deudas, lo que podría llevar a la quiebra si no se corrige.</p>"
-                        }
-                    ]
-                }
-            },
-            'economia': {
-                'macroeconomia': {
-                    title: "Conceptos Básicos de Macroeconomía",
-                    questions: [
-                        {
-                            question: "1. ¿Qué mide el Producto Interior Bruto (PIB)?",
-                            options: ["Valor total de bienes y servicios finales producidos", "Nivel de desempleo", "Tasa de inflación", "Balanza comercial"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>Producto Interior Bruto (PIB)</u> mide el valor total de los bienes y servicios finales producidos en un país durante un periodo determinado. Es el indicador macroeconómico más utilizado para medir la actividad económica de un país. Se calcula mediante tres enfoques: desde la producción, desde la renta y desde el gasto.</p>"
-                        },
-                        {
-                            question: "2. ¿Cuál es la fórmula del PIB desde el enfoque del gasto?",
-                            options: ["C + I + G + (X - M)", "C + I + G", "C + I + G + X", "C + I + G + M"],
-                            correct: [0],
-                            saber_mas: "<p>La fórmula del PIB desde el <u>enfoque del gasto</u> es: C + I + G + (X - M), donde C es el consumo privado, I es la inversión, G es el gasto público, X son las exportaciones y M son las importaciones. Esta ecuación representa todos los gastos realizados en bienes y servicios finales producidos en el país.</p>"
-                        },
-                        {
-                            question: "3. ¿Qué indica una tasa de desempleo del 5%?",
-                            options: ["Pleno empleo", "Alto desempleo", "Desempleo estructural", "Desempleo cíclico"],
-                            correct: [0],
-                            saber_mas: "<p>Una <u>tasa de desempleo del 5%</u> generalmente se considera que indica <u>pleno empleo</u> en la mayoría de los países desarrollados. Esto se debe a que siempre existe un cierto nivel de desempleo friccional (personas cambiando de trabajo) y estructural (desajuste entre las habilidades de los trabajadores y las necesidades del mercado), que se considera normal en una economía saludable.</p>"
-                        },
-                        {
-                            question: "4. ¿Qué es la inflación?",
-                            options: ["Aumento generalizado y sostenido de los precios", "Disminución del nivel general de precios", "Estabilidad de los precios", "Aumento de la producción"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>inflación</u> es el aumento generalizado y sostenido del nivel de precios de bienes y servicios en una economía durante un periodo determinado. Se mide generalmente mediante el Índice de Precios al Consumo (IPC). La inflación moderada (alrededor del 2%) suele ser deseable, ya que indica una economía en crecimiento, mientras que tasas muy altas o muy bajas pueden ser problemáticas.</p>"
-                        },
-                        {
-                            question: "5. ¿Qué es el Índice de Precios al Consumo (IPC)?",
-                            options: ["Medida de la evolución de los precios de una cesta de bienes y servicios", "Indicador de crecimiento económico", "Medida del desempleo", "Indicador de balanza comercial"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>Índice de Precios al Consumo (IPC)</u> es una medida estadística que refleja la evolución de los precios de una cesta representativa de bienes y servicios consumidos por los hogares. Es el indicador más utilizado para medir la inflación. El IPC se calcula comparando el costo actual de la cesta con su costo en un periodo base.</p>"
-                        },
-                        {
-                            question: "6. ¿Qué es la política monetaria?",
-                            options: ["Acciones del banco central sobre la oferta monetaria y tipos de interés", "Decisiones del gobierno sobre gasto e impuestos", "Política de control de precios", "Regulación de los mercados financieros"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>política monetaria</u> son las acciones que lleva a cabo el banco central de un país para controlar la oferta monetaria y los tipos de interés, con el objetivo de mantener la estabilidad de precios, promover el crecimiento económico y controlar la inflación. Los principales instrumentos son las operaciones de mercado abierto, la tasa de descuento y el coeficiente de reservas.</p>"
-                        },
-                        {
-                            question: "7. ¿Qué es la política fiscal?",
-                            options: ["Decisiones del gobierno sobre gasto público e impuestos", "Acciones del banco central sobre tipos de interés", "Política de control de precios", "Regulación de los mercados financieros"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>política fiscal</u> son las decisiones del gobierno relacionadas con el gasto público y los impuestos, con el objetivo de influir en la actividad económica. Una política fiscal expansiva (aumento del gasto o reducción de impuestos) busca estimular la economía, mientras que una política fiscal contractiva (reducción del gasto o aumento de impuestos) busca frenar una economía sobrecalentada.</p>"
-                        },
-                        {
-                            question: "8. ¿Qué es el déficit público?",
-                            options: ["Cuando el gasto público supera los ingresos fiscales", "Cuando los ingresos fiscales superan el gasto público", "Diferencia entre exportaciones e importaciones", "Disminución del PIB"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>déficit público</u> ocurre cuando el gasto público supera los ingresos fiscales en un periodo determinado. Se suele expresar como porcentaje del PIB. Un déficit moderado puede ser aceptable en tiempos de recesión para estimular la economía, pero déficits sostenidos y elevados pueden generar problemas de deuda pública y presionar los tipos de interés.</p>"
-                        },
-                        {
-                            question: "9. ¿Qué es la deuda pública?",
-                            options: ["Acumulación de déficits públicos a lo largo del tiempo", "Diferencia entre exportaciones e importaciones", "Total de impuestos recaudados", "Gasto público anual"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>deuda pública</u> es la acumulación de déficits públicos a lo largo del tiempo. Representa el total de dinero que el gobierno debe a los acreedores. Se mide generalmente como porcentaje del PIB. Una deuda pública elevada puede limitar la capacidad del gobierno para invertir en servicios públicos y puede requerir altos pagos de intereses, pero su impacto depende de factores como la tasa de crecimiento económico y los tipos de interés.</p>"
-                        },
-                        {
-                            question: "10. ¿Qué es la balanza comercial?",
-                            options: ["Diferencia entre exportaciones e importaciones de bienes", "Diferencia entre todas las transacciones económicas con el exterior", "Diferencia entre ingresos y gastos del gobierno", "Diferencia entre inversión nacional y extranjera"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>balanza comercial</u> es la diferencia entre el valor de las exportaciones y el valor de las importaciones de bienes de un país. Si las exportaciones superan a las importaciones, hay superávit comercial; si las importaciones superan a las exportaciones, hay déficit comercial. Es un componente de la balanza de pagos, pero no incluye servicios ni flujos financieros.</p>"
-                        },
-                        {
-                            question: "11. ¿Qué es la balanza de pagos?",
-                            options: ["Registro de todas las transacciones económicas entre un país y el exterior", "Diferencia entre exportaciones e importaciones", "Registro de transacciones financieras solamente", "Registro del gasto público"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>balanza de pagos</u> es un registro sistemático de todas las transacciones económicas entre los residentes de un país y el resto del mundo durante un periodo determinado. Incluye la balanza comercial, la balanza de servicios, la balanza de rentas y las transferencias corrientes (cuenta corriente), así como las inversiones y los préstamos (cuenta financiera).</p>"
-                        },
-                        {
-                            question: "12. ¿Qué es el tipo de cambio?",
-                            options: ["Precio de una moneda expresado en términos de otra moneda", "Tasa de interés de un país", "Nivel de precios en una economía", "Tasa de desempleo"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>tipo de cambio</u> es el precio de una moneda expresado en términos de otra moneda. Por ejemplo, si el tipo de cambio euro/dólar es 1.20, significa que 1 euro equivale a 1.20 dólares. Los tipos de cambio pueden ser fijos (determinados por el banco central) o flexibles (determinados por la oferta y demanda en el mercado de divisas).</p>"
-                        },
-                        {
-                            question: "13. ¿Qué es la curva de Phillips?",
-                            options: ["Relación inversa entre inflación y desempleo", "Relación directa entre crecimiento y desempleo", "Relación entre tipos de interés y crecimiento", "Relación entre inflación y tipos de interés"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>curva de Phillips</u> describe la relación inversa entre la tasa de inflación y la tasa de desempleo en el corto plazo. Cuando el desempleo es bajo, la inflación tiende a ser alta, y viceversa. Sin embargo, en el largo plazo, esta relación no se mantiene, como demostró la estanflación de los años 70 (alta inflación y alto desempleo simultáneamente).</p>"
-                        },
-                        {
-                            question: "14. ¿Qué es el multiplicador fiscal?",
-                            options: ["Efecto que tiene el gasto público sobre el PIB", "Efecto que tiene la inflación sobre el desempleo", "Efecto que tiene el tipo de interés sobre la inversión", "Efecto que tiene el tipo de cambio sobre las exportaciones"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>multiplicador fiscal</u> mide el efecto que tiene una variación en el gasto público sobre el PIB total. Si el multiplicador es 1.5, significa que cada euro adicional de gasto público aumenta el PIB en 1.5 euros. El valor del multiplicador depende de factores como la propensión marginal a consumir y la economía sumergida.</p>"
-                        },
-                        {
-                            question: "15. ¿Qué es la ley de Okun?",
-                            options: ["Relación entre crecimiento del PIB y variación del desempleo", "Relación entre inflación y desempleo", "Relación entre tipos de interés y crecimiento", "Relación entre deuda pública y crecimiento"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>ley de Okun</u> describe la relación empírica entre el crecimiento del PIB y la variación de la tasa de desempleo. Establece que, en promedio, por cada punto porcentual que el crecimiento del PIB supera su tasa normal (alrededor del 3%), la tasa de desempleo disminuye aproximadamente 0.5 puntos porcentuales. Es una herramienta útil para predecir cambios en el mercado laboral.</p>"
-                        }
-                    ]
-                },
-                'microeconomia': {
-                    title: "Oferta, Demanda y Equilibrio de Mercado",
-                    questions: [
-                        {
-                            question: "1. ¿Qué representa la curva de demanda?",
-                            options: ["Relación inversa entre precio y cantidad demandada", "Relación directa entre precio y cantidad demandada", "Relación entre ingreso y cantidad demandada", "Relación entre precio y oferta"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>curva de demanda</u> representa la relación inversa entre el precio de un bien y la cantidad demandada del mismo, manteniendo constantes otros factores. Se inclina hacia abajo porque, en general, a menor precio, mayor cantidad demandada. Esta relación se debe al efecto sustitución y al efecto renta.</p>"
-                        },
-                        {
-                            question: "2. ¿Qué representa la curva de oferta?",
-                            options: ["Relación directa entre precio y cantidad ofrecida", "Relación inversa entre precio y cantidad ofrecida", "Relación entre costos y demanda", "Relación entre ingresos y producción"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>curva de oferta</u> representa la relación directa entre el precio de un bien y la cantidad que los productores están dispuestos a ofrecer, manteniendo constantes otros factores. Se inclina hacia arriba porque, en general, a mayor precio, mayor cantidad ofrecida, ya que resulta más rentable producir.</p>"
-                        },
-                        {
-                            question: "3. ¿Qué es el equilibrio de mercado?",
-                            options: ["Punto donde oferta y demanda son iguales", "Situación de exceso de demanda", "Situación de exceso de oferta", "Punto máximo de beneficios"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>equilibrio de mercado</u> es el punto donde la cantidad ofrecida es igual a la cantidad demandada a un determinado precio. En este punto, no hay exceso de demanda ni de oferta, y el mercado tiende a permanecer estable. El precio de equilibrio es aquel al que se igualan la oferta y la demanda.</p>"
-                        },
-                        {
-                            question: "4. ¿Qué ocurre cuando el precio está por encima del equilibrio?",
-                            options: ["Exceso de oferta", "Exceso de demanda", "Equilibrio estable", "Escasez"],
-                            correct: [0],
-                            saber_mas: "<p>Cuando el precio está <u>por encima del equilibrio</u>, ocurre un <u>exceso de oferta</u> (también llamado superávit). Los productores están dispuestos a vender más de lo que los consumidores están dispuestos a comprar a ese precio. Esto generalmente lleva a una disminución del precio hasta alcanzar el equilibrio.</p>"
-                        },
-                        {
-                            question: "5. ¿Qué ocurre cuando el precio está por debajo del equilibrio?",
-                            options: ["Exceso de demanda", "Exceso de oferta", "Equilibrio estable", "Superávit"],
-                            correct: [0],
-                            saber_mas: "<p>Cuando el precio está <u>por debajo del equilibrio</u>, ocurre un <u>exceso de demanda</u> (también llamado escasez). Los consumidores están dispuestos a comprar más de lo que los productores están dispuestos a vender a ese precio. Esto generalmente lleva a un aumento del precio hasta alcanzar el equilibrio.</p>"
-                        },
-                        {
-                            question: "6. ¿Qué es la elasticidad-precio de la demanda?",
-                            options: ["Medida de la sensibilidad de la cantidad demandada ante cambios en el precio", "Medida de la sensibilidad de la oferta ante cambios en el precio", "Relación entre ingreso y cantidad demandada", "Relación entre precio y calidad"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>elasticidad-precio de la demanda</u> mide la sensibilidad de la cantidad demandada ante cambios en el precio del bien. Se calcula como el porcentaje de cambio en la cantidad demandada dividido por el porcentaje de cambio en el precio. Si |elasticidad| > 1, la demanda es elástica; si |elasticidad| < 1, la demanda es inelástica.</p>"
-                        },
-                        {
-                            question: "7. ¿Cuándo es la demanda elástica?",
-                            options: ["Cuando un cambio en el precio provoca un cambio proporcionalmente mayor en la cantidad demandada", "Cuando un cambio en el precio provoca un cambio proporcionalmente menor en la cantidad demandada", "Cuando la cantidad demandada no cambia ante cambios en el precio", "Cuando el precio no afecta a la demanda"],
-                            correct: [0],
-                            saber_mas: "<p>La demanda es <u>elástica</u> cuando un cambio en el precio provoca un cambio proporcionalmente mayor en la cantidad demandada (|elasticidad| > 1). Esto suele ocurrir con bienes de lujo, con muchos sustitutos o que representan una gran parte del presupuesto del consumidor. En estos casos, los consumidores son muy sensibles a los cambios de precio.</p>"
-                        },
-                        {
-                            question: "8. ¿Cuándo es la demanda inelástica?",
-                            options: ["Cuando un cambio en el precio provoca un cambio proporcionalmente menor en la cantidad demandada", "Cuando un cambio en el precio provoca un cambio proporcionalmente mayor en la cantidad demandada", "Cuando la cantidad demandada no cambia ante cambios en el precio", "Cuando el precio no afecta a la demanda"],
-                            correct: [0],
-                            saber_mas: "<p>La demanda es <u>inelástica</u> cuando un cambio en el precio provoca un cambio proporcionalmente menor en la cantidad demandada (|elasticidad| < 1). Esto suele ocurrir con bienes de primera necesidad, con pocos sustitutos o que representan una pequeña parte del presupuesto del consumidor. En estos casos, los consumidores son poco sensibles a los cambios de precio.</p>"
-                        },
-                        {
-                            question: "9. ¿Qué es la elasticidad-renta de la demanda?",
-                            options: ["Medida de la sensibilidad de la demanda ante cambios en la renta", "Medida de la sensibilidad de la oferta ante cambios en la renta", "Relación entre precio y renta", "Relación entre oferta y demanda"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>elasticidad-renta de la demanda</u> mide la sensibilidad de la demanda ante cambios en la renta del consumidor. Se calcula como el porcentaje de cambio en la cantidad demandada dividido por el porcentaje de cambio en la renta. Si es positiva, el bien es normal; si es negativa, el bien es inferior.</p>"
-                        },
-                        {
-                            question: "10. ¿Qué es un bien normal?",
-                            options: ["Aquel cuya demanda aumenta cuando aumenta la renta", "Aquel cuya demanda disminuye cuando aumenta la renta", "Aquel cuya demanda no cambia con la renta", "Aquel cuyo precio es constante"],
-                            correct: [0],
-                            saber_mas: "<p>Un <u>bien normal</u> es aquel cuya demanda aumenta cuando aumenta la renta del consumidor (elasticidad-renta positiva). La mayoría de los bienes son normales. Por ejemplo, cuando aumenta la renta, los consumidores suelen demandar más restaurantes, viajes o ropa de calidad.</p>"
-                        },
-                        {
-                            question: "11. ¿Qué es un bien inferior?",
-                            options: ["Aquel cuya demanda disminuye cuando aumenta la renta", "Aquel cuya demanda aumenta cuando aumenta la renta", "Aquel cuya demanda no cambia con la renta", "Aquel cuyo precio es constante"],
-                            correct: [0],
-                            saber_mas: "<p>Un <u>bien inferior</u> es aquel cuya demanda disminuye cuando aumenta la renta del consumidor (elasticidad-renta negativa). Por ejemplo, cuando aumenta la renta, los consumidores pueden sustituir alimentos básicos de baja calidad por alimentos de mayor calidad, reduciendo así la demanda del bien inferior.</p>"
-                        },
-                        {
-                            question: "12. ¿Qué es la elasticidad-precio cruzada de la demanda?",
-                            options: ["Medida de la sensibilidad de la demanda de un bien ante cambios en el precio de otro bien", "Medida de la sensibilidad de la oferta ante cambios en el precio", "Relación entre precio y cantidad demandada", "Relación entre oferta y demanda"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>elasticidad-precio cruzada de la demanda</u> mide la sensibilidad de la demanda de un bien ante cambios en el precio de otro bien. Se calcula como el porcentaje de cambio en la cantidad demandada del bien X dividido por el porcentaje de cambio en el precio del bien Y. Si es positiva, los bienes son sustitutivos; si es negativa, los bienes son complementarios.</p>"
-                        },
-                        {
-                            question: "13. ¿Qué indica una elasticidad-precio cruzada positiva?",
-                            options: ["Bienes sustitutivos", "Bienes complementarios", "Bienes independientes", "Bienes normales"],
-                            correct: [0],
-                            saber_mas: "<p>Una <u>elasticidad-precio cruzada positiva</u> indica que los bienes son <u>sustitutivos</u>. Esto significa que cuando aumenta el precio de un bien, aumenta la demanda del otro bien, porque los consumidores los utilizan como alternativas. Por ejemplo, si sube el precio de la carne, puede aumentar la demanda de pescado.</p>"
-                        },
-                        {
-                            question: "14. ¿Qué indica una elasticidad-precio cruzada negativa?",
-                            options: ["Bienes complementarios", "Bienes sustitutivos", "Bienes independientes", "Bienes inferiores"],
-                            correct: [0],
-                            saber_mas: "<p>Una <u>elasticidad-precio cruzada negativa</u> indica que los bienes son <u>complementarios</u>. Esto significa que cuando aumenta el precio de un bien, disminuye la demanda del otro bien, porque se utilizan conjuntamente. Por ejemplo, si sube el precio de los coches, puede disminuir la demanda de gasolina.</p>"
-                        },
-                        {
-                            question: "15. ¿Qué es el excedente del consumidor?",
-                            options: ["Beneficio que obtiene el consumidor al pagar menos de lo que estaría dispuesto a pagar", "Beneficio que obtiene el productor al vender por encima de su costo", "Diferencia entre oferta y demanda", "Exceso de producción"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>excedente del consumidor</u> es el beneficio que obtiene el consumidor al pagar menos de lo que estaría dispuesto a pagar por un bien. Se representa gráficamente como el área por debajo de la curva de demanda y por encima del precio de mercado. Mide la ganancia neta que los consumidores obtienen del intercambio.</p>"
-                        }
-                    ]
-                }
-            },
-            'marketing': {
-                'marketing-digital': {
-                    title: "Fundamentos de Marketing Digital",
-                    questions: [
-                        {
-                            question: "1. ¿Qué es el marketing digital?",
-                            options: ["Uso de canales digitales para promocionar productos o servicios", "Marketing tradicional en formato digital", "Publicidad en televisión digital", "Marketing para empresas tecnológicas"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>marketing digital</u> es el conjunto de estrategias y tácticas que utilizan canales y plataformas digitales para promocionar productos o servicios, interactuar con los clientes y medir los resultados. Incluye redes sociales, email marketing, SEO, publicidad en buscadores, marketing de contenidos y otras herramientas online que permiten llegar a una audiencia específica de manera más precisa y medible que el marketing tradicional.</p>"
-                        },
-                        {
-                            question: "2. ¿Qué significa SEO?",
-                            options: ["Search Engine Optimization", "Social Engagement Optimization", "Sales Efficiency Optimization", "Strategic E-commerce Operation"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>SEO (Search Engine Optimization)</u> o Optimización para Motores de Búsqueda es el proceso de mejorar la visibilidad de un sitio web en los resultados orgánicos de los motores de búsqueda. Implica optimizar el contenido, la estructura técnica del sitio y la autoridad externa mediante enlaces, para que el sitio aparezca en posiciones destacadas cuando los usuarios buscan términos relacionados con el negocio. El SEO es fundamental para atraer tráfico cualificado de forma orgánica.</p>"
-                        },
-                        {
-                            question: "3. ¿Qué es el CTR?",
-                            options: ["Click-Through Rate", "Customer Target Rating", "Conversion Tracking Report", "Cost to Revenue"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>CTR (Click-Through Rate)</u> o Tasa de Clics es un indicador que mide el porcentaje de usuarios que hacen clic en un anuncio o enlace en relación con el número total de veces que se ha mostrado. Se calcula como (Número de clics / Número de impresiones) x 100. Un CTR alto indica que el anuncio o contenido es relevante y atractivo para la audiencia. En marketing de búsqueda, un CTR promedio oscila entre el 1% y el 5%, dependiendo del sector.</p>"
-                        },
-                        {
-                            question: "4. ¿Qué es el remarketing?",
-                            options: ["Estrategia para dirigirse a usuarios que ya han visitado tu sitio web", "Marketing para mercados rurales", "Técnica para reducir costos publicitarios", "Estrategia para relanzar productos"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>remarketing</u> (también conocido como retargeting) es una estrategia publicitaria que permite mostrar anuncios específicos a usuarios que ya han visitado tu sitio web o interactuado con tu marca, pero no completaron una acción deseada (como una compra). Funciona mediante cookies o listas de remarketing, y es especialmente efectivo porque se dirige a personas que ya han mostrado interés en tus productos o servicios, aumentando así las posibilidades de conversión.</p>"
-                        },
-                        {
-                            question: "5. ¿Qué es el inbound marketing?",
-                            options: ["Estrategia para atraer clientes mediante contenido de valor", "Publicidad tradicional adaptada a digital", "Marketing basado en llamadas frías", "Técnicas para aumentar el tráfico pagado"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>inbound marketing</u> es una estrategia de marketing centrada en atraer a los clientes mediante la creación y distribución de contenido relevante y útil, en lugar de interrumpirlos con publicidad intrusiva. Se basa en el principio de que si proporcionas valor a tu audiencia a través de blogs, ebooks, webinars, redes sociales y otros canales, los clientes potenciales vendrán a ti cuando estén listos para comprar. El inbound marketing se opone al outbound marketing tradicional (como la publicidad en televisión o telemarketing).</p>"
-                        },
-                        {
-                            question: "6. ¿Qué es el buyer persona?",
-                            options: ["Representación semántica de tu cliente ideal", "Persona encargada de compras en una empresa", "Cliente que compra frecuentemente", "Representación gráfica del cliente"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>buyer persona</u> es una representación semántica de tu cliente ideal, basada en datos reales y suposiciones razonadas sobre su demografía, comportamiento, motivaciones y objetivos. No es un cliente real, sino una construcción que ayuda a entender mejor a tu audiencia objetivo y a crear mensajes y estrategias de marketing más efectivas. Un buyer persona bien definido incluye información como edad, profesión, intereses, desafíos, objetivos y canales preferidos de comunicación.</p>"
-                        },
-                        {
-                            question: "7. ¿Qué es el KPI en marketing digital?",
-                            options: ["Key Performance Indicator", "Knowledge Process Integration", "Key Product Innovation", "Knowledge Performance Index"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>KPI (Key Performance Indicator)</u> o Indicador Clave de Rendimiento es una métrica específica que se utiliza para medir el éxito de una actividad o campaña de marketing en relación con los objetivos establecidos. En marketing digital, los KPIs pueden incluir la tasa de conversión, el CTR, el coste por adquisición (CPA), el valor vitalicio del cliente (LTV) y muchos otros, dependiendo de los objetivos específicos de la campaña. Los KPIs ayudan a tomar decisiones basadas en datos y a optimizar las estrategias de marketing.</p>"
-                        },
-                        {
-                            question: "8. ¿Qué es el funnel de marketing?",
-                            options: ["Proceso que sigue un cliente desde que conoce tu marca hasta que compra", "Estrategia para reducir costos", "Método para segmentar clientes", "Técnica para mejorar el SEO"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>funnel de marketing</u> (embudo de marketing) es un modelo que representa las distintas etapas por las que pasa un cliente potencial desde que conoce tu marca hasta que se convierte en cliente. Las etapas típicas son: Conciencia (el cliente se entera de tu marca), Interés (el cliente muestra interés en tus productos), Consideración (el cliente compara opciones), Decisión (el cliente decide comprar) y Lealtad (el cliente se convierte en repetidor y defensor de la marca). Entender este funnel ayuda a crear estrategias específicas para cada etapa y a optimizar el recorrido del cliente.</p>"
-                        },
-                        {
-                            question: "9. ¿Qué es el CAC?",
-                            options: ["Customer Acquisition Cost", "Clicks Acquisition Cost", "Content Analytics Center", "Conversion Action Cost"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>CAC (Customer Acquisition Cost)</u> o Coste de Adquisición de Cliente es el coste promedio que una empresa debe invertir para conseguir un nuevo cliente. Se calcula dividiendo el coste total de marketing y ventas por el número de clientes nuevos adquiridos en un periodo determinado. Es un indicador crucial porque permite evaluar la eficiencia de las estrategias de marketing y determinar si el valor vitalicio del cliente (LTV) es suficiente para generar beneficios. Un CAC demasiado alto puede indicar problemas en la estrategia de marketing.</p>"
-                        },
-                        {
-                            question: "10. ¿Qué es el LTV?",
-                            options: ["Lifetime Value", "Lead Tracking Value", "Local Traffic Volume", "Landing Page Traffic Value"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>LTV (Lifetime Value)</u> o Valor Vitalicio del Cliente es una estimación del beneficio neto que una empresa puede esperar de toda la relación futura con un cliente. Representa el valor económico a largo plazo de un cliente y es fundamental para determinar cuánto puede invertirse en la adquisición de clientes. Un LTV alto en relación con el CAC (Coste de Adquisición de Cliente) indica un negocio sostenible y rentable. Las empresas suelen buscar un ratio LTV:CAC de al menos 3:1.</p>"
-                        },
-                        {
-                            question: "11. ¿Qué es el email marketing?",
-                            options: ["Estrategia de marketing que utiliza el correo electrónico para comunicarse con clientes", "Marketing para empresas de correo", "Técnica para aumentar el tráfico web", "Estrategia para reducir costos"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>email marketing</u> es una estrategia de marketing directo que utiliza el correo electrónico para comunicarse con clientes potenciales y existentes, con el objetivo de construir relaciones, fomentar la lealtad y generar ventas. Es uno de los canales más efectivos y con mayor ROI, ya que permite la personalización y segmentación de mensajes. Las buenas prácticas incluyen obtener consentimiento previo, ofrecer contenido relevante, optimizar para dispositivos móviles y respetar las normativas de privacidad como el RGPD.</p>"
-                        },
-                        {
-                            question: "12. ¿Qué es el engagement en redes sociales?",
-                            options: ["Nivel de interacción de los usuarios con el contenido", "Número de seguidores", "Cantidad de publicaciones", "Alcance de las publicaciones"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>engagement</u> en redes sociales es el nivel de interacción que los usuarios tienen con el contenido publicado, incluyendo likes, comentarios, compartidos, clics y tiempo de permanencia. Es un indicador más valioso que el simple número de seguidores, porque mide la calidad de la relación con la audiencia. Un alto nivel de engagement indica que el contenido es relevante y resonante para la audiencia, lo que suele traducirse en mejores resultados para la marca, como mayor visibilidad orgánica y mayor probabilidad de conversión.</p>"
-                        },
-                        {
-                            question: "13. ¿Qué es el A/B testing?",
-                            options: ["Método para comparar dos versiones de un elemento para ver cuál funciona mejor", "Análisis de beneficios", "Técnica para aumentar el tráfico", "Método para segmentar audiencias"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>A/B testing</u> (también conocido como split testing) es un método experimental que compara dos versiones de un elemento (como un email, una página web o un anuncio) para determinar cuál funciona mejor. Se muestra la versión A a un grupo de usuarios y la versión B a otro grupo similar, y se miden los resultados para ver cuál genera mejores métricas (como más clics o conversiones). Es una práctica fundamental en marketing digital porque permite tomar decisiones basadas en datos en lugar de suposiciones, optimizando continuamente las campañas y estrategias.</p>"
-                        },
-                        {
-                            question: "14. ¿Qué es el ROI en marketing digital?",
-                            options: ["Return on Investment", "Rate of Interest", "Revenue on Investment", "Retention of Interest"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>ROI (Return on Investment)</u> o Retorno de la Inversión en marketing digital es una métrica que mide la rentabilidad de una inversión en marketing. Se calcula como (Beneficio obtenido - Coste de la inversión) / Coste de la inversión x 100. Un ROI positivo indica que la inversión generó más beneficios de los que costó, mientras que un ROI negativo indica pérdidas. En marketing digital, el ROI suele ser más fácil de medir que en marketing tradicional, gracias a las herramientas de análisis que permiten rastrear conversiones y atribuir ventas a campañas específicas.</p>"
-                        },
-                        {
-                            question: "15. ¿Qué es el CTA?",
-                            options: ["Call To Action", "Customer Target Audience", "Content Tracking Analysis", "Conversion Tracking Action"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>CTA (Call To Action)</u> o Llamada a la Acción es un elemento en el diseño de una página web, email o anuncio que invita al usuario a realizar una acción específica, como 'Comprar ahora', 'Suscríbete', 'Descarga gratis' o 'Contáctanos'. Un buen CTA es claro, visible y crea un sentido de urgencia o beneficio. Es fundamental en marketing digital porque guía al usuario hacia la siguiente etapa en el funnel de conversión y puede tener un impacto significativo en las tasas de conversión.</p>"
-                        }
-                    ]
-                },
-                'segmentacion-mercado': {
-                    title: "Segmentación y Posicionamiento",
-                    questions: [
-                        {
-                            question: "1. ¿Qué es la segmentación de mercado?",
-                            options: ["Dividir el mercado en grupos homogéneos con necesidades similares", "Dividir el mercado por precios", "Dividir el mercado por ubicación geográfica", "Dividir el mercado por edad"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>segmentación de mercado</u> es el proceso de dividir un mercado total en grupos o segmentos de consumidores que comparten necesidades, características o comportamientos similares. No se limita a una sola variable (como la edad o la ubicación), sino que combina múltiples criterios para identificar grupos homogéneos dentro de la heterogeneidad del mercado. Una buena segmentación permite a las empresas dirigir sus esfuerzos de marketing de manera más eficiente hacia los grupos más prometedores, personalizando ofertas y mensajes para satisfacer mejor las necesidades específicas de cada segmento.</p>"
-                        },
-                        {
-                            question: "2. ¿Cuáles son los principales criterios de segmentación?",
-                            options: ["Geográficos, demográficos, psicográficos y conductuales", "Solo demográficos y geográficos", "Solo psicográficos y conductuales", "Solo económicos y sociales"],
-                            correct: [0],
-                            saber_mas: "<p>Los <u>principales criterios de segmentación</u> son: 1) <u>Geográficos</u> (país, región, ciudad, clima), 2) <u>Demográficos</u> (edad, género, ingresos, educación, ocupación), 3) <u>Psicográficos</u> (estilo de vida, valores, personalidad, intereses), y 4) <u>Conductuales</u> (ocasión de uso, beneficios buscados, lealtad a la marca, etapa en el funnel de compra). La segmentación efectiva suele combinar varios de estos criterios para crear perfiles de clientes más precisos y significativos que guíen las decisiones de marketing.</p>"
-                        },
-                        {
-                            question: "3. ¿Qué es un target market?",
-                            options: ["El segmento específico al que una empresa dirige sus esfuerzos de marketing", "Todos los posibles clientes", "El mercado geográfico", "El mercado demográfico"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>target market</u> o mercado objetivo es el segmento específico al que una empresa decide dirigir sus esfuerzos de marketing y recursos. No es necesariamente el segmento más grande, sino aquel que mejor se alinea con la propuesta de valor de la empresa, tiene el mayor potencial de rentabilidad y donde la empresa puede competir de manera efectiva. Elegir el target market adecuado es crucial porque determina todas las decisiones posteriores de marketing, desde el posicionamiento hasta las tácticas de comunicación y distribución.</p>"
-                        },
-                        {
-                            question: "4. ¿Qué es el posicionamiento de marca?",
-                            options: ["Proceso de crear una imagen distintiva en la mente del consumidor", "Ubicación física de la marca", "Precio de la marca", "Tamaño del mercado"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>posicionamiento de marca</u> es el proceso estratégico de crear y mantener una imagen distintiva, relevante y atractiva de una marca en la mente del consumidor objetivo, en relación con las marcas competidoras. No se trata solo de lo que la marca es o hace, sino de cómo se percibe en comparación con la competencia. Un buen posicionamiento responde a la pregunta: '¿Por qué el consumidor debería elegirnos a nosotros?' y se comunica a través de todos los puntos de contacto con el cliente, desde el producto y el precio hasta la comunicación y la experiencia de usuario.</p>"
-                        },
-                        {
-                            question: "5. ¿Qué es un mapa de posicionamiento?",
-                            options: ["Herramienta visual que muestra cómo se perciben las marcas en relación con dos dimensiones clave", "Mapa geográfico de ventas", "Gráfico de crecimiento de la marca", "Diagrama de segmentación"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>mapa de posicionamiento</u> (también llamado perceptual map) es una herramienta visual que representa cómo se perciben las marcas en relación con dos dimensiones o atributos clave del mercado (por ejemplo, precio y calidad, o innovación y tradición). Ayuda a identificar espacios vacíos en el mercado donde podría posicionarse una nueva marca, a entender la posición relativa frente a la competencia y a detectar oportunidades de re-posicionamiento. Es una herramienta fundamental en la planificación estratégica de marketing.</p>"
-                        },
-                        {
-                            question: "6. ¿Qué es la propuesta de valor?",
-                            options: ["Razón por la que un cliente debería elegir tu producto o servicio", "Precio del producto", "Características del producto", "Ubicación de la empresa"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>propuesta de valor</u> es la razón fundamental por la que un cliente debería elegir tu producto o servicio en lugar de las alternativas disponibles. Debe comunicar claramente los beneficios específicos que resolverán los problemas o mejorarán la situación del cliente, diferenciándose claramente de la competencia. Una propuesta de valor efectiva responde a tres preguntas clave: 1) ¿Para quién es? (target market), 2) ¿Qué necesidades satisface? y 3) ¿Por qué es diferente y mejor que las alternativas? Es el corazón de la estrategia de marketing y debe reflejarse en todos los aspectos de la experiencia del cliente.</p>"
-                        },
-                        {
-                            question: "7. ¿Qué es la segmentación demográfica?",
-                            options: ["División del mercado basada en características como edad, género e ingresos", "División por ubicación geográfica", "División por estilo de vida", "División por comportamiento de compra"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>segmentación demográfica</u> es la división del mercado basada en características objetivas y medibles como la edad, género, ingresos, educación, ocupación, tamaño de familia, estado civil y etnia. Es una de las formas más comunes y fáciles de segmentar porque estos datos suelen ser accesibles y relativamente estables. Aunque por sí sola puede ser limitada, cuando se combina con otros tipos de segmentación (psicográfica o conductual), permite crear perfiles de cliente más completos y efectivos para dirigir estrategias de marketing específicas.</p>"
-                        },
-                        {
-                            question: "8. ¿Qué es la segmentación psicográfica?",
-                            options: ["División del mercado basada en estilo de vida, valores y personalidad", "División por edad y género", "División por ubicación", "División por comportamiento"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>segmentación psicográfica</u> es la división del mercado basada en características subjetivas relacionadas con el estilo de vida, valores, actitudes, intereses, personalidad y opiniones de los consumidores. A diferencia de la segmentación demográfica, que se centra en 'qué' tiene el consumidor, la psicográfica se enfoca en 'quién es' y 'cómo piensa'. Esta forma de segmentación es especialmente útil para entender las motivaciones profundas detrás de las decisiones de compra y para crear mensajes de marketing que resuenen emocionalmente con los diferentes segmentos.</p>"
-                        },
-                        {
-                            question: "9. ¿Qué es la segmentación conductual?",
-                            options: ["División del mercado basada en el comportamiento de compra", "División por características personales", "División por ubicación", "División por ingresos"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>segmentación conductual</u> es la división del mercado basada en el comportamiento real de los consumidores respecto a un producto o servicio. Incluye variables como la ocasión de uso (diario, ocasional, temporada), los beneficios buscados (calidad, precio, prestigio), el nivel de uso (ligero, medio, pesado) y la lealtad a la marca (no usuario, usuario ex, usuario potencial, usuario regular). Esta segmentación es particularmente valiosa porque se basa en acciones reales en lugar de suposiciones, permitiendo a las empresas adaptar sus ofertas y mensajes a cómo los consumidores realmente interactúan con sus productos.</p>"
-                        },
-                        {
-                            question: "10. ¿Qué es la segmentación geográfica?",
-                            options: ["División del mercado basada en ubicación", "División por edad", "División por ingresos", "División por comportamiento"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>segmentación geográfica</u> es la división del mercado basada en variables de ubicación como país, región, estado, ciudad, tamaño de población, densidad, clima y características culturales locales. Es especialmente relevante cuando las preferencias de los consumidores varían significativamente según la ubicación, como ocurre con productos relacionados con el clima, la cultura local o las necesidades específicas de una región. Esta segmentación permite a las empresas adaptar sus ofertas, precios y estrategias de comunicación a las particularidades de cada zona geográfica, maximizando así su relevancia y efectividad.</p>"
-                        },
-                        {
-                            question: "11. ¿Qué es la diferenciación de marca?",
-                            options: ["Proceso de crear características únicas que distingan a la marca de la competencia", "Proceso de hacer la marca más cara", "Proceso de expandir a nuevos mercados", "Proceso de cambiar el nombre de la marca"],
-                            correct: [0],
-                            saber_mas: "<p>La <u>diferenciación de marca</u> es el proceso estratégico de crear características únicas, reales o percibidas, que distingan a la marca de la competencia en la mente del consumidor. Puede basarse en atributos del producto (calidad, diseño, innovación), en el servicio al cliente, en la experiencia de usuario, en el precio o en aspectos más intangibles como los valores de la marca. Una diferenciación efectiva debe ser relevante para el target market, superior a la competencia, comunicable, exclusiva, asequible y sostenible a largo plazo. Es fundamental para crear ventaja competitiva y justificar un precio premium.</p>"
-                        },
-                        {
-                            question: "12. ¿Qué es el re-posicionamiento?",
-                            options: ["Cambio en la percepción de la marca en la mente del consumidor", "Cambio de nombre de la marca", "Cambio de precio", "Cambio de mercado"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>re-posicionamiento</u> es el proceso estratégico de cambiar la percepción de una marca en la mente del consumidor, generalmente porque la posición actual ya no es efectiva o porque el mercado ha cambiado. Puede ser necesario por diversas razones: la marca ha perdido relevancia, hay nuevos competidores, ha cambiado el target market, o la marca quiere entrar en un nuevo segmento. El re-posicionamiento implica cambios en la propuesta de valor, los mensajes de comunicación, a veces en el producto o servicio, y debe hacerse con cuidado para no confundir a los clientes existentes mientras se atraen nuevos.</p>"
-                        },
-                        {
-                            question: "13. ¿Qué es el marketing uno a uno?",
-                            options: ["Enfoque de personalización extrema para cada cliente", "Marketing para una sola persona", "Marketing sin segmentación", "Marketing para clientes VIP"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>marketing uno a uno</u> es un enfoque avanzado de marketing que busca personalizar la oferta y la comunicación para cada cliente individual, en lugar de tratar a los clientes como parte de un segmento. Se basa en el uso intensivo de datos y tecnología para entender las preferencias, comportamientos e historial de cada cliente, y ofrecerle productos, precios y mensajes altamente personalizados. Aunque el término sugiere una relación individual perfecta, en la práctica implica niveles variables de personalización, desde segmentos muy pequeños hasta verdaderamente individuales en casos específicos. Es cada vez más viable gracias a los avances en big data, inteligencia artificial y marketing automation.</p>"
-                        },
-                        {
-                            question: "14. ¿Qué es el STP en marketing?",
-                            options: ["Segmentación, Targeting y Posicionamiento", "Strategic Target Planning", "Sales Target Process", "Segmentation Target Profit"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>STP</u> en marketing se refiere al proceso fundamental de <u>Segmentación</u>, <u>Targeting</u> (selección del mercado objetivo) y <u>Posicionamiento</u>. Es el núcleo de cualquier estrategia de marketing efectiva: 1) <u>Segmentación</u>: dividir el mercado en grupos homogéneos, 2) <u>Targeting</u>: evaluar y seleccionar los segmentos más atractivos para enfocar los esfuerzos, y 3) <u>Posicionamiento</u>: desarrollar una propuesta de valor clara y diferenciada para el segmento objetivo. El proceso STP guía todas las decisiones posteriores de la mezcla de marketing (4P's) y asegura que las estrategias estén alineadas con las necesidades específicas del mercado objetivo.</p>"
-                        },
-                        {
-                            question: "15. ¿Qué es el targeting en marketing?",
-                            options: ["Proceso de seleccionar qué segmentos atacar", "Proceso de segmentar el mercado", "Proceso de posicionar la marca", "Proceso de fijar precios"],
-                            correct: [0],
-                            saber_mas: "<p>El <u>targeting</u> en marketing es el proceso de evaluar los diferentes segmentos identificados durante la segmentación y seleccionar cuáles serán el foco de las estrategias de marketing de la empresa. Implica analizar la atractividad de cada segmento (tamaño, crecimiento, rentabilidad, competencia) y la capacidad de la empresa para servirlo efectivamente (recursos, competencias, alineación con la estrategia). Las estrategias de targeting pueden ser: concentrada (un solo segmento), diferenciada (múltiples segmentos con ofertas específicas) o no diferenciada (un mercado masivo con una sola oferta). La elección adecuada es crucial para la eficiencia de los recursos y el éxito del marketing.</p>"
-                        }
-                    ]
-                }
-            }
-        };
-
         // Variables globales
         let currentArea = 'contabilidad';
         let currentQuizId = '';
         let currentQuestionIndex = 0;
         let selectedOptions = [];
         let score = 0;
+        let quizData = null;
         let totalQuestions = 0;
 
         // Función para mostrar una página específica
@@ -1358,6 +481,11 @@
                     area === 'analisis-economico-financiero' ? 'Análisis Económico-Financiero' :
                     area === 'economia' ? 'Economía' : 'Marketing';
                 
+                // Mostrar mensaje de carga
+                const quizList = document.getElementById('quiz-list');
+                quizList.innerHTML = '<div class="loading">Cargando temas...</div>';
+                
+                // Cargar temas de esta área
                 loadAreaThemes();
             }
             
@@ -1368,52 +496,150 @@
         // Carga los temas de un área
         function loadAreaThemes() {
             const quizList = document.getElementById('quiz-list');
-            quizList.innerHTML = '';
             
-            // Verificamos si existe el área
-            if (!quizData[currentArea]) {
-                quizList.innerHTML = '<div class="error">No hay temas disponibles para esta área.</div>';
-                return;
-            }
-            
-            // Mostramos los temas de la área seleccionada
-            for (const [id, quiz] of Object.entries(quizData[currentArea])) {
-                const btn = document.createElement('button');
-                btn.className = 'btn';
-                btn.textContent = quiz.title;
-                btn.onclick = () => loadQuiz(id);
-                quizList.appendChild(btn);
-            }
+            // Intentamos cargar los temas desde el servidor
+            fetch(`content/${currentArea}/index.json`)
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    // Si no existe index.json, cargamos los temas directamente
+                    throw new Error('No existe index.json');
+                })
+                .then(data => {
+                    // Si existe index.json, lo usamos
+                    quizList.innerHTML = '';
+                    for (const [id, quiz] of Object.entries(data)) {
+                        const btn = document.createElement('button');
+                        btn.className = 'btn';
+                        btn.textContent = quiz.title;
+                        btn.onclick = () => loadQuiz(id);
+                        quizList.appendChild(btn);
+                    }
+                })
+                .catch(error => {
+                    // Si no existe index.json, buscamos los archivos JSON directamente
+                    const themeFiles = [
+                        'contabilidad-basica.json',
+                        'inversion-no-corriente.json',
+                        'analisis-financiero.json',
+                        'ratios-empresa.json',
+                        'macroeconomia.json',
+                        'microeconomia.json',
+                        'marketing-digital.json',
+                        'segmentacion-mercado.json'
+                    ];
+                    
+                    const validThemes = [];
+                    
+                    // Verificamos qué temas existen
+                    const checkThemes = themeFiles.map(file => 
+                        fetch(`content/${currentArea}/${file}`)
+                            .then(res => {
+                                if (res.ok) {
+                                    validThemes.push({
+                                        id: file.replace('.json', ''),
+                                        file: file
+                                    });
+                                }
+                            })
+                            .catch(() => {})
+                    );
+                    
+                    Promise.allSettled(checkThemes).then(() => {
+                        if (validThemes.length === 0) {
+                            quizList.innerHTML = '<div class="error">No se encontraron temas para esta área. Asegúrate de que los archivos JSON existen en el servidor.</div>';
+                            return;
+                        }
+                        
+                        // Cargamos los títulos de los temas que existen
+                        const loadTitles = validThemes.map(theme => 
+                            fetch(`content/${currentArea}/${theme.file}`)
+                                .then(res => res.json())
+                                .then(data => ({ 
+                                    id: theme.id, 
+                                    title: data.title 
+                                }))
+                                .catch(error => {
+                                    console.error(`Error cargando ${theme.file}:`, error);
+                                    return null;
+                                })
+                        );
+                        
+                        Promise.allSettled(loadTitles)
+                            .then(results => {
+                                quizList.innerHTML = '';
+                                results.forEach(result => {
+                                    if (result.status === 'fulfilled' && result.value) {
+                                        const theme = result.value;
+                                        const btn = document.createElement('button');
+                                        btn.className = 'btn';
+                                        btn.textContent = theme.title;
+                                        btn.onclick = () => loadQuiz(theme.id);
+                                        quizList.appendChild(btn);
+                                    }
+                                });
+                                
+                                // Si no hay temas válidos, mostramos mensaje de error
+                                if (quizList.children.length === 0) {
+                                    quizList.innerHTML = '<div class="error">No se pudieron cargar los temas. Verifica que los archivos JSON son válidos.</div>';
+                                }
+                            });
+                    });
+                });
         }
 
-        // Carga un quiz específico
+        // Carga un quiz específico desde JSON
         function loadQuiz(quizId) {
             currentQuizId = quizId;
             
-            if (!quizData[currentArea] || !quizData[currentArea][quizId]) {
-                alert('Error al cargar el tema. Por favor, inténtalo de nuevo.');
-                return;
-            }
+            // Mostrar mensaje de carga
+            const content = document.getElementById('quiz-content');
+            content.innerHTML = '<div class="loading">Cargando tema...</div>';
             
-            const quiz = quizData[currentArea][quizId];
-            totalQuestions = quiz.questions.length;
-            document.getElementById('total-questions').textContent = totalQuestions;
-            currentQuestionIndex = 0;
-            score = 0;
-            selectedOptions = [];
-            
-            // Actualizar título
-            document.getElementById('quiz-title').textContent = quiz.title;
-            
-            // Cargar la primera pregunta
-            loadQuestion();
-            showPage('quiz-page');
+            fetch(`content/${currentArea}/${quizId}.json`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Quiz no encontrado (${response.status})`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    quizData = data;
+                    totalQuestions = quizData.questions.length;
+                    document.getElementById('total-questions').textContent = totalQuestions;
+                    currentQuestionIndex = 0;
+                    score = 0;
+                    selectedOptions = [];
+                    
+                    // Actualizar título
+                    document.getElementById('quiz-title').textContent = quizData.title;
+                    
+                    // Cargar la primera pregunta
+                    loadQuestion();
+                    showPage('quiz-page');
+                })
+                .catch(error => {
+                    console.error('Error loading quiz:', error);
+                    content.innerHTML = `
+                        <div class="error">
+                            <h3>¡Error al cargar el tema!</h3>
+                            <p>Detalles: ${error.message}</p>
+                            <p>Posibles causas:</p>
+                            <ul>
+                                <li>El archivo JSON no existe en el servidor</li>
+                                <li>El archivo JSON tiene formato incorrecto</li>
+                                <li>Problemas de conexión</li>
+                            </ul>
+                            <p>Verifica que el archivo <code>content/${currentArea}/${quizId}.json</code> existe y es válido.</p>
+                        </div>
+                    `;
+                });
         }
 
         // Carga una pregunta específica
         function loadQuestion() {
-            const quiz = quizData[currentArea][currentQuizId];
-            const question = quiz.questions[currentQuestionIndex];
+            const question = quizData.questions[currentQuestionIndex];
             const content = document.getElementById('quiz-content');
             document.getElementById('current-question').textContent = currentQuestionIndex + 1;
             
@@ -1428,11 +654,14 @@
                     </div>
                     <div class="feedback" id="feedback-${currentQuestionIndex}" style="display:none;"></div>
                     <div class="question-actions">
-                        <button class="btn-validate" onclick="validateAnswer()">Validar respuesta</button>
+                        <button class="btn-validate" id="validate-btn">Validar respuesta</button>
                         <button class="btn-saber-mas" onclick="openModal()">Saber más</button>
                     </div>
                 </div>
             `;
+            
+            // Añadir evento al botón de validación
+            document.getElementById('validate-btn').addEventListener('click', validateAnswer);
         }
 
         // Permite seleccionar opciones
@@ -1440,7 +669,7 @@
             const options = document.querySelectorAll(`#options-${currentQuestionIndex} .option`);
             
             // Si es pregunta de única respuesta, deseleccionar otras
-            if (quizData[currentArea][currentQuizId].questions[currentQuestionIndex].correct.length === 1) {
+            if (quizData.questions[currentQuestionIndex].correct.length === 1) {
                 options.forEach(opt => opt.classList.remove('selected'));
                 element.classList.add('selected');
                 selectedOptions = [optionIndex];
@@ -1459,10 +688,9 @@
 
         // Valida la respuesta
         function validateAnswer() {
-            const quiz = quizData[currentArea][currentQuizId];
-            const question = quiz.questions[currentQuestionIndex];
+            const question = quizData.questions[currentQuestionIndex];
             const feedback = document.getElementById(`feedback-${currentQuestionIndex}`);
-            const validateBtn = document.querySelector('.btn-validate');
+            const validateBtn = document.getElementById('validate-btn');
             const options = document.querySelectorAll(`#options-${currentQuestionIndex} .option`);
             
             // Deshabilitar botón
@@ -1537,8 +765,7 @@
 
         // Abre el modal de "Saber más"
         function openModal() {
-            const quiz = quizData[currentArea][currentQuizId];
-            const question = quiz.questions[currentQuestionIndex];
+            const question = quizData.questions[currentQuestionIndex];
             const modal = document.getElementById('saberMasModal');
             const modalContent = document.getElementById('modal-content');
             
@@ -1551,13 +778,27 @@
             document.getElementById('saberMasModal').style.display = 'none';
         }
 
-        // Inicialización
+        // Inicialización al cargar la página
         document.addEventListener('DOMContentLoaded', () => {
             // Configurar evento para cerrar el modal al hacer clic fuera
             window.onclick = function(event) {
                 const modal = document.getElementById('saberMasModal');
                 if (event.target === modal) closeModal();
             };
+            
+            // Configurar botón de cierre del modal
+            const closeBtn = document.querySelector('.modal-close');
+            if (closeBtn) {
+                closeBtn.onclick = closeModal;
+            }
+            
+            // Si hay un hash en la URL, cargar esa área directamente
+            if (window.location.hash) {
+                const area = window.location.hash.substring(1);
+                if (['contabilidad', 'analisis-economico-financiero', 'economia', 'marketing'].includes(area)) {
+                    showPage('menu-page', area);
+                }
+            }
         });
     </script>
 </body>
