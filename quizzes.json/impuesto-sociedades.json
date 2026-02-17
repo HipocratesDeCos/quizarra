@@ -1,0 +1,125 @@
+{
+  "title": "Impuesto de Sociedades",
+  "questions": [
+    {
+      "intro": "El Impuesto sobre Sociedades es un tributo directo que grava el beneficio obtenido por las empresas durante un ejercicio económico. Su regulación principal es la Ley del Impuesto sobre Sociedades (LIS), que establece las reglas para determinar la base imponible y la cuota a pagar. Aunque el impuesto es de naturaleza fiscal, tiene un impacto directo en las cuentas anuales, por lo que debe contabilizarse conforme al Plan General de Contabilidad (PGC). La norma 13ª del PGC, 'Impuesto sobre beneficios', desarrolla el tratamiento contable del impuesto corriente y del impuesto diferido. Este impuesto afecta al resultado del ejercicio y a las partidas de patrimonio neto cuando existen diferencias temporarias o deducciones fiscales pendientes de aplicar.",
+      "question": "1. ¿Cuál es el objetivo del tratamiento contable del Impuesto sobre Sociedades según el PGC?",
+      "options": [
+        "Calcular la cuota a pagar a Hacienda",
+        "Reflejar el efecto fiscal en las cuentas anuales conforme al principio de devengo",
+        "Evitar pagar impuestos",
+        "Reducir el resultado del ejercicio"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El objetivo del tratamiento contable del <u>Impuesto sobre Sociedades</u> no es calcular la cuota fiscal (eso corresponde a la LIS), sino <u>reflejar el efecto fiscal en las cuentas anuales</u> conforme al principio de <u>devengo</u>.</p><p>Según la <u>Norma 13ª del PGC</u>, se deben reconocer el <u>impuesto corriente</u> (asociado al resultado fiscal del ejercicio) y el <u>impuesto diferido</u> (asociado a diferencias temporarias entre la contabilidad y la fiscalidad).</p><p>Este tratamiento asegura que el <u>gasto o ingreso por impuestos</u> se reconozca en el mismo período en que se generan los ingresos y gastos que lo originan, garantizando la <u>imagen fiel</u> del resultado y el patrimonio.</p>"
+    },
+    {
+      "intro": "El impuesto corriente es el impuesto que la empresa debe pagar a Hacienda por el beneficio fiscal del ejercicio, calculado según la Ley del Impuesto sobre Sociedades (LIS). Se reconoce como un gasto o ingreso en la cuenta de resultados, con contrapartida en un pasivo (si es acreedor) o en un activo (si es deudor). Se calcula aplicando el tipo impositivo a la base imponible fiscal. Aunque el pago puede realizarse en periodos posteriores (por pagos a cuenta), el gasto se reconoce en el ejercicio en que se genera el beneficio, cumpliendo con el principio de devengo. Es una partida clave en la cuenta de pérdidas y ganancias.",
+      "question": "2. ¿Cómo se contabiliza el impuesto corriente?",
+      "options": [
+        "Como un ingreso financiero",
+        "Con cargo a la cuenta de resultados y abono a un pasivo por impuesto",
+        "Solo cuando se paga a Hacienda",
+        "Se registra como reducción del capital social"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>impuesto corriente</u> se contabiliza con cargo a la cuenta <u>(6300) Impuesto corriente</u> (gasto) y abono a <u>(4752) Hacienda Pública, acreedora por impuesto sobre sociedades</u> (pasivo).</p><p>Por ejemplo, si la base imponible es 100.000 € y el tipo impositivo es 25%, el impuesto corriente es 25.000 €. El asiento es: <u>25.000 € a (6300)</u> y <u>25.000 € a (4752)</u>.</p><p>Si ya se han realizado pagos a cuenta, se descuentan del pasivo. Este tratamiento refleja que el gasto se reconoce en el ejercicio en que se genera el beneficio, no cuando se paga, cumpliendo con el principio de <u>devengo</u>.</p>"
+    },
+    {
+      "intro": "El impuesto diferido surge por las diferencias temporarias entre el valor contable y el valor fiscal de los activos y pasivos. Por ejemplo, una amortización contable más acelerada que la fiscal genera una diferencia temporaria imponible, que dará lugar a un mayor impuesto futuro. El impuesto diferido se reconoce como un pasivo (si se espera pagar más impuestos en el futuro) o como un activo (si se espera pagar menos). Se calcula aplicando el tipo impositivo a la diferencia temporaria. Su reconocimiento es obligatorio, salvo en casos excepcionales, y se registra en la cuenta de resultados o en el patrimonio neto, según el origen de la diferencia.",
+      "question": "3. ¿Qué causa el impuesto diferido?",
+      "options": [
+        "Diferencias permanentes entre contabilidad y fiscalidad",
+        "Diferencias temporarias en la valoración de activos y pasivos",
+        "Errores de contabilidad",
+        "Cambios en el tipo impositivo"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>impuesto diferido</u> es consecuencia de las <u>diferencias temporarias</u> entre el valor contable y el valor fiscal de los activos y pasivos.</p><p>Por ejemplo, si una empresa amortiza un activo más rápido fiscalmente que contablemente, surge una <u>diferencia temporaria imponible</u>, que generará un <u>pasivo por impuesto diferido</u> (se paga menos ahora, pero más en el futuro).</p><p>Si la amortización es más lenta fiscalmente, surge una <u>diferencia temporaria deducible</u>, que genera un <u>activo por impuesto diferido</u>. El impuesto diferido se reconoce con cargo o abono a <u>(6301)</u>, y su contrapartida es <u>(474)</u> o <u>(475)</u>.</p>"
+    },
+    {
+      "intro": "Las diferencias temporarias son discrepancias entre el valor contable y el valor fiscal de un activo o pasivo que se reversarán en ejercicios futuros. Pueden ser imponibles (cuando generan un mayor impuesto futuro) o deducibles (cuando generan un menor impuesto futuro). Por ejemplo, una provisión reconocida contablemente pero no fiscalmente es una diferencia temporaria deducible. El PGC exige reconocer un activo por impuesto diferido si es probable que haya beneficios futuros suficientes para compensarla. Las diferencias permanentes, en cambio, no se reversan y no generan impuesto diferido.",
+      "question": "4. ¿Qué es una diferencia temporaria deducible?",
+      "options": [
+        "Un gasto que no se puede deducir fiscalmente",
+        "Una diferencia que reduce el impuesto futuro",
+        "Un ingreso gravado en contabilidad pero no en fiscalidad",
+        "Una pérdida definitiva"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Una <u>diferencia temporaria deducible</u> es una discrepancia entre el valor contable y el valor fiscal que <u>reducirá la base imponible futura</u>, generando un <u>ahorro de impuestos</u> en el futuro.</p><p>Por ejemplo, una <u>provisión</u> reconocida en contabilidad pero no deducible en fiscalidad hasta que se pague, genera una diferencia temporaria deducible.</p><p>Esta diferencia da lugar a un <u>activo por impuesto diferido</u> (cuenta 474), ya que cuando se pague, se podrá deducir y se pagará menos impuesto. El activo se reconoce si es <u>probable</u> que haya beneficios futuros para compensarlo.</p>"
+    },
+    {
+      "intro": "El impuesto diferido se puede reconocer tanto en la cuenta de resultados como en el patrimonio neto, dependiendo del origen de la diferencia temporaria. Si la diferencia surge de un elemento que afecta al resultado (como una amortización), el impuesto diferido se imputa a la cuenta de pérdidas y ganancias. Si surge de un elemento que afecta directamente al patrimonio neto (como una revalorización), el impuesto diferido se reconoce en el patrimonio neto. Esta regla asegura la consistencia entre el origen del cambio y su tratamiento fiscal.",
+      "question": "5. ¿Dónde se imputa el impuesto diferido?",
+      "options": [
+        "Siempre en la cuenta de resultados",
+        "En la cuenta de resultados o en el patrimonio neto, según el origen de la diferencia",
+        "Solo en el pasivo no corriente",
+        "En el capital social"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>impuesto diferido</u> se imputa a la <u>cuenta de resultados</u> si la diferencia temporaria proviene de un elemento que afecta al resultado (por ejemplo, amortización).</p><p>Si proviene de un elemento que afecta directamente al <u>patrimonio neto</u> (por ejemplo, una revalorización o una deducción fiscal pendiente de aplicar), el impuesto diferido se reconoce en el <u>patrimonio neto</u>.</p><p>Por ejemplo, si una deducción fiscal se distribuye en varios ejercicios, el impuesto diferido se reconoce en <u>(835) Ingresos fiscales por deducciones</u>, y luego se traslada al resultado. Esto asegura la <u>coherencia</u> entre el origen del beneficio fiscal y su tratamiento contable.</p>"
+    },
+    {
+      "intro": "Las deducciones fiscales pendientes de aplicar, como la reserva de capitalización o la de nivelación de bases imponibles, generan un derecho a reducir la cuota futura. Este derecho se reconoce como un activo por impuesto diferido (cuenta 4742) si es probable que la empresa tenga beneficios futuros suficientes. El impuesto diferido asociado se registra en el patrimonio neto (cuenta 837) y se traslada gradualmente al resultado del ejercicio. Este tratamiento refleja que el beneficio fiscal no se reconoce en su totalidad en el ejercicio de generación, sino a medida que se aplica.",
+      "question": "6. ¿Cómo se contabiliza una deducción fiscal pendiente de aplicar?",
+      "options": [
+        "Como un ingreso inmediato",
+        "Como un activo por impuesto diferido y un ingreso en el patrimonio neto",
+        "Se ignora hasta que se aplica",
+        "Se registra como reducción del pasivo"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Una <u>deducción fiscal pendiente de aplicar</u> (por ejemplo, por reserva de capitalización) se reconoce como un <u>activo por impuesto diferido</u> en la cuenta <u>(4742)</u>, si es probable que haya beneficios futuros.</p><p>Simultáneamente, se registra un <u>ingreso en el patrimonio neto</u> en la cuenta <u>(837) Transferencia de deducciones y bonificaciones</u>.</p><p>Cuando se aplica la deducción en ejercicios futuros, se reduce el activo y se traslada el ingreso al resultado del ejercicio. Este tratamiento cumple con el principio de <u>devengo</u> y evita reconocer un beneficio antes de tiempo.</p>"
+    },
+    {
+      "intro": "El efecto impositivo de las pérdidas fiscales se reconoce como un activo por impuesto diferido si es probable que la empresa tenga beneficios futuros suficientes para compensarlas. Por ejemplo, si una empresa tiene una pérdida fiscal de 10.000 € y un tipo impositivo del 25%, puede generar un ahorro fiscal futuro de 2.500 €. Este ahorro se reconoce como un activo (4740) y un ingreso en la cuenta de resultados (6301). Si en el futuro no hay beneficios, el activo se da de baja. Este tratamiento permite reflejar el valor de las pérdidas fiscales cuando son utilizables.",
+      "question": "7. ¿Cuándo se reconoce un activo por impuesto diferido por pérdidas fiscales?",
+      "options": [
+        "Siempre que exista una pérdida fiscal",
+        "Solo si es probable que haya beneficios futuros suficientes",
+        "Nunca, porque las pérdidas no generan activos",
+        "Solo si Hacienda lo autoriza"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>activo por impuesto diferido</u> por pérdidas fiscales solo se reconoce si es <u>probable</u> que la empresa obtenga beneficios futuros suficientes para compensarlas.</p><p>Por ejemplo, si una empresa tiene una pérdida fiscal de 10.000 € y un tipo del 25%, puede generar un ahorro fiscal de 2.500 €. Si es probable que haya beneficios, se registra: <u>2.500 € a (4740)</u> y <u>2.500 € a (6301)</u>.</p><p>Si en el futuro no hay beneficios, el activo se <u>da de baja</u> como gasto. Este tratamiento evita sobrevalorar el patrimonio con beneficios fiscales que no se materializarán.</p>"
+    },
+    {
+      "intro": "El impuesto diferido por intereses implícitos en provisiones se reconoce porque el valor contable de la provisión se actualiza por intereses, aunque fiscalmente no se deduzcan hasta el pago. Esta diferencia genera una diferencia temporaria imponible, que da lugar a un pasivo por impuesto diferido. El gasto por impuesto diferido se reconoce en la cuenta de resultados. Este ajuste es clave para reflejar fielmente el costo financiero de las provisiones.",
+      "question": "8. ¿Qué implica el impuesto diferido en una provisión con intereses implícitos?",
+      "options": [
+        "No tiene impacto fiscal",
+        "Genera un pasivo por impuesto diferido",
+        "Se considera un ingreso",
+        "Se ignora en la contabilidad"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>actualización de una provisión</u> por intereses implícitos genera una <u>diferencia temporaria imponible</u>, ya que el valor contable aumenta, pero fiscalmente no se deduce hasta el pago.</p><p>Esto da lugar a un <u>pasivo por impuesto diferido</u> (cuenta 4751), con cargo a <u>(6301) Impuesto diferido</u>.</p><p>Por ejemplo, si una provisión se actualiza en 5.000 €, y el tipo es 25%, se registra un pasivo de 1.250 €. Este ajuste refleja que se pagará más impuesto en el futuro cuando se pague la provisión.</p>"
+    },
+    {
+      "intro": "El impuesto diferido se puede revertir cuando la diferencia temporaria que lo originó desaparece. Por ejemplo, cuando se vende un activo cuya amortización generó un impuesto diferido, se da de baja el pasivo o activo por impuesto diferido. La reversión se registra como un ingreso o gasto en la cuenta de resultados. Este ajuste asegura que el impuesto diferido no permanezca en el balance cuando ya no es necesario.",
+      "question": "9. ¿Qué ocurre cuando se revierte un impuesto diferido?",
+      "options": [
+        "Se elimina del balance sin ajuste",
+        "Se reconoce un ingreso o gasto en la cuenta de resultados",
+        "Se convierte en ingreso extraordinario",
+        "Se distribuye como dividendo"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>reversión del impuesto diferido</u> ocurre cuando la diferencia temporaria que lo originó desaparece (por ejemplo, al vender un activo).</p><p>El pasivo o activo por impuesto diferido se <u>da de baja</u>, y se reconoce un <u>ingreso</u> (si era un pasivo) o un <u>gasto</u> (si era un activo) en la cuenta de resultados.</p><p>Por ejemplo, si se vende un activo y se revierte un pasivo de 2.000 €, se registra: <u>2.000 € a (6301)</u> y <u>2.000 € a (4751)</u>. Este ajuste asegura que el impuesto diferido refleje la situación real.</p>"
+    },
+    {
+      "intro": "El tipo impositivo aplicable al impuesto diferido es el tipo esperado en el momento en que se reversará la diferencia temporaria. Si cambia el tipo impositivo, se debe ajustar el valor del impuesto diferido. Este ajuste se reconoce en la cuenta de resultados. Por ejemplo, si el tipo baja del 25% al 20%, los pasivos por impuesto diferido se reducen, generando un ingreso. Este tratamiento asegura que el impuesto diferido refleje el entorno fiscal esperado.",
+      "question": "10. ¿Qué ocurre si cambia el tipo impositivo aplicable al impuesto diferido?",
+      "options": [
+        "No se ajusta",
+        "Se ajusta el valor del impuesto diferido y se reconoce en resultados",
+        "Se ignora hasta el pago",
+        "Se distribuye como dividendo"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Si cambia el <u>tipo impositivo</u> aplicable en el momento de reversión de la diferencia temporaria, se debe <u>ajustar el valor del impuesto diferido</u>.</p><p>Por ejemplo, si el tipo baja del 25% al 20%, un pasivo de 10.000 € pasa a 8.000 €. Se registra: <u>2.000 € a (4751)</u> y <u>2.000 € a (6301)</u>, generando un <u>ingreso</u>.</p><p>Este ajuste se reconoce en la <u>cuenta de resultados</u> del ejercicio en que se conozca el cambio, cumpliendo con el principio de <u>devengo</u> y garantizando la <u>imagen fiel</u>.</p>"
+    }
+  ]
+}

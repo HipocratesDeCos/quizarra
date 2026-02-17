@@ -1,0 +1,185 @@
+{
+  "title": "Rentabilidad, Autofinanciación y Crecimiento",
+  "questions": [
+    {
+      "intro": "La rentabilidad es la capacidad de la empresa para generar beneficios a partir de sus recursos. Se mide mediante ratios como el ROA (Return on Assets) y el ROE (Return on Equity). El ROA mide la rentabilidad de los activos, calculándose como beneficio antes de intereses e impuestos (BAII) dividido por activo total. El ROE mide la rentabilidad del capital propio, calculándose como beneficio neto dividido por patrimonio neto. Estos indicadores permiten evaluar la eficiencia de la gestión y comparar el rendimiento con otros ejercicios o empresas del sector. Un ROE alto indica que la empresa genera buenos rendimientos para los accionistas.",
+      "question": "1. ¿Qué mide el ROE?",
+      "options": [
+        "La rentabilidad de los activos",
+        "La rentabilidad del capital propio",
+        "El nivel de endeudamiento",
+        "La liquidez inmediata"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>ROE</u> (Return on Equity) mide la <u>rentabilidad del capital propio</u>.</p><p>Se calcula como <u>beneficio neto / patrimonio neto</u>. Es el indicador más relevante para los <u>accionistas</u>, ya que muestra cuánto rentan sus inversiones.</p><p>Un ROE <u>alto</u> indica una <u>buena gestión</u> y <u>creación de valor</u>. Debe analizarse junto con el <u>ROA</u> para evaluar el <u>efecto del apalancamiento</u>.</p>"
+    },
+    {
+      "intro": "El ROA (Return on Assets) mide la eficiencia con la que la empresa utiliza sus activos para generar beneficios. Se calcula como beneficio antes de intereses e impuestos (BAII) dividido por activo total. Permite comparar empresas de distinto tamaño. Un ROA alto indica buena gestión de los recursos. Debe analizarse junto con el ROE para evaluar el impacto del apalancamiento financiero. Un ROA bajo puede indicar ineficiencia operativa o activos infrautilizados.",
+      "question": "2. ¿Qué mide el ROA?",
+      "options": [
+        "La rentabilidad del capital propio",
+        "La eficiencia en el uso de los activos para generar beneficios",
+        "El nivel de deuda",
+        "La liquidez de la empresa"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>ROA</u> (Return on Assets) mide la <u>rentabilidad de los activos</u> de la empresa.</p><p>Se calcula como <u>BAII / activo total</u>. Indica cuánto beneficio genera cada euro invertido en activos.</p><p>Permite comparar la <u>eficiencia operativa</u> de empresas de distinto tamaño. Un ROA <u>alto</u> indica una <u>buena gestión</u> de los recursos productivos.</p>"
+    },
+    {
+      "intro": "La autofinanciación es la capacidad de la empresa para financiar su crecimiento con recursos propios, sin recurrir al endeudamiento o a nuevas aportaciones de socios. Tiene dos componentes: la autofinanciación de enriquecimiento (beneficios retenidos) y la autofinanciación de mantenimiento (amortizaciones). La primera aumenta el patrimonio neto, mientras que la segunda permite renovar el activo fijo sin necesidad de desembolsos. La autofinanciación es clave para la estabilidad y sostenibilidad del crecimiento.",
+      "question": "3. ¿Qué componentes forman la autofinanciación?",
+      "options": [
+        "Beneficios retenidos y amortizaciones",
+        "Deudas a corto plazo y proveedores",
+        "Capital social y reservas legales",
+        "Existencias y clientes"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>La <u>autofinanciación</u> se compone de dos elementos: <u>autofinanciación de enriquecimiento</u> (beneficios retenidos en reservas) y <u>autofinanciación de mantenimiento</u> (amortizaciones).</p><p>La primera <u>aumenta el patrimonio neto</u>. La segunda <u>financia la renovación del activo fijo</u> sin necesidad de desembolsos.</p><p>Es clave para la <u>estabilidad</u> y <u>sostenibilidad</u> del crecimiento, reduciendo la dependencia del endeudamiento.</p>"
+    },
+    {
+      "intro": "La autofinanciación de enriquecimiento se refiere a los beneficios que la empresa decide retener en lugar de distribuir como dividendos. Estos beneficios se destinan a reservas, aumentando el patrimonio neto. Es una forma de reforzar la solvencia y financiar inversiones futuras. La decisión de retener beneficios depende de la política de dividendos y de las oportunidades de inversión. Un alto nivel de autofinanciación de enriquecimiento indica una empresa con capacidad de crecimiento interno.",
+      "question": "4. ¿Qué es la autofinanciación de enriquecimiento?",
+      "options": [
+        "La amortización de activos fijos",
+        "Los beneficios retenidos en reservas",
+        "El aumento de deuda a largo plazo",
+        "La venta de activos no corrientes"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>autofinanciación de enriquecimiento</u> se refiere a los <u>beneficios retenidos</u> en lugar de distribuirse como dividendos.</p><p>Estos beneficios se destinan a <u>reservas</u>, aumentando el <u>patrimonio neto</u> y reforzando la <u>solvencia</u>.</p><p>Es una forma de <u>financiar inversiones futuras</u> sin recurrir al endeudamiento. Un alto nivel indica <u>capacidad de crecimiento interno</u>.</p>"
+    },
+    {
+      "intro": "La autofinanciación de mantenimiento proviene de las amortizaciones del inmovilizado. Aunque no genera efectivo, representa un fondo de recursos que permite renovar los activos fijos al final de su vida útil. Por ejemplo, si una máquina se amortiza 10.000 € anuales durante 10 años, al final se dispone de 100.000 € en fondos para su sustitución. Este tipo de autofinanciación no aumenta el patrimonio neto, pero es esencial para mantener la capacidad productiva.",
+      "question": "5. ¿De dónde proviene la autofinanciación de mantenimiento?",
+      "options": [
+        "De la venta de acciones",
+        "De las amortizaciones del inmovilizado",
+        "De los préstamos bancarios",
+        "De la reducción de existencias"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>autofinanciación de mantenimiento</u> proviene de las <u>amortizaciones</u> del inmovilizado.</p><p>Aunque no genera <u>efectivo</u>, representa un fondo de recursos que permite <u>renovar los activos fijos</u> al final de su vida útil.</p><p>Por ejemplo, si una máquina se amortiza 10.000 € anuales durante 10 años, al final se dispone de 100.000 € en fondos para su sustitución. Es esencial para <u>mantener la capacidad productiva</u>.</p>"
+    },
+    {
+      "intro": "El crecimiento sostenible es aquel que se financia principalmente con recursos propios, sin aumentar excesivamente el endeudamiento. Depende de la rentabilidad del capital propio (ROE) y de la tasa de retención de beneficios. Se calcula como ROE multiplicado por la tasa de retención. Un crecimiento sostenible evita problemas de solvencia y permite una expansión equilibrada. Si el crecimiento supera este límite, la empresa necesita financiación ajena.",
+      "question": "6. ¿Qué determina el crecimiento sostenible de una empresa?",
+      "options": [
+        "La rentabilidad del capital propio y la tasa de retención de beneficios",
+        "El nivel de deuda a corto plazo",
+        "La rotación de existencias",
+        "El periodo medio de cobro"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>crecimiento sostenible</u> depende de la <u>rentabilidad del capital propio</u> (ROE) y de la <u>tasa de retención de beneficios</u>.</p><p>Se calcula como <u>ROE × tasa de retención</u>. Indica el ritmo máximo al que puede crecer la empresa sin aumentar excesivamente el endeudamiento.</p><p>Un crecimiento <u>sostenible</u> evita <u>problemas de solvencia</u> y permite una <u>expansión equilibrada</u>. Si supera este límite, necesita <u>financiación ajena</u>.</p>"
+    },
+    {
+      "intro": "El modelo de DuPont descompone el ROE en tres componentes: margen neto, rotación de activos y apalancamiento financiero. Esta descomposición permite analizar las fuentes de rentabilidad: ¿es por buena gestión operativa (margen), eficiencia en el uso de activos (rotación) o uso del endeudamiento (apalancamiento)? Es una herramienta clave para la toma de decisiones estratégicas.",
+      "question": "7. ¿Qué componentes forman el modelo de DuPont?",
+      "options": [
+        "Margen neto, rotación de activos y apalancamiento financiero",
+        "Liquidez, solvencia y rentabilidad",
+        "Ingresos, gastos y resultados",
+        "Activo, pasivo y patrimonio neto"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>modelo de DuPont</u> descompone el <u>ROE</u> en tres componentes: <u>margen neto</u>, <u>rotación de activos</u> y <u>apalancamiento financiero</u>.</p><p>Permite analizar si la rentabilidad viene de <u>buenos márgenes</u>, <u>eficiencia operativa</u> o <u>uso del endeudamiento</u>.</p><p>Es una herramienta clave para la <u>toma de decisiones estratégicas</u> y la mejora de la gestión financiera.</p>"
+    },
+    {
+      "intro": "El apalancamiento financiero mide el efecto del endeudamiento sobre la rentabilidad del capital propio. Cuando el coste de la deuda es inferior al rendimiento de los activos, el apalancamiento aumenta el ROE. Sin embargo, también aumenta el riesgo financiero. Un alto apalancamiento puede ser beneficioso en épocas de crecimiento, pero peligroso en crisis. Debe analizarse junto con la estructura del pasivo.",
+      "question": "8. ¿Qué indica un alto apalancamiento financiero?",
+      "options": [
+        "Bajo riesgo financiero",
+        "Mayor rentabilidad del capital propio, pero también mayor riesgo",
+        "Alta liquidez",
+        "Baja rentabilidad operativa"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>apalancamiento financiero</u> mide el efecto del <u>endeudamiento</u> sobre la <u>rentabilidad del capital propio</u>.</p><p>Cuando el <u>coste de la deuda</u> es inferior al <u>rendimiento de los activos</u>, aumenta el <u>ROE</u>.</p><p>Sin embargo, también <u>aumenta el riesgo financiero</u>. Un alto apalancamiento puede ser <u>beneficioso</u> en crecimiento, pero <u>peligroso</u> en crisis.</p>"
+    },
+    {
+      "intro": "La tasa de retención de beneficios es el porcentaje de beneficio neto que la empresa decide retener en lugar de distribuir como dividendos. Se calcula como (1 - tasa de distribución). Una tasa alta indica una política de crecimiento interno. Debe equilibrarse con las expectativas de los accionistas, que suelen esperar cierto nivel de remuneración por sus inversiones.",
+      "question": "9. ¿Qué mide la tasa de retención de beneficios?",
+      "options": [
+        "El porcentaje de beneficio que se retiene en lugar de distribuir como dividendos",
+        "El nivel de deuda a corto plazo",
+        "La rotación de clientes",
+        "El periodo medio de pago"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>La <u>tasa de retención de beneficios</u> mide el <u>porcentaje de beneficio neto</u> que se <u>retiene</u> en lugar de distribuir como <u>dividendos</u>.</p><p>Se calcula como <u>(1 - tasa de distribución)</u>. Una tasa <u>alta</u> indica una política de <u>crecimiento interno</u>.</p><p>Debe equilibrarse con las <u>expectativas de los accionistas</u>, que suelen esperar cierto nivel de <u>remuneración</u> por sus inversiones.</p>"
+    },
+    {
+      "intro": "El crecimiento financiado por deuda puede ser rápido, pero aumenta el riesgo financiero. Si el beneficio no cubre los intereses, la empresa puede entrar en insolvencia. Además, una alta deuda limita la capacidad de obtener nuevo financiamiento. El crecimiento sostenible, en cambio, se basa en la autofinanciación y es más seguro, aunque puede ser más lento. La combinación equilibrada de ambas fuentes es clave para un crecimiento saludable.",
+      "question": "10. ¿Qué caracteriza al crecimiento financiado por deuda?",
+      "options": [
+        "Es más lento pero más seguro",
+        "Es más rápido pero aumenta el riesgo financiero",
+        "No requiere beneficios",
+        "Siempre es sostenible"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>crecimiento financiado por deuda</u> puede ser <u>más rápido</u>, pero <u>aumenta el riesgo financiero</u>.</p><p>Si el <u>beneficio no cubre los intereses</u>, la empresa puede entrar en <u>insolvencia</u>.</p><p>Además, una <u>alta deuda</u> limita la capacidad de obtener <u>nuevo financiamiento</u>. El <u>crecimiento sostenible</u>, basado en <u>autofinanciación</u>, es más seguro, aunque más lento.</p>"
+    },
+    {
+      "intro": "La rentabilidad económica (ROA) debe ser superior al coste de la deuda para que el apalancamiento financiero tenga efecto positivo. Si el ROA es menor que el coste de la deuda, el endeudamiento reduce la rentabilidad del capital propio. Por ejemplo, si el ROA es 8% y el coste de la deuda es 10%, cada euro de deuda destruye valor. Este principio es clave para evaluar la conveniencia del endeudamiento.",
+      "question": "11. ¿Cuándo es beneficioso el apalancamiento financiero?",
+      "options": [
+        "Cuando el ROA es superior al coste de la deuda",
+        "Cuando el ROA es inferior al coste de la deuda",
+        "Siempre que haya beneficios",
+        "Solo en empresas grandes"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>apalancamiento financiero</u> es <u>beneficioso</u> cuando el <u>ROA</u> (rentabilidad de los activos) es <u>superior</u> al <u>coste de la deuda</u>.</p><p>En ese caso, cada euro de deuda <u>genera más beneficio</u> del que cuesta, aumentando el <u>ROE</u>.</p><p>Si el <u>ROA es inferior</u> al coste de la deuda, el apalancamiento <u>destruye valor</u>. Este principio es clave para evaluar la <u>conveniencia del endeudamiento</u>.</p>"
+    },
+    {
+      "intro": "La capacidad de generación de flujos de caja es esencial para la sostenibilidad del crecimiento. Un crecimiento financiado por deuda requiere flujos de caja suficientes para pagar intereses y devolver el principal. Si los flujos son insuficientes, la empresa puede tener problemas de solvencia. El estado de flujos de efectivo permite evaluar esta capacidad, destacando los flujos de explotación como fuente principal de financiación.",
+      "question": "12. ¿Por qué es importante la generación de flujos de caja para el crecimiento?",
+      "options": [
+        "Para pagar dividendos",
+        "Para hacer frente a intereses y devolución de deuda",
+        "Para aumentar el activo fijo",
+        "Para reducir el capital social"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>generación de flujos de caja</u> es esencial para <u>hacer frente a intereses</u> y <u>devolución de deuda</u>.</p><p>Un crecimiento financiado por deuda requiere <u>flujos suficientes</u> para cumplir con estas obligaciones.</p><p>El <u>estado de flujos de efectivo</u> permite evaluar esta capacidad, destacando los <u>flujos de explotación</u> como fuente principal de financiación.</p>"
+    },
+    {
+      "intro": "La política de dividendos afecta directamente a la autofinanciación. Una política generosa de dividendos reduce los beneficios retenidos, limitando la autofinanciación de enriquecimiento. En cambio, una política conservadora permite retener más beneficios, reforzando el crecimiento interno. La decisión debe equilibrar las necesidades de inversión con las expectativas de los accionistas.",
+      "question": "13. ¿Cómo afecta la política de dividendos a la autofinanciación?",
+      "options": [
+        "Una política generosa reduce los beneficios retenidos",
+        "No tiene ningún efecto",
+        "Aumenta automáticamente el patrimonio neto",
+        "Solo afecta al activo fijo"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Una <u>política generosa de dividendos</u> <u>reduce los beneficios retenidos</u>, limitando la <u>autofinanciación de enriquecimiento</u>.</p><p>En cambio, una política <u>conservadora</u> permite <u>retener más beneficios</u>, reforzando el <u>crecimiento interno</u>.</p><p>La decisión debe <u>equilibrar</u> las necesidades de inversión con las <u>expectativas de los accionistas</u>.</p>"
+    },
+    {
+      "intro": "El crecimiento equilibrado se da cuando el aumento del activo circulante se financia con un aumento similar de la deuda a corto plazo. Este equilibrio evita problemas de tesorería. Si el activo circulante crece más que la deuda a corto plazo, puede necesitar financiación adicional. Si la deuda crece más, asume un riesgo financiero excesivo. Este análisis se realiza con el estado de origen y aplicación de fondos.",
+      "question": "14. ¿Qué caracteriza a un crecimiento equilibrado?",
+      "options": [
+        "Crecimiento similar del activo circulante y la deuda a corto plazo",
+        "Aumento del beneficio sin inversión",
+        "Reducción del patrimonio neto",
+        "Incremento de existencias sin ventas"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Un <u>crecimiento equilibrado</u> se caracteriza por un <u>aumento similar</u> del <u>activo circulante</u> y de la <u>deuda a corto plazo</u>.</p><p>Esto indica que la empresa está <u>financiando su expansión</u> de forma <u>proporcional</u> y <u>sostenible</u>.</p><p>Si el activo circulante crece más, puede necesitar <u>financiación adicional</u>. Si la deuda crece más, asume un <u>riesgo financiero excesivo</u>. El equilibrio es clave para la <u>solvencia</u>.</p>"
+    },
+    {
+      "intro": "La rentabilidad operativa (BAII/activo total) debe analizarse junto con el coste de la deuda para evaluar la conveniencia del apalancamiento. Si la rentabilidad operativa supera el coste de la deuda, el apalancamiento es positivo. Este análisis permite tomar decisiones informadas sobre la estructura de financiación de la empresa.",
+      "question": "15. ¿Qué relación debe existir entre la rentabilidad operativa y el coste de la deuda?",
+      "options": [
+        "La rentabilidad operativa debe ser superior al coste de la deuda",
+        "El coste de la deuda debe ser superior",
+        "Ambos deben ser iguales",
+        "No hay relación"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>La <u>rentabilidad operativa</u> (BAII/activo total) debe ser <u>superior</u> al <u>coste de la deuda</u> para que el apalancamiento sea <u>beneficioso</u>.</p><p>En ese caso, cada euro de deuda <u>genera más beneficio</u> del que cuesta.</p><p>Este análisis es clave para tomar decisiones informadas sobre la <u>estructura de financiación</u> de la empresa.</p>"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "title": "Análisis del Balance de Situación I",
+  "questions": [
+    {
+      "intro": "El análisis del balance de situación es una herramienta fundamental para evaluar la salud financiera de una empresa. Permite diagnosticar su solvencia, liquidez, estabilidad y capacidad de autofinanciación. El balance refleja la situación patrimonial en una fecha determinada, estructurada en activo, pasivo y patrimonio neto. Para su análisis, se utilizan técnicas como la horizontal, la vertical y el análisis de ratios. La técnica horizontal compara los estados financieros de diferentes ejercicios para detectar tendencias. La vertical permite conocer la estructura del patrimonio, expresando cada partida como porcentaje del total del activo o del pasivo. Estas técnicas son esenciales para tomar decisiones estratégicas, de inversión o de crédito.",
+      "question": "1. ¿Cuál es el objetivo principal del análisis del balance de situación?",
+      "options": [
+        "Aumentar el beneficio del ejercicio",
+        "Evaluar la solvencia, liquidez y estabilidad de la empresa",
+        "Reducir el impuesto de sociedades",
+        "Justificar la auditoría externa"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El objetivo principal del <u>análisis del balance de situación</u> es <u>evaluar la solvencia, liquidez y estabilidad</u> de la empresa. A través de este análisis, se puede diagnosticar la <u>salud financiera</u> de la empresa y prever posibles problemas de tesorería o insolvencia.</p><p>Se utilizan técnicas como el <u>análisis horizontal</u> (comparación entre ejercicios) y el <u>análisis vertical</u> (estructura porcentual del patrimonio), que permiten identificar tendencias, cambios en la estructura de capital y la calidad del activo circulante.</p><p>Este análisis es clave para <u>inversores, acreedores y gestores</u>, ya que proporciona información sobre la capacidad de la empresa para cumplir con sus obligaciones y generar valor a largo plazo.</p>"
+    },
+    {
+      "intro": "El análisis horizontal del balance consiste en comparar los estados financieros de diferentes ejercicios para detectar tendencias en las partidas patrimoniales. Se expresan las variaciones en términos absolutos y relativos (porcentajes). Por ejemplo, si el activo total ha pasado de 100.000 € a 120.000 €, el crecimiento es del 20%. Este análisis permite identificar si la empresa está creciendo de forma sostenible, si hay un aumento desproporcionado de deudas o si el patrimonio neto se está erosionando. Es fundamental para evaluar la evolución de la empresa y tomar decisiones estratégicas.",
+      "question": "2. ¿Qué muestra el análisis horizontal del balance?",
+      "options": [
+        "La estructura porcentual del patrimonio",
+        "La evolución de las partidas entre diferentes ejercicios",
+        "Solo el resultado del último ejercicio",
+        "El valor de mercado de las acciones"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>análisis horizontal</u> del balance muestra la <u>evolución</u> de las partidas del patrimonio, la situación financiera y los resultados entre <u>dos o más ejercicios</u>.</p><p>Se calculan las <u>variaciones absolutas</u> (diferencia entre valores) y <u>relativas</u> (porcentaje de cambio). Por ejemplo, si el pasivo corriente ha aumentado un 30% mientras el activo corriente solo un 5%, puede indicar un problema de liquidez.</p><p>Este análisis permite detectar <u>tendencias</u> (crecimiento, estancamiento, deterioro) y evaluar la <u>gestión financiera</u> de la empresa a lo largo del tiempo.</p>"
+    },
+    {
+      "intro": "El análisis vertical del balance consiste en expresar cada partida del balance como un porcentaje del total del activo (para el activo) o del total del pasivo más patrimonio neto (para el pasivo). Esta técnica permite conocer la estructura del patrimonio y la importancia relativa de cada partida. Por ejemplo, si el inmovilizado material representa el 60% del activo, indica una empresa con alta inversión en activo fijo. Si el pasivo corriente es el 70% del total del pasivo, puede indicar dependencia del financiamiento a corto plazo. Es una herramienta clave para comparar empresas de distinto tamaño.",
+      "question": "3. ¿Qué permite el análisis vertical del balance?",
+      "options": [
+        "Comparar empresas de distinto tamaño mediante estructuras porcentuales",
+        "Calcular el beneficio neto del ejercicio",
+        "Determinar el valor de mercado de las acciones",
+        "Evaluar solo el activo corriente"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>El <u>análisis vertical</u> del balance permite <u>comparar empresas de distinto tamaño</u> porque expresa cada partida como un <u>porcentaje</u> del total del activo o del pasivo.</p><p>Por ejemplo, si el <u>patrimonio neto</u> representa el 45% del total del pasivo, indica una empresa <u>bien capitalizada</u>. Si el <u>activo corriente</u> es el 80% del activo total, sugiere una empresa con alta liquidez.</p><p>Esta técnica es clave para evaluar la <u>estructura financiera</u> y detectar desequilibrios, como una excesiva dependencia del endeudamiento a corto plazo.</p>"
+    },
+    {
+      "intro": "La liquidez es la capacidad de la empresa para hacer frente a sus obligaciones a corto plazo con sus activos corrientes. Se evalúa mediante ratios como el ratio de liquidez general (activo corriente / pasivo corriente) y el ratio de disponibilidad (disponible / pasivo corriente). Un ratio de liquidez general superior a 1,5-2 se considera adecuado, ya que indica que la empresa tiene suficiente activo corriente para cubrir sus deudas a corto plazo. Sin embargo, un ratio muy alto puede indicar inmovilización excesiva de recursos. La calidad del activo corriente también es clave: un activo basado en efectivo es más líquido que uno basado en existencias.",
+      "question": "4. ¿Qué indica un ratio de liquidez general elevado?",
+      "options": [
+        "La empresa tiene dificultades para pagar a corto plazo",
+        "La empresa tiene suficiente activo corriente para cubrir sus deudas a corto plazo",
+        "La empresa es muy rentable",
+        "La empresa no tiene deudas"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>ratio de liquidez general</u> (activo corriente / pasivo corriente) mide la capacidad de la empresa para hacer frente a sus obligaciones a corto plazo.</p><p>Un ratio <u>superior a 1.5-2</u> se considera <u>adecuado</u>, ya que indica que la empresa tiene más del doble de activo corriente que de pasivo corriente.</p><p>Sin embargo, un ratio <u>excesivamente alto</u> puede indicar una <u>mala gestión de la tesorería</u>, con recursos inmovilizados en activos poco rentables. La <u>calidad del activo corriente</u> (efectivo vs. existencias) también es clave para evaluar la liquidez real.</p>"
+    },
+    {
+      "intro": "El principio de que el activo circulante debe ser mayor que el pasivo corriente es fundamental para garantizar la solvencia a corto plazo. Se recomienda que el activo circulante sea al menos el doble del pasivo corriente. Esta relación asegura que la empresa pueda atender sus pagos sin necesidad de vender activo fijo. Sin embargo, este principio debe confirmarse con el análisis del presupuesto de tesorería, ya que el activo circulante puede estar compuesto por existencias poco líquidas. Una empresa con alto stock de inventario puede tener un buen ratio de liquidez, pero problemas reales de pago.",
+      "question": "5. ¿Por qué se recomienda que el activo circulante sea casi el doble del pasivo corriente?",
+      "options": [
+        "Para maximizar el beneficio",
+        "Para garantizar la solvencia a corto plazo y evitar problemas de liquidez",
+        "Para reducir el impuesto de sociedades",
+        "Para aumentar el valor de mercado de las acciones"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Se recomienda que el <u>activo circulante</u> sea casi el <u>doble del pasivo corriente</u> para <u>garantizar la solvencia a corto plazo</u> y evitar problemas de liquidez.</p><p>Esta relación proporciona un <u>margen de seguridad</u> ante imprevistos, como retrasos en cobros o pagos inesperados.</p><p>Sin embargo, esta recomendación debe <u>confirmarse con el análisis del presupuesto de tesorería</u>, ya que el activo circulante puede estar compuesto por existencias poco líquidas, lo que reduce su capacidad de pago real.</p>"
+    },
+    {
+      "intro": "El realizable más el disponible (clientes, efectos comerciales, tesorería) debe igualar aproximadamente al pasivo corriente. Este principio matiza el anterior, ya que una empresa puede tener un alto activo circulante compuesto principalmente por existencias, lo que no garantiza liquidez inmediata. El realizable y el disponible son activos de rápida conversión en efectivo, por lo que su comparación con el exigible a corto plazo ofrece una visión más realista de la capacidad de pago. Si estos valores son similares, la empresa está en una situación de liquidez adecuada.",
+      "question": "6. ¿Qué activos se consideran clave para evaluar la liquidez inmediata?",
+      "options": [
+        "Existencias y materias primas",
+        "Clientes, efectos comerciales y tesorería",
+        "Inmovilizado material e intangible",
+        "Capital social y reservas"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Los activos clave para evaluar la <u>liquidez inmediata</u> son el <u>realizable</u> (clientes, efectos comerciales) y el <u>disponible</u> (tesorería).</p><p>Estos activos pueden convertirse en efectivo en el corto plazo y se comparan con el <u>pasivo corriente</u> para evaluar la capacidad de pago.</p><p>Si el <u>realizable + disponible</u> es similar al <u>pasivo corriente</u>, la empresa está en una <u>situación de liquidez adecuada</u>. Si es inferior, puede tener problemas de solvencia a corto plazo.</p>"
+    },
+    {
+      "intro": "La capitalización de una empresa se refiere a la proporción entre el patrimonio neto y el pasivo total. Se considera adecuado que los capitales propios representen entre el 40% y el 50% del pasivo. Esta relación indica que la empresa está suficientemente capitalizada y no depende excesivamente del endeudamiento. Si los capitales propios son inferiores al 40%, la empresa está descapitalizada y tiene un alto riesgo financiero. En cambio, si superan el 50%, puede indicar una gestión conservadora con baja apalancamiento financiero. La capitalización es clave para la estabilidad y la capacidad de autofinanciación.",
+      "question": "7. ¿Qué indica una baja proporción de patrimonio neto sobre el pasivo?",
+      "options": [
+        "Alta rentabilidad",
+        "Descapitalización y alto riesgo financiero",
+        "Buena liquidez",
+        "Elevada capacidad de inversión"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Una <u>baja proporción de patrimonio neto</u> sobre el pasivo (inferior al 40%) indica <u>descapitalización</u> y <u>alto riesgo financiero</u>.</p><p>La empresa depende excesivamente del <u>endeudamiento</u> para financiar su actividad, lo que aumenta su <u>vulnerabilidad</u> ante crisis o subidas de tipos de interés.</p><p>Un nivel adecuado de <u>capitalización</u> (40-50%) refuerza la <u>solvencia</u> y la <u>autofinanciación</u>, siendo clave para la estabilidad a largo plazo.</p>"
+    },
+    {
+      "intro": "El estado de origen y aplicación de fondos (EOF) es un estado financiero que muestra de dónde proceden los fondos de la empresa (origen) y en qué se han utilizado (aplicación). Aunque ha sido sustituido por el estado de flujos de efectivo, sigue siendo una herramienta útil para entender el crecimiento y la financiación de la empresa. Los orígenes de fondos incluyen beneficios, amortizaciones, aumento de capital y deudas. Las aplicaciones incluyen inversiones en activo fijo, aumento del activo circulante, devolución de deudas y dividendos. Un crecimiento equilibrado se da cuando los aumentos de activo circulante y deuda a corto plazo son similares.",
+      "question": "8. ¿Qué muestra el estado de origen y aplicación de fondos?",
+      "options": [
+        "Solo el resultado del ejercicio",
+        "De dónde proceden los fondos y en qué se han utilizado",
+        "El valor de mercado de las acciones",
+        "La estructura organizativa de la empresa"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>estado de origen y aplicación de fondos</u> (EOF) muestra <u>de dónde proceden</u> los fondos de la empresa (<u>origen</u>) y <u>en qué se han utilizado</u> (<u>aplicación</u>).</p><p>Los <u>orígenes</u> incluyen: beneficios, amortizaciones, aumento de capital y nuevas deudas. Las <u>aplicaciones</u>: inversiones en activo fijo, aumento del activo circulante, devolución de deudas y pago de dividendos.</p><p>Permite evaluar si el <u>crecimiento</u> de la empresa está <u>financiado de forma equilibrada</u> y sostenible.</p>"
+    },
+    {
+      "intro": "El crecimiento equilibrado de una empresa se da cuando los aumentos de activo circulante y deuda a corto plazo son similares. Esto indica que la empresa financia su expansión con recursos a corto plazo de forma proporcional a su necesidad de fondos. Si el activo circulante crece más que la deuda a corto plazo, puede necesitar financiación adicional. Si la deuda crece más, puede estar asumiendo un riesgo financiero excesivo. Este equilibrio es clave para mantener la solvencia y evitar problemas de tesorería en el futuro.",
+      "question": "9. ¿Qué caracteriza a un crecimiento equilibrado de la empresa?",
+      "options": [
+        "Aumento del beneficio sin inversión",
+        "Crecimiento similar del activo circulante y la deuda a corto plazo",
+        "Reducción del patrimonio neto",
+        "Incremento de existencias sin ventas"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>crecimiento equilibrado</u> se caracteriza por un <u>aumento similar</u> del <u>activo circulante</u> y de la <u>deuda a corto plazo</u>.</p><p>Esto indica que la empresa está <u>financiando su expansión</u> de forma <u>proporcional</u> y <u>sostenible</u>.</p><p>Si el activo circulante crece más, puede necesitar <u>financiación adicional</u>. Si la deuda crece más, asume un <u>riesgo financiero excesivo</u>. El equilibrio es clave para la <u>solvencia</u> y la <u>estabilidad</u>.</p>"
+    },
+    {
+      "intro": "La inflación afecta significativamente a las cuentas anuales, especialmente cuando se utiliza el principio del coste histórico. Los valores de partidas como el inmovilizado, las existencias o los capitales propios pueden quedar subvaluados respecto a su valor real de reposición. Por ejemplo, un edificio adquirido hace 20 años por 100.000 € sigue reflejándose por ese importe, aunque su valor de mercado sea 500.000 €. Esta subvaluación puede distorsionar la imagen de la solvencia y rentabilidad de la empresa. Aunque el PGC no permite revalorizaciones generales, sí admite ajustes por deterioro o valor razonable en casos específicos.",
+      "question": "10. ¿Cómo afecta la inflación a las cuentas anuales basadas en el coste histórico?",
+      "options": [
+        "No tiene ningún efecto",
+        "Puede subvalorar activos y capitales propios respecto a su valor real",
+        "Aumenta automáticamente el beneficio",
+        "Elimina la necesidad de amortizar"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>inflación</u> afecta a las cuentas anuales basadas en el <u>coste histórico</u> porque los valores de activos como el <u>inmovilizado</u> o las <u>existencias</u> quedan <u>subvaluados</u> respecto a su valor de reposición actual.</p><p>Por ejemplo, un equipo adquirido por 50.000 € hace 10 años sigue en libros por ese importe, aunque su costo de reposición sea 120.000 €.</p><p>Esta <u>subvaluación</u> puede <u>distorsionar</u> la imagen de <u>solvencia</u> y <u>rentabilidad</u>, aunque el PGC prohíbe revalorizaciones generales para mantener la <u>prudencia</u> y <u>objetividad</u>.</p>"
+    },
+    {
+      "intro": "Las transacciones entre empresas de un grupo pueden distorsionar las cuentas individuales. Por ejemplo, una empresa puede vender a otra del grupo a precios superiores al mercado para transferir beneficios. Al consolidar las cuentas, se eliminan todas las transacciones internas y los saldos entre empresas del grupo, obteniendo un conjunto de estados financieros que reflejan la situación del grupo como una sola entidad económica. Este proceso es esencial para que los usuarios (inversores, acreedores) tengan una visión realista de la situación financiera del grupo.",
+      "question": "11. ¿Por qué es importante la consolidación de cuentas en un grupo empresarial?",
+      "options": [
+        "Para aumentar el beneficio total",
+        "Para eliminar transacciones internas y obtener una imagen fiel del grupo",
+        "Para reducir el impuesto de sociedades",
+        "Para simplificar la auditoría"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>consolidación de cuentas</u> es importante porque <u>elimina las transacciones internas</u> y los saldos entre empresas del grupo, obteniendo una <u>imagen fiel</u> del grupo como una sola entidad económica.</p><p>Por ejemplo, si una empresa vende a otra del grupo a precio inflado, el beneficio está <u>ficticio</u>. Al consolidar, se elimina esta operación.</p><p>Este proceso permite a los usuarios evaluar la <u>situación financiera real</u> del grupo, evitando distorsiones por operaciones internas.</p>"
+    },
+    {
+      "intro": "El fondo de maniobra (FM) es la diferencia entre el activo corriente y el pasivo corriente. Representa los recursos permanentes destinados a financiar el activo circulante. Un FM positivo indica solvencia a corto plazo, ya que el activo corriente es mayor que el exigible a corto plazo. Un FM negativo indica un riesgo de insolvencia, ya que la empresa financia parte de su activo fijo con deudas a corto plazo. El FM es una medida clave de la estabilidad financiera y debe analizarse junto con otros ratios de liquidez y endeudamiento.",
+      "question": "12. ¿Qué indica un fondo de maniobra negativo?",
+      "options": [
+        "Excelente liquidez",
+        "Riesgo de insolvencia a corto plazo",
+        "Alta rentabilidad",
+        "Fuerte capitalización"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>fondo de maniobra</u> (FM) negativo indica <u>riesgo de insolvencia</u> a corto plazo, ya que el <u>pasivo corriente</u> es mayor que el <u>activo corriente</u>.</p><p>Además, sugiere que la empresa está <u>financiando parte de su activo no corriente</u> con <u>deudas a corto plazo</u>, lo que genera un <u>desequilibrio financiero</u>.</p><p>Un FM positivo es deseable, ya que indica que la empresa tiene <u>recursos permanentes</u> para cubrir su activo circulante, reforzando su <u>solvencia</u>.</p>"
+    },
+    {
+      "intro": "La calidad del activo circulante es clave para evaluar la liquidez real de la empresa. No todos los activos corrientes tienen la misma capacidad de conversión en efectivo. Un activo circulante compuesto principalmente por saldos en cuentas corrientes bancarias es de mayor calidad que uno basado en existencias o créditos dudosos. Las existencias pueden tardar en venderse, y los créditos pueden no cobrarse. Por ello, es esencial analizar la composición del activo circulante para determinar la verdadera capacidad de pago de la empresa.",
+      "question": "13. ¿Por qué es importante analizar la composición del activo circulante?",
+      "options": [
+        "Para aumentar el beneficio",
+        "Para evaluar la verdadera capacidad de pago de la empresa",
+        "Para reducir el impuesto de sociedades",
+        "Para justificar la auditoría"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Es importante analizar la <u>composición del activo circulante</u> porque no todos los activos tienen la misma <u>liquidez</u>.</p><p>Un activo basado en <u>efectivo</u> o <u>clientes solventes</u> es de <u>alta calidad</u>. Uno basado en <u>existencias</u> o <u>créditos dudosos</u> es de <u>baja calidad</u>, ya que puede no convertirse fácilmente en efectivo.</p><p>Esta diferencia es crucial para evaluar la <u>capacidad real de pago</u> de la empresa, más allá de lo que indican los ratios generales.</p>"
+    },
+    {
+      "intro": "El endeudamiento total de la empresa se mide mediante ratios como el ratio de autonomía financiera (patrimonio neto / pasivo total) y el ratio de endeudamiento (pasivo total / patrimonio neto). Un ratio de autonomía inferior a 0,7 (o ratio de endeudamiento superior a 1,4) indica una alta dependencia del financiamiento ajeno, lo que aumenta el riesgo financiero. La estructura de la deuda (corto vs. largo plazo) también es clave. Un exceso de deuda a corto plazo puede generar problemas de liquidez.",
+      "question": "14. ¿Qué indica un alto ratio de endeudamiento?",
+      "options": [
+        "Bajo riesgo financiero",
+        "Alta dependencia del financiamiento ajeno",
+        "Excelente liquidez",
+        "Alta rentabilidad operativa"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Un <u>alto ratio de endeudamiento</u> (pasivo total / patrimonio neto) indica <u>alta dependencia del financiamiento ajeno</u>.</p><p>La empresa asume un <u>elevado riesgo financiero</u>, ya que debe hacer frente a intereses y devoluciones de capital, lo que puede comprometer su solvencia en caso de crisis.</p><p>Un ratio <u>superior a 1.4</u> suele considerarse <u>excesivo</u>, aunque depende del sector. Es clave analizar también la <u>estructura del pasivo</u> (corto vs. largo plazo).</p>"
+    },
+    {
+      "intro": "El crecimiento de la empresa debe analizarse en relación con su financiación. Un crecimiento financiado principalmente por beneficios y amortizaciones (autofinanciación) es más sostenible que uno financiado por deuda. El estado de flujos de efectivo permite ver si el crecimiento se sustenta en la actividad operativa (flujos positivos de explotación) o en la captación de deuda. Un crecimiento desequilibrado, financiado por deuda a corto plazo, puede llevar a problemas de solvencia en el futuro.",
+      "question": "15. ¿Qué tipo de crecimiento empresarial es más sostenible?",
+      "options": [
+        "Financiado principalmente por deuda a corto plazo",
+        "Financiado por autofinanciación (beneficios y amortizaciones)",
+        "Financiado por aumento de existencias",
+        "Financiado por emisión de acciones preferentes"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El crecimiento más <u>sostenible</u> es el <u>financiado por autofinanciación</u>, es decir, por <u>beneficios retenidos</u> y <u>amortizaciones</u>.</p><p>Este tipo de crecimiento no aumenta el <u>riesgo financiero</u> ni genera <u>costes de intereses</u>.</p><p>En cambio, un crecimiento financiado por <u>deuda</u> puede ser <u>insostenible</u> si no genera flujos de caja suficientes para su servicio. El <u>estado de flujos de efectivo</u> es clave para evaluar esta relación.</p>"
+    }
+  ]
+}

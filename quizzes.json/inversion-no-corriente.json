@@ -1,0 +1,125 @@
+{
+  "title": "Inversión No Corriente - Activo Fijo",
+  "questions": [
+    {
+      "intro": "El activo no corriente, también conocido como inmovilizado, comprende aquellos activos que la empresa destina a servir de forma duradera en su actividad, con una vida útil superior al año. Este tipo de activos no están destinados a la venta en el curso normal de la explotación, sino a participar en el proceso productivo o en la prestación de servicios. Se clasifica en inmovilizado material (terrenos, construcciones, maquinaria), inmovilizado intangible (patentes, software, marcas) e inmovilizado financiero (inversiones a largo plazo en participaciones o préstamos). Su correcta valoración es esencial para reflejar fielmente la situación patrimonial de la empresa. Inicialmente se valoran por su coste de adquisición o producción, que incluye todos los gastos necesarios para su puesta en funcionamiento. Posteriormente, se amortizan de forma sistemática, salvo los terrenos, que no sufren desgaste físico ni obsolescencia técnica. La gestión del activo fijo es clave para la solvencia y estabilidad financiera a largo plazo.",
+      "question": "1. ¿Cuáles son las características principales del activo no corriente?",
+      "options": [
+        "Permanencia en la empresa superior a un año",
+        "Destinados a servir de forma duradera en la actividad",
+        "Están destinados para la venta inmediata",
+        "No están destinados a la venta en el curso normal de la explotación"
+      ],
+      "correct": [0, 1, 3],
+      "saber_mas": "<p>El <u>activo no corriente</u> (o <u>inmovilizado</u>) está formado por activos que la empresa utiliza de forma <u>duradera</u> en su actividad productiva o de servicios. Su principal característica es la <u>permanencia</u>, con una vida útil que supera el año o el ciclo de explotación.</p><p>No están destinados a la <u>venta inmediata</u>, sino a participar en el proceso productivo. Se clasifican en <u>inmovilizado material</u> (terrenos, construcciones, maquinaria), <u>intangible</u> (patentes, software) y <u>financiero</u> (inversiones a largo plazo).</p><p>Según el PGC, se valoran inicialmente por <u>coste de adquisición o producción</u>, incluyendo todos los gastos necesarios para su puesta en funcionamiento. Posteriormente, se <u>amortizan</u> sistemáticamente, excepto los terrenos. Esta clasificación permite a los usuarios del balance distinguir entre recursos de uso permanente y temporal, mejorando la comprensión de la estructura patrimonial.</p>"
+    },
+    {
+      "intro": "El inmovilizado material comprende activos tangibles que la empresa utiliza en su proceso productivo o para proporcionar bienes y servicios. Incluye terrenos (210), construcciones (211), maquinaria (213), equipos para procesos de información (217), mobiliario (216) y elementos de transporte (218). Los terrenos no se amortizan, ya que no sufren desgaste físico ni obsolescencia técnica. El resto de activos sí se amortizan de forma sistemática durante su vida útil estimada. El valor inicial del inmovilizado material incluye el precio de compra, impuestos, transporte, instalación y otros gastos directamente atribuibles a su puesta en funcionamiento. Por ejemplo, al adquirir una máquina, se incluyen los costes de transporte, montaje y puesta a punto. Esta valoración inicial es clave para calcular correctamente la amortización anual y reflejar el desgaste real del activo a lo largo del tiempo.",
+      "question": "2. ¿Qué elementos forman parte del inmovilizado material?",
+      "options": [
+        "Terrenos y construcciones",
+        "Maquinaria y equipos para procesos de información",
+        "Patentes y marcas",
+        "Mobiliario y elementos de transporte"
+      ],
+      "correct": [0, 1, 3],
+      "saber_mas": "<p>El <u>inmovilizado material</u> comprende activos <u>tangibles</u> que la empresa utiliza en su actividad productiva. Incluye <u>terrenos</u> (210), <u>construcciones</u> (211), <u>maquinaria</u> (213), <u>equipos para procesos de información</u> (217), <u>mobiliario</u> (216) y <u>elementos de transporte</u> (218).</p><p>Los terrenos no se amortizan, ya que no sufren desgaste. El resto se amortiza de forma sistemática durante su vida útil estimada. El valor inicial incluye el precio de compra, impuestos, transporte, instalación y otros gastos necesarios para su puesta en funcionamiento.</p><p>Por ejemplo, al adquirir un ordenador para la oficina, se incluye el IVA deducible, el transporte y la instalación del software. La amortización se realiza generalmente mediante el <u>método lineal</u>. Es importante distinguirlo del inmovilizado intangible, como patentes o marcas, que carecen de sustancia física.</p>"
+    },
+    {
+      "intro": "La amortización es el proceso contable mediante el cual se distribuye el valor de un activo no corriente a lo largo de su vida útil. Su objetivo es reflejar el desgaste, obsolescencia o agotamiento del recurso. El valor amortizable se calcula como el coste de adquisición o producción menos el valor residual esperado. Este valor se distribuye sistemáticamente, generalmente mediante el método lineal, que asigna la misma cuota anual. Por ejemplo, una máquina de 10.000 € con valor residual de 1.000 € y vida útil de 9 años tendrá una amortización anual de 1.000 €. El PGC exige que la amortización sea racional y coherente con el patrón de consumo de beneficios económicos del activo. No se aplica solo en pérdidas, sino como un gasto periódico que afecta al resultado. La amortización acumulada se registra en cuentas del grupo 28.",
+      "question": "3. ¿Cómo se calcula y aplica la amortización del inmovilizado?",
+      "options": [
+        "Valor amortizable = Coste - Valor residual",
+        "Se distribuye a lo largo de la vida útil del activo",
+        "Se aplica solo cuando el activo genera pérdidas",
+        "Debe ser sistemática y racional"
+      ],
+      "correct": [0, 1, 3],
+      "saber_mas": "<p>La <u>amortización</u> es el proceso contable mediante el cual se distribuye el valor de un activo no corriente a lo largo de su <u>vida útil</u>. Su objetivo es reflejar el <u>desgaste</u>, <u>obsolescencia</u> o <u>agotamiento</u> del recurso.</p><p>El <u>valor amortizable</u> se calcula como el <u>coste de adquisición o producción</u> menos el <u>valor residual</u> esperado. Este valor se distribuye <u>sistemáticamente</u>, generalmente mediante el <u>método lineal</u>, que asigna la misma cuota anual.</p><p>Por ejemplo, una máquina de 10.000 € con valor residual de 1.000 € y vida útil de 9 años tendrá una amortización anual de 1.000 €. El PGC exige que la amortización sea <u>racional</u> y coherente con el patrón de consumo de beneficios económicos del activo. No se aplica solo en pérdidas, sino como un <u>gasto periódico</u> que afecta al resultado.</p>"
+    },
+    {
+      "intro": "Los terrenos son un componente especial del inmovilizado material, ya que no sufren desgaste físico ni obsolescencia técnica. Por esta razón, no se amortizan. Se registran en la cuenta 210 y se mantienen en el balance al coste de adquisición. Sin embargo, sí pueden estar sujetos a correcciones valorativas por deterioro si su valor de mercado cae de forma significativa y permanente. Esta distinción es clave para la valoración del activo fijo. Mientras que una construcción sobre un terreno sí se amortiza, el terreno subyacente permanece en libros con su valor original, reflejando su naturaleza de recurso duradero e inagotable. Esta práctica cumple con el principio de prudencia y garantiza la imagen fiel del patrimonio.",
+      "question": "4. ¿Qué diferencia a los terrenos dentro del inmovilizado material?",
+      "options": [
+        "No se amortizan porque no sufren desgaste",
+        "Se valoran siempre al valor de mercado",
+        "Son siempre de naturaleza financiera",
+        "Se consideran existencias si están en venta"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>Los <u>terrenos</u> son el único componente del <u>inmovilizado material</u> que <u>no se amortiza</u>, ya que no sufren desgaste físico ni obsolescencia técnica. Su valor puede incluso aumentar con el tiempo.</p><p>Se registran en la cuenta 210 y se mantienen en el balance al <u>coste de adquisición</u>, sin ajustes por depreciación. Sin embargo, sí pueden estar sujetos a <u>correcciones valorativas por deterioro</u> si su valor de mercado cae de forma significativa y permanente.</p><p>Esta distinción es clave para la valoración del activo fijo. Mientras que una construcción sobre un terreno sí se amortiza, el terreno subyacente permanece en libros con su valor original, reflejando su naturaleza de recurso duradero e inagotable.</p>"
+    },
+    {
+      "intro": "El inmovilizado en curso comprende activos que están en proceso de construcción, montaje o desarrollo, pero que aún no han sido activados porque no están listos para su uso. Se registra en cuentas del grupo 230-239, como 231 - Construcciones en curso. Durante este periodo, todos los gastos (materiales, mano de obra, costes financieros si son elegibles) se acumulan en esta cuenta. Una vez finalizado el activo, se activa transfiriendo el saldo a la cuenta de inmovilizado correspondiente (por ejemplo, 211 - Construcciones). Este proceso asegura que el costo total del activo se reconozca correctamente antes de comenzar su amortización. Es una aplicación del principio del devengo y garantiza la imagen fiel del patrimonio. No se debe confundir con existencias o gastos del ejercicio.",
+      "question": "5. ¿Qué se entiende por 'inmovilizado en curso'?",
+      "options": [
+        "Activos que ya están en funcionamiento",
+        "Construcciones o desarrollos que aún no están finalizados",
+        "Existencias listas para la venta",
+        "Pasivos a largo plazo"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>El <u>inmovilizado en curso</u> (cuentas 230-239) se refiere a activos que están en proceso de construcción, montaje o desarrollo, pero que aún no han sido activados porque no están listos para su uso.</p><p>Por ejemplo, una fábrica que se está construyendo se registra en la cuenta <u>231 - Construcciones en curso</u> hasta que finaliza la obra. Durante este periodo, todos los gastos (materiales, mano de obra, costes financieros si son elegibles) se acumulan en esta cuenta.</p><p>Una vez finalizado el activo, se <u>activa</u> transfiriendo el saldo a la cuenta de inmovilizado correspondiente (por ejemplo, 211 - Construcciones). Este proceso asegura que el costo total del activo se refleje correctamente antes de comenzar su amortización.</p>"
+    },
+    {
+      "intro": "Las correcciones valorativas por deterioro son ajustes que reducen el valor contable de un activo cuando su valor razonable es inferior a su valor en libros, y esta pérdida de valor es significativa y no temporal. Se registran en cuentas de amortización acumulada (como 293, 294) y generan un gasto en la cuenta de resultados (69X). Por ejemplo, si una máquina vale 50.000 € en libros pero su valor de mercado cae a 30.000 € por obsolescencia, se debe dotar una corrección valorativa de 20.000 €. Este ajuste es obligatorio para reflejar la imagen fiel del patrimonio. Si en el futuro mejora la situación, se puede revertir parcialmente, pero nunca por encima del valor contable original sin deterioro. Es una aplicación del principio de prudencia.",
+      "question": "6. ¿Qué son las 'correcciones valorativas por deterioro'?",
+      "options": [
+        "Aumentos del valor del activo",
+        "Reducciones del valor contable cuando el valor razonable es inferior",
+        "Amortizaciones aceleradas",
+        "Revalorizaciones obligatorias"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Las <u>correcciones valorativas por deterioro</u> son ajustes que reducen el valor contable de un activo cuando su <u>valor razonable</u> es inferior a su valor en libros, y esta pérdida de valor es <u>significativa y no temporal</u>.</p><p>Se registran en cuentas de <u>amortización acumulada</u> (como 293, 294) y generan un <u>gasto</u> en la cuenta de resultados (69X). Por ejemplo, si una máquina vale 50.000 € en libros pero su valor de mercado cae a 30.000 € por obsolescencia, se debe dotar una corrección valorativa de 20.000 €.</p><p>Este ajuste es obligatorio para reflejar la <u>imagen fiel</u> del patrimonio. Si en el futuro mejora la situación, se puede <u>revertir</u> parcialmente, pero nunca por encima del valor contable original sin deterioro.</p>"
+    },
+    {
+      "intro": "Una permuta comercial es la entrega de un activo no corriente a cambio de otro activo de naturaleza similar. Si tiene componente comercial (cambia la utilidad del activo), se reconoce el nuevo activo al valor razonable del activo entregado más (o menos) cualquier contraprestación en efectivo. Además, se debe dar de baja el activo entregado, eliminando su valor contable y su amortización acumulada, y reconocer cualquier ganancia o pérdida en la cuenta de resultados. Por ejemplo, si se entrega un equipo valorado en 3.000 € (coste 5.000 €, amortizado 70%) por otro nuevo, se contabiliza la baja y la entrada del nuevo activo, reconociendo la diferencia como resultado. Esta operación debe cumplir con el principio de imagen fiel.",
+      "question": "7. ¿Qué es una permuta comercial de inmovilizado?",
+      "options": [
+        "Venta de un activo por dinero",
+        "Intercambio de un activo por otro de similar naturaleza",
+        "Donación de un activo",
+        "Baja contable por deterioro"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Una <u>permuta comercial</u> es la entrega de un activo no corriente a cambio de otro activo de <u>naturaleza similar</u> (por ejemplo, cambiar una maquinaria vieja por una nueva).</p><p>Si la permuta tiene <u>componente comercial</u> (es decir, cambia la utilidad del activo), se reconoce el nuevo activo al <u>valor razonable</u> del activo entregado más (o menos) cualquier contraprestación en efectivo.</p><p>Además, se debe <u>dar de baja</u> el activo entregado, eliminando su valor contable y su <u>amortización acumulada</u>, y reconocer cualquier <u>ganancia o pérdida</u> en la cuenta de resultados. Por ejemplo, si se entrega un equipo valorado en 3.000 € (coste 5.000 €, amortizado 70%) por otro nuevo, se contabiliza la baja y la entrada del nuevo activo, reconociendo la diferencia como resultado.</p>"
+    },
+    {
+      "intro": "Los inmovilizados intangibles son activos sin sustancia física, como software, patentes, marcas o derechos de autor. Se valoran inicialmente por su coste de adquisición o producción, que incluye el precio de compra, impuestos y gastos directamente atribuibles a su puesta en funcionamiento. Los gastos de investigación se registran como gastos del ejercicio, mientras que los de desarrollo pueden capitalizarse si se cumplen ciertos criterios (viabilidad técnica, utilidad futura, capacidad de explotación). Una vez reconocido, el inmovilizado intangible debe amortizarse sistemáticamente durante su vida útil estimada, y estar sujeto a deterioro de valor si su valor de mercado cae por debajo de su valor contable. Son un activo estratégico en empresas de alta tecnología.",
+      "question": "8. ¿Cómo se valora inicialmente un inmovilizado intangible?",
+      "options": [
+        "Siempre al valor de mercado",
+        "Al coste de adquisición o producción",
+        "Al valor residual",
+        "Al precio de venta"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Los <u>inmovilizados intangibles</u> (como software, patentes, marcas) se valoran inicialmente por su <u>coste de adquisición</u> o <u>coste de producción</u>. Este coste incluye el precio de compra, impuestos, y todos los gastos directamente atribuibles a su puesta en funcionamiento.</p><p>Por ejemplo, los <u>gastos de desarrollo de una página web</u> pueden capitalizarse como inmovilizado intangible si se cumplen ciertos criterios de <u>viabilidad técnica</u> y <u>utilidad futura</u>. En cambio, los <u>gastos de investigación</u> se registran como <u>gastos del ejercicio</u>.</p><p>Una vez reconocido, el inmovilizado intangible debe <u>amortizarse</u> sistemáticamente durante su vida útil estimada, y estar sujeto a <u>deterioro de valor</u> si su valor de mercado cae por debajo de su valor contable.</p>"
+    },
+    {
+      "intro": "Tanto la amortización como el deterioro de valor reducen el valor de un activo, pero con finalidades distintas. La amortización es un proceso sistemático y previsible que distribuye el costo de un activo a lo largo de su vida útil, reflejando su desgaste normal. Es obligatoria y se aplica de forma regular. El deterioro de valor, en cambio, es un ajuste puntual que se realiza cuando hay una pérdida de valor no esperada (por obsolescencia, daño, caída del mercado). Es reversible (a diferencia de la amortización), pero solo hasta el valor que tendría sin deterioro. Ambos generan un gasto en la cuenta de resultados. La amortización se aplica a todos los activos amortizables, mientras que el deterioro solo cuando hay evidencia de pérdida de valor.",
+      "question": "9. ¿Qué diferencia hay entre amortización y deterioro de valor?",
+      "options": [
+        "Ambos son gastos, pero la amortización es sistemática y el deterioro es puntual",
+        "Solo la amortización afecta al resultado",
+        "El deterioro es reversible, la amortización no",
+        "La amortización solo aplica a activos corrientes"
+      ],
+      "correct": [0],
+      "saber_mas": "<p>La <u>amortización</u> y el <u>deterioro de valor</u> son dos formas diferentes de reducir el valor de un activo, pero con finalidades distintas.</p><p>La <u>amortización</u> es un <u>proceso sistemático y previsible</u> que distribuye el costo de un activo a lo largo de su vida útil, reflejando su <u>desgaste normal</u>. Es obligatoria y se aplica de forma regular (anual).</p><p>El <u>deterioro de valor</u>, en cambio, es un <u>ajuste puntual</u> que se realiza cuando hay una <u>pérdida de valor no esperada</u> (por obsolescencia, daño, caída del mercado). Es <u>reversible</u> (a diferencia de la amortización), pero solo hasta el valor que tendría sin deterioro. Ambos generan un gasto en la cuenta de resultados.</p>"
+    },
+    {
+      "intro": "El inmovilizado financiero incluye préstamos a largo plazo concedidos a terceros, inversiones en participaciones a largo plazo y valores representativos de deuda no negociados en mercados activos. Se valoran inicialmente por su coste y posteriormente por coste amortizado, ajustando los intereses devengados. A diferencia de las inversiones financieras a corto plazo (grupo 54-55), estas partidas no se valoran al valor razonable con cambios en pérdidas y ganancias, sino que siguen un modelo de coste amortizado, reflejando su naturaleza de inversión a largo plazo. Son una parte clave del activo no corriente y contribuyen a la estabilidad financiera de la empresa.",
+      "question": "10. ¿Qué activos financieros a largo plazo se incluyen en el inmovilizado?",
+      "options": [
+        "Acciones cotizadas en bolsa",
+        "Préstamos a largo plazo concedidos a terceros",
+        "Efectivo en cuentas corrientes",
+        "Deudores comerciales a corto plazo"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>En el <u>inmovilizado financiero</u> (grupo 25) se incluyen aquellos activos financieros que la empresa tiene la intención de mantener a <u>largo plazo</u>. Entre ellos destacan los <u>préstamos y partidas a cobrar a largo plazo</u>, como los créditos concedidos a terceros con vencimiento superior a un año.</p><p>Estos activos se valoran inicialmente por su <u>coste</u> (importe del préstamo) y posteriormente por <u>coste amortizado</u>, ajustando los intereses devengados. También pueden incluir <u>cuentas en participación</u> y <u>valores representativos de deuda</u> no negociados en mercados activos.</p><p>A diferencia de las inversiones financieras a corto plazo (grupo 54-55), estas partidas no se valoran al valor razonable con cambios en pérdidas y ganancias, sino que siguen un modelo de coste amortizado, reflejando su naturaleza de inversión a largo plazo.</p>"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "title": "Patrimonio Neto - Capital y Reservas",
+  "questions": [
+    {
+      "intro": "El patrimonio neto representa la parte residual del activo de la empresa una vez deducidos todos sus pasivos. Es el valor que pertenece a los socios o propietarios y está compuesto por el capital social, las reservas, los resultados de ejercicios anteriores y el resultado del ejercicio actual. Además, incluye subvenciones, donaciones y legados recibidos. El capital social es la suma de las aportaciones realizadas por los socios, que pueden ser dinerarias o no dinerarias. Las reservas son beneficios retenidos en la empresa, ya sea por obligación legal, estatutaria o decisión voluntaria de la junta. Los resultados negativos de ejercicios anteriores se compensan con beneficios futuros. Este conjunto de partidas es fundamental para evaluar la solvencia, estabilidad financiera y capacidad de autofinanciación de la empresa. Su correcta valoración es esencial para expresar la imagen fiel del patrimonio.",
+      "question": "1. ¿Qué elementos componen el patrimonio neto de una empresa?",
+      "options": [
+        "Capital social y reservas",
+        "Resultados de ejercicios anteriores y del ejercicio actual",
+        "Subvenciones, donaciones y legados recibidos",
+        "Deudas a largo plazo"
+      ],
+      "correct": [0, 1, 2],
+      "saber_mas": "<p>El <u>patrimonio neto</u> es la diferencia entre el <u>activo total</u> y el <u>pasivo total</u> de la empresa. Representa los <u>fondos propios</u> y está compuesto por: <u>capital social</u>, <u>reservas</u>, <u>resultados de ejercicios anteriores</u> y <u>resultado del ejercicio</u>, así como <u>subvenciones</u>, <u>donaciones</u> y <u>legados recibidos</u>.</p><p>Las <u>reservas</u> pueden ser <u>legales</u> (obligatorias por ley), <u>estatutarias</u> (previstas en estatutos), <u>voluntarias</u> (acordadas por la junta) o <u>especiales</u> (por normativa específica). Su función es reforzar la solvencia y autofinanciar la empresa.</p><p>Las <u>deudas a largo plazo</u> son <u>pasivos</u>, no parte del patrimonio neto. Este desglose es clave para evaluar la estabilidad financiera y la capacidad de crecimiento interno de la empresa.</p>"
+    },
+    {
+      "intro": "El capital social es el conjunto de aportaciones realizadas por los socios o accionistas para constituir la empresa. Puede ser dinerario (en efectivo) o no dinerario (en bienes o derechos). Se divide en capital suscrito y capital desembolsado. El capital suscrito es el monto total de aportaciones comprometidas por los socios según los estatutos. El capital desembolsado es la parte que ya han aportado efectivamente. La diferencia entre ambos se registra como dividendos pasivos en el pasivo, ya que la empresa tiene derecho a exigir el pago. Por ejemplo, si el capital suscrito es 100.000 € y se han aportado 70.000 €, los 30.000 € restantes son dividendos pasivos. Esta distinción es fundamental para evaluar la fuerza financiera real de la empresa.",
+      "question": "2. ¿Cómo se diferencia el capital suscrito del capital desembolsado?",
+      "options": [
+        "Capital suscrito es el comprometido por los socios",
+        "Capital desembolsado es el efectivamente aportado",
+        "La diferencia son los dividendos pasivos",
+        "Ambos conceptos son siempre iguales"
+      ],
+      "correct": [0, 1, 2],
+      "saber_mas": "<p>El <u>capital suscrito</u> es el monto total de aportaciones que los socios se <u>comprometen</u> a realizar según los estatutos sociales. El <u>capital desembolsado</u> es la parte que ya han <u>aportado efectivamente</u>, en efectivo o en especie.</p><p>La diferencia entre ambos se registra como <u>dividendos pasivos</u> en el pasivo, ya que la empresa tiene derecho a exigir el pago. Por ejemplo, si el capital suscrito es 100.000 € y se han aportado 70.000 €, los 30.000 € restantes son dividendos pasivos.</p><p>Esta distinción es fundamental para evaluar la <u>fuerza financiera real</u> de la empresa. Solo el capital desembolsado forma parte del patrimonio neto, mientras que el suscrito refleja un compromiso futuro.</p>"
+    },
+    {
+      "intro": "Las reservas son beneficios retenidos en la empresa procedentes de ejercicios anteriores o de operaciones específicas. Se clasifican en reservas legales (obligatorias por ley), estatutarias (establecidas en estatutos), voluntarias (acordadas por la junta) y especiales (por normativa específica). La reserva legal es obligatoria (10% del beneficio hasta alcanzar el 20% del capital) y refuerza la solvencia. Las reservas estatutarias y voluntarias permiten a la empresa autofinanciar inversiones sin distribuir dividendos. Las reservas especiales pueden surgir por subvenciones o diferencias de cambio. Todas ellas aumentan el patrimonio neto y limitan la distribución de dividendos, protegiendo a los acreedores. Son una herramienta clave para la estabilidad financiera y el crecimiento interno.",
+      "question": "3. ¿Qué tipos de reservas puede constituir una empresa?",
+      "options": [
+        "Reserva legal obligatoria",
+        "Reservas estatutarias y voluntarias",
+        "Reservas especiales por normativa",
+        "Solo la reserva voluntaria es permitida"
+      ],
+      "correct": [0, 1, 2],
+      "saber_mas": "<p>Las <u>reservas</u> son partidas del patrimonio neto que representan <u>beneficios retenidos</u> en la empresa. La <u>reserva legal</u> es obligatoria (10% del beneficio hasta alcanzar el 20% del capital) y refuerza la solvencia. Las <u>reservas estatutarias</u> se crean según los estatutos sociales, y las <u>voluntarias</u> son acordadas por la junta de accionistas para autofinanciar inversiones.</p><p>Existen también <u>reservas especiales</u> por normativa específica, como por subvenciones o diferencias de cambio. Todas ellas aumentan el patrimonio neto y limitan la distribución de dividendos, protegiendo a los acreedores.</p><p>Por ejemplo, una empresa con beneficios puede destinar parte a reservas voluntarias para financiar una expansión. Las reservas son clave para la estabilidad financiera y la capacidad de crecimiento interno.</p>"
+    },
+    {
+      "intro": "Las aportaciones no dinerarias son compromisos de los socios de aportar bienes, derechos o servicios a la empresa, que aún no han sido entregados. Se registran en la cuenta (104) Socios por aportaciones no dinerarias pendientes. Por ejemplo, si un socio se compromete a aportar una maquinaria valorada en 50.000 €, se registra: 50.000 € a (100) Capital social y 50.000 € a (104). Cuando se entrega la maquinaria, se da de baja la cuenta (104) y se activa el inmovilizado. Este tratamiento asegura que el capital social se reconozca cuando se formaliza el compromiso, mientras que el activo se registra cuando se recibe, cumpliendo con el principio de devengo y garantizando la imagen fiel del patrimonio. Es distinto de una donación, ya que forma parte del capital.",
+      "question": "4. ¿Qué se registra en la cuenta (104) 'Socios por aportaciones no dinerarias pendientes'?",
+      "options": [
+        "Aportaciones en efectivo ya recibidas",
+        "Compromisos de aportación en bienes o derechos aún no entregados",
+        "Dividendos a pagar a socios",
+        "Donaciones recibidas de terceros"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La cuenta <u>(104) Socios por aportaciones no dinerarias pendientes</u> registra los <u>compromisos de aportación</u> realizados por los socios en forma de <u>bienes, derechos o servicios</u> que aún no han sido entregados a la empresa.</p><p>Por ejemplo, si un socio se compromete a aportar una maquinaria valorada en 50.000 €, se registra: <u>50.000 € a (100) Capital social</u> y <u>50.000 € a (104)</u>. Cuando se entrega la maquinaria, se da de baja la cuenta (104) y se activa el inmovilizado.</p><p>Este tratamiento asegura que el capital social se reconozca cuando se formaliza el compromiso, mientras que el activo se registra cuando se recibe, cumpliendo con el principio de <u>devengo</u> y garantizando la <u>imagen fiel</u> del patrimonio.</p>"
+    },
+    {
+      "intro": "Una aportación no dineraria al capital social se contabiliza activando el bien aportado y registrando el incremento de capital. Por ejemplo, si un socio aporta una patente valorada en 30.000 €, el asiento es: 30.000 € a (203) Propiedad industrial y 30.000 € a (100) Capital social. Si el IVA es soportado y deducible, también se registra. Este procedimiento refleja fielmente el incremento del patrimonio y del activo de la empresa. La aportación no se trata como ingreso, sino como un aumento de fondos propios, distinguiéndose claramente de donaciones o subvenciones. Es una forma de reforzar el patrimonio sin necesidad de efectivo, útil en fusiones, adquisiciones o ampliaciones de capital.",
+      "question": "5. ¿Cómo se contabiliza una aportación no dineraria al capital social?",
+      "options": [
+        "Se registra solo cuando se recibe el dinero",
+        "Se activa el bien aportado y se registra el incremento de capital",
+        "Se considera una donación",
+        "No se contabiliza hasta que se vende el bien"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Una <u>aportación no dineraria</u> al capital social se contabiliza <u>activando el bien aportado</u> (por ejemplo, maquinaria, vehículos, propiedad industrial) y <u>incrementando el capital social</u> por su valor razonable.</p><p>Por ejemplo, si un socio aporta una patente valorada en 30.000 €, el asiento es: <u>30.000 € a (203) Propiedad industrial</u> y <u>30.000 € a (100) Capital social</u>. Si el IVA es soportado y deducible, también se registra.</p><p>Este procedimiento refleja fielmente el incremento del patrimonio y del activo de la empresa. La aportación no se trata como ingreso, sino como un <u>aumento de fondos propios</u>, distinguiéndose claramente de donaciones o subvenciones.</p>"
+    },
+    {
+      "intro": "Los dividendos pasivos son las aportaciones pendientes de los socios al capital social. Representan el derecho de la empresa a exigir el pago de la parte del capital que ha sido suscrita pero no desembolsada. Se registran en el pasivo corriente (cuenta 558) si vencen en menos de un año, o en pasivo no corriente (cuenta 158) si el vencimiento es superior. Por ejemplo, si el capital suscrito es 100.000 € y se han aportado 75.000 €, los 25.000 € restantes son dividendos pasivos. Este concepto es clave para diferenciar entre el capital legal (suscrito) y el capital real (desembolsado). Los dividendos pasivos no generan intereses, a menos que así se acuerde. Son una obligación presente derivada de un evento pasado.",
+      "question": "6. ¿Qué son los 'dividendos pasivos'?",
+      "options": [
+        "Beneficios distribuidos a los socios",
+        "Aportaciones pendientes de los socios al capital social",
+        "Intereses de deudas con socios",
+        "Gastos por administración de capital"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Los <u>dividendos pasivos</u> son las <u>aportaciones pendientes</u> de los socios al capital social. Representan el derecho de la empresa a exigir el pago de la parte del capital que ha sido <u>suscrita</u> pero no <u>desembolsada</u>.</p><p>Se registran en el <u>pasivo corriente</u> (cuenta 558) si vencen en menos de un año, o en <u>pasivo no corriente</u> (cuenta 158) si el vencimiento es superior. Por ejemplo, si el capital suscrito es 100.000 € y se han aportado 75.000 €, los 25.000 € restantes son dividendos pasivos.</p><p>Este concepto es clave para diferenciar entre el capital <u>legal</u> (suscrito) y el capital <u>real</u> (desembolsado). Los dividendos pasivos no generan intereses, a menos que así se acuerde.</p>"
+    },
+    {
+      "intro": "Los resultados negativos de ejercicios anteriores son pérdidas acumuladas que no se han compensado con beneficios futuros. Se registran en la cuenta (121) Resultados negativos de ejercicios anteriores y se compensan con beneficios del ejercicio actual. Por ejemplo, si una empresa tiene una pérdida acumulada de 20.000 € y en el ejercicio actual obtiene un beneficio de 18.000 €, se registra: 18.000 € a (129) Resultado del ejercicio y 18.000 € a (121). La pérdida pendiente queda reducida a 2.000 €. Este tratamiento permite la autocompensación de pérdidas y beneficios a lo largo del tiempo, reflejando fielmente la situación patrimonial. No se distribuyen como dividendos, ya que no son fondos disponibles.",
+      "question": "7. ¿Cómo se tratan los resultados negativos de ejercicios anteriores?",
+      "options": [
+        "Se eliminan del balance",
+        "Se compensan con beneficios futuros y se registran en (121)",
+        "Se consideran pérdidas del ejercicio actual",
+        "Se distribuyen como dividendos negativos"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Los <u>resultados negativos de ejercicios anteriores</u> (pérdidas acumuladas) se registran en la cuenta <u>(121) Resultados negativos de ejercicios anteriores</u> y se compensan con beneficios futuros.</p><p>Por ejemplo, si una empresa tiene una pérdida acumulada de 20.000 € y en el ejercicio actual obtiene un beneficio de 18.000 €, se registra: <u>18.000 € a (129) Resultado del ejercicio</u> y <u>18.000 € a (121)</u>. La pérdida pendiente queda reducida a 2.000 €.</p><p>Este tratamiento permite la <u>autocompensación</u> de pérdidas y beneficios a lo largo del tiempo, reflejando fielmente la situación patrimonial. No se distribuyen como dividendos, ya que no son fondos disponibles.</p>"
+    },
+    {
+      "intro": "La reducción del capital social puede realizarse por amortización de acciones o por devolución de aportaciones. En ambos casos, se reduce el patrimonio neto y se registra con cargo a la cuenta (100) Capital social. Por ejemplo, si se amortiza capital por 50.000 €, el asiento es: 50.000 € a (100) y 50.000 € a (558) Socios por desembolsos exigidos. Si se devuelve efectivo, se carga (572) Bancos. Este procedimiento debe cumplir con requisitos legales y estatutarios. La reducción de capital afecta directamente al patrimonio neto y puede realizarse para absorber pérdidas o devolver fondos a los socios. Es distinta de la pérdida de valor del activo.",
+      "question": "8. ¿Qué ocurre cuando se reduce el capital social?",
+      "options": [
+        "Siempre se distribuye en efectivo a los socios",
+        "Puede amortizarse capital, reduciendo el patrimonio neto",
+        "Se convierte automáticamente en reservas",
+        "Se registra como ingreso extraordinario"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>reducción del capital social</u> puede realizarse por amortización de acciones o por devolución de aportaciones. En ambos casos, se <u>reduce el patrimonio neto</u> y se registra con cargo a la cuenta <u>(100) Capital social</u>.</p><p>Por ejemplo, si se amortiza capital por 50.000 €, el asiento es: <u>50.000 € a (100)</u> y <u>50.000 € a (558) Socios por desembolsos exigidos</u>. Si se devuelve efectivo, se carga <u>(572) Bancos</u>.</p><p>Este procedimiento debe cumplir con requisitos legales y estatutarios. La reducción de capital afecta directamente al patrimonio neto y puede realizarse para absorber pérdidas o devolver fondos a los socios.</p>"
+    },
+    {
+      "intro": "Las subvenciones al capital son ayudas públicas, donaciones o legados recibidos que se registran como un aumento del patrimonio neto, no como ingreso del ejercicio. Se reconocen en cuentas del grupo 1, como (130) Subvenciones, donaciones y legados recibidos. Posteriormente, pueden transferirse a reservas o resultados cuando se cumplan las condiciones. Por ejemplo, si se recibe una subvención de 60.000 €, se registra: 60.000 € a (130) y 60.000 € a (4708) Hacienda Pública, deudora por subvenciones. Este tratamiento evita distorsionar el resultado del ejercicio y refleja que la subvención es un refuerzo patrimonial, no un ingreso operativo. Es distinto de las subvenciones al resultado.",
+      "question": "9. ¿Cómo se contabilizan las subvenciones al capital?",
+      "options": [
+        "Como ingresos del ejercicio",
+        "Como un aumento del patrimonio neto, no como ingreso",
+        "Se distribuyen como dividendos",
+        "Se registran como deudas a largo plazo"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>Las <u>subvenciones al capital</u> (como ayudas públicas, donaciones o legados) se registran como un <u>aumento del patrimonio neto</u>, no como <u>ingreso del ejercicio</u>. Se reconocen en cuentas del grupo 1, como <u>(130) Subvenciones, donaciones y legados recibidos</u>.</p><p>Posteriormente, pueden transferirse a <u>reservas</u> o <u>resultados</u> cuando se cumplan las condiciones. Por ejemplo, si se recibe una subvención de 60.000 €, se registra: <u>60.000 € a (130)</u> y <u>60.000 € a (4708) Hacienda Pública, deudora por subvenciones</u>.</p><p>Este tratamiento evita distorsionar el resultado del ejercicio y refleja que la subvención es un <u>refuerzo patrimonial</u>, no un ingreso operativo.</p>"
+    },
+    {
+      "intro": "La reserva por capital amortizado (cuenta 1142) se forma cuando una empresa reduce su capital social mediante la amortización de acciones o participaciones. Por ejemplo, si se amortiza capital por 10.000 €, el asiento es: 10.000 € a (100) Capital social y 10.000 € a (1142) Reservas por capital amortizado. Esta reserva no puede distribuirse como dividendo, sino que refuerza la solvencia. Es una forma de reconvertir parte del capital en reserva, manteniendo el patrimonio neto constante pero cambiando su composición. Es distinta de las reservas legales o voluntarias, ya que surge de una operación de reducción de capital. No se genera por beneficios, sino por una decisión patrimonial.",
+      "question": "10. ¿Qué es la 'reserva por capital amortizado'?",
+      "options": [
+        "Una reserva que se crea al amortizar activos",
+        "Una reserva que se forma al reducir el capital social",
+        "Un fondo para pagar dividendos",
+        "Una cuenta de pérdidas acumuladas"
+      ],
+      "correct": [1],
+      "saber_mas": "<p>La <u>reserva por capital amortizado</u> (cuenta 1142) se forma cuando una empresa <u>reduce su capital social</u> mediante la amortización de acciones o participaciones.</p><p>Por ejemplo, si se amortiza capital por 10.000 €, el asiento es: <u>10.000 € a (100) Capital social</u> y <u>10.000 € a (1142) Reservas por capital amortizado</u>. Esta reserva no puede distribuirse como dividendo, sino que refuerza la solvencia.</p><p>Es una forma de reconvertir parte del capital en reserva, manteniendo el patrimonio neto constante pero cambiando su composición. Es distinta de las reservas legales o voluntarias, ya que surge de una operación de reducción de capital.</p>"
+    }
+  ]
+}
